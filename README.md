@@ -94,8 +94,49 @@ Final documentation should contain:
 - Database/Firestore schema (if applicable)
 - CI/CD description/screenshot (if applicable)
 
-### Sample Projects
-TODO
+### Examples of projects
+#### To-do list app
+A to-do list app (like Google Tasks/Todoist/Remember The Milk)
+- Firebase Auth
+- Cross-device synchronization
+- Note sharing
+
+#### Instant messaging app
+- Sign in / sign up
+- Image messages support
+- "Seen" status support
+- (optional) Other media messages support
+- (optional) Creating rooms or contact list
+
+#### Shopping list app
+- Classification using categories
+- Fuzzy search
+- Item grouping
+- History
+- Local persistence
+
+#### Feed browser app
+- Connected to some public API (like Reddit)
+- Favorite posts with local persistence
+- Simple actions (likes / comments - depending on the API)
+- (optional) Video posts playback support
+
+#### Online store browser app (local / fake API)
+- Categories
+- Filters
+- Sorting
+- Item photo pinch-to-zoom
+- Local cart
+- Sharing items (with deep-links)
+
+#### PoI (Point of Interest) browser app
+- PoI map
+- PoI list
+- Tags
+- Categories
+- Filters
+- Sorting by location
+- User geolocation
 
 ### Late Project Submission
 Students can submit the project until 11.02.2022. Each day of being late will take a decrease of 5pt from the total number of gained points. Projects submitted after the final deadline won't be accepted.
