@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:week2_lab/utils/constraint_viewer.dart';
 
-class Example1 extends StatelessWidget {
-  const Example1({Key? key}) : super(key: key);
+class Example2 extends StatelessWidget {
+  const Example2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
