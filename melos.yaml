@@ -1,0 +1,8 @@
+name: Flutter at MiNI
+
+packages:
+  - labs/**
+  - lectures/**
+
+scripts:
+  get: melos exec flutter pub get
