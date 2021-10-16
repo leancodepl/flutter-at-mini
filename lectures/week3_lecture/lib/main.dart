@@ -28,18 +28,17 @@ class Sample1Page extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Container(
-        color: Colors.grey,
-        child: Stack(
-          children: [
-            Container(
-              width: double.maxFinite,
-              height: double.maxFinite,
-              color: Colors.yellow,
-            ),
-            const Center(child: CircularProgressIndicator())
-          ],
-        ),
-      ),
+          color: Colors.grey,
+          child: Row(
+            children: const [
+              FlutterLogo(size: 60),
+              Text("Lecture 3"),
+              Icon(
+                Icons.sentiment_very_satisfied,
+                size: 40,
+              ),
+            ],
+          )),
     );
   }
 }
