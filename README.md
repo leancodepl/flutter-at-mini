@@ -1,6 +1,10 @@
 # flutter-at-mini
 Repository contains information about **Programming mobile applications in Flutter** course.
 
+## Contact info
+Rafał Adasiewicz - adasiewicz.r@gmail.com
+Mateusz Wojtczak - mateusz@leancode.pl
+
 ## Rules
 Student need to gather at least 51pt to pass the course:
 - 51-60pt - 3
