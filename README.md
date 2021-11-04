@@ -20,8 +20,8 @@ Points can be gained from:
 ## Lectures
 1. **06.10.2021** - [Introduction and Dart](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week1_lecture)
 2. **13.10.2021** - [Introduction to Flutter 1](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week2_lecture)
-3. **20.10.2021** - [Introduction to Flutter 2]()
-4. **TODO** - [State Management]()
+3. **20.10.2021** - [Introduction to Flutter 2](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week3_lecture)
+4. **27.10.2021** - [State Management](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week4_lecture)
 5. **03.11.2021** - [Asynchrony and HTTP](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week5_lecture)
 6. **TODO** - [State Management with External Libraries]()
 7. **TODO** - [Architecture and Dependency Injection]()
