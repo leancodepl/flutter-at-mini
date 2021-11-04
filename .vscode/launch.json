@@ -1,0 +1,105 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "week2_lab",
+            "cwd": "labs/week2_lab",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "week2_lab (profile mode)",
+            "cwd": "labs/week2_lab",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "week3_lab",
+            "cwd": "labs/week3_lab",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "week3_lab (profile mode)",
+            "cwd": "labs/week3_lab",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "week4_lab",
+            "cwd": "labs/week4_lab",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "week4_lab (profile mode)",
+            "cwd": "labs/week4_lab",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "week5_lab",
+            "cwd": "labs/week5_lab",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "week5_lab (profile mode)",
+            "cwd": "labs/week5_lab",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "week1_lecture",
+            "cwd": "lectures/week1_lecture",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "week1_lecture (profile mode)",
+            "cwd": "lectures/week1_lecture",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "week2_lecture",
+            "cwd": "lectures/week2_lecture",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "week2_lecture (profile mode)",
+            "cwd": "lectures/week2_lecture",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "week3_lecture",
+            "cwd": "lectures/week3_lecture",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "week3_lecture (profile mode)",
+            "cwd": "lectures/week3_lecture",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "week5_lecture",
+            "cwd": "lectures/week5_lecture",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
