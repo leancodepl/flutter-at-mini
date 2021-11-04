@@ -3,6 +3,7 @@ Repository contains information about **Programming mobile applications in Flutt
 
 ## Contact info
 Rafał Adasiewicz - adasiewicz.r@gmail.com
+
 Mateusz Wojtczak - mateusz@leancode.pl
 
 ## Rules
