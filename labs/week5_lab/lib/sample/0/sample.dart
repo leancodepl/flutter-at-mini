@@ -10,15 +10,6 @@ class Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<Sample> {
-  static const _jobsDataSource = JobsDataSource();
-  List<Job> _jobs = [];
-
-  @override
-  void initState() {
-    super.initState();
-    _fetchJobs();
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,22 +19,8 @@ class _SampleState extends State<Sample> {
       ),
       home: Scaffold(
         appBar: AppBar(title: const Text('Jobs')),
-        body: ListView.builder(
-          itemCount: _jobs.length,
-          itemBuilder: (context, i) {
-            final item = _jobs[i];
-            return ListTile(
-              title: Text(item.name),
-              onTap: () {},
-            );
-          },
-        ),
+        body: Container(),
       ),
     );
-  }
-
-  Future<void> _fetchJobs() async {
-    final jobs = await _jobsDataSource.getJobs();
-    setState(() => _jobs = jobs);
   }
 }
