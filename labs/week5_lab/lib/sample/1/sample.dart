@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:week5_lab/data/job.dart';
 import 'package:week5_lab/data/jobs_data_source.dart';
 
-class Sample0 extends StatefulWidget {
-  const Sample0({Key? key}) : super(key: key);
+class Sample1 extends StatefulWidget {
+  const Sample1({Key? key}) : super(key: key);
 
   @override
-  State<Sample0> createState() => _Sample0State();
+  State<Sample1> createState() => _Sample1State();
 }
 
-class _Sample0State extends State<Sample0> {
+class _Sample1State extends State<Sample1> {
   static const _jobsDataSource = JobsDataSource();
   List<Job> _jobs = [];
 

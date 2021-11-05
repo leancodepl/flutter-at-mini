@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:week5_lab/data/job.dart';
 import 'package:week5_lab/data/jobs_data_source.dart';
 
-class Sample extends StatefulWidget {
-  const Sample({Key? key}) : super(key: key);
+class Sample0 extends StatefulWidget {
+  const Sample0({Key? key}) : super(key: key);
 
   @override
-  State<Sample> createState() => _SampleState();
+  State<Sample0> createState() => _Sample0State();
 }
 
-class _SampleState extends State<Sample> {
+class _Sample0State extends State<Sample0> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
