@@ -100,6 +100,12 @@
             "cwd": "lectures/week5_lecture",
             "request": "launch",
             "type": "dart"
+        },
+        {
+            "name": "week6_lecture",
+            "cwd": "lectures/week6_lecture",
+            "request": "launch",
+            "type": "dart"
         }
     ]
 }
