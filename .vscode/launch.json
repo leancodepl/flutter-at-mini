@@ -57,6 +57,12 @@
             "flutterMode": "profile"
         },
         {
+            "name": "week6_lab",
+            "cwd": "labs/week6_lab",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
             "name": "week1_lecture",
             "cwd": "lectures/week1_lecture",
             "request": "launch",

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "152105901480",
+    "project_id": "shoutbox-dd69b",
+    "storage_bucket": "shoutbox-dd69b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152105901480:android:1e1cb93a53679cfb80519d",
+        "android_client_info": {
+          "package_name": "com.example.week6_lab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152105901480-uod738i76j2i2tf8kgal826a4je4cvdr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIr6ijLyezUfFjCF0CKV2x2MBcBYGYX2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "152105901480-uod738i76j2i2tf8kgal826a4je4cvdr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
