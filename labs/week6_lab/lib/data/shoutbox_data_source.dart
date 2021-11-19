@@ -22,6 +22,7 @@ class ShoutboxDataSource {
 
   Stream<List<Message>> get messageStream => _firestore
       .collection('messages')
+      .orderBy('timestamp')
       .snapshots()
       .map((m) => m.docs.map(Message.fromSnapshot).toList());
 }

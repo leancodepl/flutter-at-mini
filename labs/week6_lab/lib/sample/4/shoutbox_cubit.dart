@@ -8,8 +8,8 @@ class ShoutboxCubit extends Cubit<ShoutboxState> {
   ShoutboxCubit({required ShoutboxDataSource shoutboxDataSource})
       : _shoutboxDataSource = shoutboxDataSource,
         super(const ShoutboxInitialState()) {
-    _sub = _shoutboxDataSource.messageStream
-        .listen((messages) => emit(ShoutboxLoadedState(messages: messages)));
+    _sub = _shoutboxDataSource.messageStream.listen((messages) =>
+        emit(ShoutboxLoadedState(messages: messages.reversed.toList())));
   }
 
   final ShoutboxDataSource _shoutboxDataSource;
@@ -17,7 +17,9 @@ class ShoutboxCubit extends Cubit<ShoutboxState> {
 
   Future<void> refresh() async {
     final messages = await _shoutboxDataSource.getMessages();
-    emit(ShoutboxLoadedState(messages: messages));
+    emit(ShoutboxLoadedState(
+      messages: messages.reversed.toList(),
+    ));
   }
 
   Future<void> sendMessage(String text) =>

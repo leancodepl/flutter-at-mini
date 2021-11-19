@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:week6_lab/data/message.dart';
 import 'package:week6_lab/data/shoutbox_data_source.dart';
-import 'package:week6_lab/sample/3/shoutbox_cubit.dart';
+import 'package:week6_lab/sample/4/shoutbox_cubit.dart';
 
 class ShoutboxPage4 extends StatelessWidget {
   const ShoutboxPage4({Key? key}) : super(key: key);
@@ -97,6 +97,7 @@ class _List extends StatelessWidget {
               itemBuilder: (_, i) => _Message(
                 message: state.messages[i],
               ),
+              reverse: true,
             );
           } else {
             return const Center(
