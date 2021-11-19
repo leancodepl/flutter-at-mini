@@ -6,8 +6,8 @@ import 'package:week6_lab/data/message.dart';
 import 'package:week6_lab/data/shoutbox_data_source.dart';
 import 'package:week6_lab/sample/1/shoutbox.dart';
 
-class ShoutboxPage1 extends StatelessWidget {
-  const ShoutboxPage1({Key? key}) : super(key: key);
+class ShoutboxPage2 extends StatelessWidget {
+  const ShoutboxPage2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +72,6 @@ class _MessageBoxState extends State<_MessageBox> {
             onPressed: () {
               context.read<Shoutbox>().sendMessage(_controller.text);
               FocusScope.of(context).unfocus();
-              _controller.text = '';
             }),
       ],
     );
