@@ -1,13 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:week6_lab/data/message.dart';
 import 'package:week6_lab/data/shoutbox_data_source.dart';
-import 'package:week6_lab/sample/2/shoutbox.dart';
+import 'package:week6_lab/sample/3/shoutbox_cubit.dart';
 
-class ShoutboxPage2 extends StatelessWidget {
-  const ShoutboxPage2({Key? key}) : super(key: key);
+class ShoutboxPage3 extends StatelessWidget {
+  const ShoutboxPage3({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +16,8 @@ class ShoutboxPage2 extends StatelessWidget {
       create: (_) => ShoutboxDataSource(
         firestore: FirebaseFirestore.instance,
       ),
-      child: ChangeNotifierProvider(
-        create: (context) => Shoutbox(
+      child: BlocProvider(
+        create: (context) => ShoutboxCubit(
           shoutboxDataSource: context.read(),
         )..refresh(),
         child: MaterialApp(
@@ -70,7 +71,7 @@ class _MessageBoxState extends State<_MessageBox> {
         IconButton(
             icon: const Icon(Icons.send),
             onPressed: () {
-              context.read<Shoutbox>().sendMessage(_controller.text);
+              context.read<ShoutboxCubit>().sendMessage(_controller.text);
               FocusScope.of(context).unfocus();
               _controller.text = '';
             }),
@@ -86,15 +87,23 @@ class _List extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final messages = context.watch<Shoutbox>().messages;
-
     return RefreshIndicator(
-      onRefresh: context.watch<Shoutbox>().refresh,
-      child: ListView.builder(
-        itemCount: messages.length,
-        itemBuilder: (_, i) => _Message(
-          message: messages[i],
-        ),
+      onRefresh: context.watch<ShoutboxCubit>().refresh,
+      child: BlocBuilder<ShoutboxCubit, ShoutboxState>(
+        builder: (context, state) {
+          if (state is ShoutboxLoadedState) {
+            return ListView.builder(
+              itemCount: state.messages.length,
+              itemBuilder: (_, i) => _Message(
+                message: state.messages[i],
+              ),
+            );
+          } else {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        },
       ),
     );
   }

@@ -19,4 +19,9 @@ class ShoutboxDataSource {
 
   Future<void> sendMessage(Message message) =>
       _firestore.collection('messages').add(message.toMap());
+
+  Stream<List<Message>> get messageStream => _firestore
+      .collection('messages')
+      .snapshots()
+      .map((m) => m.docs.map(Message.fromSnapshot).toList());
 }

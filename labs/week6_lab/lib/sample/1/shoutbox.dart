@@ -13,13 +13,4 @@ class Shoutbox with ChangeNotifier {
     messages = await _shoutboxDataSource.getMessages();
     notifyListeners();
   }
-
-  Future<void> sendMessage(String text) async {
-    _shoutboxDataSource.sendMessage(Message(
-      content: text,
-      timestamp: DateTime.now(),
-    ));
-
-    return refresh();
-  }
 }

@@ -18,7 +18,7 @@ class ShoutboxPage1 extends StatelessWidget {
       child: ChangeNotifierProvider(
         create: (context) => Shoutbox(
           shoutboxDataSource: context.read(),
-        )..refresh(),
+        ),
         child: MaterialApp(
           title: 'Shoutbox',
           theme: ThemeData(
@@ -28,53 +28,10 @@ class ShoutboxPage1 extends StatelessWidget {
             appBar: AppBar(
               title: const Text('Shoutbox'),
             ),
-            body: Column(
-              children: const [
-                Expanded(
-                  child: _List(),
-                ),
-                Divider(
-                  color: Colors.grey,
-                ),
-                _MessageBox(),
-              ],
-            ),
+            body: _List(),
           ),
         ),
       ),
-    );
-  }
-}
-
-class _MessageBox extends StatefulWidget {
-  const _MessageBox({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  State<_MessageBox> createState() => _MessageBoxState();
-}
-
-class _MessageBoxState extends State<_MessageBox> {
-  final _controller = TextEditingController();
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const SizedBox(width: 8),
-        Expanded(
-          child: TextField(
-            controller: _controller,
-          ),
-        ),
-        IconButton(
-            icon: const Icon(Icons.send),
-            onPressed: () {
-              context.read<Shoutbox>().sendMessage(_controller.text);
-              FocusScope.of(context).unfocus();
-              _controller.text = '';
-            }),
-      ],
     );
   }
 }

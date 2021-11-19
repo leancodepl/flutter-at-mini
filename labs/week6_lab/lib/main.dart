@@ -3,13 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:week6_lab/sample/0/page.dart';
 import 'package:week6_lab/sample/1/page.dart';
 import 'package:week6_lab/sample/2/page.dart';
+import 'package:week6_lab/sample/3/page.dart';
+import 'package:week6_lab/sample/4/page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   // const app = ShoutboxPage0();
   // const app = ShoutboxPage1();
-  const app = ShoutboxPage2();
+  // const app = ShoutboxPage2();
+  // const app = ShoutboxPage3();
+  const app = ShoutboxPage4();
 
   runApp(const _App(app: app));
 }
