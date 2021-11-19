@@ -1,11 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:week6_lab/sample/0/page.dart';
+import 'package:week6_lab/sample/1/page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  const app = ShoutboxPage0();
-  // const app = Sample1());
+
+  // const app = ShoutboxPage0();
+  const app = ShoutboxPage1();
+
   runApp(_App(app: app));
 }
 

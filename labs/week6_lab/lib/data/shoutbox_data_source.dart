@@ -8,7 +8,15 @@ class ShoutboxDataSource {
   final FirebaseFirestore _firestore;
 
   Future<List<Message>> getMessages() async {
-    final messages = await _firestore.collection('messages').get();
+    final messages = await _firestore
+        .collection('messages')
+        .orderBy(
+          'timestamp',
+        )
+        .get();
     return messages.docs.map(Message.fromSnapshot).toList();
   }
+
+  Future<void> sendMessage(Message message) =>
+      _firestore.collection('messages').add(message.toMap());
 }

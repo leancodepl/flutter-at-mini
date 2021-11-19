@@ -16,5 +16,8 @@ class Message {
         timestamp: (snapshot.data()['timestamp'] as Timestamp).toDate(),
       );
 
-  Map<String, dynamic> toMap() => {'content': content};
+  Map<String, dynamic> toMap() => {
+        'content': content,
+        'timestamp': Timestamp.fromDate(timestamp),
+      };
 }
