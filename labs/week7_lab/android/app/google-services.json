@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "647495204529",
+    "project_id": "water-4a614",
+    "storage_bucket": "water-4a614.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647495204529:android:cae9652cb3775181a0ec90",
+        "android_client_info": {
+          "package_name": "com.example.week7_lab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647495204529-bot0v0ipl277tqqae6s81nkekfcc7ilf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaPTojAsUDclqo31Km2-62B_rB0cleZDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647495204529-bot0v0ipl277tqqae6s81nkekfcc7ilf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "647495204529-nse2i1fdt88sh338lab1tf95m0hti9sr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.week7Lab"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

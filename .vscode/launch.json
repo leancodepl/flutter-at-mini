@@ -63,6 +63,12 @@
             "type": "dart"
         },
         {
+            "name": "week7_lab",
+            "cwd": "labs/week7_lab",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
             "name": "week1_lecture",
             "cwd": "lectures/week1_lecture",
             "request": "launch",
