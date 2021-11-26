@@ -10,13 +10,14 @@ enum SignInResult {
 }
 
 class AuthService {
-  const AuthService({required this.firebaseAuth});
+  const AuthService({required FirebaseAuth firebaseAuth})
+      : _firebaseAuth = firebaseAuth;
 
-  final FirebaseAuth firebaseAuth;
+  final FirebaseAuth _firebaseAuth;
 
-  bool get isSignedIn => firebaseAuth.currentUser != null;
+  bool get isSignedIn => _firebaseAuth.currentUser != null;
   Stream<bool> get isSignedInStream =>
-      firebaseAuth.userChanges().map((user) => user != null);
+      _firebaseAuth.userChanges().map((user) => user != null);
 
   Future<SignInResult> signInWithEmail(
     String email,
@@ -24,10 +25,10 @@ class AuthService {
   ) async {
     try {
       if (isSignedIn) {
-        await firebaseAuth.signOut();
+        await _firebaseAuth.signOut();
       }
 
-      await firebaseAuth.signInWithEmailAndPassword(
+      await _firebaseAuth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
@@ -60,10 +61,10 @@ class AuthService {
   ) async {
     try {
       if (isSignedIn) {
-        await firebaseAuth.signOut();
+        await _firebaseAuth.signOut();
       }
 
-      await firebaseAuth.createUserWithEmailAndPassword(
+      await _firebaseAuth.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
@@ -77,5 +78,5 @@ class AuthService {
     }
   }
 
-  Future<void> signOut() => firebaseAuth.signOut();
+  Future<void> signOut() => _firebaseAuth.signOut();
 }
