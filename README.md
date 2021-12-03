@@ -25,10 +25,10 @@ Points can be gained from:
 4. **27.10.2021** - [State Management](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week4_lecture)
 5. **03.11.2021** - [Asynchrony and HTTP](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week5_lecture)
 6. **17.11.2021** - [State Management with External Libraries](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week6_lecture)
-7. **TODO** - [Firebase](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week7_lecture)
-8. **TODO** - [Storing Data]()
+7. **25.11.2021** - [Firebase](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week7_lecture)
+8. **01.12.2021** - [Storing Data](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week8_lecture)
 9. **TODO** - [Forms]()
-10. **TODO** - [Architecture and Dependency Injection]()
+10. **TODO** - [Testing]()
 11. **TODO** - [Code Generation and Internationalization]()
 12. **TODO** - [Animations]()
 13. **TODO** - [Flutter Web and Flutter Desktop]()
@@ -39,11 +39,12 @@ Points can be gained from:
 ## Labs
 1. **08.10.2021** - [Getting Started with Flutter](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week1_lab)
 2. **15.10.2021** - [Layouts 1](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week2_lab)
-3. **TODO** - [Layouts 2]()
-4. **TODO** - [Communication with API]()
-5. **TODO** - [State Management]()
-6. **TODO** - [CodeMagic]()
-7. **TODO** - [Authorization]()
+3. **22.10.2021** - [Layouts 2](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week3_lab)
+4. **29.10.2021** - [Communication with API](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week4_lab)
+5. **05.11.2021** - [Context and StatefulWidget](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week5_lab)
+6. **19.11.2021** - [State management with external services](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week6_lab)
+7. **26.11.2021** - [Firebase Auth](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week7_lab)
+8. **03.12.2021** - [Useful widgets](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week8_lab)
 
 ## Project
 
