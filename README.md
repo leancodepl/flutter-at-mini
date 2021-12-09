@@ -27,7 +27,7 @@ Points can be gained from:
 6. **17.11.2021** - [State Management with External Libraries](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week6_lecture)
 7. **25.11.2021** - [Firebase](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week7_lecture)
 8. **01.12.2021** - [Storing Data](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week8_lecture)
-9. **TODO** - [Forms]()
+9. **08.12.2021** - [Forms](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week9_lecture)
 10. **TODO** - [Testing]()
 11. **TODO** - [Code Generation and Internationalization]()
 12. **TODO** - [Animations]()
