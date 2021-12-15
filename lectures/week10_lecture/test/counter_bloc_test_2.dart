@@ -13,7 +13,7 @@ void main() {
     });
 
     blocTest(
-      'emits [1] when CounterIncrementPressed is added',
+      'emits new state when SampleBloc emits state',
       seed: () => 2,
       setUp: () {
         whenListen(sampleBlocMock, Stream.fromIterable([5, 6]));

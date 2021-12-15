@@ -12,9 +12,9 @@ void main() {
     late EmailValidatorMock emailValidatorMock;
     late UserRepository2 repository;
 
-    // setUpAll(() {
-    //   registerFallbackValue(UserFake());
-    // });
+    setUpAll(() {
+      registerFallbackValue(UserFake());
+    });
 
     setUp(() {
       emailValidatorMock = EmailValidatorMock();
@@ -48,9 +48,9 @@ void main() {
       expect(captured.last, equals("a@a.com"));
     });
 
-    // test('fallback ', () {
-    //   when(() => repository.hasValidData(any()));
-    // });
+    test('fallback ', () {
+      when(() => repository.hasValidData(any())).thenReturn(false);
+    });
 
     // :(
     test('throw example', () {
