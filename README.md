@@ -29,11 +29,11 @@ Points can be gained from:
 8. **01.12.2021** - [Storing Data](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week8_lecture)
 9. **08.12.2021** - [Forms](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week9_lecture)
 10. **15.12.2021** - [Testing](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week10_lecture)
-11. **TODO** - [Code Generation and Internationalization]()
-12. **TODO** - [Animations]()
-13. **TODO** - [Flutter Web and Flutter Desktop]()
-14. **TODO** - [Communication with Native]()
-15. **TODO** - [Waiting for Proposals]()
+11. **22.12.2021** - [Testing 2 and Code Generation](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week11_lecture)
+12. **05.01.2022** - [Flutter Web and Flutter Desktop]()
+13. **12.01.2022** - [Animations]()
+14. **19.01.2022** - [Communication with Native]()
+15. **26.01.2022** - [Waiting for Proposals]()
 
 
 ## Labs
