@@ -32,7 +32,7 @@ Points can be gained from:
 11. **22.12.2021** - [Testing 2 and Code Generation](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week11_lecture)
 12. **05.01.2022** - [Flutter Web and Flutter Desktop]()
 13. **12.01.2022** - [Animations]()
-14. **19.01.2022** - [Communication with Native]()
+14. **19.01.2022** - [Communication with Native](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week14_lecture)
 15. **26.01.2022** - [Waiting for Proposals]()
 
 
