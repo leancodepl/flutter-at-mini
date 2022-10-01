@@ -1,13 +1,13 @@
-# flutter-at-mini
+# Flutter @ MiNI - 2022/2023
 Repository contains information about **Programming mobile applications in Flutter** course.
 
 ## Contact info
-Rafał Adasiewicz - adasiewicz.r@gmail.com
+Jakub Fijałkowski - jakub.fijalkowski@leancode.pl
 
-Mateusz Wojtczak - mateusz@leancode.pl
+Mateusz Wojtczak - mateusz.wojtczak@leancode.pl
 
 ## Rules
-Student need to gather at least 51pt to pass the course:
+Students need to gather at least 51pt to pass the course:
 - 51-60pt - 3
 - 61-70pt - 3.5
 - 71-80pt - 4
@@ -18,33 +18,40 @@ Points can be gained from:
 - Project - 100pt
 - Activity during lectures - 10pt
 
+### Minimum SDK versions:
+- Flutter 3.3.3 (latest stable on 01.10.2022)
+- Dart 2.18.2
+
+
 ## Lectures
-1. **06.10.2021** - [Introduction and Dart](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week1_lecture)
-2. **13.10.2021** - [Introduction to Flutter 1](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week2_lecture)
-3. **20.10.2021** - [Introduction to Flutter 2](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week3_lecture)
-4. **27.10.2021** - [State Management](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week4_lecture)
-5. **03.11.2021** - [Asynchrony and HTTP](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week5_lecture)
-6. **17.11.2021** - [State Management with External Libraries](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week6_lecture)
-7. **25.11.2021** - [Firebase](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week7_lecture)
-8. **01.12.2021** - [Storing Data](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week8_lecture)
-9. **08.12.2021** - [Forms](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week9_lecture)
-10. **15.12.2021** - [Testing](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week10_lecture)
-11. **22.12.2021** - [Testing 2 and Code Generation](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week11_lecture)
-12. **05.01.2022** - [Flutter Web and Flutter Desktop]()
-13. **12.01.2022** - [Animations]()
-14. **19.01.2022** - [Communication with Native](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week14_lecture)
-15. **26.01.2022** - [Waiting for Proposals]()
+1. **03.10.2022** - [Intro lecture](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week1_lecture)
+2. **10.10.2022** - [What is Flutter?](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week2_lecture)
+3. **17.10.2022** - [Let's go deeper into Flutter](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week3_lecture)
+4. **24.10.2022** - [State Management](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week4_lecture)
+5. **07.11.2022** - [Asynchrony and HTTP](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week5_lecture)
+6. **14.11.2022** - [State Management with External Libraries](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week6_lecture)
+7. **21.11.2022** - [Firebase](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week7_lecture)
+8. **28.11.2022** - [Data persistence](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week8_lecture)
+9. **05.12.2022** - [Forms](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week9_lecture)
+10. **12.12.2022** - [Testing](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week10_lecture)
+11. **19.12.2022** - [Code generation](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week11_lecture)
+12. **02.01.2023** - [Flutter Web and Flutter Desktop](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week12_lecture)
+13. **09.01.2023** - [Animations](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week13_lecture)
+14. **16.01.2023** - [Communication with Native](https://github.com/leancodepl/flutter-at-mini/tree/main/lectures/week14_lecture)
+15. **23.01.2023** - [*Waiting for Proposals*]()
 
 
 ## Labs
-1. **08.10.2021** - [Getting Started with Flutter](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week1_lab)
-2. **15.10.2021** - [Layouts 1](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week2_lab)
-3. **22.10.2021** - [Layouts 2](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week3_lab)
-4. **29.10.2021** - [Communication with API](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week4_lab)
-5. **05.11.2021** - [Context and StatefulWidget](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week5_lab)
-6. **19.11.2021** - [State management with external services](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week6_lab)
-7. **26.11.2021** - [Firebase Auth](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week7_lab)
-8. **03.12.2021** - [Useful widgets](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week8_lab)
+1. **03.10.2022** - [Getting started](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week1_lab)
+2. **10.10.2022** - [Layouts 1](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week2_lab)
+3. **17.10.2022** - [Layouts 2 & using context](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week3_lab)
+4. **24.10.2022** - [Communication with API](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week4_lab)
+5. **07.11.2022** - [Context and StatefulWidget](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week5_lab)
+6. **14.11.2022** - [State management with external services](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week6_lab)
+7. **21.11.2022** - [Firebase Auth in action](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week7_lab)
+8. **28.11.2022** - [Useful widgets](https://github.com/leancodepl/flutter-at-mini/tree/main/labs/week8_lab)
+
+Week 9-15 lab slots can be used for project consulting.
 
 ## Project
 
@@ -81,14 +88,14 @@ Points can be gained from:
 
 
 ### Timeline
-- 29.10.2021 - [Initial documentation](#initial-documentation)
-- 28.01.2022 - Project Submission (source code + [final documentation](#final-documentation)
-- 11.02.2022 - [Late Project Submission](#late-project-submission)
+- 24.10.2022 - [Initial documentation](#initial-documentation)
+- 23.01.2023 - Project Submission (source code + [final documentation](#final-documentation)
+- 06.02.2023 - [Late Project Submission](#late-project-submission)
 
 ### Initial Documentation
 Initial documentation should contain:
 - Project description
-- Use cases (e.g. As a user, I can sign in, As a user, I can view the list of items)
+- User stories (e.g. As a user, I can sign in; As a user, I can view the list of items)
 
 ### Final Documentation
 Final documentation should contain:
@@ -99,6 +106,8 @@ Final documentation should contain:
 - Test account (if applicable)
 - Database/Firestore schema (if applicable)
 - CI/CD description/screenshot (if applicable)
+
+But it shouldn't be longer than 1-2 pages. :)
 
 ### Examples of projects
 #### To-do list app
@@ -145,10 +154,11 @@ A to-do list app (like Google Tasks/Todoist/Remember The Milk)
 - User geolocation
 
 ### Late Project Submission
-Students can submit the project until 11.02.2022. Each day of being late will take a decrease of 5pt from the total number of gained points. Projects submitted after the final deadline won't be accepted.
+Students can submit the project until 06.02.2023. Each day of being late will take a decrease of 5pt from the total number of gained points. Projects submitted after the final deadline won't be accepted.
 
 ## Resources
 - [Flutter Official Documentation](https://flutter.dev/docs)
-- Code Documentation
 - [Pub Dev](https://pub.dev)
-- Alberto Miola - Flutter Complete Reference
+- [Effective Dart](https://dart.dev/guides/language/effective-dart)
+- [Inside Flutter (for curious ones)](https://docs.flutter.dev/resources/inside-flutter)
+- [Opinionated linter rules used in this codebase](https://github.com/leancodepl/flutter_corelibrary/tree/master/packages/leancode_lint)
