@@ -37,21 +37,15 @@ class _Sample2State extends State<Sample2> {
             ),
           ),
           if (isList)
-            MaterialPage(
-              key: const ValueKey("ListScreen"),
-              child: ListScreen4(
-                onPressed: (Channel value) {
-                  setState(() {
-                    selectedChannel = value;
-                  });
-                },
-              ),
+            const MaterialPage(
+              key: ValueKey("ListScreen"),
+              child: ListScreen(),
             ),
           // 4 Step
           if (selectedChannel != null)
             MaterialPage(
               key: ValueKey(selectedChannel!.name),
-              child: MessageListScreen2(channel: selectedChannel!),
+              child: MessageListScreen(channel: selectedChannel!),
             ),
         ],
         onPopPage: (route, result) {
