@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>152105901480-h2cjeferveh10nfkgjgo7f9k9s1kii45.apps.googleusercontent.com</string>
+	<string>426362135894-l3rh40kekj12ih3rn4betf1utn0ddv9r.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.152105901480-h2cjeferveh10nfkgjgo7f9k9s1kii45</string>
+	<string>com.googleusercontent.apps.426362135894-l3rh40kekj12ih3rn4betf1utn0ddv9r</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCBKFd_AjAy0lLzIS5IvLpmt2qilfzy65Y</string>
+	<string>AIzaSyAoNiW8ur8CkV0ihkMIrR4fbvQK75ktZGc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>152105901480</string>
+	<string>426362135894</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.week6Lab</string>
 	<key>PROJECT_ID</key>
-	<string>shoutbox-dd69b</string>
+	<string>shoutbox-newest</string>
 	<key>STORAGE_BUCKET</key>
-	<string>shoutbox-dd69b.appspot.com</string>
+	<string>shoutbox-newest.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:152105901480:ios:1bd1b1015ee4d8f280519d</string>
+	<string>1:426362135894:ios:01498d34aba03ff191a2f7</string>
 </dict>
 </plist>

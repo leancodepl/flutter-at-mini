@@ -44,40 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBdb5Iq6lC4eu0QxS3Ggzoi3JZRCUFia0k',
-    appId: '1:152105901480:web:7d2206ffd4bdf18b80519d',
-    messagingSenderId: '152105901480',
-    projectId: 'shoutbox-dd69b',
-    authDomain: 'shoutbox-dd69b.firebaseapp.com',
-    storageBucket: 'shoutbox-dd69b.appspot.com',
-    measurementId: 'G-9NZWMWTGC1',
+    apiKey: 'AIzaSyBARXvZJi9e5BW-IIyg-CU39Lo4LZs41po',
+    appId: '1:426362135894:web:349a89e9beb24b8e91a2f7',
+    messagingSenderId: '426362135894',
+    projectId: 'shoutbox-newest',
+    authDomain: 'shoutbox-newest.firebaseapp.com',
+    storageBucket: 'shoutbox-newest.appspot.com',
+    measurementId: 'G-VRHQ8Y4MSC',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBIr6ijLyezUfFjCF0CKV2x2MBcBYGYX2c',
-    appId: '1:152105901480:android:1e1cb93a53679cfb80519d',
-    messagingSenderId: '152105901480',
-    projectId: 'shoutbox-dd69b',
-    storageBucket: 'shoutbox-dd69b.appspot.com',
+    apiKey: 'AIzaSyDYUNemef3VM9Ghy5IJP-kjWOrRBjGeN8E',
+    appId: '1:426362135894:android:adb542df756e70ff91a2f7',
+    messagingSenderId: '426362135894',
+    projectId: 'shoutbox-newest',
+    storageBucket: 'shoutbox-newest.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCBKFd_AjAy0lLzIS5IvLpmt2qilfzy65Y',
-    appId: '1:152105901480:ios:1bd1b1015ee4d8f280519d',
-    messagingSenderId: '152105901480',
-    projectId: 'shoutbox-dd69b',
-    storageBucket: 'shoutbox-dd69b.appspot.com',
-    iosClientId: '152105901480-h2cjeferveh10nfkgjgo7f9k9s1kii45.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAoNiW8ur8CkV0ihkMIrR4fbvQK75ktZGc',
+    appId: '1:426362135894:ios:01498d34aba03ff191a2f7',
+    messagingSenderId: '426362135894',
+    projectId: 'shoutbox-newest',
+    storageBucket: 'shoutbox-newest.appspot.com',
+    iosClientId: '426362135894-l3rh40kekj12ih3rn4betf1utn0ddv9r.apps.googleusercontent.com',
     iosBundleId: 'com.example.week6Lab',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCBKFd_AjAy0lLzIS5IvLpmt2qilfzy65Y',
-    appId: '1:152105901480:ios:1bd1b1015ee4d8f280519d',
-    messagingSenderId: '152105901480',
-    projectId: 'shoutbox-dd69b',
-    storageBucket: 'shoutbox-dd69b.appspot.com',
-    iosClientId: '152105901480-h2cjeferveh10nfkgjgo7f9k9s1kii45.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAoNiW8ur8CkV0ihkMIrR4fbvQK75ktZGc',
+    appId: '1:426362135894:ios:01498d34aba03ff191a2f7',
+    messagingSenderId: '426362135894',
+    projectId: 'shoutbox-newest',
+    storageBucket: 'shoutbox-newest.appspot.com',
+    iosClientId: '426362135894-l3rh40kekj12ih3rn4betf1utn0ddv9r.apps.googleusercontent.com',
     iosBundleId: 'com.example.week6Lab',
   );
 }

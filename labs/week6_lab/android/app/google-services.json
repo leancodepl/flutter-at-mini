@@ -1,37 +1,37 @@
 {
   "project_info": {
-    "project_number": "152105901480",
-    "project_id": "shoutbox-dd69b",
-    "storage_bucket": "shoutbox-dd69b.appspot.com"
+    "project_number": "426362135894",
+    "project_id": "shoutbox-newest",
+    "storage_bucket": "shoutbox-newest.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:152105901480:android:1e1cb93a53679cfb80519d",
+        "mobilesdk_app_id": "1:426362135894:android:adb542df756e70ff91a2f7",
         "android_client_info": {
           "package_name": "com.example.week6_lab"
         }
       },
       "oauth_client": [
         {
-          "client_id": "152105901480-uod738i76j2i2tf8kgal826a4je4cvdr.apps.googleusercontent.com",
+          "client_id": "426362135894-0l05modad9i74t7gfb68cbqmu94aptc5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBIr6ijLyezUfFjCF0CKV2x2MBcBYGYX2c"
+          "current_key": "AIzaSyDYUNemef3VM9Ghy5IJP-kjWOrRBjGeN8E"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "152105901480-uod738i76j2i2tf8kgal826a4je4cvdr.apps.googleusercontent.com",
+              "client_id": "426362135894-0l05modad9i74t7gfb68cbqmu94aptc5.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "152105901480-h2cjeferveh10nfkgjgo7f9k9s1kii45.apps.googleusercontent.com",
+              "client_id": "426362135894-l3rh40kekj12ih3rn4betf1utn0ddv9r.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.example.week6Lab"
