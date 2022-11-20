@@ -1,0 +1,46 @@
+name: week7_lab
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  cloud_firestore: ^3.1.0
+  cupertino_icons: ^1.0.2
+  firebase_auth: ^3.2.0
+  firebase_core: ^1.10.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^7.3.3
+  http: ^0.13.4
+  intl: ^0.17.0
+  provider: ^6.0.1
+  stream_transform: ^2.0.0
+
+dev_dependencies:
+  bloc_test: ^8.5.0
+  build_runner: ^2.1.5
+  flutter_lints: ^1.0.0
+  flutter_test:
+    sdk: flutter
+  leancode_lint: ^1.1.0
+  mockito: ^5.0.16
+
+flutter:
+  uses-material-design: true
