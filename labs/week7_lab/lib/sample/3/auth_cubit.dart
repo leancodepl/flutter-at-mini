@@ -4,14 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:week7_lab/data/auth_service.dart';
 
 class AuthCubit extends Cubit<AuthState> {
-  AuthCubit({required this.authService})
-      : super(
-          authService.isSignedIn
-              ? const SignedInState()
-              : const SignedOutState(),
-        ) {
+  AuthCubit({required this.authService}) : super(const SigningInState()) {
     _sub = authService.isSignedInStream.listen((isSignedIn) {
-      emit(isSignedIn ? const SignedInState() : const SignedOutState());
+      _emitStateFromAuth();
     });
   }
 
@@ -30,7 +25,7 @@ class AuthCubit extends Cubit<AuthState> {
 
       switch (res) {
         case SignInResult.success:
-          emit(const SignedInState());
+          emit(SignedInState(email: email));
           break;
         case SignInResult.emailAlreadyInUse:
           emit(
@@ -69,6 +64,12 @@ class AuthCubit extends Cubit<AuthState> {
     return super.close();
   }
 
+  void _emitStateFromAuth() {
+    emit(authService.isSignedIn
+        ? SignedInState(email: authService.userEmail)
+        : const SignedOutState());
+  }
+
   Future<void> _trySignUp(String email, String password) =>
       authService.signUpWithEmail(email, password);
 }
@@ -78,7 +79,9 @@ abstract class AuthState {
 }
 
 class SignedInState extends AuthState {
-  const SignedInState();
+  const SignedInState({required this.email});
+
+  final String email;
 }
 
 class SigningInState extends AuthState {

@@ -36,6 +36,7 @@ class _UnauthorizedPageState extends State<UnauthorizedPage> {
                   hintText: 'Password',
                 ),
                 controller: password,
+                obscureText: true,
               ),
               const SizedBox(height: 16),
               if (state is SignedOutState && state.error != null) ...[

@@ -1,31 +1,33 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/annotations.dart';
-import 'package:mockito/mockito.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:week7_lab/data/auth_service.dart';
 import 'package:week7_lab/sample/3/auth_cubit.dart';
 
-import 'auth_cubit_test.mocks.dart';
+class MockAuthService extends Mock implements AuthService {}
 
-@GenerateMocks([AuthService])
 void main() {
   group('AuthCubit', () {
     late MockAuthService authService;
 
     setUp(() {
       authService = MockAuthService();
-      when(authService.isSignedInStream)
+      when(() => authService.isSignedInStream)
           .thenAnswer((_) => Stream.fromIterable([]));
     });
 
     test('initial state is SignedInState when authService is signed in', () {
-      when(authService.isSignedIn).thenReturn(true);
+      when(() => authService.isSignedIn).thenReturn(true);
+      when(() => authService.userEmail).thenReturn('email');
       final cubit = AuthCubit(authService: authService);
-      expect(cubit.state, const SignedInState());
+      expect(
+        cubit.state,
+        const SignedInState(email: 'email'),
+      );
     });
 
     test('initial state is SignedOutState when authService is signed out', () {
-      when(authService.isSignedIn).thenReturn(false);
+      when(() => authService.isSignedIn).thenReturn(false);
       final cubit = AuthCubit(authService: authService);
       expect(cubit.state, const SignedOutState());
     });
@@ -33,23 +35,25 @@ void main() {
     blocTest<AuthCubit, AuthState>(
       'signInWithEmail emits signed in state on correct sign in',
       build: () {
-        when(authService.isSignedIn).thenReturn(false);
-        when(authService.signInWithEmail(any, any))
+        when(() => authService.isSignedIn).thenReturn(false);
+        when(() => authService.signInWithEmail(any(), any()))
             .thenAnswer((_) async => SignInResult.success);
+        when(() => authService.userEmail).thenReturn('email');
+
         return AuthCubit(authService: authService);
       },
       act: (c) => c.signInWithEmail('email', 'password'),
       expect: () => [
         const SigningInState(),
-        const SignedInState(),
+        const SignedInState(email: 'email'),
       ],
     );
 
     blocTest<AuthCubit, AuthState>(
       'signInWithEmail emits signed out state with error when password is wrong',
       build: () {
-        when(authService.isSignedIn).thenReturn(false);
-        when(authService.signInWithEmail(any, any))
+        when(() => authService.isSignedIn).thenReturn(false);
+        when(() => authService.signInWithEmail(any(), any()))
             .thenAnswer((_) async => SignInResult.wrongPassword);
         return AuthCubit(authService: authService);
       },
