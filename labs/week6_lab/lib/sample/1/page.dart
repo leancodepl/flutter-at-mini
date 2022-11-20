@@ -28,7 +28,7 @@ class ShoutboxPage1 extends StatelessWidget {
             appBar: AppBar(
               title: const Text('Shoutbox'),
             ),
-            body: _List(),
+            body: const _List(),
           ),
         ),
       ),

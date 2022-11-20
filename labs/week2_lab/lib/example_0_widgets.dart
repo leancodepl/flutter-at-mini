@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
 class SuperComplexLayout extends StatelessWidget {
@@ -62,10 +64,11 @@ class ListOfWidgets extends StatelessWidget {
           height: 100,
         ),
         Container(
-            color: Colors.purple,
-            width: 200,
-            height: 100,
-            child: const Text('Hello!')),
+          color: Colors.purple,
+          width: 200,
+          height: 100,
+          child: const Text('Hello!'),
+        ),
       ],
     );
   }

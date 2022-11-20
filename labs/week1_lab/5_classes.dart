@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field, unused_local_variable
+
 class A {
   A();
   A.some();

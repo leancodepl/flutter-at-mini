@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:week4_lab/data/job.dart';
-import 'package:week4_lab/data/jobs_data_source.dart';
 
 class Sample0 extends StatefulWidget {
   const Sample0({Key? key}) : super(key: key);

@@ -3,7 +3,6 @@ import 'package:week4_lab/data/job.dart';
 import 'package:week4_lab/data/jobs_data_source.dart';
 import 'package:week4_lab/sample/4/job_list.dart';
 import 'package:week4_lab/sample/4/jobs_provider.dart';
-import 'package:week4_lab/sample/4/job_tile.dart';
 
 class Sample4 extends StatefulWidget {
   const Sample4({Key? key}) : super(key: key);

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:week3_lab/exercise1.dart';
 import 'package:week3_lab/sample1.dart';

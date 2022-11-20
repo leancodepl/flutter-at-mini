@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -47,7 +49,8 @@ class RenderPositionedBox extends RenderShiftedBox {
       size = child.size;
 
       print(
-          'ConstraintsViewer ${tag != null ? '$tag ' : ''}received constraints $constraints');
+        'ConstraintsViewer ${tag != null ? '$tag ' : ''}received constraints $constraints',
+      );
       print('ConstraintsViewer ${tag != null ? '$tag ' : ''}child size $size');
     } else {
       size = constraints.biggest;
