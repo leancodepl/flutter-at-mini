@@ -2,6 +2,8 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:week7_lab/firebase_options.dart';
+import 'package:week7_lab/sample/0/app.dart';
 
 import 'package:week7_lab/sample/1/app.dart';
 import 'package:week7_lab/sample/2/app.dart';
@@ -9,11 +11,12 @@ import 'package:week7_lab/sample/3/app.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-  // const app = WaterLogApp0();
+  const app = WaterLogApp0();
   // const app = WaterLogApp1();
   // const app = WaterLogApp2();
-  const app = WaterLogApp3();
+  // const app = WaterLogApp3();
 
   runApp(const _App(app: app));
 }

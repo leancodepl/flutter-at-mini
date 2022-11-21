@@ -16,20 +16,20 @@ void main() {
           .thenAnswer((_) => Stream.fromIterable([]));
     });
 
-    test('initial state is SignedInState when authService is signed in', () {
+    test('initial state is SigningInState when authService is signed in', () {
       when(() => authService.isSignedIn).thenReturn(true);
       when(() => authService.userEmail).thenReturn('email');
       final cubit = AuthCubit(authService: authService);
       expect(
         cubit.state,
-        const SignedInState(email: 'email'),
+        const SigningInState(),
       );
     });
 
-    test('initial state is SignedOutState when authService is signed out', () {
+    test('initial state is SigningOutState when authService is signed out', () {
       when(() => authService.isSignedIn).thenReturn(false);
       final cubit = AuthCubit(authService: authService);
-      expect(cubit.state, const SignedOutState());
+      expect(cubit.state, const SigningInState());
     });
 
     blocTest<AuthCubit, AuthState>(
@@ -45,7 +45,7 @@ void main() {
       act: (c) => c.signInWithEmail('email', 'password'),
       expect: () => [
         const SigningInState(),
-        const SignedInState(email: 'email'),
+        isA<SignedInState>().having((s) => s.email, 'email', 'email'),
       ],
     );
 
