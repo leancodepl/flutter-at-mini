@@ -17,17 +17,20 @@ class GridExample extends StatelessWidget {
                     color: Colors.grey,
                     child: Center(child: Text('Block $i')))),
           ],
-          // gridDelegate: _delegate2,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            mainAxisSpacing: 8,
-            crossAxisSpacing: 8,
-          ),
+          gridDelegate: _delegate2,
+          // gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          //   crossAxisCount: 2,
+          //   mainAxisSpacing: 8,
+          //   crossAxisSpacing: 8,
+          // ),
         ),
       ),
     );
   }
 }
 
-const _delegate2 =
-    SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 90);
+const _delegate2 = SliverGridDelegateWithMaxCrossAxisExtent(
+  maxCrossAxisExtent: 200,
+  mainAxisSpacing: 8,
+  crossAxisSpacing: 8,
+);

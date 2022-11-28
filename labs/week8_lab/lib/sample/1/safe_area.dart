@@ -5,18 +5,20 @@ class SafeAreaExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          'Top text',
-          style: Theme.of(context).textTheme.headline3,
-        ),
-        Text(
-          'Bottom text',
-          style: Theme.of(context).textTheme.headline3,
-        ),
-      ],
+    return SafeArea(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            'Top text',
+            style: Theme.of(context).textTheme.headline3,
+          ),
+          Text(
+            'Bottom text',
+            style: Theme.of(context).textTheme.headline3,
+          ),
+        ],
+      ),
     );
   }
 }

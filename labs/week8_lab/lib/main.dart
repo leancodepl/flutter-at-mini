@@ -19,6 +19,6 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const GalleryApp0(
-    child: SizedBox(),
+    child: RichTextExample(),
   ));
 }

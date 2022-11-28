@@ -6,7 +6,7 @@ class SingleChildScrollExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
+      child: ListView(
         children: [
           Container(
             color: Colors.green,

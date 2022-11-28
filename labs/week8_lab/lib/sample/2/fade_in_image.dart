@@ -11,10 +11,13 @@ class FadeInImageExample extends StatelessWidget {
         itemBuilder: (_, i) => CachedNetworkImage(
           imageUrl: 'https://picsum.photos/300/200?$i',
           placeholder: (_, __) => Center(
-            child: Container(
-              width: 300,
-              height: 200,
-              color: Colors.grey.shade200,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                width: 300,
+                height: 200,
+                color: Colors.grey.shade200,
+              ),
             ),
           ),
         ),

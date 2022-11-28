@@ -9,11 +9,10 @@ class InteractiveViewerExample extends StatelessWidget {
     return Scaffold(
         body: Center(
       child: InteractiveViewer(
-        child: Padding(
-          padding: const EdgeInsets.all(120),
-          child: CachedNetworkImage(
-            imageUrl: 'https://picsum.photos/400/300',
-          ),
+        child: SizedBox(
+          width: 1200,
+          height: 900,
+          child: LicensePage(),
         ),
       ),
     ));

@@ -9,7 +9,17 @@ class WrapExample extends StatelessWidget {
       appBar: AppBar(),
       body: Wrap(
         children: [
-          ...List.generate(10, (i) => Chip(label: Text('Chip $i'))),
+          ...List.generate(100, (i) {
+            if (i % 2 == 0) {
+              return SizedBox(
+                  width: 30 + i * 10,
+                  height: 30 + i * 10,
+                  child: ColoredBox(color: Colors.green));
+            }
+            return Chip(
+              label: Text('Chip $i'),
+            );
+          }),
         ],
       ),
     );
