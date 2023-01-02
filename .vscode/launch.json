@@ -124,6 +124,19 @@
             "cwd": "lectures/week6_lecture",
             "request": "launch",
             "type": "dart"
-        }
+        },
+        {
+            "name": "week12_lecture",
+            "cwd": "lectures/week12_lecture",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "week12_lecture (device preview)",
+            "cwd": "lectures/week12_lecture",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_device_preview.dart"
+        },
     ]
 }
