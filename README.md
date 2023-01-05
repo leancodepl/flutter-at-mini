@@ -36,8 +36,8 @@ Points can be gained from:
 10. **12.12.2022** - [Testing](lectures/week10_lecture)
 11. **19.12.2022** - [Code generation](lectures/week11_lecture)
 12. **02.01.2023** - [Flutter Web and Flutter Desktop](lectures/week12_lecture)
-13. **09.01.2023** - [Animations](lectures/week13_lecture)
-14. **16.01.2023** - [Communication with Native](lectures/week14_lecture)
+13. **09.01.2023** - [Communication with Native](lectures/week13_lecture)
+14. **16.01.2023** - [Animations](lectures/week14_lecture)
 15. **23.01.2023** - [*Waiting for Proposals*]()
 
 
