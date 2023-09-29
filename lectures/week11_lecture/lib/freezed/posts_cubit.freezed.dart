@@ -87,25 +87,25 @@ class _$PostsStateCopyWithImpl<$Res, $Val extends PostsState>
 }
 
 /// @nodoc
-abstract class _$$PostsStateInitialCopyWith<$Res> {
-  factory _$$PostsStateInitialCopyWith(
-          _$PostsStateInitial value, $Res Function(_$PostsStateInitial) then) =
-      __$$PostsStateInitialCopyWithImpl<$Res>;
+abstract class _$$PostsStateInitialImplCopyWith<$Res> {
+  factory _$$PostsStateInitialImplCopyWith(_$PostsStateInitialImpl value,
+          $Res Function(_$PostsStateInitialImpl) then) =
+      __$$PostsStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$PostsStateInitialCopyWithImpl<$Res>
-    extends _$PostsStateCopyWithImpl<$Res, _$PostsStateInitial>
-    implements _$$PostsStateInitialCopyWith<$Res> {
-  __$$PostsStateInitialCopyWithImpl(
-      _$PostsStateInitial _value, $Res Function(_$PostsStateInitial) _then)
+class __$$PostsStateInitialImplCopyWithImpl<$Res>
+    extends _$PostsStateCopyWithImpl<$Res, _$PostsStateInitialImpl>
+    implements _$$PostsStateInitialImplCopyWith<$Res> {
+  __$$PostsStateInitialImplCopyWithImpl(_$PostsStateInitialImpl _value,
+      $Res Function(_$PostsStateInitialImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$PostsStateInitial implements PostsStateInitial {
-  const _$PostsStateInitial();
+class _$PostsStateInitialImpl implements PostsStateInitial {
+  const _$PostsStateInitialImpl();
 
   @override
   String toString() {
@@ -115,7 +115,7 @@ class _$PostsStateInitial implements PostsStateInitial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$PostsStateInitial);
+        (other.runtimeType == runtimeType && other is _$PostsStateInitialImpl);
   }
 
   @override
@@ -197,29 +197,29 @@ class _$PostsStateInitial implements PostsStateInitial {
 }
 
 abstract class PostsStateInitial implements PostsState {
-  const factory PostsStateInitial() = _$PostsStateInitial;
+  const factory PostsStateInitial() = _$PostsStateInitialImpl;
 }
 
 /// @nodoc
-abstract class _$$PostsStateInProgressCopyWith<$Res> {
-  factory _$$PostsStateInProgressCopyWith(_$PostsStateInProgress value,
-          $Res Function(_$PostsStateInProgress) then) =
-      __$$PostsStateInProgressCopyWithImpl<$Res>;
+abstract class _$$PostsStateInProgressImplCopyWith<$Res> {
+  factory _$$PostsStateInProgressImplCopyWith(_$PostsStateInProgressImpl value,
+          $Res Function(_$PostsStateInProgressImpl) then) =
+      __$$PostsStateInProgressImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$PostsStateInProgressCopyWithImpl<$Res>
-    extends _$PostsStateCopyWithImpl<$Res, _$PostsStateInProgress>
-    implements _$$PostsStateInProgressCopyWith<$Res> {
-  __$$PostsStateInProgressCopyWithImpl(_$PostsStateInProgress _value,
-      $Res Function(_$PostsStateInProgress) _then)
+class __$$PostsStateInProgressImplCopyWithImpl<$Res>
+    extends _$PostsStateCopyWithImpl<$Res, _$PostsStateInProgressImpl>
+    implements _$$PostsStateInProgressImplCopyWith<$Res> {
+  __$$PostsStateInProgressImplCopyWithImpl(_$PostsStateInProgressImpl _value,
+      $Res Function(_$PostsStateInProgressImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$PostsStateInProgress implements PostsStateInProgress {
-  const _$PostsStateInProgress();
+class _$PostsStateInProgressImpl implements PostsStateInProgress {
+  const _$PostsStateInProgressImpl();
 
   @override
   String toString() {
@@ -229,7 +229,8 @@ class _$PostsStateInProgress implements PostsStateInProgress {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$PostsStateInProgress);
+        (other.runtimeType == runtimeType &&
+            other is _$PostsStateInProgressImpl);
   }
 
   @override
@@ -311,24 +312,24 @@ class _$PostsStateInProgress implements PostsStateInProgress {
 }
 
 abstract class PostsStateInProgress implements PostsState {
-  const factory PostsStateInProgress() = _$PostsStateInProgress;
+  const factory PostsStateInProgress() = _$PostsStateInProgressImpl;
 }
 
 /// @nodoc
-abstract class _$$PostsStateReadyCopyWith<$Res> {
-  factory _$$PostsStateReadyCopyWith(
-          _$PostsStateReady value, $Res Function(_$PostsStateReady) then) =
-      __$$PostsStateReadyCopyWithImpl<$Res>;
+abstract class _$$PostsStateReadyImplCopyWith<$Res> {
+  factory _$$PostsStateReadyImplCopyWith(_$PostsStateReadyImpl value,
+          $Res Function(_$PostsStateReadyImpl) then) =
+      __$$PostsStateReadyImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<Post> posts});
 }
 
 /// @nodoc
-class __$$PostsStateReadyCopyWithImpl<$Res>
-    extends _$PostsStateCopyWithImpl<$Res, _$PostsStateReady>
-    implements _$$PostsStateReadyCopyWith<$Res> {
-  __$$PostsStateReadyCopyWithImpl(
-      _$PostsStateReady _value, $Res Function(_$PostsStateReady) _then)
+class __$$PostsStateReadyImplCopyWithImpl<$Res>
+    extends _$PostsStateCopyWithImpl<$Res, _$PostsStateReadyImpl>
+    implements _$$PostsStateReadyImplCopyWith<$Res> {
+  __$$PostsStateReadyImplCopyWithImpl(
+      _$PostsStateReadyImpl _value, $Res Function(_$PostsStateReadyImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -336,7 +337,7 @@ class __$$PostsStateReadyCopyWithImpl<$Res>
   $Res call({
     Object? posts = null,
   }) {
-    return _then(_$PostsStateReady(
+    return _then(_$PostsStateReadyImpl(
       null == posts
           ? _value._posts
           : posts // ignore: cast_nullable_to_non_nullable
@@ -347,8 +348,8 @@ class __$$PostsStateReadyCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PostsStateReady implements PostsStateReady {
-  const _$PostsStateReady(final List<Post> posts) : _posts = posts;
+class _$PostsStateReadyImpl implements PostsStateReady {
+  const _$PostsStateReadyImpl(final List<Post> posts) : _posts = posts;
 
   final List<Post> _posts;
   @override
@@ -367,7 +368,7 @@ class _$PostsStateReady implements PostsStateReady {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PostsStateReady &&
+            other is _$PostsStateReadyImpl &&
             const DeepCollectionEquality().equals(other._posts, _posts));
   }
 
@@ -378,8 +379,9 @@ class _$PostsStateReady implements PostsStateReady {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PostsStateReadyCopyWith<_$PostsStateReady> get copyWith =>
-      __$$PostsStateReadyCopyWithImpl<_$PostsStateReady>(this, _$identity);
+  _$$PostsStateReadyImplCopyWith<_$PostsStateReadyImpl> get copyWith =>
+      __$$PostsStateReadyImplCopyWithImpl<_$PostsStateReadyImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -457,29 +459,29 @@ class _$PostsStateReady implements PostsStateReady {
 }
 
 abstract class PostsStateReady implements PostsState {
-  const factory PostsStateReady(final List<Post> posts) = _$PostsStateReady;
+  const factory PostsStateReady(final List<Post> posts) = _$PostsStateReadyImpl;
 
   List<Post> get posts;
   @JsonKey(ignore: true)
-  _$$PostsStateReadyCopyWith<_$PostsStateReady> get copyWith =>
+  _$$PostsStateReadyImplCopyWith<_$PostsStateReadyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PostsStateErrorCopyWith<$Res> {
-  factory _$$PostsStateErrorCopyWith(
-          _$PostsStateError value, $Res Function(_$PostsStateError) then) =
-      __$$PostsStateErrorCopyWithImpl<$Res>;
+abstract class _$$PostsStateErrorImplCopyWith<$Res> {
+  factory _$$PostsStateErrorImplCopyWith(_$PostsStateErrorImpl value,
+          $Res Function(_$PostsStateErrorImpl) then) =
+      __$$PostsStateErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({PostsStateErrorKind errorKind});
 }
 
 /// @nodoc
-class __$$PostsStateErrorCopyWithImpl<$Res>
-    extends _$PostsStateCopyWithImpl<$Res, _$PostsStateError>
-    implements _$$PostsStateErrorCopyWith<$Res> {
-  __$$PostsStateErrorCopyWithImpl(
-      _$PostsStateError _value, $Res Function(_$PostsStateError) _then)
+class __$$PostsStateErrorImplCopyWithImpl<$Res>
+    extends _$PostsStateCopyWithImpl<$Res, _$PostsStateErrorImpl>
+    implements _$$PostsStateErrorImplCopyWith<$Res> {
+  __$$PostsStateErrorImplCopyWithImpl(
+      _$PostsStateErrorImpl _value, $Res Function(_$PostsStateErrorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -487,7 +489,7 @@ class __$$PostsStateErrorCopyWithImpl<$Res>
   $Res call({
     Object? errorKind = null,
   }) {
-    return _then(_$PostsStateError(
+    return _then(_$PostsStateErrorImpl(
       null == errorKind
           ? _value.errorKind
           : errorKind // ignore: cast_nullable_to_non_nullable
@@ -498,8 +500,8 @@ class __$$PostsStateErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PostsStateError implements PostsStateError {
-  const _$PostsStateError(this.errorKind);
+class _$PostsStateErrorImpl implements PostsStateError {
+  const _$PostsStateErrorImpl(this.errorKind);
 
   @override
   final PostsStateErrorKind errorKind;
@@ -513,7 +515,7 @@ class _$PostsStateError implements PostsStateError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PostsStateError &&
+            other is _$PostsStateErrorImpl &&
             (identical(other.errorKind, errorKind) ||
                 other.errorKind == errorKind));
   }
@@ -524,8 +526,9 @@ class _$PostsStateError implements PostsStateError {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PostsStateErrorCopyWith<_$PostsStateError> get copyWith =>
-      __$$PostsStateErrorCopyWithImpl<_$PostsStateError>(this, _$identity);
+  _$$PostsStateErrorImplCopyWith<_$PostsStateErrorImpl> get copyWith =>
+      __$$PostsStateErrorImplCopyWithImpl<_$PostsStateErrorImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -604,11 +607,11 @@ class _$PostsStateError implements PostsStateError {
 
 abstract class PostsStateError implements PostsState {
   const factory PostsStateError(final PostsStateErrorKind errorKind) =
-      _$PostsStateError;
+      _$PostsStateErrorImpl;
 
   PostsStateErrorKind get errorKind;
   @JsonKey(ignore: true)
-  _$$PostsStateErrorCopyWith<_$PostsStateError> get copyWith =>
+  _$$PostsStateErrorImplCopyWith<_$PostsStateErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -682,9 +685,10 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
 }
 
 /// @nodoc
-abstract class _$$_PostCopyWith<$Res> implements $PostCopyWith<$Res> {
-  factory _$$_PostCopyWith(_$_Post value, $Res Function(_$_Post) then) =
-      __$$_PostCopyWithImpl<$Res>;
+abstract class _$$PostImplCopyWith<$Res> implements $PostCopyWith<$Res> {
+  factory _$$PostImplCopyWith(
+          _$PostImpl value, $Res Function(_$PostImpl) then) =
+      __$$PostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -696,9 +700,10 @@ abstract class _$$_PostCopyWith<$Res> implements $PostCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
-    implements _$$_PostCopyWith<$Res> {
-  __$$_PostCopyWithImpl(_$_Post _value, $Res Function(_$_Post) _then)
+class __$$PostImplCopyWithImpl<$Res>
+    extends _$PostCopyWithImpl<$Res, _$PostImpl>
+    implements _$$PostImplCopyWith<$Res> {
+  __$$PostImplCopyWithImpl(_$PostImpl _value, $Res Function(_$PostImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -710,7 +715,7 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
     Object? content = null,
     Object? createdAt = null,
   }) {
-    return _then(_$_Post(
+    return _then(_$PostImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -737,8 +742,8 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
 
 /// @nodoc
 
-class _$_Post implements _Post {
-  const _$_Post(
+class _$PostImpl implements _Post {
+  const _$PostImpl(
       {required this.id,
       required this.authorId,
       required this.title,
@@ -765,7 +770,7 @@ class _$_Post implements _Post {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Post &&
+            other is _$PostImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.authorId, authorId) ||
                 other.authorId == authorId) &&
@@ -782,8 +787,8 @@ class _$_Post implements _Post {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PostCopyWith<_$_Post> get copyWith =>
-      __$$_PostCopyWithImpl<_$_Post>(this, _$identity);
+  _$$PostImplCopyWith<_$PostImpl> get copyWith =>
+      __$$PostImplCopyWithImpl<_$PostImpl>(this, _$identity);
 }
 
 abstract class _Post implements Post {
@@ -792,7 +797,7 @@ abstract class _Post implements Post {
       required final String authorId,
       required final String title,
       required final String content,
-      required final DateTime createdAt}) = _$_Post;
+      required final DateTime createdAt}) = _$PostImpl;
 
   @override
   String get id;
@@ -806,5 +811,6 @@ abstract class _Post implements Post {
   DateTime get createdAt;
   @override
   @JsonKey(ignore: true)
-  _$$_PostCopyWith<_$_Post> get copyWith => throw _privateConstructorUsedError;
+  _$$PostImplCopyWith<_$PostImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'union_types.freezed.dart';
 
 @freezed
-class IpAddr with _$IpAddr {
+sealed class IpAddr with _$IpAddr {
   const factory IpAddr.v4(int a, int b, int c, int d) = IpAddrV4;
   const factory IpAddr.v6(
     int a,

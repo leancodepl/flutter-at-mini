@@ -93,7 +93,7 @@ class PostsCubit extends Cubit<PostsState> {
 }
 
 @freezed
-class PostsState with _$PostsState {
+sealed class PostsState with _$PostsState {
   const factory PostsState.initial() = PostsStateInitial;
   const factory PostsState.inProgress() = PostsStateInProgress;
   const factory PostsState.ready(List<Post> posts) = PostsStateReady;
@@ -108,7 +108,7 @@ enum PostsStateErrorKind {
 }
 
 @freezed
-class Post with _$Post {
+sealed class Post with _$Post {
   const factory Post({
     required String id,
     required String authorId,
