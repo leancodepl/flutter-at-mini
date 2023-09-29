@@ -76,7 +76,10 @@ class PostsCubit extends Cubit<PostsState> {
       final alreadyPresent = state.posts.any((p) => p.id == post.id);
 
       final newPosts = alreadyPresent
-          ? state.posts.map((p) => p.id == post.id ? post : p).toList()
+          ? [
+              for (final p in state.posts)
+                if (p.id == post.id) post else p,
+            ]
           : [...state.posts, post];
 
       emit(state.copyWith(posts: newPosts));

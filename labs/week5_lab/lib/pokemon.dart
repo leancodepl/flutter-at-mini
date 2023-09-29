@@ -24,8 +24,11 @@ class Pokemons {
   final List<Pokemon> pokemons;
 
   Map<String, dynamic> toJson() {
-    final data = <String, dynamic>{};
-    data['pokemon'] = pokemons.map((v) => v.toJson()).toList();
+    final data = <String, dynamic>{
+      'pokemon': [
+        for (final pokemon in pokemons) pokemon.toJson(),
+      ],
+    };
     return data;
   }
 }

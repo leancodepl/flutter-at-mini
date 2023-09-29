@@ -32,13 +32,11 @@ class _Sample3State extends State<Sample3> {
           onRefresh: _fetchJobs,
           child: ListView(
             children: [
-              // FIXME: collection-for
-              ..._jobs.map(
-                (j) => JobTile(
-                  key: ValueKey(j.id),
-                  item: j,
+              for (final job in _jobs)
+                JobTile(
+                  key: ValueKey(job.id),
+                  item: job,
                 ),
-              ),
             ],
             // child: ListView.builder(
             //   itemCount: _jobs.length,

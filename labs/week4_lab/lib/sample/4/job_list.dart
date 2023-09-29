@@ -13,13 +13,12 @@ class JobList extends StatelessWidget {
 
     return ListView(
       children: [
-        ...jobs.map(
-          (j) => JobTile(
-            // key: ValueKey(j.id),
-            item: j,
+        for (final job in jobs)
+          JobTile(
+            // key: ValueKey(job.id),
+            item: job,
             showButton: true,
           ),
-        ),
       ],
     );
   }
