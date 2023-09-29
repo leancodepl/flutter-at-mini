@@ -12,7 +12,7 @@ part 'user.g.dart';
 // the casing of fields (here changed to PascalCase).
 @JsonSerializable(fieldRename: FieldRename.pascal)
 class User {
-  const User(this.name, this.email, this.age, this.isAdmin);
+  const User(this.name, this.email, this.age, {required this.isAdmin});
 
   // A convention factory constructor for creating a new User instance
   // from a map. Pass the map to the generated `_$UserFromJson()` function.
