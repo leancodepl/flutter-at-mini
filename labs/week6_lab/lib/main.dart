@@ -30,9 +30,8 @@ void main() async {
 
 class _App extends StatefulWidget {
   const _App({
-    Key? key,
     required this.app,
-  }) : super(key: key);
+  });
 
   final Widget app;
 
@@ -46,21 +45,22 @@ class _AppState extends State<_App> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: _initialization,
-        builder: (context, snapshot) {
-          switch (snapshot.connectionState) {
-            case ConnectionState.done:
-              return widget.app;
-            default:
-              return const ColoredBox(
-                color: Colors.white,
-                child: Center(
-                  child: CircularProgressIndicator(
-                    color: Colors.blue,
-                  ),
+      future: _initialization,
+      builder: (context, snapshot) {
+        switch (snapshot.connectionState) {
+          case ConnectionState.done:
+            return widget.app;
+          default:
+            return const ColoredBox(
+              color: Colors.white,
+              child: Center(
+                child: CircularProgressIndicator(
+                  color: Colors.blue,
                 ),
-              );
-          }
-        });
+              ),
+            );
+        }
+      },
+    );
   }
 }

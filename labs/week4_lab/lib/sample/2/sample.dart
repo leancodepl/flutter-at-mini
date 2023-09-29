@@ -3,7 +3,7 @@ import 'package:week4_lab/data/job.dart';
 import 'package:week4_lab/data/jobs_data_source.dart';
 
 class Sample2 extends StatefulWidget {
-  const Sample2({Key? key}) : super(key: key);
+  const Sample2({super.key});
 
   @override
   State<Sample2> createState() => _Sample2State();
@@ -47,9 +47,9 @@ class _Sample2State extends State<Sample2> {
 
 class JobTile extends StatefulWidget {
   const JobTile({
-    Key? key,
+    super.key,
     required this.item,
-  }) : super(key: key);
+  });
 
   final Job item;
 

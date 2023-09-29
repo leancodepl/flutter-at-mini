@@ -5,13 +5,10 @@ import 'package:flutter/rendering.dart';
 
 class ConstraintsViewer extends SingleChildRenderObjectWidget {
   const ConstraintsViewer({
-    Key? key,
+    super.key,
     this.tag,
-    Widget? child,
-  }) : super(
-          key: key,
-          child: child,
-        );
+    super.child,
+  });
 
   final String? tag;
 

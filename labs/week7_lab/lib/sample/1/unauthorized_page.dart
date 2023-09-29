@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:week7_lab/sample/1/auth_cubit.dart';
 
 class UnauthorizedPage extends StatefulWidget {
-  const UnauthorizedPage({Key? key}) : super(key: key);
+  const UnauthorizedPage({super.key});
 
   @override
   State<UnauthorizedPage> createState() => _UnauthorizedPageState();
@@ -46,7 +46,7 @@ class _UnauthorizedPageState extends State<UnauthorizedPage> {
               _SignInButton(
                 email: email,
                 password: password,
-              )
+              ),
             ],
           ),
         );
@@ -57,10 +57,9 @@ class _UnauthorizedPageState extends State<UnauthorizedPage> {
 
 class _SignInButton extends StatelessWidget {
   const _SignInButton({
-    Key? key,
     required this.email,
     required this.password,
-  }) : super(key: key);
+  });
 
   final TextEditingController email;
   final TextEditingController password;

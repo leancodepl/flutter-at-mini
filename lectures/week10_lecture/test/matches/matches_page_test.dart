@@ -2,10 +2,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:provider/provider.dart';
+import 'package:testing/matches/matches_models.dart';
 import 'package:testing/matches/matches_page.dart';
 import 'package:testing/matches/matches_repository.dart';
 import 'package:testing/ui/match_item.dart';
-import 'package:testing/matches/matches_models.dart';
+
 import 'match_mocks.dart';
 
 void main() {
@@ -22,7 +23,8 @@ void main() {
 
     void setUpMatchesResponse([List<Match>? matches]) {
       when(() => repository.fetchMatches()).thenAnswer(
-          (_) async => matches ?? [finishedMatch, penaltiesMatch, futureMatch]);
+        (_) async => matches ?? [finishedMatch, penaltiesMatch, futureMatch],
+      );
     }
 
     Future<void> pumpPage(WidgetTester tester) {

@@ -2,7 +2,7 @@
 // ignore_for_file: lines_longer_than_80_chars, avoid_classes_with_only_static_members
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
-    show defaultTargetPlatform, kIsWeb, TargetPlatform;
+    show TargetPlatform, defaultTargetPlatform, kIsWeb;
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '426362135894',
     projectId: 'shoutbox-newest',
     storageBucket: 'shoutbox-newest.appspot.com',
-    iosClientId: '426362135894-l3rh40kekj12ih3rn4betf1utn0ddv9r.apps.googleusercontent.com',
+    iosClientId:
+        '426362135894-l3rh40kekj12ih3rn4betf1utn0ddv9r.apps.googleusercontent.com',
     iosBundleId: 'com.example.week6Lab',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '426362135894',
     projectId: 'shoutbox-newest',
     storageBucket: 'shoutbox-newest.appspot.com',
-    iosClientId: '426362135894-l3rh40kekj12ih3rn4betf1utn0ddv9r.apps.googleusercontent.com',
+    iosClientId:
+        '426362135894-l3rh40kekj12ih3rn4betf1utn0ddv9r.apps.googleusercontent.com',
     iosBundleId: 'com.example.week6Lab',
   );
 }

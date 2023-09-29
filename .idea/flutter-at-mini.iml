@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/labs/week2_lab/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week2_lab/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week2_lab/build" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week3_lab/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week3_lab/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week3_lab/build" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week4_lab/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week4_lab/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week4_lab/build" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week5_lab/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week5_lab/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week5_lab/build" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week6_lab/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week6_lab/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week6_lab/build" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week7_lab/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week7_lab/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week7_lab/build" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week8_lab/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week8_lab/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/labs/week8_lab/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week10_lecture/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week10_lecture/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week10_lecture/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week11_lecture/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week11_lecture/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week11_lecture/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week12_lecture/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week12_lecture/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week12_lecture/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week14_lecture/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week14_lecture/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week14_lecture/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week5_lecture/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week5_lecture/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week5_lecture/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week6_lecture/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week6_lecture/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week6_lecture/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week9_lecture/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week9_lecture/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lectures/week9_lecture/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

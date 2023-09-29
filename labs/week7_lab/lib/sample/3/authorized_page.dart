@@ -5,9 +5,9 @@ import 'package:week7_lab/sample/3/auth_cubit.dart';
 
 class AuthorizedPage extends StatelessWidget {
   const AuthorizedPage({
-    Key? key,
+    super.key,
     required this.state,
-  }) : super(key: key);
+  });
 
   final SignedInState state;
 

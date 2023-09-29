@@ -2,7 +2,7 @@
 // ignore_for_file: lines_longer_than_80_chars, avoid_classes_with_only_static_members
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
-    show defaultTargetPlatform, kIsWeb, TargetPlatform;
+    show TargetPlatform, defaultTargetPlatform, kIsWeb;
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '647495204529',
     projectId: 'water-4a614',
     storageBucket: 'water-4a614.appspot.com',
-    iosClientId: '647495204529-nse2i1fdt88sh338lab1tf95m0hti9sr.apps.googleusercontent.com',
+    iosClientId:
+        '647495204529-nse2i1fdt88sh338lab1tf95m0hti9sr.apps.googleusercontent.com',
     iosBundleId: 'com.example.week7Lab',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '647495204529',
     projectId: 'water-4a614',
     storageBucket: 'water-4a614.appspot.com',
-    iosClientId: '647495204529-nse2i1fdt88sh338lab1tf95m0hti9sr.apps.googleusercontent.com',
+    iosClientId:
+        '647495204529-nse2i1fdt88sh338lab1tf95m0hti9sr.apps.googleusercontent.com',
     iosBundleId: 'com.example.week7Lab',
   );
 }

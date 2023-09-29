@@ -3,14 +3,11 @@ import 'package:forms_lecture/examples/async_validation/data.dart';
 
 class CurrencyPickerField extends FormField<String> {
   CurrencyPickerField({
-    Key? key,
-    String? initialValue,
-    FormFieldValidator<String>? validator,
+    super.key,
+    super.initialValue,
+    super.validator,
     InputDecoration? decoration,
   }) : super(
-          key: key,
-          initialValue: initialValue,
-          validator: validator,
           builder: (field) {
             return DropdownButtonFormField<String>(
               value: field.value,

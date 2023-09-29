@@ -5,7 +5,7 @@ import 'package:week4_lab/sample/4/job_list.dart';
 import 'package:week4_lab/sample/4/jobs_provider.dart';
 
 class Sample4 extends StatefulWidget {
-  const Sample4({Key? key}) : super(key: key);
+  const Sample4({super.key});
 
   @override
   State<Sample4> createState() => _Sample4State();

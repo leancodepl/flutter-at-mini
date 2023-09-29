@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ShoutboxPage0 extends StatelessWidget {
-  const ShoutboxPage0({Key? key}) : super(key: key);
+  const ShoutboxPage0({super.key});
 
   @override
   Widget build(BuildContext context) {

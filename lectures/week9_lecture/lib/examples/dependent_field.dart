@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DependentFieldRoute extends MaterialPageRoute {
+class DependentFieldRoute extends MaterialPageRoute<void> {
   DependentFieldRoute()
       : super(
           builder: (context) => const _DependentFieldForm(),

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:week3_lab/sample2/2/data.dart';
 
 class MessageListScreen extends StatelessWidget {
-  final Channel channel;
+  const MessageListScreen({super.key, required this.channel});
 
-  const MessageListScreen({Key? key, required this.channel}) : super(key: key);
+  final Channel channel;
 
   @override
   Widget build(BuildContext context) {

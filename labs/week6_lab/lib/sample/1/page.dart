@@ -7,7 +7,7 @@ import 'package:week6_lab/data/shoutbox_data_source.dart';
 import 'package:week6_lab/sample/1/shoutbox.dart';
 
 class ShoutboxPage1 extends StatelessWidget {
-  const ShoutboxPage1({Key? key}) : super(key: key);
+  const ShoutboxPage1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +37,7 @@ class ShoutboxPage1 extends StatelessWidget {
 }
 
 class _List extends StatelessWidget {
-  const _List({
-    Key? key,
-  }) : super(key: key);
+  const _List();
 
   @override
   Widget build(BuildContext context) {
@@ -59,9 +57,8 @@ class _List extends StatelessWidget {
 
 class _Message extends StatelessWidget {
   _Message({
-    Key? key,
     required this.message,
-  }) : super(key: key);
+  });
 
   final df = DateFormat.Hm();
   final Message message;
@@ -69,8 +66,8 @@ class _Message extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8.0),
-      margin: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.blueGrey.shade100,
         boxShadow: [

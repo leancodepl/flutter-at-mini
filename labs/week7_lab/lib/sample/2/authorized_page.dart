@@ -4,7 +4,7 @@ import 'package:week7_lab/data/auth_service.dart';
 import 'package:week7_lab/sample/2/auth_cubit.dart';
 
 class AuthorizedPage extends StatelessWidget {
-  const AuthorizedPage({Key? key}) : super(key: key);
+  const AuthorizedPage({super.key});
 
   @override
   Widget build(BuildContext context) {

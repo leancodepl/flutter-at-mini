@@ -7,7 +7,7 @@ class CounterHydratedCubit extends HydratedCubit<int> {
   void decrement() => emit(state - 1);
 
   @override
-  int? fromJson(Map<String, dynamic> json) => json['count'];
+  int? fromJson(Map<String, dynamic> json) => json['count'] as int?;
 
   @override
   Map<String, dynamic>? toJson(int state) => {'count': state};

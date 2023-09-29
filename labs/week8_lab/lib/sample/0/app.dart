@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class GalleryApp0 extends StatelessWidget {
   const GalleryApp0({
-    Key? key,
+    super.key,
     required this.child,
-  }) : super(key: key);
+  });
 
   final Widget child;
 

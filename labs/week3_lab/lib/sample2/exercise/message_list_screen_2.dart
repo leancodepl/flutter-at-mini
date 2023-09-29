@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:week3_lab/sample2/2/data.dart';
 
 class MessageListScreen2 extends StatelessWidget {
-  final Channel channel;
+  const MessageListScreen2({super.key, required this.channel});
 
-  const MessageListScreen2({Key? key, required this.channel}) : super(key: key);
+  final Channel channel;
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +31,9 @@ class MessageListScreen2 extends StatelessWidget {
 }
 
 class MyMessage extends StatelessWidget {
-  final Message message;
+  const MyMessage({super.key, required this.message});
 
-  const MyMessage({Key? key, required this.message}) : super(key: key);
+  final Message message;
 
   @override
   Widget build(BuildContext context) {
@@ -64,9 +64,9 @@ class MyMessage extends StatelessWidget {
 }
 
 class TheirMessage extends StatelessWidget {
-  final Message message;
+  const TheirMessage({super.key, required this.message});
 
-  const TheirMessage({Key? key, required this.message}) : super(key: key);
+  final Message message;
 
   @override
   Widget build(BuildContext context) {

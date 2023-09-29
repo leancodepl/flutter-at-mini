@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SingleChildScrollExample extends StatelessWidget {
-  const SingleChildScrollExample({Key? key}) : super(key: key);
+  const SingleChildScrollExample({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -39,7 +39,7 @@ class PaginationInfo {
 }
 
 void main() {
-  final jsonStr = '''
+  const jsonStr = '''
     {
       "info": {
         "page": 0,
@@ -60,8 +60,8 @@ void main() {
   print('parsed: $parsed');
 
   final user = PaginatedResult<User>.fromJson(
-    parsed,
-    (json) => User.fromJson(json as Map<String, dynamic>),
+    parsed as Map<String, dynamic>,
+    (json) => User.fromJson(json! as Map<String, dynamic>),
   );
 
   print('toJson: ${user.toJson((user) => user.toJson())}');

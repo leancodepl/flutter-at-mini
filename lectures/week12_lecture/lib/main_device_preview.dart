@@ -9,7 +9,6 @@ void main() => runApp(
         builder: (context) => MyApp(
           locale: DevicePreview.locale(context),
           builder: DevicePreview.appBuilder,
-          useInheritedMediaQuery: true,
         ), // Wrap your app
       ),
     );

@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class FadeInImageExample extends StatelessWidget {
-  const FadeInImageExample({Key? key}) : super(key: key);
+  const FadeInImageExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class FadeInImageExample extends StatelessWidget {
           imageUrl: 'https://picsum.photos/300/200?$i',
           placeholder: (_, __) => Center(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8),
               child: Container(
                 width: 300,
                 height: 200,

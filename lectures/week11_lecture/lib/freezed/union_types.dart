@@ -30,16 +30,16 @@ class IpAddr with _$IpAddr {
           addr.e,
           addr.f,
           addr.g,
-          addr.h
+          addr.h,
         ].map((part) => part.toRadixString(16)).join(':'),
       );
 }
 
 void main() {
-  print(IpAddr.v4(127, 0, 0, 1));
-  print(IpAddr.v6(0, 0, 0, 0, 0, 0, 0, 1));
+  print(const IpAddr.v4(127, 0, 0, 1));
+  print(const IpAddr.v6(0, 0, 0, 0, 0, 0, 0, 1));
 
-  final addr = IpAddr.v4(192, 168, 0, 1);
+  const addr = IpAddr.v4(192, 168, 0, 1);
 
   // you can switch over possible variants with `map`
   final firstPart = addr.map(v4: (addr) => addr.a, v6: (addr) => addr.a);

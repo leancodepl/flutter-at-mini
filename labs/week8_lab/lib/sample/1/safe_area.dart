@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SafeAreaExample extends StatelessWidget {
-  const SafeAreaExample({Key? key}) : super(key: key);
+  const SafeAreaExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,11 +11,11 @@ class SafeAreaExample extends StatelessWidget {
         children: [
           Text(
             'Top text',
-            style: Theme.of(context).textTheme.headline3,
+            style: Theme.of(context).textTheme.displaySmall,
           ),
           Text(
             'Bottom text',
-            style: Theme.of(context).textTheme.headline3,
+            style: Theme.of(context).textTheme.displaySmall,
           ),
         ],
       ),

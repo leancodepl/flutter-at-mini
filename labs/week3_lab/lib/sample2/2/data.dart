@@ -1,31 +1,35 @@
 import 'dart:math';
 
 class Channel {
+  Channel({
+    required this.name,
+    required this.avatar,
+    required this.messages,
+  });
+
   final String name;
   final String avatar;
   final List<Message> messages;
-
-  Channel({required this.name, required this.avatar, required this.messages});
 }
 
 class Message {
+  Message({required this.text, required this.isMine});
   final String text;
 
   //Exercise
   final bool isMine;
-
-  Message({required this.text, required this.isMine});
 }
 
 class Generator {
   static List<Channel> generateRandomChannels(int size) {
-    List<Channel> channels = [];
+    final channels = <Channel>[];
 
-    for (int i = 0; i < size; i++) {
+    // FIXME: collection-for
+    for (var i = 0; i < size; i++) {
       channels.add(
         Channel(
-          avatar: "https://picsum.photos/64",
-          name: "Channel${i + 1}",
+          avatar: 'https://picsum.photos/64',
+          name: 'Channel${i + 1}',
           messages: _generateRandomMessages(i + 1),
         ),
       );
@@ -35,8 +39,8 @@ class Generator {
 
   static List<Message> _generateRandomMessages(int size) {
     final r = Random();
-    List<Message> messages = [];
-    for (int i = 0; i < size; i++) {
+    final messages = <Message>[];
+    for (var i = 0; i < size; i++) {
       messages.add(
         Message(
           text: _generateRandomString((i + 1) * 3, r),

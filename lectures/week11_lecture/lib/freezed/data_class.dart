@@ -28,7 +28,7 @@ void main() {
     attributes: {'tired': 'always'},
   );
 
-  final user2 = User(
+  const user2 = User(
     name: 'Marcin',
     email: 'marcin.wojnarowski@leancode.pl',
     age: 23,

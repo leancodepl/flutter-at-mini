@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lectures/week5_lecture/melos_flutter_at_mini.iml" filepath="$PROJECT_DIR$/lectures/week5_lecture/melos_flutter_at_mini.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lectures/week9_lecture/melos_forms_lecture.iml" filepath="$PROJECT_DIR$/lectures/week9_lecture/melos_forms_lecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lectures/week6_lecture/melos_state.iml" filepath="$PROJECT_DIR$/lectures/week6_lecture/melos_state.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lectures/week10_lecture/melos_testing.iml" filepath="$PROJECT_DIR$/lectures/week10_lecture/melos_testing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lectures/week11_lecture/melos_week11_lecture.iml" filepath="$PROJECT_DIR$/lectures/week11_lecture/melos_week11_lecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lectures/week12_lecture/melos_week12_lecture.iml" filepath="$PROJECT_DIR$/lectures/week12_lecture/melos_week12_lecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lectures/week14_lecture/melos_week14_lecture.iml" filepath="$PROJECT_DIR$/lectures/week14_lecture/melos_week14_lecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labs/week2_lab/melos_week2_lab.iml" filepath="$PROJECT_DIR$/labs/week2_lab/melos_week2_lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labs/week3_lab/melos_week3_lab.iml" filepath="$PROJECT_DIR$/labs/week3_lab/melos_week3_lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labs/week4_lab/melos_week4_lab.iml" filepath="$PROJECT_DIR$/labs/week4_lab/melos_week4_lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labs/week5_lab/melos_week5_lab.iml" filepath="$PROJECT_DIR$/labs/week5_lab/melos_week5_lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labs/week6_lab/melos_week6_lab.iml" filepath="$PROJECT_DIR$/labs/week6_lab/melos_week6_lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labs/week7_lab/melos_week7_lab.iml" filepath="$PROJECT_DIR$/labs/week7_lab/melos_week7_lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labs/week8_lab/melos_week8_lab.iml" filepath="$PROJECT_DIR$/labs/week8_lab/melos_week8_lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/melos_flutter_at_mini.iml" filepath="$PROJECT_DIR$/melos_flutter_at_mini.iml" />
+    </modules>
+  </component>
+</project>

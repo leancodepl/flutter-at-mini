@@ -30,7 +30,7 @@ class User {
 }
 
 void main() {
-  final jsonStr = '''
+  const jsonStr = '''
     {
       "Name": "Marcin",
       "Email": "marcin.wojnarowski@leancode.pl",
@@ -41,7 +41,7 @@ void main() {
   final parsed = jsonDecode(jsonStr);
   print('parsed: $parsed');
 
-  final user = User.fromJson(parsed);
+  final user = User.fromJson(parsed as Map<String, dynamic>);
 
   print('toJson: ${user.toJson()}');
 }

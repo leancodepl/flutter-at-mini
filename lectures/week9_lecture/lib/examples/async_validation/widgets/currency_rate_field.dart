@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:forms_lecture/examples/async_validation/async_state.dart';
 import 'package:forms_lecture/examples/async_validation/models.dart';
 

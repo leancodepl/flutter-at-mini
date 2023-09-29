@@ -5,7 +5,7 @@ import 'package:week7_lab/sample/1/authorized_page.dart';
 import 'package:week7_lab/sample/1/unauthorized_page.dart';
 
 class AuthGate extends StatelessWidget {
-  const AuthGate({Key? key}) : super(key: key);
+  const AuthGate({super.key});
 
   @override
   Widget build(BuildContext context) {

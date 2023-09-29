@@ -4,14 +4,11 @@ import 'package:forms_lecture/examples/async_validation/models.dart';
 
 class AccountPicker extends FormField<BankAccount> {
   AccountPicker({
-    Key? key,
-    BankAccount? initialValue,
-    FormFieldValidator<BankAccount>? validator,
+    super.key,
+    super.initialValue,
+    super.validator,
     InputDecoration? decoration,
   }) : super(
-          key: key,
-          initialValue: initialValue,
-          validator: validator,
           builder: (field) {
             return DropdownButtonFormField<BankAccount>(
               items: [
@@ -19,7 +16,8 @@ class AccountPicker extends FormField<BankAccount> {
                   DropdownMenuItem(
                     value: account,
                     child: Text(
-                        '${account.name} (${account.funds.currency} ${account.funds.amount})'),
+                      '${account.name} (${account.funds.currency} ${account.funds.amount})',
+                    ),
                   ),
               ],
               value: field.value,

@@ -3,9 +3,7 @@
 import 'package:flutter/material.dart';
 
 class SuperComplexLayout extends StatelessWidget {
-  const SuperComplexLayout({
-    Key? key,
-  }) : super(key: key);
+  const SuperComplexLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +25,7 @@ class SuperComplexLayout extends StatelessWidget {
 }
 
 class PurpleBox extends StatelessWidget {
-  const PurpleBox({Key? key}) : super(key: key);
+  const PurpleBox({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +40,7 @@ class PurpleBox extends StatelessWidget {
 }
 
 class ListOfWidgets extends StatelessWidget {
-  const ListOfWidgets({Key? key}) : super(key: key);
+  const ListOfWidgets({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -76,9 +74,9 @@ class ListOfWidgets extends StatelessWidget {
 
 class TopRight extends StatelessWidget {
   const TopRight({
-    Key? key,
+    super.key,
     required this.child,
-  }) : super(key: key);
+  });
 
   final Widget child;
 
@@ -92,12 +90,12 @@ class TopRight extends StatelessWidget {
 }
 
 class MyStack extends StatelessWidget {
-  const MyStack({Key? key}) : super(key: key);
+  const MyStack({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: const [
+    return const Stack(
+      children: [
         Positioned(
           right: 0,
           bottom: 0,

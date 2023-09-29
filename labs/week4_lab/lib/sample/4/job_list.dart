@@ -4,8 +4,8 @@ import 'package:week4_lab/sample/4/jobs_provider.dart';
 
 class JobList extends StatelessWidget {
   const JobList({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

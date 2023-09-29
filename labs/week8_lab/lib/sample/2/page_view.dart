@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PageViewExample extends StatefulWidget {
-  const PageViewExample({Key? key}) : super(key: key);
+  const PageViewExample({super.key});
 
   @override
   State<PageViewExample> createState() => _PageViewExampleState();
@@ -17,7 +17,7 @@ class _PageViewExampleState extends State<PageViewExample> {
         length: 3,
         child: Column(
           children: [
-            TabBar(
+            const TabBar(
               tabs: [
                 Tab(
                   child: Text('Page 1'),
@@ -38,7 +38,7 @@ class _PageViewExampleState extends State<PageViewExample> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text('Page 1'),
+                        const Text('Page 1'),
                         ElevatedButton(
                           onPressed: () {
                             controller.animateToPage(
@@ -47,7 +47,7 @@ class _PageViewExampleState extends State<PageViewExample> {
                               curve: Curves.easeOut,
                             );
                           },
-                          child: Text('Next page'),
+                          child: const Text('Next page'),
                         ),
                       ],
                     ),

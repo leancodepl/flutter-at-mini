@@ -3,7 +3,7 @@ import 'package:week4_lab/data/job.dart';
 import 'package:week4_lab/data/jobs_data_source.dart';
 
 class Sample3 extends StatefulWidget {
-  const Sample3({Key? key}) : super(key: key);
+  const Sample3({super.key});
 
   @override
   State<Sample3> createState() => _Sample3State();
@@ -32,10 +32,13 @@ class _Sample3State extends State<Sample3> {
           onRefresh: _fetchJobs,
           child: ListView(
             children: [
-              ..._jobs.map((j) => JobTile(
-                    key: ValueKey(j.id),
-                    item: j,
-                  )),
+              // FIXME: collection-for
+              ..._jobs.map(
+                (j) => JobTile(
+                  key: ValueKey(j.id),
+                  item: j,
+                ),
+              ),
             ],
             // child: ListView.builder(
             //   itemCount: _jobs.length,
@@ -57,9 +60,9 @@ class _Sample3State extends State<Sample3> {
 
 class JobTile extends StatefulWidget {
   const JobTile({
-    Key? key,
+    super.key,
     required this.item,
-  }) : super(key: key);
+  });
 
   final Job item;
 

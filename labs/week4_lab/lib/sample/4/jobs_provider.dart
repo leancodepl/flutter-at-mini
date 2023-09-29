@@ -3,13 +3,10 @@ import 'package:week4_lab/data/job.dart';
 
 class JobsProvider extends InheritedWidget {
   const JobsProvider({
-    Key? key,
-    required Widget child,
+    super.key,
+    required super.child,
     required this.jobs,
-  }) : super(
-          key: key,
-          child: child,
-        );
+  });
 
   final List<Job> jobs;
 

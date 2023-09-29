@@ -6,7 +6,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'posts_cubit.freezed.dart';
 
 class PostsCubit extends Cubit<PostsState> {
-  PostsCubit(this.repository) : super(PostsState.initial());
+  PostsCubit(this.repository) : super(const PostsState.initial());
 
   final PostsRepository repository;
 
@@ -17,18 +17,18 @@ class PostsCubit extends Cubit<PostsState> {
       return;
     }
 
-    emit(PostsState.inProgress());
+    emit(const PostsState.inProgress());
 
     try {
       final posts = await repository.getAllPosts();
 
       emit(PostsState.ready(posts));
     } on SocketException {
-      emit(PostsState.error(PostsStateErrorKind.network));
+      emit(const PostsState.error(PostsStateErrorKind.network));
     } catch (err, st) {
       // this should not happen, so we print it to track such issues
       print('Unknown error: $err $st');
-      emit(PostsState.error(PostsStateErrorKind.unknown));
+      emit(const PostsState.error(PostsStateErrorKind.unknown));
     }
   }
 
@@ -51,10 +51,10 @@ class PostsCubit extends Cubit<PostsState> {
 
       emit(state.copyWith(posts: [...state.posts, newPost]));
     } on SocketException {
-      emit(PostsState.error(PostsStateErrorKind.network));
+      emit(const PostsState.error(PostsStateErrorKind.network));
     } catch (err, st) {
       print('Unknown error: $err $st');
-      emit(PostsState.error(PostsStateErrorKind.unknown));
+      emit(const PostsState.error(PostsStateErrorKind.unknown));
     }
   }
 
@@ -69,7 +69,7 @@ class PostsCubit extends Cubit<PostsState> {
       final post = await repository.getPostById(postId);
 
       if (post == null) {
-        emit(PostsState.error(PostsStateErrorKind.postDoesNotExist));
+        emit(const PostsState.error(PostsStateErrorKind.postDoesNotExist));
         return;
       }
 
@@ -81,10 +81,10 @@ class PostsCubit extends Cubit<PostsState> {
 
       emit(state.copyWith(posts: newPosts));
     } on SocketException {
-      emit(PostsState.error(PostsStateErrorKind.network));
+      emit(const PostsState.error(PostsStateErrorKind.network));
     } catch (err, st) {
       print('Unknown error: $err $st');
-      emit(PostsState.error(PostsStateErrorKind.unknown));
+      emit(const PostsState.error(PostsStateErrorKind.unknown));
     }
   }
 }

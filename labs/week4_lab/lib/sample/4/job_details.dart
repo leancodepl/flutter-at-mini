@@ -5,9 +5,9 @@ import 'package:week4_lab/sample/4/jobs_provider.dart';
 
 class JobDetails extends StatelessWidget {
   const JobDetails({
-    Key? key,
+    super.key,
     required this.job,
-  }) : super(key: key);
+  });
 
   final Job job;
 

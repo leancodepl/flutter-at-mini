@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class BasicFormRoute extends MaterialPageRoute {
+class BasicFormRoute extends MaterialPageRoute<void> {
   BasicFormRoute()
       : super(
           builder: (context) => const _BasicForm(),
