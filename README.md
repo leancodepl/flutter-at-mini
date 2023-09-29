@@ -1,4 +1,4 @@
-# Flutter @ MiNI - 2022/2023
+# Flutter @ MiNI - 2023/2024
 Repository contains information about **Programming mobile applications in Flutter** course.
 
 ## Contact info
@@ -19,26 +19,26 @@ Points can be gained from:
 - Activity during lectures - 10pt
 
 ### Minimum SDK versions:
-- Flutter 3.3.3 (latest stable on 01.10.2022)
-- Dart 2.18.2
+- Flutter 3.13.4 (latest stable on 01.10.2023)
+- Dart 3.1.0
 
 
 ## Lectures
-1. **03.10.2022** - [Intro lecture](lectures/week1_lecture)
-2. **10.10.2022** - [What is Flutter?](lectures/week2_lecture)
-3. **17.10.2022** - [Let's go deeper into Flutter](lectures/week3_lecture)
-4. **24.10.2022** - [State Management](lectures/week4_lecture)
-5. **07.11.2022** - [Asynchrony and HTTP](lectures/week5_lecture)
-6. **14.11.2022** - [State Management with External Libraries](lectures/week6_lecture)
-7. **21.11.2022** - [Firebase](lectures/week7_lecture)
-8. **28.11.2022** - [Data persistence](lectures/week8_lecture)
-9. **05.12.2022** - [Forms](lectures/week9_lecture)
-10. **12.12.2022** - [Testing](lectures/week10_lecture)
-11. **19.12.2022** - [Code generation](lectures/week11_lecture)
-12. **02.01.2023** - [Flutter Web and Flutter Desktop](lectures/week12_lecture)
-13. **09.01.2023** - [Communication with Native](lectures/week13_lecture)
-14. **16.01.2023** - [Animations](lectures/week14_lecture)
-15. **23.01.2023** - [*Waiting for Proposals*]()
+1. **06.10.2023** - [Intro lecture](lectures/week1_lecture)
+2. **13.10.2023** - [What is Flutter?](lectures/week2_lecture)
+3. **20.10.2023** - [Let's go deeper into Flutter](lectures/week3_lecture)
+4. **27.10.2023** - [State Management](lectures/week4_lecture)
+5. **03.11.2023** - [Asynchrony and HTTP](lectures/week5_lecture)
+6. **17.11.2023** - [State Management with External Libraries](lectures/week6_lecture)
+7. **24.11.2023** - [Firebase](lectures/week7_lecture)
+8. **01.12.2023** - [Data persistence](lectures/week8_lecture)
+9. **08.12.2023** - [Forms](lectures/week9_lecture)
+10. **15.12.2023** - [Testing](lectures/week10_lecture)
+11. **22.12.2023** - [Code generation](lectures/week11_lecture)
+12. **05.01.2024** - [Flutter Web and Flutter Desktop](lectures/week12_lecture)
+13. **12.01.2024** - [Communication with Native](lectures/week13_lecture)
+14. **19.01.2024** - [Animations](lectures/week14_lecture)
+15. **26.01.2024** - [*Waiting for Proposals*]()
 
 
 ## Labs
