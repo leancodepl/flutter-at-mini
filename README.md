@@ -42,14 +42,14 @@ Points can be gained from:
 
 
 ## Labs
-1. **03.10.2022** - [Getting started](labs/week1_lab)
-2. **10.10.2022** - [Layouts 1](labs/week2_lab)
-3. **17.10.2022** - [Layouts 2 & using context](labs/week3_lab)
-4. **24.10.2022** - [Context and StatefulWidget](labs/week4_lab)
-5. **07.11.2022** - [Communication with API](labs/week5_lab)
-6. **14.11.2022** - [State management with external services](labs/week6_lab)
-7. **21.11.2022** - [Firebase Auth in action](labs/week7_lab)
-8. **28.11.2022** - [Useful widgets](labs/week8_lab)
+1. **06.10.2023** - [Getting started](labs/week1_lab)
+2. **13.10.2023** - [Layouts 1](labs/week2_lab)
+3. **20.10.2023** - [Layouts 2 & using context](labs/week3_lab)
+4. **27.10.2023** - [Context and StatefulWidget](labs/week4_lab)
+5. **03.11.2023** - [Communication with API](labs/week5_lab)
+6. **17.11.2023** - [State management with external services](labs/week6_lab)
+7. **24.11.2023** - [Firebase Auth in action](labs/week7_lab)
+8. **01.12.2023** - [You decide](labs/week8_lab)
 
 Week 9-15 lab slots can be used for project consulting.
 
