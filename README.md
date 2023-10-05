@@ -57,8 +57,8 @@ Week 9-15 lab slots can be used for project consulting.
 
 ### Requirements
 - Individual multi-layer Flutter application that works at least on one mobile platform (Android/iOS)
-- Application should contain at least two screens
-- Application should communicate with 3rd party API OR use other data persistency solution
+- Application should contain at least five screens
+- Application should communicate with 3rd party API OR use other data persistence solution
 - Application's topic and scope is defined by the student, should be described in initial documentation and approved by the lecturer
 - Project's source code and final documentation is submitted according to the [Timeline](#timeline)
 
