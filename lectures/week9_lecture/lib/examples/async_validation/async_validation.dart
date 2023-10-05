@@ -9,7 +9,7 @@ import 'package:forms_lecture/examples/async_validation/widgets/currency_picker.
 import 'package:forms_lecture/examples/async_validation/widgets/currency_rate_field.dart';
 import 'package:provider/provider.dart';
 
-class AsyncValidationRoute extends MaterialPageRoute {
+class AsyncValidationRoute extends MaterialPageRoute<void> {
   AsyncValidationRoute()
       : super(
           builder: (context) => Provider<CurrencyConversionService>(
@@ -88,7 +88,8 @@ class _AsyncValidationFormState extends State<_AsyncValidationForm> {
           if (currencyConversionController != null) {
             currencyConversionController
               ..amount = double.tryParse(
-                  _paymentAmountFieldKey.currentState?.value ?? '')
+                _paymentAmountFieldKey.currentState?.value ?? '',
+              )
               ..fromCurrency =
                   _accountFieldKey.currentState?.value?.funds.currency
               ..toCurrency = _paymentCurrencyFieldKey.currentState?.value;

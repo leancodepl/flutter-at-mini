@@ -7,7 +7,7 @@ import 'package:week6_lab/data/shoutbox_data_source.dart';
 import 'package:week6_lab/sample/2/shoutbox.dart';
 
 class ShoutboxPage2 extends StatelessWidget {
-  const ShoutboxPage2({Key? key}) : super(key: key);
+  const ShoutboxPage2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +28,8 @@ class ShoutboxPage2 extends StatelessWidget {
             appBar: AppBar(
               title: const Text('Shoutbox'),
             ),
-            body: Column(
-              children: const [
+            body: const Column(
+              children: [
                 Expanded(
                   child: _List(),
                 ),
@@ -47,9 +47,7 @@ class ShoutboxPage2 extends StatelessWidget {
 }
 
 class _MessageBox extends StatefulWidget {
-  const _MessageBox({
-    Key? key,
-  }) : super(key: key);
+  const _MessageBox();
 
   @override
   State<_MessageBox> createState() => _MessageBoxState();
@@ -68,21 +66,20 @@ class _MessageBoxState extends State<_MessageBox> {
           ),
         ),
         IconButton(
-            icon: const Icon(Icons.send),
-            onPressed: () {
-              context.read<Shoutbox>().sendMessage(_controller.text);
-              FocusScope.of(context).unfocus();
-              _controller.text = '';
-            }),
+          icon: const Icon(Icons.send),
+          onPressed: () {
+            context.read<Shoutbox>().sendMessage(_controller.text);
+            FocusScope.of(context).unfocus();
+            _controller.text = '';
+          },
+        ),
       ],
     );
   }
 }
 
 class _List extends StatelessWidget {
-  const _List({
-    Key? key,
-  }) : super(key: key);
+  const _List();
 
   @override
   Widget build(BuildContext context) {
@@ -102,9 +99,8 @@ class _List extends StatelessWidget {
 
 class _Message extends StatelessWidget {
   _Message({
-    Key? key,
     required this.message,
-  }) : super(key: key);
+  });
 
   final df = DateFormat.Hm();
   final Message message;
@@ -112,8 +108,8 @@ class _Message extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8.0),
-      margin: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.blueGrey.shade100,
         boxShadow: [

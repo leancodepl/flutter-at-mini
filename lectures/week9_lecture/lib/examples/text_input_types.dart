@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TextInputTypesRoute extends MaterialPageRoute {
+class TextInputTypesRoute extends MaterialPageRoute<void> {
   TextInputTypesRoute()
       : super(
           builder: (context) => const _TextInputTypes(),
@@ -8,7 +8,7 @@ class TextInputTypesRoute extends MaterialPageRoute {
 }
 
 class _TextInputTypes extends StatelessWidget {
-  const _TextInputTypes({Key? key}) : super(key: key);
+  const _TextInputTypes();
 
   @override
   Widget build(BuildContext context) {

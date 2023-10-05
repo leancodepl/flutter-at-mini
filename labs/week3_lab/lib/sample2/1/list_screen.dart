@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class ListScreen extends StatelessWidget {
-  const ListScreen({Key? key}) : super(key: key);
+  const ListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Sample 2")),
+      appBar: AppBar(title: const Text('Sample 2')),
     );
   }
 }

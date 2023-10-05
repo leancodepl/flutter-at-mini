@@ -24,30 +24,24 @@ class AuthCubit extends Cubit<AuthState> {
       switch (res) {
         case SignInResult.success:
           emit(const SignedInState());
-          break;
         case SignInResult.emailAlreadyInUse:
           emit(
             const SignedOutState(
               error: 'This email address is already in use.',
             ),
           );
-          break;
         case SignInResult.invalidEmail:
           emit(const SignedOutState(error: 'This email address is invalid.'));
-          break;
         case SignInResult.userDisabled:
           emit(const SignedOutState(error: 'This user has been banned.'));
-          break;
         case SignInResult.userNotFound:
           emit(
             const SignedOutState(
               error: "This user doesn't exist.",
             ),
           );
-          break;
         case SignInResult.wrongPassword:
           emit(const SignedOutState(error: 'Invalid credentials.'));
-          break;
       }
     } catch (_) {
       emit(const SignedOutState(error: 'Unexpected error.'));

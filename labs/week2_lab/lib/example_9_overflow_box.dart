@@ -3,7 +3,7 @@ import 'package:week2_lab/utils/constraint_viewer.dart';
 import 'package:week2_lab/utils/tight_constraints.dart';
 
 class Example9 extends StatelessWidget {
-  const Example9({Key? key}) : super(key: key);
+  const Example9({super.key});
 
   @override
   Widget build(BuildContext context) {

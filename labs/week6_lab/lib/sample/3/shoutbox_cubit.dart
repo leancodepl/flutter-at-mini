@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:week6_lab/data/message.dart';
 import 'package:week6_lab/data/shoutbox_data_source.dart';
@@ -15,10 +17,14 @@ class ShoutboxCubit extends Cubit<ShoutboxState> {
   }
 
   Future<void> sendMessage(String text) async {
-    _shoutboxDataSource.sendMessage(Message(
-      content: text,
-      timestamp: DateTime.now(),
-    ));
+    unawaited(
+      _shoutboxDataSource.sendMessage(
+        Message(
+          content: text,
+          timestamp: DateTime.now(),
+        ),
+      ),
+    );
 
     return refresh();
   }

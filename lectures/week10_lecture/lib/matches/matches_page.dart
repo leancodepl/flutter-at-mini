@@ -36,19 +36,19 @@ class MatchesPage extends StatelessWidget {
                     key: listKey,
                     padding: const EdgeInsets.all(16),
                     itemCount: state.matches.length,
-                    separatorBuilder: ((context, index) =>
-                        const SizedBox(height: 16)),
-                    itemBuilder: ((context, index) => MatchItem(
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => MatchDetailsPage(
-                                match: state.matches[index],
-                              ),
-                            ),
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(height: 16),
+                    itemBuilder: (context, index) => MatchItem(
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute<void>(
+                          builder: (context) => MatchDetailsPage(
+                            match: state.matches[index],
                           ),
-                          match: state.matches[index],
-                        )),
+                        ),
+                      ),
+                      match: state.matches[index],
+                    ),
                   ),
                 );
               }

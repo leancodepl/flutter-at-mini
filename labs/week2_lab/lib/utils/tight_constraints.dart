@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class TightConstraints extends StatelessWidget {
   const TightConstraints({
-    Key? key,
+    super.key,
     required this.child,
-  }) : super(key: key);
+  });
 
   final Widget child;
 

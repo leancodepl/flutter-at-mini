@@ -24,7 +24,7 @@ class MatchResult extends StatelessWidget {
           Text(
             '${match.homeTeam.penalties?.toString() ?? ''} (P) ${match.awayTeam.penalties?.toString() ?? ''}',
             style: const TextStyle(fontSize: 12),
-          )
+          ),
       ],
     );
   }

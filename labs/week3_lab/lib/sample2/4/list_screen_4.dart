@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:week3_lab/sample2/2/data.dart';
 
 class ListScreen4 extends StatefulWidget {
-  final ValueChanged<Channel> onPressed;
+  const ListScreen4({super.key, required this.onPressed});
 
-  const ListScreen4({Key? key, required this.onPressed}) : super(key: key);
+  final ValueChanged<Channel> onPressed;
 
   @override
   State<ListScreen4> createState() => _ListScreen4State();
@@ -12,7 +12,7 @@ class ListScreen4 extends StatefulWidget {
 
 class _ListScreen4State extends State<ListScreen4> {
   List<Channel> channels = [];
-  var isLoading = true;
+  bool isLoading = true;
 
   @override
   void initState() {
@@ -32,7 +32,7 @@ class _ListScreen4State extends State<ListScreen4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Sample 2")),
+      appBar: AppBar(title: const Text('Sample 2')),
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
           : ListView.separated(
@@ -52,11 +52,14 @@ class _ListScreen4State extends State<ListScreen4> {
 }
 
 class ListItem extends StatelessWidget {
+  const ListItem({
+    super.key,
+    required this.channel,
+    required this.onPressed,
+  });
+
   final Channel channel;
   final ValueChanged<Channel> onPressed;
-
-  const ListItem({Key? key, required this.channel, required this.onPressed})
-      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

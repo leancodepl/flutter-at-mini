@@ -81,25 +81,25 @@ class _$AsyncStateCopyWithImpl<T, $Res, $Val extends AsyncState<T>>
 }
 
 /// @nodoc
-abstract class _$$InitialStateCopyWith<T, $Res> {
-  factory _$$InitialStateCopyWith(
-          _$InitialState<T> value, $Res Function(_$InitialState<T>) then) =
-      __$$InitialStateCopyWithImpl<T, $Res>;
+abstract class _$$InitialStateImplCopyWith<T, $Res> {
+  factory _$$InitialStateImplCopyWith(_$InitialStateImpl<T> value,
+          $Res Function(_$InitialStateImpl<T>) then) =
+      __$$InitialStateImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$InitialStateCopyWithImpl<T, $Res>
-    extends _$AsyncStateCopyWithImpl<T, $Res, _$InitialState<T>>
-    implements _$$InitialStateCopyWith<T, $Res> {
-  __$$InitialStateCopyWithImpl(
-      _$InitialState<T> _value, $Res Function(_$InitialState<T>) _then)
+class __$$InitialStateImplCopyWithImpl<T, $Res>
+    extends _$AsyncStateCopyWithImpl<T, $Res, _$InitialStateImpl<T>>
+    implements _$$InitialStateImplCopyWith<T, $Res> {
+  __$$InitialStateImplCopyWithImpl(
+      _$InitialStateImpl<T> _value, $Res Function(_$InitialStateImpl<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$InitialState<T> implements InitialState<T> {
-  const _$InitialState();
+class _$InitialStateImpl<T> implements InitialState<T> {
+  const _$InitialStateImpl();
 
   @override
   String toString() {
@@ -109,7 +109,7 @@ class _$InitialState<T> implements InitialState<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialState<T>);
+        (other.runtimeType == runtimeType && other is _$InitialStateImpl<T>);
   }
 
   @override
@@ -185,29 +185,29 @@ class _$InitialState<T> implements InitialState<T> {
 }
 
 abstract class InitialState<T> implements AsyncState<T> {
-  const factory InitialState() = _$InitialState<T>;
+  const factory InitialState() = _$InitialStateImpl<T>;
 }
 
 /// @nodoc
-abstract class _$$LoadingStateCopyWith<T, $Res> {
-  factory _$$LoadingStateCopyWith(
-          _$LoadingState<T> value, $Res Function(_$LoadingState<T>) then) =
-      __$$LoadingStateCopyWithImpl<T, $Res>;
+abstract class _$$LoadingStateImplCopyWith<T, $Res> {
+  factory _$$LoadingStateImplCopyWith(_$LoadingStateImpl<T> value,
+          $Res Function(_$LoadingStateImpl<T>) then) =
+      __$$LoadingStateImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$LoadingStateCopyWithImpl<T, $Res>
-    extends _$AsyncStateCopyWithImpl<T, $Res, _$LoadingState<T>>
-    implements _$$LoadingStateCopyWith<T, $Res> {
-  __$$LoadingStateCopyWithImpl(
-      _$LoadingState<T> _value, $Res Function(_$LoadingState<T>) _then)
+class __$$LoadingStateImplCopyWithImpl<T, $Res>
+    extends _$AsyncStateCopyWithImpl<T, $Res, _$LoadingStateImpl<T>>
+    implements _$$LoadingStateImplCopyWith<T, $Res> {
+  __$$LoadingStateImplCopyWithImpl(
+      _$LoadingStateImpl<T> _value, $Res Function(_$LoadingStateImpl<T>) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadingState<T> implements LoadingState<T> {
-  const _$LoadingState();
+class _$LoadingStateImpl<T> implements LoadingState<T> {
+  const _$LoadingStateImpl();
 
   @override
   String toString() {
@@ -217,7 +217,7 @@ class _$LoadingState<T> implements LoadingState<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingState<T>);
+        (other.runtimeType == runtimeType && other is _$LoadingStateImpl<T>);
   }
 
   @override
@@ -293,24 +293,24 @@ class _$LoadingState<T> implements LoadingState<T> {
 }
 
 abstract class LoadingState<T> implements AsyncState<T> {
-  const factory LoadingState() = _$LoadingState<T>;
+  const factory LoadingState() = _$LoadingStateImpl<T>;
 }
 
 /// @nodoc
-abstract class _$$ResultStateCopyWith<T, $Res> {
-  factory _$$ResultStateCopyWith(
-          _$ResultState<T> value, $Res Function(_$ResultState<T>) then) =
-      __$$ResultStateCopyWithImpl<T, $Res>;
+abstract class _$$ResultStateImplCopyWith<T, $Res> {
+  factory _$$ResultStateImplCopyWith(_$ResultStateImpl<T> value,
+          $Res Function(_$ResultStateImpl<T>) then) =
+      __$$ResultStateImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
-class __$$ResultStateCopyWithImpl<T, $Res>
-    extends _$AsyncStateCopyWithImpl<T, $Res, _$ResultState<T>>
-    implements _$$ResultStateCopyWith<T, $Res> {
-  __$$ResultStateCopyWithImpl(
-      _$ResultState<T> _value, $Res Function(_$ResultState<T>) _then)
+class __$$ResultStateImplCopyWithImpl<T, $Res>
+    extends _$AsyncStateCopyWithImpl<T, $Res, _$ResultStateImpl<T>>
+    implements _$$ResultStateImplCopyWith<T, $Res> {
+  __$$ResultStateImplCopyWithImpl(
+      _$ResultStateImpl<T> _value, $Res Function(_$ResultStateImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -318,7 +318,7 @@ class __$$ResultStateCopyWithImpl<T, $Res>
   $Res call({
     Object? data = freezed,
   }) {
-    return _then(_$ResultState<T>(
+    return _then(_$ResultStateImpl<T>(
       freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -329,8 +329,8 @@ class __$$ResultStateCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$ResultState<T> implements ResultState<T> {
-  const _$ResultState(this.data);
+class _$ResultStateImpl<T> implements ResultState<T> {
+  const _$ResultStateImpl(this.data);
 
   @override
   final T data;
@@ -344,7 +344,7 @@ class _$ResultState<T> implements ResultState<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ResultState<T> &&
+            other is _$ResultStateImpl<T> &&
             const DeepCollectionEquality().equals(other.data, data));
   }
 
@@ -355,8 +355,9 @@ class _$ResultState<T> implements ResultState<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ResultStateCopyWith<T, _$ResultState<T>> get copyWith =>
-      __$$ResultStateCopyWithImpl<T, _$ResultState<T>>(this, _$identity);
+  _$$ResultStateImplCopyWith<T, _$ResultStateImpl<T>> get copyWith =>
+      __$$ResultStateImplCopyWithImpl<T, _$ResultStateImpl<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -428,10 +429,10 @@ class _$ResultState<T> implements ResultState<T> {
 }
 
 abstract class ResultState<T> implements AsyncState<T> {
-  const factory ResultState(final T data) = _$ResultState<T>;
+  const factory ResultState(final T data) = _$ResultStateImpl<T>;
 
   T get data;
   @JsonKey(ignore: true)
-  _$$ResultStateCopyWith<T, _$ResultState<T>> get copyWith =>
+  _$$ResultStateImplCopyWith<T, _$ResultStateImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

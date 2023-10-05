@@ -8,7 +8,7 @@ import 'package:week6_lab/data/shoutbox_data_source.dart';
 import 'package:week6_lab/sample/4/shoutbox_cubit.dart';
 
 class ShoutboxPage4 extends StatelessWidget {
-  const ShoutboxPage4({Key? key}) : super(key: key);
+  const ShoutboxPage4({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +29,8 @@ class ShoutboxPage4 extends StatelessWidget {
             appBar: AppBar(
               title: const Text('Shoutbox'),
             ),
-            body: Column(
-              children: const [
+            body: const Column(
+              children: [
                 Expanded(
                   child: _List(),
                 ),
@@ -48,9 +48,7 @@ class ShoutboxPage4 extends StatelessWidget {
 }
 
 class _MessageBox extends StatefulWidget {
-  const _MessageBox({
-    Key? key,
-  }) : super(key: key);
+  const _MessageBox();
 
   @override
   State<_MessageBox> createState() => _MessageBoxState();
@@ -69,21 +67,20 @@ class _MessageBoxState extends State<_MessageBox> {
           ),
         ),
         IconButton(
-            icon: const Icon(Icons.send),
-            onPressed: () {
-              context.read<ShoutboxCubit>().sendMessage(_controller.text);
-              FocusScope.of(context).unfocus();
-              _controller.text = '';
-            }),
+          icon: const Icon(Icons.send),
+          onPressed: () {
+            context.read<ShoutboxCubit>().sendMessage(_controller.text);
+            FocusScope.of(context).unfocus();
+            _controller.text = '';
+          },
+        ),
       ],
     );
   }
 }
 
 class _List extends StatelessWidget {
-  const _List({
-    Key? key,
-  }) : super(key: key);
+  const _List();
 
   @override
   Widget build(BuildContext context) {
@@ -112,9 +109,8 @@ class _List extends StatelessWidget {
 
 class _Message extends StatelessWidget {
   _Message({
-    Key? key,
     required this.message,
-  }) : super(key: key);
+  });
 
   final df = DateFormat.Hm();
   final Message message;
@@ -122,8 +118,8 @@ class _Message extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8.0),
-      margin: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.blueGrey.shade100,
         boxShadow: [

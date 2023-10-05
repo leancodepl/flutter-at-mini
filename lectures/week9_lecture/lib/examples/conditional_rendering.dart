@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ConditionalRenderingRoute extends MaterialPageRoute {
+class ConditionalRenderingRoute extends MaterialPageRoute<void> {
   ConditionalRenderingRoute()
       : super(
           builder: (context) => const _ConditionalRenderingForm(),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Exercise1 extends StatelessWidget {
-  const Exercise1({Key? key}) : super(key: key);
+  const Exercise1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +42,13 @@ class Exercise1 extends StatelessWidget {
                           flex: 2,
                           child: Container(color: Colors.blue),
                         ),
-                        Flexible(child: Container(color: Colors.green))
+                        Flexible(child: Container(color: Colors.green)),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

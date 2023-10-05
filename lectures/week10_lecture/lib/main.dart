@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:testing/matches/matches_page.dart';
 import 'package:provider/provider.dart';
+import 'package:testing/matches/matches_page.dart';
 import 'package:testing/matches/matches_repository.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         providers: [
           Provider<MatchesRepository>(
             create: (context) => MatchesRepository(),
-          )
+          ),
         ],
         child: const MatchesPage(),
       ),

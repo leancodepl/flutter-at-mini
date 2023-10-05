@@ -4,7 +4,7 @@ part 'data_class.freezed.dart';
 
 // freezed classes are "sealed": you shouldn't extend them
 @freezed
-class User with _$User {
+sealed class User with _$User {
   // Freezed will read all constructor parameters and turn them into fields of `User`
   // assertions need a special annotation
   @Assert('age >= 18')
@@ -28,7 +28,7 @@ void main() {
     attributes: {'tired': 'always'},
   );
 
-  final user2 = User(
+  const user2 = User(
     name: 'Marcin',
     email: 'marcin.wojnarowski@leancode.pl',
     age: 23,

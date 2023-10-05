@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -73,10 +72,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
 class CounterValue extends StatelessWidget {
   const CounterValue({
-    Key? key,
+    super.key,
     required int counter,
-  })  : _counter = counter,
-        super(key: key);
+  }) : _counter = counter;
 
   final int _counter;
 
@@ -92,7 +90,7 @@ class CounterValue extends StatelessWidget {
 
     return Text(
       '$_counter',
-      style: Theme.of(context).textTheme.headline4,
+      style: Theme.of(context).textTheme.headlineMedium,
     );
   }
 }
@@ -106,4 +104,4 @@ void someCpuWork() {
   while (stopwatch.elapsedMilliseconds < 200) {}
 }
 
-final stream = StreamController.broadcast().stream;
+final stream = StreamController<dynamic>.broadcast().stream;

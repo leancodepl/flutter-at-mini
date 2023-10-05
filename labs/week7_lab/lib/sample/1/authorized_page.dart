@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AuthorizedPage extends StatelessWidget {
-  const AuthorizedPage({Key? key}) : super(key: key);
+  const AuthorizedPage({super.key});
 
   @override
   Widget build(BuildContext context) {

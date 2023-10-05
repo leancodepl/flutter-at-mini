@@ -13,7 +13,7 @@ final _jobs = [
     id: 'faucet',
     name: 'Broken faucet',
     description:
-        'I got a broken faucet at my place. I don\' have any necessary tools.',
+        "I got a broken faucet at my place. I don't have any necessary tools.",
     address: '4 Maple Street',
     color: Colors.blue.shade100,
   ),

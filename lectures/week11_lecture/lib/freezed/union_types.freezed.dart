@@ -115,20 +115,21 @@ class _$IpAddrCopyWithImpl<$Res, $Val extends IpAddr>
 }
 
 /// @nodoc
-abstract class _$$IpAddrV4CopyWith<$Res> implements $IpAddrCopyWith<$Res> {
-  factory _$$IpAddrV4CopyWith(
-          _$IpAddrV4 value, $Res Function(_$IpAddrV4) then) =
-      __$$IpAddrV4CopyWithImpl<$Res>;
+abstract class _$$IpAddrV4ImplCopyWith<$Res> implements $IpAddrCopyWith<$Res> {
+  factory _$$IpAddrV4ImplCopyWith(
+          _$IpAddrV4Impl value, $Res Function(_$IpAddrV4Impl) then) =
+      __$$IpAddrV4ImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int a, int b, int c, int d});
 }
 
 /// @nodoc
-class __$$IpAddrV4CopyWithImpl<$Res>
-    extends _$IpAddrCopyWithImpl<$Res, _$IpAddrV4>
-    implements _$$IpAddrV4CopyWith<$Res> {
-  __$$IpAddrV4CopyWithImpl(_$IpAddrV4 _value, $Res Function(_$IpAddrV4) _then)
+class __$$IpAddrV4ImplCopyWithImpl<$Res>
+    extends _$IpAddrCopyWithImpl<$Res, _$IpAddrV4Impl>
+    implements _$$IpAddrV4ImplCopyWith<$Res> {
+  __$$IpAddrV4ImplCopyWithImpl(
+      _$IpAddrV4Impl _value, $Res Function(_$IpAddrV4Impl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -139,7 +140,7 @@ class __$$IpAddrV4CopyWithImpl<$Res>
     Object? c = null,
     Object? d = null,
   }) {
-    return _then(_$IpAddrV4(
+    return _then(_$IpAddrV4Impl(
       null == a
           ? _value.a
           : a // ignore: cast_nullable_to_non_nullable
@@ -162,8 +163,8 @@ class __$$IpAddrV4CopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$IpAddrV4 extends IpAddrV4 {
-  const _$IpAddrV4(this.a, this.b, this.c, this.d) : super._();
+class _$IpAddrV4Impl extends IpAddrV4 {
+  const _$IpAddrV4Impl(this.a, this.b, this.c, this.d) : super._();
 
   @override
   final int a;
@@ -178,7 +179,7 @@ class _$IpAddrV4 extends IpAddrV4 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IpAddrV4 &&
+            other is _$IpAddrV4Impl &&
             (identical(other.a, a) || other.a == a) &&
             (identical(other.b, b) || other.b == b) &&
             (identical(other.c, c) || other.c == c) &&
@@ -191,8 +192,8 @@ class _$IpAddrV4 extends IpAddrV4 {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$IpAddrV4CopyWith<_$IpAddrV4> get copyWith =>
-      __$$IpAddrV4CopyWithImpl<_$IpAddrV4>(this, _$identity);
+  _$$IpAddrV4ImplCopyWith<_$IpAddrV4Impl> get copyWith =>
+      __$$IpAddrV4ImplCopyWithImpl<_$IpAddrV4Impl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -263,7 +264,7 @@ class _$IpAddrV4 extends IpAddrV4 {
 
 abstract class IpAddrV4 extends IpAddr {
   const factory IpAddrV4(final int a, final int b, final int c, final int d) =
-      _$IpAddrV4;
+      _$IpAddrV4Impl;
   const IpAddrV4._() : super._();
 
   @override
@@ -276,25 +277,26 @@ abstract class IpAddrV4 extends IpAddr {
   int get d;
   @override
   @JsonKey(ignore: true)
-  _$$IpAddrV4CopyWith<_$IpAddrV4> get copyWith =>
+  _$$IpAddrV4ImplCopyWith<_$IpAddrV4Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$IpAddrV6CopyWith<$Res> implements $IpAddrCopyWith<$Res> {
-  factory _$$IpAddrV6CopyWith(
-          _$IpAddrV6 value, $Res Function(_$IpAddrV6) then) =
-      __$$IpAddrV6CopyWithImpl<$Res>;
+abstract class _$$IpAddrV6ImplCopyWith<$Res> implements $IpAddrCopyWith<$Res> {
+  factory _$$IpAddrV6ImplCopyWith(
+          _$IpAddrV6Impl value, $Res Function(_$IpAddrV6Impl) then) =
+      __$$IpAddrV6ImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int a, int b, int c, int d, int e, int f, int g, int h});
 }
 
 /// @nodoc
-class __$$IpAddrV6CopyWithImpl<$Res>
-    extends _$IpAddrCopyWithImpl<$Res, _$IpAddrV6>
-    implements _$$IpAddrV6CopyWith<$Res> {
-  __$$IpAddrV6CopyWithImpl(_$IpAddrV6 _value, $Res Function(_$IpAddrV6) _then)
+class __$$IpAddrV6ImplCopyWithImpl<$Res>
+    extends _$IpAddrCopyWithImpl<$Res, _$IpAddrV6Impl>
+    implements _$$IpAddrV6ImplCopyWith<$Res> {
+  __$$IpAddrV6ImplCopyWithImpl(
+      _$IpAddrV6Impl _value, $Res Function(_$IpAddrV6Impl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -309,7 +311,7 @@ class __$$IpAddrV6CopyWithImpl<$Res>
     Object? g = null,
     Object? h = null,
   }) {
-    return _then(_$IpAddrV6(
+    return _then(_$IpAddrV6Impl(
       null == a
           ? _value.a
           : a // ignore: cast_nullable_to_non_nullable
@@ -348,8 +350,8 @@ class __$$IpAddrV6CopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$IpAddrV6 extends IpAddrV6 {
-  const _$IpAddrV6(
+class _$IpAddrV6Impl extends IpAddrV6 {
+  const _$IpAddrV6Impl(
       this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h)
       : super._();
 
@@ -374,7 +376,7 @@ class _$IpAddrV6 extends IpAddrV6 {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IpAddrV6 &&
+            other is _$IpAddrV6Impl &&
             (identical(other.a, a) || other.a == a) &&
             (identical(other.b, b) || other.b == b) &&
             (identical(other.c, c) || other.c == c) &&
@@ -391,8 +393,8 @@ class _$IpAddrV6 extends IpAddrV6 {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$IpAddrV6CopyWith<_$IpAddrV6> get copyWith =>
-      __$$IpAddrV6CopyWithImpl<_$IpAddrV6>(this, _$identity);
+  _$$IpAddrV6ImplCopyWith<_$IpAddrV6Impl> get copyWith =>
+      __$$IpAddrV6ImplCopyWithImpl<_$IpAddrV6Impl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -463,7 +465,7 @@ class _$IpAddrV6 extends IpAddrV6 {
 
 abstract class IpAddrV6 extends IpAddr {
   const factory IpAddrV6(final int a, final int b, final int c, final int d,
-      final int e, final int f, final int g, final int h) = _$IpAddrV6;
+      final int e, final int f, final int g, final int h) = _$IpAddrV6Impl;
   const IpAddrV6._() : super._();
 
   @override
@@ -480,6 +482,6 @@ abstract class IpAddrV6 extends IpAddr {
   int get h;
   @override
   @JsonKey(ignore: true)
-  _$$IpAddrV6CopyWith<_$IpAddrV6> get copyWith =>
+  _$$IpAddrV6ImplCopyWith<_$IpAddrV6Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }

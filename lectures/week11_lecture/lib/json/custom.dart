@@ -12,7 +12,7 @@ class Custom {
   @JsonKey(name: 'different_name')
   final int field1;
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   String field2 = 'internal field';
 
   @JsonKey(defaultValue: '')
@@ -36,7 +36,7 @@ enum Status {
 String toString(Object? obj) => obj.toString();
 
 void main() {
-  final jsonStr = '''
+  const jsonStr = '''
     {
       "different_name": 890,
       "field3": null,
@@ -47,7 +47,7 @@ void main() {
   final parsed = jsonDecode(jsonStr);
   print('parsed: $parsed');
 
-  final custom = Custom.fromJson(parsed);
+  final custom = Custom.fromJson(parsed as Map<String, dynamic>);
 
   print('toJson: ${custom.toJson()}');
 

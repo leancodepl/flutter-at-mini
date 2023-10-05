@@ -14,7 +14,7 @@ class MatchesRepository {
     final response = await client.get(Uri.parse(_baseUrl));
     if (response.statusCode == 200) {
       return (jsonDecode(response.body) as List)
-          .map((e) => Match.fromJson(e))
+          .map((e) => Match.fromJson(e as Map<String, dynamic>))
           .toList();
     } else {
       throw Exception('Could not load matches');

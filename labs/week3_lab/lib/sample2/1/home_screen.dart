@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  final VoidCallback onPressed;
+  const HomeScreen({super.key, required this.onPressed});
 
-  const HomeScreen({Key? key, required this.onPressed}) : super(key: key);
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Sample 2")),
+      appBar: AppBar(title: const Text('Sample 2')),
       body: Center(
         child: MaterialButton(
           onPressed: onPressed,

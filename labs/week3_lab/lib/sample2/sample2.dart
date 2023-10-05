@@ -10,7 +10,7 @@ import '4/list_screen_4.dart';
 import 'exercise/message_list_screen_2.dart';
 
 class Sample2 extends StatefulWidget {
-  const Sample2({Key? key}) : super(key: key);
+  const Sample2({super.key});
 
   @override
   State<Sample2> createState() => _Sample2State();
@@ -29,7 +29,7 @@ class _Sample2State extends State<Sample2> {
       home: Navigator(
         pages: [
           MaterialPage(
-            key: const ValueKey("HomeScreen"),
+            key: const ValueKey('HomeScreen'),
             child: HomeScreen(
               onPressed: () {
                 setState(() {
@@ -40,7 +40,7 @@ class _Sample2State extends State<Sample2> {
           ),
           if (isList)
             const MaterialPage(
-              key: ValueKey("ListScreen"),
+              key: ValueKey('ListScreen'),
               child: ListScreen(),
             ),
           // 4 Step

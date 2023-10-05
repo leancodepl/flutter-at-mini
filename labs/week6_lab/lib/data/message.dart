@@ -7,7 +7,8 @@ class Message {
   });
 
   factory Message.fromSnapshot(
-          QueryDocumentSnapshot<Map<String, dynamic>> snapshot) =>
+    QueryDocumentSnapshot<Map<String, dynamic>> snapshot,
+  ) =>
       Message(
         content: snapshot.data()['content'] as String,
         timestamp: (snapshot.data()['timestamp'] as Timestamp).toDate(),

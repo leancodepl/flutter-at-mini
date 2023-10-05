@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WaterLogApp0 extends StatelessWidget {
-  const WaterLogApp0({Key? key}) : super(key: key);
+  const WaterLogApp0({super.key});
 
   @override
   Widget build(BuildContext context) {

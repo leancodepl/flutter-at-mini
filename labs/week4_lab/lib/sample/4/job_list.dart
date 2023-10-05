@@ -4,8 +4,8 @@ import 'package:week4_lab/sample/4/jobs_provider.dart';
 
 class JobList extends StatelessWidget {
   const JobList({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,13 +13,12 @@ class JobList extends StatelessWidget {
 
     return ListView(
       children: [
-        ...jobs.map(
-          (j) => JobTile(
-            // key: ValueKey(j.id),
-            item: j,
+        for (final job in jobs)
+          JobTile(
+            // key: ValueKey(job.id),
+            item: job,
             showButton: true,
           ),
-        ),
       ],
     );
   }

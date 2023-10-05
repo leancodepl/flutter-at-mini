@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'data.dart';
 
 class ListScreen2 extends StatelessWidget {
-  const ListScreen2({Key? key}) : super(key: key);
+  const ListScreen2({super.key});
 
   @override
   Widget build(BuildContext context) {
     final channels = Generator.generateRandomChannels(10);
     return Scaffold(
-      appBar: AppBar(title: const Text("Sample 2")),
+      appBar: AppBar(title: const Text('Sample 2')),
       body: ListView.separated(
         itemCount: channels.length,
         itemBuilder: (context, index) {
@@ -24,9 +24,9 @@ class ListScreen2 extends StatelessWidget {
 }
 
 class ListItem extends StatelessWidget {
-  final Channel channel;
+  const ListItem({super.key, required this.channel});
 
-  const ListItem({Key? key, required this.channel}) : super(key: key);
+  final Channel channel;
 
   @override
   Widget build(BuildContext context) {

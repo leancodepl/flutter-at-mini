@@ -5,21 +5,21 @@ import 'task.dart';
 
 class _PokemonDataState extends State<PokemonData> {
   // ---------------------------------------------------------------
-  void _loadPokemonSlow() async {
-    _load(() async {
-      return await loadPokemonSlow();
+  Future<void> _loadPokemonSlow() async {
+    await _load(() async {
+      return loadPokemonSlow();
     });
   }
 
-  void _loadPokemonFastAndEasy() async {
-    _load(() async {
-      return await loadPokemonFastAndEasy();
+  Future<void> _loadPokemonFastAndEasy() async {
+    await _load(() async {
+      return loadPokemonFastAndEasy();
     });
   }
 
-  void _loadPokemonFastAndComplex() async {
-    _load(() async {
-      return await loadPokemonFastAndComplex();
+  Future<void> _loadPokemonFastAndComplex() async {
+    await _load(() async {
+      return loadPokemonFastAndComplex();
     });
   }
   // ---------------------------------------------------------------
@@ -27,7 +27,7 @@ class _PokemonDataState extends State<PokemonData> {
   bool isLoading = false;
   Pokemon? selectedPokemon;
 
-  void _load(Future<Pokemon> Function() callback) async {
+  Future<void> _load(Future<Pokemon> Function() callback) async {
     setState(() {
       selectedPokemon = null;
       isLoading = true;
@@ -64,28 +64,28 @@ class _PokemonDataState extends State<PokemonData> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
                     onPressed: _loadPokemonSlow,
                     child: const Text('Slow'),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
                     onPressed: _loadPokemonFastAndEasy,
                     child: const Text('Fast&Easy'),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
                     onPressed: _loadPokemonFastAndComplex,
                     child: const Text('Fast&Complex'),
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

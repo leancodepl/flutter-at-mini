@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WrapExample extends StatelessWidget {
-  const WrapExample({Key? key}) : super(key: key);
+  const WrapExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,11 +10,12 @@ class WrapExample extends StatelessWidget {
       body: Wrap(
         children: [
           ...List.generate(100, (i) {
-            if (i % 2 == 0) {
+            if (i.isEven) {
               return SizedBox(
-                  width: 30 + i * 10,
-                  height: 30 + i * 10,
-                  child: ColoredBox(color: Colors.green));
+                width: 30 + i * 10,
+                height: 30 + i * 10,
+                child: const ColoredBox(color: Colors.green),
+              );
             }
             return Chip(
               label: Text('Chip $i'),

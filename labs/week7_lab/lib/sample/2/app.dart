@@ -7,7 +7,7 @@ import 'package:week7_lab/sample/2/auth_cubit.dart';
 import 'package:week7_lab/sample/2/auth_gate.dart';
 
 class WaterLogApp2 extends StatelessWidget {
-  const WaterLogApp2({Key? key}) : super(key: key);
+  const WaterLogApp2({super.key});
 
   @override
   Widget build(BuildContext context) {

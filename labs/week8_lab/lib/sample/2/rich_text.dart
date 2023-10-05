@@ -1,16 +1,14 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class RichTextExample extends StatelessWidget {
-  const RichTextExample({Key? key}) : super(key: key);
+  const RichTextExample({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: DefaultTextStyle(
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 50,
           ),
           child: RichText(
@@ -36,7 +34,8 @@ class RichTextExample extends StatelessWidget {
                       ),
                     ),
                     WidgetSpan(
-                        child: SizedBox(height: 100, child: FlutterLogo())),
+                      child: SizedBox(height: 100, child: FlutterLogo()),
+                    ),
                     TextSpan(
                       text: 'and this one is bold.',
                       style: TextStyle(

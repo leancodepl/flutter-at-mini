@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GridExample extends StatelessWidget {
-  const GridExample({Key? key}) : super(key: key);
+  const GridExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,19 +10,21 @@ class GridExample extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(8),
         child: GridView(
-          children: [
-            ...List.generate(
-                10,
-                (i) => ColoredBox(
-                    color: Colors.grey,
-                    child: Center(child: Text('Block $i')))),
-          ],
           gridDelegate: _delegate2,
           // gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           //   crossAxisCount: 2,
           //   mainAxisSpacing: 8,
           //   crossAxisSpacing: 8,
           // ),
+          children: [
+            ...List.generate(
+              10,
+              (i) => ColoredBox(
+                color: Colors.grey,
+                child: Center(child: Text('Block $i')),
+              ),
+            ),
+          ],
         ),
       ),
     );

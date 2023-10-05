@@ -4,10 +4,10 @@ import 'package:week4_lab/sample/4/job_details.dart';
 
 class JobTile extends StatefulWidget {
   const JobTile({
-    Key? key,
+    super.key,
     required this.item,
     this.showButton = false,
-  }) : super(key: key);
+  });
 
   final Job item;
   final bool showButton;
@@ -45,13 +45,13 @@ class _JobTileState extends State<JobTile> {
                     child: ElevatedButton(
                       child: const Text('Go to details'),
                       onPressed: () => Navigator.of(context).push(
-                        MaterialPageRoute(
+                        MaterialPageRoute<void>(
                           builder: (_) => JobDetails(job: widget.item),
                         ),
                       ),
                     ),
                   ),
-                ]
+                ],
               ],
             ),
           ),
