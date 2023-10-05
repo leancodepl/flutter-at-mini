@@ -19,7 +19,7 @@ Points can be gained from:
 - Activity during lectures - 10pt
 
 ### Minimum SDK versions:
-- Flutter 3.13.4 (latest stable on 01.10.2023)
+- Flutter 3.13.4
 - Dart 3.1.0
 
 
@@ -88,9 +88,9 @@ Week 9-15 lab slots can be used for project consulting.
 
 
 ### Timeline
-- 24.10.2022 - [Initial documentation](#initial-documentation)
-- 23.01.2023 - Project Submission (source code + [final documentation](#final-documentation)
-- 06.02.2023 - [Late Project Submission](#late-project-submission)
+- 27.10.2023 - [Initial documentation](#initial-documentation)
+- 26.01.2024 - Project Submission (source code + [final documentation](#final-documentation)
+- 09.02.2024 - [Late Project Submission](#late-project-submission)
 
 ### Initial Documentation
 Initial documentation should contain:
@@ -154,7 +154,7 @@ A to-do list app (like Google Tasks/Todoist/Remember The Milk)
 - User geolocation
 
 ### Late Project Submission
-Students can submit the project until 06.02.2023. Each day of being late will take a decrease of 5pt from the total number of gained points. Projects submitted after the final deadline won't be accepted.
+Students can submit the project until 09.02.2024. Each day of being late will take a decrease of 5pt from the total number of gained points (not less than 51pts). Projects submitted after the final deadline won't be accepted.
 
 ## Resources
 - [Flutter Official Documentation](https://flutter.dev/docs)
