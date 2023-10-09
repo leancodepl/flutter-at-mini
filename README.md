@@ -17,6 +17,7 @@ Students need to gather at least 51pt to pass the course:
 Points can be gained from:
 - Project - 100pt
 - Activity during lectures - 10pt
+- Top solutions during labs - 5pt each
 
 ### Minimum SDK versions:
 - Flutter 3.13.4
