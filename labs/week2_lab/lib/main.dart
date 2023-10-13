@@ -10,6 +10,7 @@ import 'package:week2_lab/example_6_align.dart';
 import 'package:week2_lab/example_7_intrinsic.dart';
 import 'package:week2_lab/example_8_unconstrained_box.dart';
 import 'package:week2_lab/example_9_overflow_box.dart';
+import 'package:week2_lab/task.dart';
 import 'package:week2_lab/utils/constraint_viewer.dart';
 import 'package:week2_lab/utils/run_example.dart';
 
@@ -24,6 +25,7 @@ const examples = [
   Example7(),
   Example8(),
   Example9(),
+  Task(),
 ];
 
 void main() {
