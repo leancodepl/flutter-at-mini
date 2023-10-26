@@ -14,6 +14,6 @@ final books = List.generate(
     genre: _faker.randomGenerator.element(genres),
     coverUrl: _faker.image.image(width: 210, height: 270, random: true),
     publishDate: _faker.date.dateTime(minYear: 1850, maxYear: 2020),
-    description: _faker.lorem.sentences(3).join(' '),
+    description: _faker.lorem.sentences(20).join(' '),
   ),
 );
