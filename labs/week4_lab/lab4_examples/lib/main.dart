@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lab4_examples/examples/inherited.dart';
 import 'package:lab4_examples/examples/keys.dart';
+import 'package:lab4_examples/examples/listenable.dart';
 import 'package:lab4_examples/examples/provider.dart';
 import 'package:lab4_examples/examples/reusing_widgets.dart';
 import 'package:lab4_examples/examples/simple_stateful.dart';
@@ -83,6 +84,14 @@ class HomePage extends StatelessWidget {
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => const KeysExample(),
+              ),
+            ),
+          ),
+          ListTile(
+            title: const Text('Listenable'),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const ListenableExample(),
               ),
             ),
           ),
