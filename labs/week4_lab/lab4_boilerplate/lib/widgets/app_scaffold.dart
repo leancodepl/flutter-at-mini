@@ -29,31 +29,29 @@ class AppScaffold extends StatelessWidget {
   }
 }
 
-class ToggleThemeAction extends StatefulWidget {
+class ToggleThemeAction extends StatelessWidget {
   const ToggleThemeAction({super.key});
 
-  @override
-  State<ToggleThemeAction> createState() => _ToggleThemeActionState();
-}
-
-class _ToggleThemeActionState extends State<ToggleThemeAction> {
-  var themeMode = ThemeMode.system;
-
-  void updateThemeMode() {
+  void setThemeMode(BuildContext context, ThemeMode mode) {
     // TODO: implement
+    throw UnimplementedError();
   }
 
-  void setThemeMode(ThemeMode mode) {
+  ThemeMode getThemeMode(BuildContext context) {
     // TODO: implement
+    throw UnimplementedError();
   }
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () => setThemeMode(
-        themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light,
+        context,
+        getThemeMode(context) == ThemeMode.light
+            ? ThemeMode.dark
+            : ThemeMode.light,
       ),
-      icon: themeMode == ThemeMode.light
+      icon: getThemeMode(context) == ThemeMode.light
           ? const Icon(Icons.light_mode)
           : const Icon(Icons.dark_mode),
     );
