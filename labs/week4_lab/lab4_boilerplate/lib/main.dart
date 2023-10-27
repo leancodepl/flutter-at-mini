@@ -12,33 +12,65 @@ void main() {
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  static MyAppState? of(BuildContext context) {
+    return context
+        .dependOnInheritedWidgetOfExactType<AppThemeProvider>()
+        ?.state;
+  }
+
   @override
   State<MyApp> createState() => MyAppState();
 }
 
 class MyAppState extends State<MyApp> {
+  var _themeMode = ThemeMode.system;
+
+  ThemeMode get themeMode => _themeMode;
+  set themeMode(ThemeMode mode) {
+    setState(() {
+      _themeMode = mode;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      routerConfig: _router,
-      title: 'Lab 4 solution',
-      // HINT: use this property to override theme
-      themeMode: ThemeMode.system,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
+    return AppThemeProvider(
+      state: this,
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        routerConfig: _router,
+        title: 'Lab 4 solution',
+        themeMode: _themeMode,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.deepPurple,
+          ),
+          useMaterial3: true,
         ),
-        useMaterial3: true,
-      ),
-      darkTheme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
-          brightness: Brightness.dark,
+        darkTheme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.deepPurple,
+            brightness: Brightness.dark,
+          ),
+          useMaterial3: true,
         ),
-        useMaterial3: true,
       ),
     );
+  }
+}
+
+class AppThemeProvider extends InheritedWidget {
+  const AppThemeProvider({
+    super.key,
+    required super.child,
+    required this.state,
+  });
+
+  final MyAppState state;
+
+  @override
+  bool updateShouldNotify(AppThemeProvider oldWidget) {
+    return true;
   }
 }
 
