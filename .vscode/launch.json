@@ -30,8 +30,14 @@
             "flutterMode": "profile"
         },
         {
+            "name": "week4_lab examples",
+            "cwd": "labs/week4_lab/lab4_examples",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
             "name": "week4_lab",
-            "cwd": "labs/week4_lab",
+            "cwd": "labs/week4_lab/lab4_boilerplate",
             "request": "launch",
             "type": "dart"
         },
