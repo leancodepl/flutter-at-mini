@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:week8_lab/data_sources/in_memory.dart';
+import 'package:week8_lab/data_sources/isar.dart';
 import 'package:week8_lab/todo_cubit.dart';
 import 'package:week8_lab/todo_page.dart';
 
@@ -41,10 +42,10 @@ class HomePage extends StatelessWidget {
             title: const Text('In-memory store'),
             onTap: () => context.push('/in-memory'),
           ),
-          // ListTile(
-          //   title: const Text('Isar'),
-          //   onTap: () => context.push('/isar'),
-          // ),
+          ListTile(
+            title: const Text('Isar'),
+            onTap: () => context.push('/isar'),
+          ),
         ],
       ),
     );
@@ -67,15 +68,15 @@ final _router = GoRouter(
             child: const TodoPage(),
           ),
         ),
-        // GoRoute(
-        //   path: 'isar',
-        //   builder: (context, state) => BlocProvider(
-        //     create: (_) => TodoCubit(
-        //       dataSource: IsarTodoDataSource(),
-        //     )..init(),
-        //     child: const TodoPage(),
-        //   ),
-        // ),
+        GoRoute(
+          path: 'isar',
+          builder: (context, state) => BlocProvider(
+            create: (_) => TodoCubit(
+              dataSource: IsarTodoDataSource(),
+            )..init(),
+            child: const TodoPage(),
+          ),
+        ),
       ],
     ),
   ],
