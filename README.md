@@ -35,7 +35,7 @@ Points can be gained from:
 8. **01.12.2023** - [Data persistence](lectures/week8_lecture)
 9. **08.12.2023** - [Testing](lectures/week9_lecture)
 10. **15.12.2023** - [Forms](lectures/week10_lecture)
-11. **22.12.2023** - [Code generation](lectures/week11_lecture)
+11. **22.12.2023** - [Architecture](lectures/week11_lecture)
 12. **05.01.2024** - [Flutter Web and Flutter Desktop](lectures/week12_lecture)
 13. **12.01.2024** - [Communication with Native](lectures/week13_lecture)
 14. **19.01.2024** - [Animations](lectures/week14_lecture)
