@@ -1,10 +1,11 @@
-# Flutter @ MiNI - 2023/2024
+# Flutter @ MiNI - 2024/2025
 Repository contains information about **Programming mobile applications in Flutter** course.
 
 ## Contact info
 Jakub Fijałkowski - jakub.fijalkowski@leancode.pl
 
 Mateusz Wojtczak - mateusz.wojtczak@leancode.pl
+Piotr Rogulski - piotr.rogulski@leancode.pl
 
 ## Rules
 Students need to gather at least 51pt to pass the course:
@@ -20,37 +21,37 @@ Points can be gained from:
 - Top solutions during labs - 5pt each
 
 ### Minimum SDK versions:
-- Flutter 3.13.4
-- Dart 3.1.0
+- Flutter 3.24.3
+- Dart 3.5.3
 
 
 ## Lectures
-1. **06.10.2023** - [Intro lecture](lectures/week1_lecture)
-2. **13.10.2023** - [What is Flutter?](lectures/week2_lecture)
-3. **20.10.2023** - [Let's go deeper into Flutter](lectures/week3_lecture)
-4. **27.10.2023** - [State Management](lectures/week4_lecture)
-5. **03.11.2023** - [Asynchrony and HTTP](lectures/week5_lecture)
-6. **17.11.2023** - [State Management with External Libraries](lectures/week6_lecture)
-7. **24.11.2023** - [Firebase](lectures/week7_lecture)
-8. **01.12.2023** - [Data persistence](lectures/week8_lecture)
-9. **08.12.2023** - [Testing](lectures/week9_lecture)
-10. **15.12.2023** - [Forms](lectures/week10_lecture)
-11. **22.12.2023** - [Architecture](lectures/week11_lecture)
-12. **05.01.2024** - [Flutter Web and Flutter Desktop](lectures/week12_lecture)
-13. **12.01.2024** - [Communication with Native](lectures/week13_lecture)
-14. **19.01.2024** - [Animations](lectures/week14_lecture)
-15. **26.01.2024** - [*Waiting for Proposals*]()
+1. **08.10.2024** - [Intro lecture](lectures/week1_lecture)
+2. **15.10.2024** - [What is Flutter?](lectures/week2_lecture)
+3. **22.10.2024** - [Let's go deeper into Flutter](lectures/week3_lecture)
+4. **29.10.2024** - [State Management](lectures/week4_lecture)
+5. **05.11.2024** - [Asynchrony and HTTP](lectures/week5_lecture)
+6. **12.11.2024** - [State Management with External Libraries](lectures/week6_lecture)
+7. **19.11.2024** - [Firebase](lectures/week7_lecture)
+8. **26.11.2024** - [Data persistence](lectures/week8_lecture)
+9. **03.12.2024** - [Testing](lectures/week9_lecture)
+10. **10.12.2024** - [Forms](lectures/week10_lecture)
+11. **17.12.2024** - [Architecture](lectures/week11_lecture)
+12. **07.01.2025** - [Flutter Web and Flutter Desktop](lectures/week12_lecture)
+13. **14.01.2025** - [Communication with Native](lectures/week13_lecture)
+14. **21.01.2025** - [Animations](lectures/week14_lecture)
+15. **28.01.2025** - TBA
 
 
 ## Labs
-1. **06.10.2023** - [Getting started](labs/week1_lab)
-2. **13.10.2023** - [Layouts 1](labs/week2_lab)
-3. **20.10.2023** - [Layouts 2 & using context](labs/week3_lab)
-4. **27.10.2023** - [Context and StatefulWidget](labs/week4_lab)
-5. **03.11.2023** - [Communication with API](labs/week5_lab)
-6. **17.11.2023** - [State management with external services](labs/week6_lab)
-7. **24.11.2023** - [Firebase Auth in action](labs/week7_lab)
-8. **01.12.2023** - [You decide](labs/week8_lab)
+1. **11.10.2024** - [Getting started](labs/week1_lab)
+2. **18.10.2024** - [Layouts 1](labs/week2_lab)
+3. **25.10.2024** - [Layouts 2 & using context](labs/week3_lab)
+4. **08.11.2024** - [Context and StatefulWidget](labs/week4_lab)
+5. **15.11.2024** - [Communication with API](labs/week5_lab)
+6. **22.11.2024** - [State management with external services](labs/week6_lab)
+7. **29.11.2024** - [Firebase Auth in action](labs/week7_lab)
+8. **06.12.2024** - TBA
 
 Week 9-15 lab slots can be used for project consulting.
 
@@ -58,44 +59,51 @@ Week 9-15 lab slots can be used for project consulting.
 
 ### Requirements
 - Individual multi-layer Flutter application that works at least on one mobile platform (Android/iOS)
-- Application should contain at least five screens
-- Application should communicate with 3rd party API OR use other data persistence solution
-- Application's topic and scope is defined by the student, should be described in initial documentation and approved by the lecturer
+- Application's topic and scope is defined by the student, should be described in the initial documentation and approved by the lecturer
 - Project's source code and final documentation is submitted according to the [Timeline](#timeline)
 
 ### Assessment Rules
 - Implementation of the required project assumptions (50pt)
 	- Initial documentation - 5pt
-	- Implementation of a multi-layer application - 15pt
-	- Code quality - 10pt
-	- UI/UX - 10pt
-	- Final documentation - 10pt
+	- Architecture - 15pt
+	- Code quality (e.g. static code analysis, formatting) - 15pt
+	- UI/UX
+    	- Material Design - 5pt
+    	- Custom design widgets - 5pt
+	- Final documentation - 5pt
 - Optional requirements (max 50pt)
-	- Support for additional platform (Android/iOS/Web/Desktop) - 5pt each
-	- Implementing BLoC pattern - 10pt
-	- Animations - 10pt
-	- Tests - 10pt
-	- Signing in process - 10pt
-	- Complex form with validation - 10pt
-	- CI/CD - 5pt
-	- Platform Channels - 10pt
-	- Internationalization - 5pt
-	- Accessibility - 5pt
-	- Custom painting - 10pt
-	- Deep links - 10pt
-	- Using Camera/Bluetooth/Other platform features - 10pt
-	- Offline support - 20pt
-- Adherence to the schedule - 10pt
+	- Support for each additional platform (Mobile/Web/Desktop) - 5pt each
+	- Animations
+    	- Implicit / ready-to-use packages - max 5pt
+    	- Custom - max 10pt
+	- Tests
+    	- Unit tests - max 5pt
+    	- Widget tests - max 5pt
+    	- Patrol tests - max 10pt
+	- Signing in process
+    	- Firebase Auth - max 5pt
+    	- Custom backend auth - max 10pt
+	- Multi-step form with validation - max 10pt
+	- CI/CD - max 15pt
+    	- code analysis & run flutter test - max 10pt
+    	- deploy app - max 10pt
+	- Platform Channels
+    	- Using pub package for platform features (e.g. camera) - 5pt
+    	- Creating custom platform channels - 15pt
+	- Internationalization - max 10pt
+	- Custom painting - max 5pt
+	- Local data persistence (offline) - max 15pt
 
 
 ### Timeline
-- 27.10.2023 - [Initial documentation](#initial-documentation)
-- 26.01.2024 - Project Submission (source code + [final documentation](#final-documentation)
-- 09.02.2024 - [Late Project Submission](#late-project-submission)
+- 08.11.2024 - [Initial documentation](#initial-documentation)
+- 28.01.2025 - Project Submission (source code + [final documentation](#final-documentation)
+- 12.02.2025 - [Late Project Submission](#late-project-submission)
 
 ### Initial Documentation
 Initial documentation should contain:
 - Project description
+- Desired optional requirements should be listed in the initial documentation
 - User stories (e.g. As a user, I can sign in; As a user, I can view the list of items)
 
 ### Final Documentation
@@ -109,50 +117,6 @@ Final documentation should contain:
 - CI/CD description/screenshot (if applicable)
 
 But it shouldn't be longer than 1-2 pages. :)
-
-### Examples of projects
-#### To-do list app
-A to-do list app (like Google Tasks/Todoist/Remember The Milk)
-- Firebase Auth
-- Cross-device synchronization
-- Note sharing
-
-#### Instant messaging app
-- Sign in / sign up
-- Image messages support
-- "Seen" status support
-- (optional) Other media messages support
-- (optional) Creating rooms or contact list
-
-#### Shopping list app
-- Classification using categories
-- Fuzzy search
-- Item grouping
-- History
-- Local persistence
-
-#### Feed browser app
-- Connected to some public API (like Reddit)
-- Favorite posts with local persistence
-- Simple actions (likes / comments - depending on the API)
-- (optional) Video posts playback support
-
-#### Online store browser app (local / fake API)
-- Categories
-- Filters
-- Sorting
-- Item photo pinch-to-zoom
-- Local cart
-- Sharing items (with deep-links)
-
-#### PoI (Point of Interest) browser app
-- PoI map
-- PoI list
-- Tags
-- Categories
-- Filters
-- Sorting by location
-- User geolocation
 
 ### Late Project Submission
 Students can submit the project until 09.02.2024. Each day of being late will take a decrease of 5pt from the total number of gained points (not less than 51pts). Projects submitted after the final deadline won't be accepted.
