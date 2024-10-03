@@ -5,6 +5,7 @@ Repository contains information about **Programming mobile applications in Flutt
 Jakub Fijałkowski - jakub.fijalkowski@leancode.pl
 
 Mateusz Wojtczak - mateusz.wojtczak@leancode.pl
+
 Piotr Rogulski - piotr.rogulski@leancode.pl
 
 ## Rules
@@ -18,7 +19,7 @@ Students need to gather at least 51pt to pass the course:
 Points can be gained from:
 - Project - 100pt
 - Activity during lectures - 10pt
-- Top solutions during labs - 5pt each
+- Labs (non-obligatory) - 8 * 3 = 24 pt
 
 ### Minimum SDK versions:
 - Flutter 3.24.3
@@ -44,6 +45,8 @@ Points can be gained from:
 
 
 ## Labs
+Each lab is an exercise about the preceding lecture consisting of multiple parts. Completing all parts is optional (as your homework) and is worth additional 3 pts each.
+
 1. **11.10.2024** - [Getting started](labs/week1_lab)
 2. **18.10.2024** - [Layouts 1](labs/week2_lab)
 3. **25.10.2024** - [Layouts 2 & using context](labs/week3_lab)
