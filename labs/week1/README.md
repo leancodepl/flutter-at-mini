@@ -2,17 +2,38 @@
 
 ## Exercise parts
 
-> [!TIP]
+> [!NOTE]
 > Make sure to add print statements to your solutions (in the `partX` functions)
 > to present your progress.
 
 <details>
 <summary><h3>1. Hello, Dart!</h3></summary>
-TODO
+
+1. Create a simple Q&A program.
+    1. Ask the user ([`stdin`]) about their name and favorite color. You can
+       add more questions.
+    2. Then, print a greeting using their data.
+
+2. Print a triangle of asterisks, something like this:
+
+   ```
+   *
+   **
+   ***
+   ****
+   *****
+   ******
+   *******
+   ```
+
+[`stdin`]: https://api.dart.dev/stable/3.5.3/dart-io/stdin.html
+
 </details>
 
 <details>
-<summary><h3>2. Collections & Loops</h3></summary>
+<summary><h3>2. Collections</h3></summary>
+
+[`package:collection`] might be useful.
 
 1. Lists & sets
     1. Create a list of 30 random integers between 0 and 20 (use the `Random`
@@ -24,8 +45,7 @@ TODO
 2. Maps
     1. Create a collection of Strings (e.g., names, cities, etc.).
     2. Create a map that maps each string to its length.
-    3. Group the elements by their first letter. [`package:collection`] might be
-       useful here.
+    3. Group the elements by their first letter.
 
 [`package:collection`]: https://pub.dev/documentation/collection/latest/
 
