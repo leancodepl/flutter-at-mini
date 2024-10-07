@@ -80,7 +80,26 @@ TODO
 
 <details>
 <summary><h3>4. Generics</h3></summary>
-TODO
+
+1. Define a generic `Container` class that holds a single value.
+
+   Example usage:
+   ```dart
+   final intContainer = Container<int>(42);
+   final stringContainer = Container<String>('Hello, world!');
+   ```
+
+   Make sure `null` **_cannot_** be stored in the container, i.e. the type
+   parameter is not nullable:
+
+   ```dart
+   // This shouldn't compile
+   final invalid = Container<String?>(null);
+   ```
+
+2. Create a list of various containers. Then loop over them: if the contained
+   value is a number, print its square. If it's a string, print its length.
+
 </details>
 
 <details>
