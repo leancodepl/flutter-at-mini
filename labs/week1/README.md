@@ -9,7 +9,22 @@ TODO
 
 <details>
 <summary><h3>2. Collections & Loops</h3></summary>
-TODO
+
+1. Lists & sets
+    1. Create a list of 30 random integers between 0 and 20 (use the `Random`
+       class).
+    2. Sort the list in descending order.
+    3. Filter the list, so that it contains only numbers divisible by 3.
+    4. Remove duplicates from the list (i.e., make a set out of it).
+    5. Print each element, its index in the list, and whether it is even or odd.
+2. Maps
+    1. Create a collection of Strings (e.g., names, cities, etc.).
+    2. Create a map that maps each string to its length.
+    3. Group the elements by their first letter. [`package:collection`] might be
+       useful here.
+
+[`package:collection`]: https://pub.dev/documentation/collection/latest/
+
 </details>
 
 <details>
