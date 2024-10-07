@@ -84,12 +84,13 @@ TODO
 1. Define a generic `Container` class that holds a single value.
 
    Example usage:
+
    ```dart
    final intContainer = Container<int>(42);
    final stringContainer = Container<String>('Hello, world!');
    ```
 
-   Make sure `null` **_cannot_** be stored in the container, i.e. the type
+   Make sure `null` ***cannot*** be stored in the container, i.e. the type
    parameter is not nullable:
 
    ```dart
@@ -109,5 +110,17 @@ TODO
 
 <details>
 <summary><h3>6. Asynchronous programming</h3></summary>
-TODO
+
+1. Define a function that generates a random integer after a couple of seconds.
+   If the number is even, throw an exception, else return it.
+    1. Wait for this number inside `part6` and handle any exceptions.
+
+2. Define a function that generates a stream of fibonacci numbers
+   (`Stream<int>`). Numbers should be generated every 100 ms.
+    1. Create a stream and collect the first 10 numbers into a list.
+    2. Create a stream and map the numbers to their hexadecimal representation
+       (`int.toRadixString`). Collect the first 20 numbers into a set.
+    3. Create a stream and filter it, so that it contains only numbers that end
+       in `8`. Subscribe to the stream and print the numbers as they arrive.
+
 </details>
