@@ -1,6 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Flutter Run -&gt; 'week2_lab'" type="FlutterRunConfigurationType" factoryName="Flutter">
-    <option name="filePath" value="$PROJECT_DIR$/labs/week2_lab/lib/main.dart" />
-    <method v="2" />
-  </configuration>
-</component>

@@ -1,5 +1,5 @@
 .DS_Store
-
-.idea/**/libraries
-
-.fvm/flutter_sdk
+**/.idea
+.dart_tool/
+.fvm/
+.vscode/settings.json
