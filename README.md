@@ -1,15 +1,20 @@
 # Flutter @ MiNI - 2024/2025
-Repository contains information about **Programming mobile applications in Flutter** course.
+
+Repository contains information about **Programming mobile applications in
+Flutter** course.
 
 ## Contact info
-Jakub Fijałkowski - jakub.fijalkowski@leancode.pl
 
-Mateusz Wojtczak - mateusz.wojtczak@leancode.pl
+Jakub Fijałkowski – <jakub.fijalkowski@leancode.pl>
 
-Piotr Rogulski - piotr.rogulski@leancode.pl
+Mateusz Wojtczak – <mateusz.wojtczak@leancode.pl>
+
+Piotr Rogulski – <piotr.rogulski@leancode.pl>
 
 ## Rules
+
 Students need to gather at least 51pt to pass the course:
+
 - 51-60pt - 3
 - 61-70pt - 3.5
 - 71-80pt - 4
@@ -17,16 +22,18 @@ Students need to gather at least 51pt to pass the course:
 - 91-100pt - 5
 
 Points can be gained from:
+
 - Project - 100pt
 - Activity during lectures - 10pt
 - Labs (non-obligatory) - 8 * 3 = 24 pt
 
-### Minimum SDK versions:
+### Minimum SDK versions
+
 - Flutter 3.24.3
 - Dart 3.5.3
 
-
 ## Lectures
+
 1. **08.10.2024** - [Intro lecture](lectures/week1_lecture)
 2. **15.10.2024** - [What is Flutter?](lectures/week2_lecture)
 3. **22.10.2024** - [Let's go deeper into Flutter](lectures/week3_lecture)
@@ -43,9 +50,11 @@ Points can be gained from:
 14. **21.01.2025** - [Animations](lectures/week14_lecture)
 15. **28.01.2025** - TBA
 
-
 ## Labs
-Each lab is an exercise about the preceding lecture consisting of multiple parts. Completing all parts is optional (as your homework) and is worth additional 3 pts each.
+
+Each lab is an exercise about the preceding lecture consisting of multiple
+parts. Completing all parts is optional (as your homework) and is worth
+additional 3 pts each.
 
 1. **11.10.2024** - [Getting started](labs/week1_lab)
 2. **18.10.2024** - [Layouts 1](labs/week2_lab)
@@ -61,56 +70,65 @@ Week 9-15 lab slots can be used for project consulting.
 ## Project
 
 ### Requirements
-- Individual multi-layer Flutter application that works at least on one mobile platform (Android/iOS)
-- Application's topic and scope is defined by the student, should be described in the initial documentation and approved by the lecturer
-- Project's source code and final documentation is submitted according to the [Timeline](#timeline)
+
+- Individual multi-layer Flutter application that works at least on one mobile
+  platform (Android/iOS)
+- Application's topic and scope is defined by the student, should be described
+  in the initial documentation and approved by the lecturer
+- Project's source code and final documentation is submitted according to
+  the [Timeline](#timeline)
 
 ### Assessment Rules
-- Implementation of the required project assumptions (50pt)
-	- Initial documentation - 5pt
-	- Architecture - 15pt
-	- Code quality (e.g. static code analysis, formatting) - 15pt
-	- UI/UX
-    	- Material Design - 5pt
-    	- Custom design widgets - 5pt
-	- Final documentation - 5pt
-- Optional requirements (max 50pt)
-	- Support for each additional platform (Mobile/Web/Desktop) - 5pt each
-	- Animations
-    	- Implicit / ready-to-use packages - max 5pt
-    	- Custom - max 10pt
-	- Tests
-    	- Unit tests - max 5pt
-    	- Widget tests - max 5pt
-    	- Patrol tests - max 10pt
-	- Signing in process
-    	- Firebase Auth - max 5pt
-    	- Custom backend auth - max 10pt
-	- Multi-step form with validation - max 10pt
-	- CI/CD - max 15pt
-    	- code analysis & run flutter test - max 10pt
-    	- deploy app - max 10pt
-	- Platform Channels
-    	- Using pub package for platform features (e.g. camera) - 5pt
-    	- Creating custom platform channels - 15pt
-	- Internationalization - max 10pt
-	- Custom painting - max 5pt
-	- Local data persistence (offline) - max 15pt
 
+- Implementation of the required project assumptions (50pt)
+  - Initial documentation - 5pt
+  - Architecture - 15pt
+  - Code quality (e.g. static code analysis, formatting) - 15pt
+  - UI/UX
+    - Material Design - 5pt
+    - Custom design widgets - 5pt
+  - Final documentation - 5pt
+- Optional requirements (max 50pt)
+  - Support for each additional platform (Mobile/Web/Desktop) - 5pt each
+  - Animations
+    - Implicit / ready-to-use packages - max 5pt
+    - Custom - max 10pt
+  - Tests
+    - Unit tests - max 5pt
+    - Widget tests - max 5pt
+    - Patrol tests - max 10pt
+  - Signing in process
+    - Firebase Auth - max 5pt
+    - Custom backend auth - max 10pt
+  - Multi-step form with validation - max 10pt
+  - CI/CD - max 15pt
+    - code analysis & run flutter test - max 10pt
+    - deploy app - max 10pt
+  - Platform Channels
+    - Using pub package for platform features (e.g. camera) - 5pt
+    - Creating custom platform channels - 15pt
+  - Internationalization - max 10pt
+  - Custom painting - max 5pt
+  - Local data persistence (offline) - max 15pt
 
 ### Timeline
+
 - 08.11.2024 - [Initial documentation](#initial-documentation)
 - 28.01.2025 - Project Submission (source code + [final documentation](#final-documentation)
 - 12.02.2025 - [Late Project Submission](#late-project-submission)
 
 ### Initial Documentation
+
 Initial documentation should contain:
+
 - Project description
 - Desired optional requirements should be listed in the initial documentation
 - User stories (e.g. As a user, I can sign in; As a user, I can view the list of items)
 
 ### Final Documentation
+
 Final documentation should contain:
+
 - Project description
 - Integrations
 - List of optional requirements
@@ -122,9 +140,13 @@ Final documentation should contain:
 But it shouldn't be longer than 1-2 pages. :)
 
 ### Late Project Submission
-Students can submit the project until 09.02.2024. Each day of being late will take a decrease of 5pt from the total number of gained points (not less than 51pts). Projects submitted after the final deadline won't be accepted.
+
+Students can submit the project until 09.02.2024. Each day of being late will
+take a decrease of 5pt from the total number of gained points (not less than
+51pts). Projects submitted after the final deadline won't be accepted.
 
 ## Resources
+
 - [Flutter Official Documentation](https://flutter.dev/docs)
 - [Pub Dev](https://pub.dev)
 - [Effective Dart](https://dart.dev/guides/language/effective-dart)
