@@ -2,6 +2,10 @@
 
 ## Exercise parts
 
+> [!TIP]
+> Make sure to add print statements to your solutions (in the `partX` functions)
+> to present your progress.
+
 <details>
 <summary><h3>1. Hello, Dart!</h3></summary>
 TODO
