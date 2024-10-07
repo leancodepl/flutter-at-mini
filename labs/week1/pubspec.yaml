@@ -1,0 +1,9 @@
+name: week1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+
+dev_dependencies:
+  leancode_lint: ^14.1.0

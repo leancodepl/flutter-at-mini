@@ -1,0 +1,9 @@
+include: package:leancode_lint/analysis_options.yaml
+
+analyzer:
+  plugins:
+    - custom_lint
+
+linter:
+  rules:
+    - avoid_print: false
