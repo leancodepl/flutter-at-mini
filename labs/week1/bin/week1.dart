@@ -1,3 +1,15 @@
+import 'package:week1/part1.dart';
+import 'package:week1/part2.dart';
+import 'package:week1/part3.dart';
+import 'package:week1/part4.dart';
+import 'package:week1/part5.dart';
+import 'package:week1/part6.dart';
+
 void main() {
-  print('Hello world!');
+  part1();
+  part2();
+  part3();
+  part4();
+  part5();
+  part6();
 }
