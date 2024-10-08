@@ -56,13 +56,13 @@ Each lab is an exercise about the preceding lecture consisting of multiple
 parts. Completing all parts is optional (as your homework) and is worth
 additional 3 pts each.
 
-1. **11.10.2024** - [Getting started](labs/week1_lab)
-2. **18.10.2024** - [Layouts 1](labs/week2_lab)
-3. **25.10.2024** - [Layouts 2 & using context](labs/week3_lab)
-4. **08.11.2024** - [Context and StatefulWidget](labs/week4_lab)
-5. **15.11.2024** - [Communication with API](labs/week5_lab)
-6. **22.11.2024** - [State management with external services](labs/week6_lab)
-7. **29.11.2024** - [Firebase Auth in action](labs/week7_lab)
+1. **11.10.2024** - [Getting started](labs/week1)
+2. **18.10.2024** - [Layouts 1](labs/week2)
+3. **25.10.2024** - [Layouts 2 & using context](labs/week3)
+4. **08.11.2024** - [Context and StatefulWidget](labs/week4)
+5. **15.11.2024** - [Communication with API](labs/week5)
+6. **22.11.2024** - [State management with external services](labs/week6)
+7. **29.11.2024** - [Firebase Auth in action](labs/week7)
 8. **06.12.2024** - TBA
 
 Week 9-15 lab slots can be used for project consulting.
@@ -81,35 +81,35 @@ Week 9-15 lab slots can be used for project consulting.
 ### Assessment Rules
 
 - Implementation of the required project assumptions (50pt)
-  - Initial documentation - 5pt
-  - Architecture - 15pt
-  - Code quality (e.g. static code analysis, formatting) - 15pt
-  - UI/UX
-    - Material Design - 5pt
-    - Custom design widgets - 5pt
-  - Final documentation - 5pt
+    - Initial documentation - 5pt
+    - Architecture - 15pt
+    - Code quality (e.g. static code analysis, formatting) - 15pt
+    - UI/UX
+        - Material Design - 5pt
+        - Custom design widgets - 5pt
+    - Final documentation - 5pt
 - Optional requirements (max 50pt)
-  - Support for each additional platform (Mobile/Web/Desktop) - 5pt each
-  - Animations
-    - Implicit / ready-to-use packages - max 5pt
-    - Custom - max 10pt
-  - Tests
-    - Unit tests - max 5pt
-    - Widget tests - max 5pt
-    - Patrol tests - max 10pt
-  - Signing in process
-    - Firebase Auth - max 5pt
-    - Custom backend auth - max 10pt
-  - Multi-step form with validation - max 10pt
-  - CI/CD - max 15pt
-    - code analysis & run flutter test - max 10pt
-    - deploy app - max 10pt
-  - Platform Channels
-    - Using pub package for platform features (e.g. camera) - 5pt
-    - Creating custom platform channels - 15pt
-  - Internationalization - max 10pt
-  - Custom painting - max 5pt
-  - Local data persistence (offline) - max 15pt
+    - Support for each additional platform (Mobile/Web/Desktop) - 5pt each
+    - Animations
+        - Implicit / ready-to-use packages - max 5pt
+        - Custom - max 10pt
+    - Tests
+        - Unit tests - max 5pt
+        - Widget tests - max 5pt
+        - Patrol tests - max 10pt
+    - Signing in process
+        - Firebase Auth - max 5pt
+        - Custom backend auth - max 10pt
+    - Multi-step form with validation - max 10pt
+    - CI/CD - max 15pt
+        - code analysis & run flutter test - max 10pt
+        - deploy app - max 10pt
+    - Platform Channels
+        - Using pub package for platform features (e.g. camera) - 5pt
+        - Creating custom platform channels - 15pt
+    - Internationalization - max 10pt
+    - Custom painting - max 5pt
+    - Local data persistence (offline) - max 15pt
 
 ### Timeline
 
