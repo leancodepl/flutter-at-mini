@@ -124,12 +124,7 @@
 </details>
 
 <details>
-<summary><h3>5. Functional programming</h3></summary>
-TODO
-</details>
-
-<details>
-<summary><h3>6. Asynchronous programming</h3></summary>
+<summary><h3>5. Asynchronous programming</h3></summary>
 
 1. Define a function that generates a random integer after a couple of seconds.
    If the number is even, throw an exception, else return it.
