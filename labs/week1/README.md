@@ -1,5 +1,23 @@
 # Labs – week 1
 
+## Running the exercises
+
+### From IntelliJ or Android Studio
+
+1. In the top bar, select the `Week 1` run configuration.
+2. Click the green play button (`Run`).
+
+### From VS Code
+
+1. Open the "Run and Debug" view from the sidebar.
+2. Select the `Week 1` run configuration.
+3. Click the green play button (`Run`).
+
+### From the terminal
+
+1. Navigate to the `labs/week1` directory.
+2. Execute `dart run`.
+
 ## Exercise parts
 
 > [!NOTE]
