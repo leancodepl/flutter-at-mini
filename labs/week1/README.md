@@ -106,6 +106,13 @@
             int weight
         }
     ```
+   
+   Example usage:
+
+   ```dart
+   final myDog = Dog('Rex', age: 3, color: 'brown');
+   final aCow = Cow('Betsy', age: 5, weight: 500);
+   ```
 
 2. Create a list of various animals.
    Iterate over this list and make every animal make a sound. Also, for each
