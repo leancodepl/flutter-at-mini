@@ -106,7 +106,7 @@
             int weight
         }
     ```
-   
+
    Example usage:
 
    ```dart
@@ -149,18 +149,27 @@
 </details>
 
 <details>
-<summary><h3>5. Asynchronous programming</h3></summary>
+<summary><h3>5. Records</h3></summary>
 
-1. Define a function that generates a random integer after a couple of seconds.
-   If the number is even, throw an exception, else return it.
-    1. Wait for this number inside `part6` and handle any exceptions.
+1. Define a function called `generate` that returns a random triple of integers.
 
-2. Define a function that generates a stream of fibonacci numbers
-   (`Stream<int>`). Numbers should be generated every 100 ms.
-    1. Create a stream and collect the first 10 numbers into a list.
-    2. Create a stream and map the numbers to their hexadecimal representation
-       (`int.toRadixString`). Collect the first 20 numbers into a set.
-    3. Create a stream and filter it, so that it contains only numbers that end
-       in `8`. Subscribe to the stream and print the numbers as they arrive.
+2. Define a function called `transform` that accepts a triple of integers and:
+    1. If all values are 0, ***returns*** `"All zeros!"`.
+    2. If the first value is greater than 10 and the second one is equal to 5,
+       ***returns*** the third one.
+    3. If the first value is even, ***returns*** the first and second values.
+    4. Else, ***returns*** the entire triple.
+   
+   ***Don't use `if` statements in this function.***
+
+   *Try to define `transform` with the arrow syntax `=> ...`.*
+
+3. Define a function called `randomize` that returns a random record of:
+    * Two integers `x` and `y`
+    * A boolean `enabled`
+    * A double `temperature`
+
+4. Read the four values from `randomize` into variables inside `part6` without
+   creating any additional variables or using property access (i.e. `obj.prop`).
 
 </details>
