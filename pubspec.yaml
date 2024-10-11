@@ -1,0 +1,8 @@
+name: flutter_at_mini
+
+environment:
+  sdk: 3.5.3
+  flutter: 3.24.3
+
+dev_dependencies:
+  melos: ^6.1.0
