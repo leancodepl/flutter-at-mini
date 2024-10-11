@@ -1,5 +1,13 @@
 # Labs – week 1
 
+If your IDE doesn't detect the project files,
+run the following in the terminal:
+
+```shell
+cd labs/week1
+dart pub get
+```
+
 ## Running the exercises
 
 ### From IntelliJ or Android Studio
