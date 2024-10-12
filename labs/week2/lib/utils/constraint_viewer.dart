@@ -1,3 +1,6 @@
+import 'dart:math';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -42,14 +45,47 @@ class RenderPositionedBox extends RenderShiftedBox {
       child.layout(constraints, parentUsesSize: true);
 
       size = child.size;
-
-      // FIXME: display the values instead of printing them
-      print(
-        'ConstraintsViewer ${tag != null ? '$tag ' : ''}received constraints $constraints',
-      );
-      print('ConstraintsViewer ${tag != null ? '$tag ' : ''}child size $size');
     } else {
       size = constraints.biggest;
     }
+
+    debugPrint(
+      [
+        if (tag != null) '$tag',
+        'constraints: $constraints',
+        if (child != null) 'child size: $size' else 'size: $size',
+      ].join(' | '),
+    );
+  }
+
+  @override
+  void paint(PaintingContext context, Offset offset) {
+    super.paint(context, offset);
+
+    final builder = ParagraphBuilder(ParagraphStyle(fontSize: 10));
+
+    if (tag != null) {
+      builder.addText('$tag\n');
+    }
+    builder.addText('constraints: $constraints\n');
+    if (child != null) {
+      builder.addText('child size: $size');
+    } else {
+      builder.addText('size: $size');
+    }
+
+    final paragraph = builder.build()
+      ..layout(ParagraphConstraints(width: size.width));
+
+    context.canvas
+      ..drawRect(
+        offset &
+            Size(
+              min(paragraph.width, paragraph.maxIntrinsicWidth),
+              paragraph.height,
+            ),
+        Paint()..color = Colors.black38,
+      )
+      ..drawParagraph(paragraph, offset);
   }
 }
