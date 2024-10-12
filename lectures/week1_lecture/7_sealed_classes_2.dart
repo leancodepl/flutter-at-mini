@@ -1,7 +1,7 @@
 import './7_sealed_classes_1.dart';
 
 // we can't extend PaymentStatus here
-class PaymentCanceled extends PaymentStatus {}
+// class PaymentCanceled extends PaymentStatus {}
 
 void handlePaymentStatus(PaymentStatus status) {
   switch (status) {
