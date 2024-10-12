@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -49,18 +50,24 @@ class RenderPositionedBox extends RenderShiftedBox {
       size = constraints.biggest;
     }
 
-    debugPrint(
-      [
-        if (tag != null) '$tag',
-        'constraints: $constraints',
-        if (child != null) 'child size: $size' else 'size: $size',
-      ].join(' | '),
-    );
+    if (kDebugMode) {
+      debugPrint(
+        [
+          if (tag != null) '$tag',
+          'constraints: $constraints',
+          if (child != null) 'child size: $size' else 'size: $size',
+        ].join(' | '),
+      );
+    }
   }
 
   @override
   void paint(PaintingContext context, Offset offset) {
     super.paint(context, offset);
+
+    if (!kDebugMode) {
+      return;
+    }
 
     final builder = ParagraphBuilder(ParagraphStyle(fontSize: 10));
 
