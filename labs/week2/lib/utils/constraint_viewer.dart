@@ -29,36 +29,13 @@ class RenderConstraintsViewer extends RenderShiftedBox {
 
   @override
   Size computeDryLayout(BoxConstraints constraints) {
-    final child = this.child;
-
-    if (child != null) {
-      return child.getDryLayout(constraints);
-    } else {
-      return constraints.biggest;
-    }
+    return child?.getDryLayout(constraints) ?? constraints.biggest;
   }
-
-  List<String> get _descriptionParts => [
-        if (tag != null) '$tag',
-        'constraints: $constraints',
-        if (child != null) 'child size: $size' else 'size: $size',
-      ];
 
   @override
   void performLayout() {
-    final child = this.child;
-
-    if (child != null) {
-      child.layout(constraints, parentUsesSize: true);
-
-      size = child.size;
-    } else {
-      size = constraints.biggest;
-    }
-
-    if (kDebugMode) {
-      debugPrint(_descriptionParts.join(' | '));
-    }
+    child?.layout(constraints, parentUsesSize: true);
+    size = child?.size ?? constraints.biggest;
   }
 
   @override
@@ -69,8 +46,14 @@ class RenderConstraintsViewer extends RenderShiftedBox {
       return;
     }
 
+    final parts = [
+      if (tag != null) '$tag',
+      'constraints: $constraints',
+      if (child != null) 'child size: $size' else 'size: $size',
+    ];
+
     final builder = ParagraphBuilder(ParagraphStyle(fontSize: 10))
-      ..addText(_descriptionParts.join('\n'));
+      ..addText(parts.join('\n'));
 
     final paragraph = builder.build()
       ..layout(ParagraphConstraints(width: size.width));
@@ -85,5 +68,7 @@ class RenderConstraintsViewer extends RenderShiftedBox {
         Paint()..color = Colors.black38,
       )
       ..drawParagraph(paragraph, offset);
+
+    debugPrint(parts.join(' | '));
   }
 }

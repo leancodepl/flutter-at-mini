@@ -44,8 +44,7 @@ class App extends StatelessWidget {
               final (child, title) = entries[i];
               return ListTile(
                 title: Text(title),
-                onTap: () => Navigator.push(
-                  context,
+                onTap: () => Navigator.of(context).push(
                   MaterialPageRoute<void>(
                     builder: (_) => ExampleWrapper(title: title, child: child),
                   ),
