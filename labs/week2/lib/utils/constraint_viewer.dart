@@ -15,12 +15,12 @@ class ConstraintsViewer extends SingleChildRenderObjectWidget {
   final String? tag;
 
   @override
-  RenderPositionedBox createRenderObject(BuildContext context) =>
-      RenderPositionedBox(tag: tag);
+  RenderConstraintsViewer createRenderObject(BuildContext context) =>
+      RenderConstraintsViewer(tag: tag);
 }
 
-class RenderPositionedBox extends RenderShiftedBox {
-  RenderPositionedBox({
+class RenderConstraintsViewer extends RenderShiftedBox {
+  RenderConstraintsViewer({
     required this.tag,
     RenderBox? child,
   }) : super(child);
@@ -38,6 +38,12 @@ class RenderPositionedBox extends RenderShiftedBox {
     }
   }
 
+  List<String> get _descriptionParts => [
+        if (tag != null) '$tag',
+        'constraints: $constraints',
+        if (child != null) 'child size: $size' else 'size: $size',
+      ];
+
   @override
   void performLayout() {
     final child = this.child;
@@ -51,13 +57,7 @@ class RenderPositionedBox extends RenderShiftedBox {
     }
 
     if (kDebugMode) {
-      debugPrint(
-        [
-          if (tag != null) '$tag',
-          'constraints: $constraints',
-          if (child != null) 'child size: $size' else 'size: $size',
-        ].join(' | '),
-      );
+      debugPrint(_descriptionParts.join(' | '));
     }
   }
 
@@ -69,17 +69,8 @@ class RenderPositionedBox extends RenderShiftedBox {
       return;
     }
 
-    final builder = ParagraphBuilder(ParagraphStyle(fontSize: 10));
-
-    if (tag != null) {
-      builder.addText('$tag\n');
-    }
-    builder.addText('constraints: $constraints\n');
-    if (child != null) {
-      builder.addText('child size: $size');
-    } else {
-      builder.addText('size: $size');
-    }
+    final builder = ParagraphBuilder(ParagraphStyle(fontSize: 10))
+      ..addText(_descriptionParts.join('\n'));
 
     final paragraph = builder.build()
       ..layout(ParagraphConstraints(width: size.width));

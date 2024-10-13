@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:week2/example_0.dart';
 import 'package:week2/example_1_container.dart';
 import 'package:week2/example_2_constraints.dart';
 import 'package:week2/example_3_constrained_box.dart';
@@ -10,17 +9,16 @@ import 'package:week2/example_7_intrinsic.dart';
 import 'package:week2/example_8_unconstrained_box.dart';
 import 'package:week2/example_9_overflow_box.dart';
 
-const examples = [
-  Example0(),
-  Example1(),
-  Example2(),
-  Example3(),
-  Example4(),
-  Example5(),
-  Example6(),
-  Example7(),
-  Example8(),
-  Example9(),
+const entries = [
+  (Example1(), '1. Container'),
+  (Example2(), '2. Constraints'),
+  (Example3(), '3. Constrained Box'),
+  (Example4(), '4. Aspect Ratio'),
+  (Example5(), '5. Layout Builder'),
+  (Example6(), '6. Align'),
+  (Example7(), '7. Intrinsic'),
+  (Example8(), '8. Unconstrained Box'),
+  (Example9(), '9. Overflow Box'),
 ];
 
 void main() {
@@ -38,23 +36,22 @@ class App extends StatelessWidget {
       child: MaterialApp(
         home: Scaffold(
           appBar: AppBar(
-            title: const Text('Labs 2'),
+            title: const Text('Labs – week 2'),
           ),
           body: ListView.builder(
+            itemCount: entries.length,
             itemBuilder: (context, i) {
+              final (child, title) = entries[i];
               return ListTile(
-                title: Text('${examples[i].runtimeType}'),
+                title: Text(title),
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute<void>(
-                    builder: (_) => ExampleWrapper(
-                      child: examples[i],
-                    ),
+                    builder: (_) => ExampleWrapper(title: title, child: child),
                   ),
                 ),
               );
             },
-            itemCount: examples.length,
           ),
         ),
       ),
@@ -65,18 +62,18 @@ class App extends StatelessWidget {
 class ExampleWrapper extends StatelessWidget {
   const ExampleWrapper({
     super.key,
+    required this.title,
     required this.child,
   });
 
+  final String title;
   final Widget child;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          child.runtimeType.toString(),
-        ),
+        title: Text(title),
       ),
       body: SafeArea(
         child: child,
