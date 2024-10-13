@@ -8,6 +8,8 @@ import 'package:week2/example_6_align.dart';
 import 'package:week2/example_7_intrinsic.dart';
 import 'package:week2/example_8_unconstrained_box.dart';
 import 'package:week2/example_9_overflow_box.dart';
+import 'package:week2/task1.dart';
+import 'package:week2/task2.dart';
 
 const entries = [
   (Example1(), '1. Container'),
@@ -19,6 +21,8 @@ const entries = [
   (Example7(), '7. Intrinsic'),
   (Example8(), '8. Unconstrained Box'),
   (Example9(), '9. Overflow Box'),
+  (Task1(), 'Task 1'),
+  (Task2(), 'Task 2'),
 ];
 
 void main() {
