@@ -6,8 +6,8 @@ class Example1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100,
-      height: 100,
+      width: 300,
+      height: 300,
       color: Colors.red,
     );
   }

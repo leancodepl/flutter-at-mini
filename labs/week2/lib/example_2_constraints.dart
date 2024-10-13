@@ -8,8 +8,8 @@ class Example2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return ConstraintsViewer(
       child: Container(
-        width: 100,
-        height: 100,
+        width: 600,
+        height: 300,
         color: Colors.red,
       ),
     );

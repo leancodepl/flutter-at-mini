@@ -7,7 +7,7 @@ class Example3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints.tight(const Size(200, 200)),
+      constraints: BoxConstraints.tight(const Size(500, 400)),
       child: ConstraintsViewer(
         child: Container(
           width: 50,

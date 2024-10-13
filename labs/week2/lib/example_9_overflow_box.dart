@@ -8,23 +8,25 @@ class Example9 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
-        width: 400,
-        height: 400,
-        color: Colors.blue,
-        child: TightConstraints(
-          child: OverflowBox(
-            minWidth: 0,
-            maxWidth: double.infinity,
-            // maxWidth: null,
-            minHeight: 0,
-            maxHeight: double.infinity,
-            // maxHeight: null,
-            child: ConstraintsViewer(
-              child: Container(
-                width: 100,
-                height: 1000,
-                color: Colors.red,
+      child: ConstraintsViewer(
+        child: Container(
+          width: 1000,
+          height: 400,
+          color: Colors.blue,
+          child: TightConstraints(
+            child: OverflowBox(
+              minWidth: 0,
+              maxWidth: double.infinity,
+              // maxWidth: null,
+              minHeight: 0,
+              maxHeight: double.infinity,
+              // maxHeight: null,
+              child: ConstraintsViewer(
+                child: Container(
+                  width: 400,
+                  height: 800,
+                  color: Colors.red,
+                ),
               ),
             ),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:week2/utils/constraint_viewer.dart';
 
 class Example7 extends StatelessWidget {
   const Example7({super.key});
@@ -9,15 +10,19 @@ class Example7 extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.red,
+          ConstraintsViewer(
+            child: Container(
+              width: 200,
+              height: 200,
+              color: Colors.red,
+            ),
           ),
-          Container(
-            width: 100,
-            height: 200,
-            color: Colors.blue,
+          ConstraintsViewer(
+            child: Container(
+              width: 200,
+              height: 400,
+              color: Colors.blue,
+            ),
           ),
         ],
       ),

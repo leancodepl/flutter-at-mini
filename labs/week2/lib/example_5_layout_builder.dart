@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:week2/utils/constraint_viewer.dart';
 
 class Example5 extends StatelessWidget {
   const Example5({super.key});
@@ -7,10 +8,12 @@ class Example5 extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        return Container(
-          width: constraints.maxWidth / 2,
-          height: constraints.maxHeight / 3,
-          color: Colors.red,
+        return ConstraintsViewer(
+          child: Container(
+            width: constraints.maxWidth / 2,
+            height: constraints.maxHeight / 3,
+            color: Colors.red,
+          ),
         );
       },
     );

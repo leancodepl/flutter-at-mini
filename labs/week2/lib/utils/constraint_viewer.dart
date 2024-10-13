@@ -19,7 +19,7 @@ class ConstraintsViewer extends SingleChildRenderObjectWidget {
       RenderConstraintsViewer(tag: tag);
 }
 
-class RenderConstraintsViewer extends RenderShiftedBox {
+class RenderConstraintsViewer extends RenderProxyBox {
   RenderConstraintsViewer({
     required this.tag,
     RenderBox? child,
@@ -52,7 +52,7 @@ class RenderConstraintsViewer extends RenderShiftedBox {
       if (child != null) 'child size: $size' else 'size: $size',
     ];
 
-    final builder = ParagraphBuilder(ParagraphStyle(fontSize: 10))
+    final builder = ParagraphBuilder(ParagraphStyle(fontSize: 20))
       ..addText(parts.join('\n'));
 
     final paragraph = builder.build()

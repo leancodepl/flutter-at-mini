@@ -11,9 +11,10 @@ class Example8 extends StatelessWidget {
       child: UnconstrainedBox(
         // constrainedAxis: null,
         // constrainedAxis: Axis.horizontal,
+        // constrainedAxis: Axis.vertical,
         child: ConstraintsViewer(
           child: Container(
-            width: 100,
+            width: 400,
             height: 800,
             color: Colors.red,
           ),
