@@ -4,3 +4,4 @@
 .fvm/
 .vscode/settings.json
 *.log
+**/build

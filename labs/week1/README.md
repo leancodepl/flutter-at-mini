@@ -177,7 +177,7 @@ dart pub get
     * A boolean `enabled`
     * A double `temperature`
 
-4. Read the four values from `randomize` into variables inside `part6` without
+4. Read the four values from `randomize` into variables inside `part5` without
    creating any additional variables or using property access (i.e. `obj.prop`).
 
 </details>
