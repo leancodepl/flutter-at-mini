@@ -17,6 +17,12 @@
             "type": "dart"
         },
         {
+            "name": "Week 3",
+            "cwd": "labs/week3",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
             "name": "Week 2 lecture",
             "cwd": "lectures/week2",
             "type": "dart",
