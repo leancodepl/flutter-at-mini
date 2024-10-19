@@ -1,6 +1,8 @@
+import 'package:equatable/equatable.dart';
+
 import 'data.dart' as data;
 
-class Book {
+class Book with EquatableMixin {
   const Book({
     required this.id,
     required this.title,
@@ -18,9 +20,13 @@ class Book {
   final String coverUrl;
   final DateTime publishDate;
   final String description;
+
+  @override
+  List<Object?> get props =>
+      [id, title, author, genre, coverUrl, publishDate, description];
 }
 
-class Author {
+class Author with EquatableMixin {
   const Author({
     required this.id,
     required this.name,
@@ -39,9 +45,12 @@ class Author {
       .toSet();
 
   Iterable<Book> get books => data.books.where((book) => book.author.id == id);
+
+  @override
+  List<Object?> get props => [id, name, pictureUrl, bio];
 }
 
-class Genre {
+class Genre with EquatableMixin {
   const Genre({
     required this.id,
     required this.name,
@@ -56,4 +65,7 @@ class Genre {
       .toSet();
 
   Iterable<Book> get books => data.books.where((book) => book.genre.id == id);
+
+  @override
+  List<Object?> get props => [id, name];
 }
