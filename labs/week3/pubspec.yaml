@@ -5,6 +5,8 @@ environment:
   flutter: 3.24.3
 
 dependencies:
+  bookstore_data:
+    path: packages/bookstore_data
   flutter:
     sdk: flutter
   go_router: ^14.3.0

@@ -1,0 +1,11 @@
+name: bookstore_data
+
+environment:
+  sdk: 3.5.3
+
+dependencies:
+  faker: ^2.2.0
+  meta: ^1.15.0
+
+dev_dependencies:
+  leancode_lint: ^14.2.0

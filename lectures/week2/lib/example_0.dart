@@ -5,6 +5,6 @@ class Example0 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('Hello World!');
+    return const Text('Hello World!');
   }
 }
