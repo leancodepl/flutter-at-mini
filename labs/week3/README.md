@@ -24,7 +24,6 @@ Your app should have the following features:
 - Display information about an author, including their photo
 - Display a list of books by the author (entries should be clickable like in
   the book list on the home page)
-- (optional) Make this page responsive, i.e., adapt the layout to various widths
 
 ## Genre page
 
@@ -37,13 +36,13 @@ Your app should have the following features:
 
 - To format dates, use the `DateFormat` from the [`intl`][intl] package
 - To easily create new stateless widgets, use the `stless` snippet
-- Use `context.go` to navigate between pages
+- Use `context.go` or `context.push` to navigate between pages
 - ***Do not*** use built-in complex widgets, like `ListTile`
 - For tappable widgets, you use `InkWell` or various [`Button` widgets][buttons]
-- The simplest way to display images is `Image.network`. However, if you
-  want to make the experience nicer for the user, you can use the
-  [`cached_network_image`][cached-network-image] package to handle caching the
-  images, as well as displaying loading or error indicators.
+- The simplest way to display images is `Image.network`
+- Ensure the layouts are at least somewhat responsive, i.e. there are no 
+  overflow warnings. Optionally, you can provide different layouts for 
+  different breakpoints.
 
 [intl]: https://pub.dev/packages/intl
 
