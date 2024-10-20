@@ -36,7 +36,7 @@ final books = List.generate(
     title: _faker.lorem.words(3).join(' '),
     author: _faker.randomGenerator.element(authors),
     genre: _faker.randomGenerator.element(genres),
-    coverUrl: _faker.image.loremPicsum(width: 210, height: 270, random: index),
+    coverUrl: _faker.image.loremPicsum(width: 300, height: 400, random: index),
     publishDate: _faker.date.dateTime(minYear: 1850, maxYear: 2020),
     description: _faker.lorem.sentences(20).join(' '),
   ),

@@ -6,6 +6,7 @@ import 'package:week3/book_screen.dart';
 import 'package:week3/genre_screen.dart';
 
 void main() {
+  GoRouter.optionURLReflectsImperativeAPIs = true;
   runApp(const MyApp());
 }
 
