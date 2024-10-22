@@ -3,14 +3,19 @@
 Your task is to create a simple book store app that displays basic info
 about books, authors and genres.
 
-Your app should have the following features:
+You can use the [demo app][demo-app] as inspiration. It's ***not*** a strict
+requirement to follow its design or layout; use it as a showcase of the required features.
+
+[demo-app]: https://flutter-at-mini-2024-lab-3.web.app/
+
+Your app should have the following:
 
 ## List of books
 
 ***This should be the home page of the app***
 
-- Display the available books (the layout is up to you; it can be a list or 
-  a grid)
+- Display the available books (the layout is up to you; it can be a list or
+  a grid) – ensure that at least the name and the author of the book is shown
 - Entries should be clickable, and take the user to the book details page
 
 ## Book details
@@ -34,14 +39,16 @@ Your app should have the following features:
 
 ### Tips & requirements
 
+- All the required data is available in the `Bookstore` class from the
+  local `bookstore_data`package.
 - To format dates, use the `DateFormat` from the [`intl`][intl] package
 - To easily create new stateless widgets, use the `stless` snippet
 - Use `context.go` or `context.push` to navigate between pages
 - ***Do not*** use built-in complex widgets, like `ListTile`
 - For tappable widgets, you use `InkWell` or various [`Button` widgets][buttons]
 - The simplest way to display images is `Image.network`
-- Ensure the layouts are at least somewhat responsive, i.e. there are no 
-  overflow warnings. Optionally, you can provide different layouts for 
+- Ensure the layouts are at least somewhat responsive, i.e. there are no
+  overflow warnings. Optionally, you can provide different layouts for
   different breakpoints.
 
 [intl]: https://pub.dev/packages/intl
