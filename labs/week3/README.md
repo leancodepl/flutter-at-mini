@@ -50,6 +50,8 @@ Your app should have the following:
 - Ensure the layouts are at least somewhat responsive, i.e. there are no
   overflow warnings. Optionally, you can provide different layouts for
   different breakpoints.
+- Ensure smooth scrolling in long or complex scrollable views by using slivers
+  (e.g., `CustomScrollView` and `SliverList.builder`)
 
 [intl]: https://pub.dev/packages/intl
 
