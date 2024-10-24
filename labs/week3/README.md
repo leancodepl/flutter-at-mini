@@ -1,5 +1,16 @@
 # Labs week 3 – stateless widgets & layouts
 
+> ⚠️ ***Formatting & analysis***
+>
+> To get full marks for the task, your code must be properly formatted and
+> must not produce any analysis issues. That is, running the following
+> commands in the `labs/week3` directory must not report any issues or changes:
+>
+> ```shell
+> dart format --output=none --set-exit-if-changed .
+> flutter analyze
+> ```
+
 Your task is to create a simple book store app that displays basic info
 about books, authors and genres.
 
@@ -56,5 +67,3 @@ Your app should have the following:
 [intl]: https://pub.dev/packages/intl
 
 [buttons]: https://api.flutter.dev/flutter/material/ButtonStyle-class.html#material-3-button-types
-
-[cached-network-image]: https://pub.dev/packages/cached_network_image
