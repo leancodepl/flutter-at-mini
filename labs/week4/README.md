@@ -25,7 +25,8 @@ Your app should have the following features:
 - By default, the description should be ***expanded***
 - The button should change its appearance depending on the expansion state
   (e.g., `Expand`/`Collapse` or arrows pointing up/down)
-- The state doesn't have to persist when navigating between pages
+- The state doesn't have to persist when navigating between pages. However,
+  try to preserve the state when the responsive layout changes.
 
 ## Light and dark themes
 
@@ -46,7 +47,7 @@ Your app should have the following features:
 
 ## Tips
 
-- To set the desired mode, it's enough to change the value in
+- To set the desired theme mode, it's enough to change the value in
   `ColorScheme.fromSeed(brightness: ...)` inside `main.dart`.
 - Use an `InheritedWidget`/`InheritedModel` or `Provider` for global state
 
