@@ -6,3 +6,5 @@ environment:
 
 dev_dependencies:
   melos: ^6.1.0
+dependencies:
+  intl: ^0.19.0

@@ -1,3 +1,4 @@
+import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:week3/author_screen.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Week 3',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepOrange,
+          seedColor: Colors.lightBlue,
           dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
         ),
       ),
@@ -56,3 +57,59 @@ final _router = GoRouter(
     ),
   ],
 );
+
+class BookListCard extends StatelessWidget {
+  const BookListCard({super.key, required this.book});
+  final Book book;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(2),
+      child: Card(
+        color: const Color(0xFFFDEAE7),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: InkWell(
+          onTap: () => context.push('/book/${book.id}'),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.bookmark,
+                      color: Colors.black,
+                    ),
+                    const SizedBox(width: 12),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          book.title,
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'by ${book.author.name}',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                const Icon(
+                  Icons.arrow_forward_ios,
+                  color: Colors.black54,
+                  size: 16,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
