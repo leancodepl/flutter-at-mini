@@ -34,20 +34,20 @@ Points can be gained from:
 
 ## Lectures
 
-1. **08.10.2024** - [Intro lecture](lectures/week1_lecture)
-2. **15.10.2024** - [What is Flutter?](lectures/week2_lecture)
-3. **22.10.2024** - [Let's go deeper into Flutter](lectures/week3_lecture)
-4. **29.10.2024** - [State Management](lectures/week4_lecture)
-5. **05.11.2024** - [Asynchrony and HTTP](lectures/week5_lecture)
-6. **12.11.2024** - [State Management with External Libraries](lectures/week6_lecture)
-7. **19.11.2024** - [Firebase](lectures/week7_lecture)
-8. **26.11.2024** - [Data persistence](lectures/week8_lecture)
-9. **03.12.2024** - [Testing](lectures/week9_lecture)
-10. **10.12.2024** - [Forms](lectures/week10_lecture)
-11. **17.12.2024** - [Architecture](lectures/week11_lecture)
-12. **07.01.2025** - [Flutter Web and Flutter Desktop](lectures/week12_lecture)
-13. **14.01.2025** - [Communication with Native](lectures/week13_lecture)
-14. **21.01.2025** - [Animations](lectures/week14_lecture)
+1. **08.10.2024** - [Intro lecture](lectures/week1)
+2. **15.10.2024** - [What is Flutter?](lectures/week2)
+3. **22.10.2024** - [Let's go deeper into Flutter](lectures/week3)
+4. **29.10.2024** - [State Management](lectures/week4)
+5. **05.11.2024** - [Asynchrony and HTTP](lectures/week5)
+6. **12.11.2024** - [State Management with External Libraries](lectures/week6)
+7. **19.11.2024** - [Firebase](lectures/week7)
+8. **26.11.2024** - [Data persistence](lectures/week8)
+9. **03.12.2024** - [Testing](lectures/week9)
+10. **10.12.2024** - [Forms](lectures/week10)
+11. **17.12.2024** - [Architecture](lectures/week11)
+12. **07.01.2025** - [Flutter Web and Flutter Desktop](lectures/week12)
+13. **14.01.2025** - [Communication with Native](lectures/week13)
+14. **21.01.2025** - [Animations](lectures/week14)
 15. **28.01.2025** - TBA
 
 ## Labs
@@ -114,7 +114,7 @@ Week 9-15 lab slots can be used for project consulting.
 ### Timeline
 
 - 08.11.2024 - [Initial documentation](#initial-documentation)
-- 28.01.2025 - Project Submission (source code + [final documentation](#final-documentation)
+- 28.01.2025 - Project Submission (source code + [final documentation](#final-documentation))
 - 12.02.2025 - [Late Project Submission](#late-project-submission)
 
 ### Initial Documentation
