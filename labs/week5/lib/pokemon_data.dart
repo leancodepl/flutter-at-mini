@@ -32,11 +32,12 @@ class _PokemonDataState extends State<PokemonData> {
       selectedPokemon = null;
       isLoading = true;
     });
-    final selected = await callback();
-    setState(() {
-      selectedPokemon = selected;
-      isLoading = false;
-    });
+    try {
+      final selected = await callback();
+      setState(() => selectedPokemon = selected);
+    } finally {
+      setState(() => isLoading = false);
+    }
   }
 
   @override
