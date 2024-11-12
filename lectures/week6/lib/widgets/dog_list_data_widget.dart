@@ -8,14 +8,17 @@ class DogListDataWidget extends StatelessWidget {
   const DogListDataWidget({
     super.key,
     required FetchedDogList dogList,
-  }) : _dogList = dogList;
+    required Future<void> Function() onFetch,
+  })  : _dogList = dogList,
+        _onFetch = onFetch;
 
   final FetchedDogList _dogList;
+  final Future<void> Function() _onFetch;
 
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
-      onRefresh: () async => context.read<DogListBloc>().add(FetchDogs()),
+      onRefresh: _onFetch,
       child: GridView.builder(
         physics: BouncingScrollPhysics(),
         gridDelegate:

@@ -4,7 +4,9 @@ import 'package:week6/bloc/dog_list_bloc.dart';
 import 'package:week6/bloc/dog_list_event.dart';
 
 class EmptyDogListWidget extends StatelessWidget {
-  const EmptyDogListWidget({super.key});
+  const EmptyDogListWidget({super.key, required this.onFetch});
+
+  final VoidCallback onFetch;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class EmptyDogListWidget extends StatelessWidget {
             Text('There are no dogs yet :('),
             OutlinedButton(
               child: Text('More dogs!'),
-              onPressed: () => context.read<DogListBloc>().add(FetchDogs()),
+              onPressed: onFetch,
             )
           ],
         ),

@@ -2,7 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:week6/bloc/dog_list_bloc.dart';
+import 'package:week6/bloc/dog_list_cubit.dart';
 import 'package:week6/dog_list_bloc_page.dart';
+import 'package:week6/dog_list_cubit_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,8 +22,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: BlocProvider(
-        create: (_) => DogListBloc(),
-        child: const DogListBlocPage(),
+        create: (_) => DogListCubit(),
+        child: BlocProvider(
+          create: (_) => DogListBloc(),
+          child: const DogListCubitPage(),
+        ),
       ),
       scrollBehavior: _TouchAndMouseScrollBehavior(),
     );
