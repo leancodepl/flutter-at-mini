@@ -1,0 +1,1 @@
+typedef Dog = ({String url});

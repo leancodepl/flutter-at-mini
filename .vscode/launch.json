@@ -34,5 +34,11 @@
             "type": "dart",
             "request": "launch"
         },
+        {
+            "name": "Week 6 lecture",
+            "cwd": "lectures/week6",
+            "type": "dart",
+            "request": "launch"
+        }, 
     ]
 }
