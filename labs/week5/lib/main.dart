@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.from(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.indigoAccent,
+          seedColor: Colors.yellow,
           dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
         ),
       ),
