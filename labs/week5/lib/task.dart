@@ -1,12 +1,12 @@
 import 'package:week5/pokemon.dart';
 
 Future<Pokemon> loadPokemonSlow() async {
-  // First task - load random pokemon from
-  // https://flutter-at-mini.azurewebsites.net/api/Pokedex?multiply=100
-  // using your library of choice.
-  // Remember to pass `accept = application/json` and `user-agent = Dart-Pokedex` headers.
-  //
-  // Parse the response using Pokemons.fromResponse and then randomly pick a single pokemon
+  // - Fetch pokemon from https://pokeapi.co/api/v2/pokemon?limit=100 using your
+  //   library of choice.
+  // - Parse the response using Pokemons.fromJson
+  // - Pick a random pokemon from the list
+  // - Fetch the selected pokemon from its url.
+  // - Parse the response using Pokemon.fromJson and return it.
   throw UnimplementedError();
 }
 
@@ -16,6 +16,6 @@ Future<Pokemon> loadPokemonFastAndEasy() async {
 }
 
 Future<Pokemon> loadPokemonFastAndComplex() async {
-  // And now, make the same thing as in `_loadPokemonFastAndEasy` but with raw Isolates
+  // And now, make the same thing as in `loadPokemonFastAndEasy` but with raw Isolates
   throw UnimplementedError();
 }

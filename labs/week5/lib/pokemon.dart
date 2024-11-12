@@ -1,115 +1,61 @@
-import 'dart:convert';
-
 class Pokemons {
   Pokemons({required this.pokemons});
 
-  factory Pokemons.fromResponse(String response) {
-    return Pokemons.fromJson(jsonDecode(response) as Map<String, dynamic>);
-  }
-
-  Pokemons.fromJson(Map<String, dynamic> json) : pokemons = [] {
-    if (json case {'pokemon': final List<dynamic> elements}) {
+  Pokemons.fromJson(Map<String, dynamic> json)
+      : pokemons = [
+          if (json case {'results': final elements as List})
+            for (final (json as Map) in elements)
+              PokemonEntry.fromJson(json.cast()),
+        ] {
+    if (json case {'results': final elements as List}) {
       for (final (i, json as Map) in elements.indexed) {
-        pokemons.add(Pokemon.fromJson(json.cast()));
+        pokemons.add(PokemonEntry.fromJson(json.cast()));
 
-        if (i % 50 == 0) {
-          // we're doing _a lot_ of work here :)
+        if (i % 10 == 0) {
+          // We're doing *a lot* of work here :)
           final sw = Stopwatch()..start();
-          while (sw.elapsedMilliseconds < 10) {}
+          while (sw.elapsedMilliseconds < 100) {}
         }
       }
     }
   }
 
-  final List<Pokemon> pokemons;
+  final List<PokemonEntry> pokemons;
+}
+
+class PokemonEntry {
+  PokemonEntry({
+    required this.name,
+    required this.url,
+  });
+
+  PokemonEntry.fromJson(Map<String, dynamic> json)
+      : name = json['name'] as String,
+        url = json['url'] as String;
+
+  final String name;
+  final String url;
 }
 
 class Pokemon {
   Pokemon({
     required this.id,
-    required this.num,
     required this.name,
-    required this.img,
-    required this.type,
+    required this.baseExperience,
     required this.height,
     required this.weight,
-    required this.candy,
-    required this.candyCount,
-    required this.egg,
-    required this.spawnChance,
-    required this.avgSpawns,
-    required this.spawnTime,
-    required this.multipliers,
-    required this.weaknesses,
-    required this.nextEvolution,
-    required this.prevEvolution,
   });
 
   Pokemon.fromJson(Map<String, dynamic> json)
-      : id = json['id'] as int? ?? 0,
-        num = json['num'] as String? ?? '',
-        name = json['name'] as String? ?? '',
-        img = json['img'] as String? ?? '',
-        type = (json['type'] as List?)?.cast() ?? [],
-        height = json['height'] as String? ?? '',
-        weight = json['weight'] as String? ?? '',
-        candy = json['candy'] as String? ?? '',
-        candyCount = json['candy_count'] as int? ?? 0,
-        egg = json['egg'] as String? ?? '',
-        spawnChance = asDouble(json['spawn_chance']),
-        avgSpawns = asDouble(json['avg_spawns']),
-        spawnTime = json['spawn_time'] as String? ?? '',
-        multipliers =
-            (json['multipliers'] as List<dynamic>?)?.map(asDouble).toList() ??
-                [],
-        weaknesses = (json['weaknesses'] as List?)?.cast() ?? [],
-        nextEvolution = [
-          if (json['next_evolution'] case final List<dynamic> elements)
-            for (final (json as Map) in elements)
-              Evolution.fromJson(json.cast()),
-        ],
-        prevEvolution = [
-          if (json['prev_evolution'] case final List<dynamic> elements)
-            for (final (json as Map) in elements)
-              Evolution.fromJson(json.cast()),
-        ];
+      : id = json['id'] as int,
+        name = json['name'] as String,
+        baseExperience = json['base_experience'] as int,
+        height = json['height'] as int,
+        weight = json['weight'] as int;
 
   final int id;
-  final String num;
   final String name;
-  final String img;
-  final List<String> type;
-  final String height;
-  final String weight;
-  final String candy;
-  final int candyCount;
-  final String egg;
-  final double spawnChance;
-  final double avgSpawns;
-  final String spawnTime;
-  final List<double> multipliers;
-  final List<String> weaknesses;
-  final List<Evolution> nextEvolution;
-  final List<Evolution> prevEvolution;
-
-  static double asDouble(dynamic v) {
-    if (v == null) {
-      return 0;
-    } else if (v is int) {
-      return v.toDouble();
-    } else {
-      return v as double;
-    }
-  }
-}
-
-class Evolution {
-  Evolution({required this.num, required this.name});
-
-  Evolution.fromJson(Map<String, dynamic> json)
-      : num = json['num'] as String? ?? '',
-        name = json['name'] as String? ?? '';
-
-  final String num;
-  final String name;
+  final int baseExperience;
+  final int height;
+  final int weight;
 }
