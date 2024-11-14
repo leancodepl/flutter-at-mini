@@ -1,11 +1,10 @@
 import 'package:week5/pokemon.dart';
 
 Future<Pokemon> loadPokemonSlow() async {
-  // - Fetch pokemon from https://pokeapi.co/api/v2/pokemon?limit=100 using your
-  //   library of choice.
+  // - Fetch pokémon entries from https://pokeapi.co/api/v2/pokemon?limit=100.
   // - Parse the response using Pokemons.fromJson
-  // - Pick a random pokemon from the list
-  // - Fetch the selected pokemon from its url.
+  // - Pick a random entry from the list
+  // - Fetch the selected pokémon from its entry's url.
   // - Parse the response using Pokemon.fromJson and return it.
   throw UnimplementedError();
 }
