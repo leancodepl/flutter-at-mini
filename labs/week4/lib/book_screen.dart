@@ -2,7 +2,10 @@ import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
+import 'package:week4/app_theme.dart';
 import 'package:week4/common_widgets.dart';
+import 'package:week4/favorite_books.dart';
 
 class BookScreen extends StatelessWidget {
   const BookScreen({super.key, required this.bookId});
@@ -11,9 +14,16 @@ class BookScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final book = Bookstore.getBook(id: bookId);
+
     return Scaffold(
-      appBar: AppBar(),
-      body: switch (Bookstore.getBook(id: bookId)) {
+      appBar: AppBar(
+        actions: [
+          if (book != null) BookFavoriteButton(book: book),
+          const AppThemeSwitcher(),
+        ],
+      ),
+      body: switch (book) {
         final book? => LayoutBuilder(
             builder: (context, constraints) => switch (constraints.maxWidth) {
               < 600 => _BookDetailsNarrow(book),
@@ -45,8 +55,11 @@ class _BookDetailsNarrow extends StatelessWidget {
         _Genre(book.genre),
         const SizedBox(height: 26),
         _Published(book.publishDate),
-        const SizedBox(height: 32),
-        _Description(book.description),
+        const SizedBox(height: 26),
+        _Description(
+          key: GlobalObjectKey(book.id),
+          book.description,
+        ),
       ],
     );
   }
@@ -84,8 +97,11 @@ class _BookDetailsWide extends StatelessWidget {
               _Genre(book.genre),
               const SizedBox(height: 26),
               _Published(book.publishDate),
-              const SizedBox(height: 32),
-              _Description(book.description),
+              const SizedBox(height: 26),
+              _Description(
+                key: GlobalObjectKey(book.id),
+                book.description,
+              ),
             ],
           ),
         ),
@@ -189,10 +205,17 @@ class _Published extends StatelessWidget {
   }
 }
 
-class _Description extends StatelessWidget {
-  const _Description(this.description);
+class _Description extends StatefulWidget {
+  const _Description(this.description, {super.key});
 
   final String description;
+
+  @override
+  State<_Description> createState() => _DescriptionState();
+}
+
+class _DescriptionState extends State<_Description> {
+  var _expanded = true;
 
   @override
   Widget build(BuildContext context) {
@@ -208,7 +231,7 @@ class _Description extends StatelessWidget {
               color: theme.colorScheme.onSurface,
             ),
             const SizedBox(width: 8),
-            Expanded(
+            Flexible(
               child: Text(
                 'Description',
                 style: theme.textTheme.titleLarge,
@@ -216,21 +239,60 @@ class _Description extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
             ),
+            IconButton(
+              icon: AnimatedRotation(
+                turns: _expanded ? -0.25 : 0.25,
+                duration: Durations.long1,
+                curve: Curves.easeInOutCubicEmphasized,
+                child: const Icon(Icons.chevron_right_rounded),
+              ),
+              onPressed: () {
+                setState(() {
+                  _expanded = !_expanded;
+                });
+              },
+            ),
           ],
         ),
-        const SizedBox(height: 8),
-        Padding(
-          padding: const EdgeInsetsDirectional.only(start: 32),
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 500),
-            child: Text(
-              description,
-              style: theme.textTheme.bodyLarge,
-              textAlign: TextAlign.justify,
+        if (_expanded) ...[
+          const SizedBox(height: 8),
+          Padding(
+            padding: const EdgeInsetsDirectional.only(start: 32),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 500),
+              child: Text(
+                widget.description,
+                style: theme.textTheme.bodyLarge,
+                textAlign: TextAlign.justify,
+              ),
             ),
           ),
-        ),
+        ],
       ],
+    );
+  }
+}
+
+class BookFavoriteButton extends StatelessWidget {
+  const BookFavoriteButton({super.key, required this.book});
+
+  final Book book;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    final favoriteBooks = context.watch<FavoriteBooks>();
+    final isFavorite = favoriteBooks.value.contains(book.id);
+
+    return IconButton(
+      onPressed: isFavorite
+          ? () => favoriteBooks.removeBook(book)
+          : () => favoriteBooks.addBook(book),
+      icon: Icon(
+        isFavorite ? Icons.favorite_rounded : Icons.favorite_border_rounded,
+        color: isFavorite ? theme.colorScheme.primary : null,
+      ),
     );
   }
 }
