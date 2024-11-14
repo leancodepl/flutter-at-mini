@@ -11,8 +11,14 @@
 > flutter analyze
 > ```
 
-In the task for week 5, you'll be fetching data from a RESTful HTTP service – [pokeapi.co].
-You only need to modify lib/task.dart (and the pubspec, to add dependencies if needed).
+In the task for week 5, you'll be fetching data from a RESTful HTTP
+service – [pokeapi.co]. You only need to modify lib/task.dart (and the pubspec,
+to add dependencies if needed).
+
+> ⚠️ ***Isolate support***
+>
+> Part 2 & 3 ***will not work*** on the web – run the app on one of the
+> mobile or desktop targets.
 
 [pokeapi.co]: https://pokeapi.co
 
@@ -23,7 +29,8 @@ You only need to modify lib/task.dart (and the pubspec, to add dependencies if n
 
 ## Part 2 – `loadPokemonFastAndEasy`
 
-- You'll find that part 1 causes the app to freeze while the data is being parsed.
+- You'll find that part 1 causes the app to freeze while the data is being
+  parsed.
 - Offload the fetching & parsing to a separate isolate
 
 ## Part 3 – `loadPokemonFastAndComplex`
