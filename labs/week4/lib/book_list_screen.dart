@@ -1,5 +1,6 @@
 import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
+import 'package:week4/app_theme.dart';
 import 'package:week4/common_widgets.dart';
 
 class BookListScreen extends StatelessWidget {
@@ -12,6 +13,7 @@ class BookListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Bookstore'),
+        actions: const [AppThemeSwitcher()],
       ),
       body: CustomScrollView(
         slivers: [

@@ -12,7 +12,7 @@ class Example2 extends StatelessWidget {
         constraints: BoxConstraints.tight(const Size(300, 200)),
         color: Colors.red,
         child: Align(
-          alignment: const Alignment(1, 0),
+          alignment: Alignment.centerRight, // Alignment(1, 0)
           child: Container(
             width: 100,
             height: 50,

@@ -11,7 +11,7 @@ class Example3 extends StatelessWidget {
       color: Colors.red,
       // Uncomment to see how Align fills available space
       child: Align(
-        alignment: const Alignment(1, 0),
+        alignment: Alignment.centerRight, // Alignment(1, 0)
         child: Container(
           width: 350,
           height: double.infinity,
