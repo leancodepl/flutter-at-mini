@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week6/bloc/dog_list_bloc.dart';
-import 'package:week6/bloc/dog_list_event.dart';
 
 class EmptyDogListWidget extends StatelessWidget {
   const EmptyDogListWidget({super.key, required this.onFetch});
@@ -17,11 +14,11 @@ class EmptyDogListWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset('images/undraw_dog.png'),
-            Text('There are no dogs yet :('),
+            const Text('There are no dogs yet :('),
             OutlinedButton(
-              child: Text('More dogs!'),
               onPressed: onFetch,
-            )
+              child: const Text('More dogs!'),
+            ),
           ],
         ),
       ),

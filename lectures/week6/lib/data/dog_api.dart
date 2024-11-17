@@ -1,16 +1,17 @@
 import 'dart:convert';
 
-import 'package:week6/data/dog.dart';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart';
+import 'package:week6/data/dog.dart';
 
 class DogApi {
   final _uri = Uri.parse('https://dog.ceo/api/breed/corgi/images/random/50');
 
   Future<List<Dog>> fetchAll() async {
     final res = await get(_uri);
-    final body = json.decode(res.body);
+    final body = json.decode(res.body) as Map<String, dynamic>;
 
-    print(body);
+    debugPrint(body.toString());
 
     return (body['message'] as List)
         .cast<String>()

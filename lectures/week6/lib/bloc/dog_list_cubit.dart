@@ -9,9 +9,9 @@ class DogListCubit extends Cubit<DogListState> {
 
   Future<void> fetchDogs() async {
     if (state is! FetchedDogList) {
-      emit(LoadingDogList());
+      emit(const LoadingDogList());
     }
-    await Future.delayed(Duration(seconds: 5));
+    await Future<void>.delayed(const Duration(seconds: 5));
     final dogs = await _api.fetchAll();
     emit(FetchedDogList(dogs: dogs));
   }
