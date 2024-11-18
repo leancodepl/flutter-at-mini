@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:week6/bloc/bloc_page.dart';
-import 'package:week6/comms/comms_page.dart';
-import 'package:week6/cubit/cubit_page.dart';
+import 'package:week6/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,15 +37,15 @@ class HomePage extends StatelessWidget {
         children: [
           ListTile(
             title: const Text('Cubit'),
-            onTap: () => context.go('/cubit'),
+            onTap: () => throw UnimplementedError('TODO'),
           ),
           ListTile(
             title: const Text('Bloc'),
-            onTap: () => context.go('/bloc'),
+            onTap: () => throw UnimplementedError('TODO'),
           ),
           ListTile(
             title: const Text('Comms'),
-            onTap: () => context.go('/comms'),
+            onTap: () => throw UnimplementedError('TODO'),
           ),
         ],
       ),
@@ -56,25 +54,5 @@ class HomePage extends StatelessWidget {
 }
 
 final _router = GoRouter(
-  routes: [
-    GoRoute(
-      path: '/',
-      name: 'home',
-      builder: (context, state) => const HomePage(),
-      routes: [
-        GoRoute(
-          path: 'cubit',
-          builder: (context, state) => const CubitPage(),
-        ),
-        GoRoute(
-          path: 'bloc',
-          builder: (context, state) => const BlocPage(),
-        ),
-        GoRoute(
-          path: 'comms',
-          builder: (context, state) => const CommsPage(),
-        ),
-      ],
-    ),
-  ],
+  routes: $appRoutes,
 );
