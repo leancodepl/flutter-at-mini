@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:week6/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,7 +64,7 @@ class HomePage extends StatelessWidget {
 }
 
 final _router = GoRouter(
-  routes: $appRoutes,
+  routes: [/* TODO: use generated routes */],
 );
 
 class _PageCard extends StatelessWidget {
