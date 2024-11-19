@@ -18,12 +18,11 @@ class BeerTile extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       child: Row(
         children: [
-          SizedBox.square(
-            dimension: 64,
-            child: Image.network(
-              beer.imageUrl,
-              errorBuilder: (_, __, ___) => const Placeholder(),
-            ),
+          Image.network(
+            beer.imageUrl,
+            errorBuilder: (_, __, ___) => const Placeholder(),
+            width: 64,
+            height: 64,
           ),
           const SizedBox(width: 8),
           Expanded(

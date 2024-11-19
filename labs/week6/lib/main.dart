@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Week 6',
       theme: ThemeData.from(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
+          seedColor: Colors.deepOrange,
           dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
         ),
       ),
@@ -31,23 +31,34 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Beer App'),
+        title: const Text('Week 6'),
       ),
-      body: ListView(
-        children: [
-          ListTile(
-            title: const Text('Cubit'),
-            onTap: () => throw UnimplementedError('TODO'),
-          ),
-          ListTile(
-            title: const Text('Bloc'),
-            onTap: () => throw UnimplementedError('TODO'),
-          ),
-          ListTile(
-            title: const Text('Comms'),
-            onTap: () => throw UnimplementedError('TODO'),
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            Expanded(
+              child: _PageCard(
+                label: 'Cubit',
+                onTap: () => throw UnimplementedError('TODO'),
+              ),
+            ),
+            const SizedBox(height: 16),
+            Expanded(
+              child: _PageCard(
+                label: 'Bloc',
+                onTap: () => throw UnimplementedError('TODO'),
+              ),
+            ),
+            const SizedBox(height: 16),
+            Expanded(
+              child: _PageCard(
+                label: 'Comms',
+                onTap: () => throw UnimplementedError('TODO'),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -56,3 +67,30 @@ class HomePage extends StatelessWidget {
 final _router = GoRouter(
   routes: $appRoutes,
 );
+
+class _PageCard extends StatelessWidget {
+  const _PageCard({
+    required this.label,
+    required this.onTap,
+  });
+
+  final String label;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card.filled(
+      clipBehavior: Clip.antiAlias,
+      margin: EdgeInsets.zero,
+      child: InkWell(
+        onTap: onTap,
+        child: Center(
+          child: Text(
+            label,
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+        ),
+      ),
+    );
+  }
+}
