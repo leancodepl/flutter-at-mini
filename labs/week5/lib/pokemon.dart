@@ -1,12 +1,7 @@
 class Pokemons {
   Pokemons({required this.pokemons});
 
-  Pokemons.fromJson(Map<String, dynamic> json)
-      : pokemons = [
-          if (json case {'results': final elements as List})
-            for (final (json as Map) in elements)
-              PokemonEntry.fromJson(json.cast()),
-        ] {
+  Pokemons.fromJson(Map<String, dynamic> json) : pokemons = [] {
     if (json case {'results': final elements as List}) {
       for (final (i, json as Map) in elements.indexed) {
         pokemons.add(PokemonEntry.fromJson(json.cast()));

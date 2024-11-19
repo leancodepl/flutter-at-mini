@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Week 6',
       theme: ThemeData.from(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepOrange,
+          seedColor: Colors.purple,
           dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
         ),
       ),

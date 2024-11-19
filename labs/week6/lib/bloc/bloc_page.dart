@@ -12,8 +12,9 @@ class BlocPage extends StatelessWidget {
       body: const Placeholder(
         child: Center(child: Text('TODO')),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.refresh),
+      floatingActionButton: FloatingActionButton.extended(
+        icon: const Icon(Icons.refresh),
+        label: const Text('Load more'),
         onPressed: () {
           throw UnimplementedError('TODO');
         },
