@@ -14,8 +14,9 @@ class BlocPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton.extended(
         icon: const Icon(Icons.refresh),
-        label: const Text('Load more'),
+        label: const Text('Reload'),
         onPressed: () {
+          // TODO: reload Pokémon
           throw UnimplementedError('TODO');
         },
       ),

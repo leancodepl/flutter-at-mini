@@ -14,8 +14,9 @@ class CubitPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton.extended(
         icon: const Icon(Icons.refresh),
-        label: const Text('Load'),
+        label: const Text('Reload'),
         onPressed: () {
+          // TODO: reload Pokémon
           throw UnimplementedError('TODO');
         },
       ),

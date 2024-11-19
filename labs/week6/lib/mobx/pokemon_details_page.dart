@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
-class PokemonPage extends StatelessWidget {
-  const PokemonPage({super.key});
+class PokemonDetailsPage extends StatelessWidget {
+  const PokemonDetailsPage({
+    super.key,
+    required this.pokemonUrl,
+  });
+
+  final String pokemonUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +19,9 @@ class PokemonPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton.extended(
         icon: const Icon(Icons.refresh),
-        label: const Text('Load'),
+        label: const Text('Reload'),
         onPressed: () {
+          // TODO: reload Pokémon details
           throw UnimplementedError('TODO');
         },
       ),

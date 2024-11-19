@@ -13,13 +13,11 @@ library;
 class Pokemons {
   Pokemons({
     required this.pokemons,
-    required this.next,
     required this.count,
   });
 
   // This field is called `results` in the JSON.
   final List<PokemonEntry> pokemons;
-  final Uri next;
   final int count;
 }
 
