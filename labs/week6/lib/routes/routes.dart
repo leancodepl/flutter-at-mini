@@ -8,8 +8,7 @@
 /// / (HomePage)
 /// ├── cubit (CubitPage)
 /// │   └── pokemon (PokemonPage)
-/// ├── bloc (BlocPage)
-/// │   └── pokemon (PokemonPage)
-/// └── comms (CommsPage)
+/// └── bloc (BlocPage)
+///     └── pokemon (PokemonPage)
 /// ```
 library;

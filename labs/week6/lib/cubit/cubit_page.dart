@@ -7,13 +7,14 @@ class CubitPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cubit Beers'),
+        title: const Text('Cubit Pokémon'),
       ),
       body: const Placeholder(
         child: Center(child: Text('TODO')),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.refresh),
+      floatingActionButton: FloatingActionButton.extended(
+        icon: const Icon(Icons.refresh),
+        label: const Text('Load'),
         onPressed: () {
           throw UnimplementedError('TODO');
         },

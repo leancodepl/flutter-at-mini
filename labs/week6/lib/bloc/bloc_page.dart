@@ -7,7 +7,7 @@ class BlocPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bloc Beers'),
+        title: const Text('Bloc Pokémon'),
       ),
       body: const Placeholder(
         child: Center(child: Text('TODO')),
