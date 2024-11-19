@@ -1,3 +1,13 @@
+/// 1. JSON
+///    Make the classes in this file deserializable from JSON.
+///    Use the `json_serializable` package.
+///    *Don't generate `toJson` methods.*
+///
+/// 2. Value-based equality
+///    Define value-based equality for the classes in this file.
+///    Use the `equatable` package.
+library;
+
 class Pokemons {
   Pokemons({required this.pokemons});
 
