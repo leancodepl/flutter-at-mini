@@ -40,6 +40,7 @@ define two features:
 ## Task 3 – bloc
 
 In `BlocPage`, implement loading a list of Pokémon using a Bloc.
+The endpoint is at https://pokeapi.co/api/v2/pokemon?limit=100
 
 - Create a PokemonBloc
 - The bloc should expose one event – to load the list of Pokémon
