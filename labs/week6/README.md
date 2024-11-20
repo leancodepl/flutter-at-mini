@@ -24,7 +24,8 @@ use code generation to define type-safe navigation routes.
 
 Then, use the new classes to navigate between pages:
 - In `HomePage`, implement navigating to one of the lists
-- In `_PokemonEntryTile`, implement navigating to the pokemon details page
+- In your usages of `PokemonList`, implement navigating to the pokemon details
+  pages
 
 ## Task 2 – data serialization & equality
 
