@@ -11,7 +11,7 @@
 library;
 
 class Pokemons {
-  Pokemons({
+  const Pokemons({
     required this.pokemons,
     required this.count,
   });
@@ -22,7 +22,7 @@ class Pokemons {
 }
 
 class PokemonEntry {
-  PokemonEntry({
+  const PokemonEntry({
     required this.name,
     required this.url,
   });
@@ -32,7 +32,7 @@ class PokemonEntry {
 }
 
 class Pokemon {
-  Pokemon({
+  const Pokemon({
     required this.id,
     required this.name,
     required this.baseExperience,
