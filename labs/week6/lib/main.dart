@@ -49,13 +49,6 @@ class HomePage extends StatelessWidget {
                 onTap: () => throw UnimplementedError('TODO'),
               ),
             ),
-            const SizedBox(height: 16),
-            Expanded(
-              child: _PageCard(
-                label: 'MobX',
-                onTap: () => throw UnimplementedError('TODO'),
-              ),
-            ),
           ],
         ),
       ),
