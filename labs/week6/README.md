@@ -89,3 +89,25 @@ Packages:
 
 - To display loading & error states, use the `LoadingIndicator` and
   `ErrorMessage` widgets
+
+## build_runner
+
+- Regular invocation
+  ```shell
+  dart run build_runner build
+  ```
+
+- If it complains about conflicts (in existing files)
+  ```shell
+  dart run build_runner build --delete-conflicting-outputs
+  ```
+  or simply
+  ```shell
+  dart run build_runner build -d
+  ```
+
+- To clean build_runner's state, if it still cannot generate files
+  ```shell
+  dart run build_runner clean
+  dart run build_runner build
+  ```
