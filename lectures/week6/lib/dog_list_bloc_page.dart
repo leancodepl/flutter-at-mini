@@ -21,8 +21,9 @@ class DogListBlocPage extends StatelessWidget {
         builder: (context, state) => switch (state) {
           LoadingDogList() => const LoadingWidget(),
           EmptyDogList() => EmptyDogListWidget(
-              onFetch: () => context.read<DogListBloc>().add(FetchDogs())),
-          FetchedDogList dogList => DogListDataWidget(
+              onFetch: () => context.read<DogListBloc>().add(FetchDogs()),
+            ),
+          final FetchedDogList dogList => DogListDataWidget(
               dogList: dogList,
               onFetch: () async => context.read<DogListBloc>().add(FetchDogs()),
             ),
