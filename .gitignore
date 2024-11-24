@@ -5,3 +5,5 @@
 .vscode/settings.json
 *.log
 **/build
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
