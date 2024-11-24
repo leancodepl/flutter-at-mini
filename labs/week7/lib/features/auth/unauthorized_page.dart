@@ -15,82 +15,70 @@ class _UnauthorizedPageState extends State<UnauthorizedPage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AuthCubit, AuthState>(
-      builder: (context, state) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextField(
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Email address',
-                ),
-                controller: email,
-              ),
-              const SizedBox(height: 16),
-              TextField(
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Password',
-                ),
-                controller: password,
-                obscureText: true,
-              ),
-              const SizedBox(height: 16),
-              if (state is SignedOutState && state.error != null) ...[
-                Text(state.error!),
-                const SizedBox(height: 16),
-              ] else
-                const SizedBox(height: 32),
-              _SignInButton(
-                email: email,
-                password: password,
-              ),
-            ],
+    final authCubit = context.watch<AuthCubit>();
+    final state = authCubit.state;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 32),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          TextField(
+            decoration: InputDecoration(
+              border:
+                  OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+              hintText: 'Email address',
+            ),
+            controller: email,
           ),
-        );
-      },
+          const SizedBox(height: 16),
+          TextField(
+            decoration: InputDecoration(
+              border:
+                  OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+              hintText: 'Password',
+            ),
+            controller: password,
+            obscureText: true,
+          ),
+          const SizedBox(height: 16),
+          if (state case SignedOutState(:final error?)) ...[
+            Text(error),
+            const SizedBox(height: 16),
+          ] else
+            const SizedBox(height: 32),
+          _SignInButton(
+            enabled: state is SignedOutState,
+            onSignIn: () => authCubit.signInWithEmail(
+              email.text,
+              password.text,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
 
 class _SignInButton extends StatelessWidget {
   const _SignInButton({
-    required this.email,
-    required this.password,
+    required this.enabled,
+    required this.onSignIn,
   });
 
-  final TextEditingController email;
-  final TextEditingController password;
+  final bool enabled;
+  final VoidCallback onSignIn;
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AuthCubit, AuthState>(
-      builder: (context, state) {
-        return ElevatedButton(
-          onPressed: state is SignedOutState
-              ? () => context.read<AuthCubit>().signInWithEmail(
-                    email.text,
-                    password.text,
-                  )
-              : null,
-          style: ButtonStyle(
-            backgroundColor: WidgetStateProperty.all(Colors.blue),
-            foregroundColor: WidgetStateProperty.all(Colors.white),
-          ),
-          child: state is SignedOutState
-              ? const Text('Sign in')
-              : const SizedBox.square(
-                  dimension: 16,
-                  child: CircularProgressIndicator(
-                    strokeWidth: 2,
-                    color: Colors.white,
-                  ),
-                ),
-        );
-      },
+    return FilledButton.tonal(
+      onPressed: enabled ? onSignIn : null,
+      child: enabled
+          ? const Text('Sign in')
+          : const SizedBox.square(
+              dimension: 16,
+              child: CircularProgressIndicator(strokeWidth: 2),
+            ),
     );
   }
 }

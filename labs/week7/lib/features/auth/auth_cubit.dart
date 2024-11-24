@@ -21,21 +21,20 @@ class AuthCubit extends Cubit<AuthState> {
     try {
       final result = await authService.signInWithEmail(email, password);
 
-      emit(
-        switch (result) {
-          SignInResult.invalidEmail =>
-            SignedOutState(error: 'This email address is invalid.'),
-          SignInResult.userDisabled =>
-            SignedOutState(error: 'This user has been banned.'),
-          SignInResult.userNotFound =>
-            SignedOutState(error: "This user doesn't exist."),
-          SignInResult.wrongPassword =>
-            SignedOutState(error: 'Invalid credentials.'),
-          SignInResult.success => SignedInState(email: email),
-        },
-      );
-    } catch (_) {
-      emit(SignedOutState(error: 'Unexpected error.'));
+      switch (result) {
+        case SignInResult.invalidEmail:
+          emit(SignedOutState(error: 'This email address is invalid.'));
+        case SignInResult.userDisabled:
+          emit(SignedOutState(error: 'This user has been banned.'));
+        case SignInResult.userNotFound:
+          await _trySignUp(email, password);
+        case SignInResult.wrongPassword:
+          emit(SignedOutState(error: 'Invalid credentials.'));
+        case SignInResult.success:
+          emit(SignedInState(email: email));
+      }
+    } catch (err) {
+      emit(SignedOutState(error: 'Unexpected error: $err'));
     }
   }
 
@@ -44,6 +43,9 @@ class AuthCubit extends Cubit<AuthState> {
 
     emit(SignedOutState());
   }
+
+  Future<void> _trySignUp(String email, String password) =>
+      authService.signUpWithEmail(email, password);
 
   @override
   Future<void> close() async {

@@ -36,7 +36,7 @@ class AuthService {
           return SignInResult.invalidEmail;
         case 'user-disabled':
           return SignInResult.userDisabled;
-        case 'user-not-found':
+        case 'user-not-found' || 'invalid-credential':
           return SignInResult.userNotFound;
         case 'wrong-password':
           return SignInResult.wrongPassword;

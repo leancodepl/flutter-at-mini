@@ -19,12 +19,12 @@ class AuthorizedPage extends StatelessWidget {
         children: [
           Text('Signed in as: ${state.email}'),
           const SizedBox(height: 16),
-          ElevatedButton(
+          FilledButton.tonal(
             onPressed: context.read<AuthCubit>().signOut,
             child: const Text('Sign out with cubit'),
           ),
           const SizedBox(height: 16),
-          ElevatedButton(
+          FilledButton.tonal(
             onPressed: context.read<AuthService>().signOut,
             child: const Text('Sign out with auth'),
           ),
