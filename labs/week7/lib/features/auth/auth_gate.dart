@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:week7/authorized_page.dart';
 import 'package:week7/features/auth/auth_cubit.dart';
-import 'package:week7/features/auth/authorized_page.dart';
-import 'package:week7/features/auth/unauthorized_page.dart';
+import 'package:week7/unauthorized_page.dart';
 
 class AuthGate extends StatelessWidget {
   const AuthGate({super.key});
