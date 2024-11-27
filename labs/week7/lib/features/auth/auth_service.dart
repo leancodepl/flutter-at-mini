@@ -13,10 +13,12 @@ class AuthService {
 
   final FirebaseAuth firebaseAuth;
 
-  bool get isSignedIn => firebaseAuth.currentUser != null;
+  bool get isSignedIn => currentUser != null;
   Stream<bool> get isSignedInStream =>
       firebaseAuth.userChanges().map((user) => user != null);
-  String get userEmail => firebaseAuth.currentUser!.email!;
+  String get userEmail => currentUser!.email!;
+
+  User? get currentUser => firebaseAuth.currentUser;
 
   Future<SignInResult> signInWithEmail(String email, String password) async {
     try {

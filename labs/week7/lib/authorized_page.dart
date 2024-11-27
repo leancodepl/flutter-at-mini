@@ -36,27 +36,25 @@ class _AccountInfoBox extends StatelessWidget {
 
     return ColoredBox(
       color: theme.colorScheme.surface,
-      child: Padding(
-        padding: const EdgeInsets.all(8),
-        child: Card.outlined(
-          color: theme.colorScheme.surfaceContainerLowest,
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              children: [
-                Text('Signed in as: ${state.email}'),
-                const SizedBox(height: 16),
-                FilledButton.tonal(
-                  onPressed: context.read<AuthCubit>().signOut,
-                  child: const Text('Sign out with cubit'),
-                ),
-                const SizedBox(height: 16),
-                FilledButton.tonal(
-                  onPressed: context.read<AuthService>().signOut,
-                  child: const Text('Sign out with auth'),
-                ),
-              ],
-            ),
+      child: Card.outlined(
+        color: theme.colorScheme.surfaceContainerLowest,
+        margin: const EdgeInsets.all(8),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            children: [
+              Text('Signed in as: ${state.email}'),
+              const SizedBox(height: 16),
+              FilledButton.tonal(
+                onPressed: context.read<AuthCubit>().signOut,
+                child: const Text('Sign out with cubit'),
+              ),
+              const SizedBox(height: 16),
+              FilledButton.tonal(
+                onPressed: context.read<AuthService>().signOut,
+                child: const Text('Sign out with auth'),
+              ),
+            ],
           ),
         ),
       ),

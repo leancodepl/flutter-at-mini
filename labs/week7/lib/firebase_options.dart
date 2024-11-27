@@ -72,4 +72,5 @@ class DefaultFirebaseOptions {
     authDomain: 'flutter-at-mini-2024-lab-7.firebaseapp.com',
     storageBucket: 'flutter-at-mini-2024-lab-7.firebasestorage.app',
   );
+
 }
