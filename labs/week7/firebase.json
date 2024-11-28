@@ -1,1 +1,42 @@
-{"flutter":{"platforms":{"dart":{"lib/firebase_options.dart":{"projectId":"flutter-at-mini-2024-lab-7","configurations":{"macos":"1:719560878252:ios:17dfb18439244295165709","web":"1:719560878252:web:ba3e00c150cca035165709","windows":"1:719560878252:web:071f92c7f8f864e6165709"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "flutter-at-mini-2024-lab-7",
+          "configurations": {
+            "macos": "1:719560878252:ios:17dfb18439244295165709",
+            "web": "1:719560878252:web:ba3e00c150cca035165709",
+            "windows": "1:719560878252:web:071f92c7f8f864e6165709"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "europe-west1"
+    },
+    "headers": [
+      {
+        "source": "**/*",
+        "headers": [
+          {
+            "key": "Cross-Origin-Embedder-Policy",
+            "value": "credentialless"
+          },
+          {
+            "key": "Cross-Origin-Opener-Policy",
+            "value": "same-origin"
+          }
+        ]
+      }
+    ]
+  }
+}
