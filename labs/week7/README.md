@@ -44,10 +44,11 @@ the app, as per the [official Firebase setup][firebase-setup].
    ```shell
    flutterfire configure
    ```
+   After this step, a `firebase_options.dart` file should be generated.
 
 5. Initialize Firebase from Dart.
-   Inside `_AppState`, use the generated options and `Firebase.initializeApp`
-   to start the initialization.
+   In `main.dart`, inside `_AppState`, use the generated options and
+   `Firebase.initializeApp` to start the initialization.
 
 6. Run the app to check if Firebase gets initialized properly.
 
