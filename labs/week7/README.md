@@ -59,7 +59,7 @@ the app, as per the [official Firebase setup][firebase-setup].
 
 ### Setup
 
-1. In the Firebase console, go to Build / Authentication
+1. In the Firebase console, go to `Build → Authentication`
 
 2. Click `Get started` and enable the Email/Password provider
 
@@ -80,3 +80,30 @@ the app, as per the [official Firebase setup][firebase-setup].
   some common auth state properties.
 
 ## Firestore
+
+We'll store user's items (`UserItem`) in Firestore. Items should be 
+user-specific – i.e., each user should have a separate collection of items. 
+For example, the items can be stored in documents like ***`items/{userID}`***.
+
+### Setup
+
+1. In the Firebase console, go to `Build → Firestore Database`
+
+2. Click `Create database`
+
+3. Configure the database.
+
+   You can leave the default config or change the location to Europe.
+
+   For now, make sure you ***Start in test mode***.
+
+### `UserItemsService` implementation
+
+`UserItem` is JSON-serializable; you can use this as the representation in the
+database.
+
+- `itemsStream` – A stream containing lists of current items. Should update in
+  real time.
+
+- `addItem` – Add a new item to the user's collection. This change should be
+  immediately visible to the user.

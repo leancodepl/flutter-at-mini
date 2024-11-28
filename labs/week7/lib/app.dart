@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
@@ -23,10 +22,7 @@ class Week7App extends StatelessWidget {
           ),
         ),
         Provider(
-          create: (context) => UserItemsService(
-            db: FirebaseFirestore.instance,
-            auth: context.read(),
-          ),
+          create: (context) => UserItemsService(),
         ),
       ],
       child: Scaffold(
