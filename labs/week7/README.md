@@ -14,7 +14,7 @@
 Check out the [hosted example solution](https://flutter-at-mini-2024-lab-7.web.app/)
 to play around with the implemented features.
 
-# Project setup
+## Project setup
 
 > ⚠️ ***Platform support***
 >
@@ -55,6 +55,28 @@ the app, as per the [official Firebase setup][firebase-setup].
 [firebase-cli]: https://firebase.google.com/docs/cli#setup_update_cli
 [firebase-console]: https://console.firebase.google.com/
 
-# Auth
+## Auth
 
-# Firestore
+### Setup
+
+1. In the Firebase console, go to Build / Authentication
+
+2. Click `Get started` and enable the Email/Password provider
+
+### `AuthService` implementation
+
+*Note that the service already has some (basic) error handling implemented.*
+
+- `signInWithEmail` – Log the user in with the provided email and password.
+  Make sure the user is not already logged in (log out if necessary).
+  Return `SignInResult.success` when the operation was successful.
+
+- `signUpWithEmail` – Create a new account using the provided credentials.
+  Return whether the operation was successful.
+
+- `signOut` – Sign the user out of the app.
+
+- `isSignedIn`, `isSignedInStream`, `userEmail`, `currentUser` – Getters for
+  some common auth state properties.
+
+## Firestore
