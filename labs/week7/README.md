@@ -16,6 +16,45 @@ to play around with the implemented features.
 
 # Project setup
 
+> ⚠️ ***Platform support***
+>
+> Firebase supports several platforms, but to avoid having to deal with 
+> native setup, consider building for the web platform.
+
+To use Firebase services in the app, you have to setup the configuration for
+the app, as per the [official Firebase setup][firebase-setup].
+
+1. Install and login to the [Firebase CLI][firebase-cli]. Use any Google 
+   account you want.
+   ```shell
+   firebase login
+   ```
+
+2. Install the FlutterFire CLI
+   ```shell
+   dart pub global activate flutterfire_cli
+   ```
+
+3. In the [Firebase console][firebase-console], create a project for your app.
+
+   _(Disable analytics, we won't be needing this)_
+
+4. Configure your Flutter app. Select the project you created and the
+   platform you'll support.
+   ```shell
+   flutterfire configure
+   ```
+
+5. Initialize Firebase from Dart.
+   Inside `_AppState`, use the generated options and `Firebase.initializeApp`
+   to start the initialization.
+
+6. Run the app to check if Firebase gets initialized properly.
+
+[firebase-setup]: https://firebase.google.com/docs/flutter/setup?platform=web
+[firebase-cli]: https://firebase.google.com/docs/cli#setup_update_cli
+[firebase-console]: https://console.firebase.google.com/
+
 # Auth
 
 # Firestore
