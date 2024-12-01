@@ -52,6 +52,7 @@ class _AddTodoDialogState extends State<AddTodoDialog> {
     return AlertDialog(
       content: TextField(
         controller: _title,
+        autofocus: true,
       ),
       actions: [
         TextButton(
