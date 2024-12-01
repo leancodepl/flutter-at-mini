@@ -10,4 +10,6 @@ abstract class TodoDataSource {
   FutureOr<void> insert(Todo todo);
 
   FutureOr<void> delete(String id);
+
+  FutureOr<void> update(Todo todo);
 }

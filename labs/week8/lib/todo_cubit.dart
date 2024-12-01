@@ -32,6 +32,11 @@ class TodoCubit extends Cubit<TodoState> {
     await dataSource.delete(id);
     await refresh();
   }
+
+  Future<void> changeDoneStatus(Todo todo) async {
+    await dataSource.update(todo.copyWith(done: !todo.done));
+    await refresh();
+  }
 }
 
 sealed class TodoState with EquatableMixin {

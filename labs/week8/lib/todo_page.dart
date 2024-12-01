@@ -92,7 +92,8 @@ class TodosList extends StatelessWidget {
                 selected: todo.done,
                 trailing: Checkbox(
                   value: todo.done,
-                  onChanged: (_) {},
+                  onChanged: (_) =>
+                      context.read<TodoCubit>().changeDoneStatus(todo),
                 ),
               ),
             ),
