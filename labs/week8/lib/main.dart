@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:week8/data_source/drift_data_source.dart';
+import 'package:week8/data_source/in_memory.dart';
+import 'package:week8/todo_cubit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -63,11 +67,19 @@ final _router = GoRouter(
       routes: [
         GoRoute(
           path: 'in-memory',
-          builder: (context, state) => throw UnimplementedError(),
+          builder: (context, state) => BlocProvider(
+            create: (context) => TodoCubit(
+              dataSource: InMemoryTodoDataSource(),
+            ),
+          ),
         ),
         GoRoute(
           path: 'drift',
-          builder: (context, state) => throw UnimplementedError(),
+          builder: (context, state) => BlocProvider(
+            create: (context) => TodoCubit(
+              dataSource: DriftTodoDataSource(),
+            ),
+          ),
         ),
       ],
     ),
