@@ -2,15 +2,15 @@ import 'package:uuid/uuid.dart';
 
 class Todo {
   Todo({
-    required this.noteId,
+    required this.id,
     required this.title,
     required this.done,
   });
 
   Todo.create(String title)
-      : this(noteId: const Uuid().v8(), title: title, done: false);
+      : this(id: const Uuid().v8(), title: title, done: false);
 
-  final String noteId;
+  final String id;
   final String title;
   final bool done;
 }

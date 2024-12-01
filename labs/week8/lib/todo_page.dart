@@ -82,8 +82,8 @@ class TodosList extends StatelessWidget {
           final todo = todos[index];
 
           return Dismissible(
-            key: ValueKey(todo.noteId),
-            onDismissed: (_) => context.read<TodoCubit>().delete(todo.noteId),
+            key: ValueKey(todo.id),
+            onDismissed: (_) => context.read<TodoCubit>().delete(todo.id),
             child: Card.filled(
               margin: EdgeInsets.zero,
               child: ListTile(
