@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 import 'package:week8/data_source/drift_data_source.dart';
 import 'package:week8/data_source/in_memory.dart';
+import 'package:week8/db/todo_database.dart';
 import 'package:week8/todo_cubit.dart';
 import 'package:week8/todo_page.dart';
 
@@ -15,14 +17,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      theme: ThemeData.from(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.purple,
-          dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
+    return MultiProvider(
+      providers: [
+        Provider(
+          create: (context) => TodoDatabase(),
+          dispose: (context, db) => db.close(),
         ),
+        Provider(
+          create: (context) => InMemoryTodoDataSource(),
+        ),
+        Provider(
+          create: (context) => DriftTodoDataSource(
+            db: context.read(),
+          ),
+        ),
+      ],
+      child: MaterialApp.router(
+        theme: ThemeData.from(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.purple,
+            dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
+          ),
+        ),
+        routerConfig: _router,
       ),
-      routerConfig: _router,
     );
   }
 }
@@ -70,7 +88,7 @@ final _router = GoRouter(
           path: 'in-memory',
           builder: (context, state) => BlocProvider(
             create: (context) => TodoCubit(
-              dataSource: InMemoryTodoDataSource(),
+              dataSource: context.read<InMemoryTodoDataSource>(),
             )..refresh(),
             child: const TodoPage(),
           ),
@@ -79,7 +97,7 @@ final _router = GoRouter(
           path: 'drift',
           builder: (context, state) => BlocProvider(
             create: (context) => TodoCubit(
-              dataSource: DriftTodoDataSource(),
+              dataSource: context.read<DriftTodoDataSource>(),
             )..refresh(),
             child: const TodoPage(),
           ),
