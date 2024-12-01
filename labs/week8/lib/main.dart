@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:week8/data_source/drift_data_source.dart';
 import 'package:week8/data_source/in_memory.dart';
 import 'package:week8/todo_cubit.dart';
+import 'package:week8/todo_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -70,7 +71,8 @@ final _router = GoRouter(
           builder: (context, state) => BlocProvider(
             create: (context) => TodoCubit(
               dataSource: InMemoryTodoDataSource(),
-            ),
+            )..refresh(),
+            child: const TodoPage(),
           ),
         ),
         GoRoute(
@@ -78,7 +80,8 @@ final _router = GoRouter(
           builder: (context, state) => BlocProvider(
             create: (context) => TodoCubit(
               dataSource: DriftTodoDataSource(),
-            ),
+            )..refresh(),
+            child: const TodoPage(),
           ),
         ),
       ],
