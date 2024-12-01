@@ -2,27 +2,30 @@ import 'package:week8/data_source/todo_data_source.dart';
 import 'package:week8/todo.dart';
 
 class InMemoryTodoDataSource extends TodoDataSource {
+  final _todos = <String, Todo>{};
+
   @override
   void delete(String id) {
-    // TODO: implement delete
-    throw UnimplementedError();
+    _todos.remove(id);
   }
 
   @override
   Todo? get(String id) {
-    // TODO: implement get
-    throw UnimplementedError();
+    return _todos[id];
   }
 
   @override
   List<Todo> getAll() {
-    // TODO: implement getAll
-    throw UnimplementedError();
+    return _todos.values.toList();
   }
 
   @override
   void insert(Todo todo) {
-    // TODO: implement insert
-    throw UnimplementedError();
+    _todos[todo.id] = todo;
+  }
+
+  @override
+  void update(Todo todo) {
+    _todos[todo.id] = todo;
   }
 }
