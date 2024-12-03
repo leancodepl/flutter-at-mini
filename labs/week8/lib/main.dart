@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:localstore/localstore.dart';
 import 'package:provider/provider.dart';
 import 'package:week8/data_source/drift_data_source.dart';
 import 'package:week8/data_source/hive_data_source.dart';
 import 'package:week8/data_source/in_memory.dart';
+import 'package:week8/data_source/localstore_data_source.dart';
 import 'package:week8/db/todo_database.dart';
 import 'package:week8/todo_cubit.dart';
 import 'package:week8/todo_page.dart';
@@ -27,6 +29,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        Provider.value(
+          value: Localstore.instance,
+        ),
         Provider(
           create: (context) => TodoDatabase(),
           dispose: (context, db) => db.close(),
@@ -42,6 +47,11 @@ class MyApp extends StatelessWidget {
         Provider(
           create: (context) => HiveTodoDataSource(
             boxFuture: Hive.openBox('todos'),
+          ),
+        ),
+        Provider(
+          create: (context) => LocalstoreTodoDataSource(
+            localstore: context.read(),
           ),
         ),
       ],
@@ -91,6 +101,13 @@ class HomePage extends StatelessWidget {
                 onTap: () => context.go('/hive'),
               ),
             ),
+            const SizedBox(height: 16),
+            Expanded(
+              child: _PageCard(
+                label: 'Localstore',
+                onTap: () => context.go('/localstore'),
+              ),
+            ),
           ],
         ),
       ),
@@ -127,6 +144,15 @@ final _router = GoRouter(
           builder: (context, state) => BlocProvider(
             create: (context) => TodoCubit(
               dataSource: context.read<HiveTodoDataSource>(),
+            )..refresh(),
+            child: const TodoPage(),
+          ),
+        ),
+        GoRoute(
+          path: 'localstore',
+          builder: (context, state) => BlocProvider(
+            create: (context) => TodoCubit(
+              dataSource: context.read<LocalstoreTodoDataSource>(),
             )..refresh(),
             child: const TodoPage(),
           ),
