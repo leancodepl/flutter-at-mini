@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:week8/data_source/drift_data_source.dart';
+import 'package:week8/data_source/hive_data_source.dart';
 import 'package:week8/data_source/in_memory.dart';
 import 'package:week8/db/todo_database.dart';
 import 'package:week8/todo_cubit.dart';
 import 'package:week8/todo_page.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Hive.initFlutter();
+
+  Hive.registerAdapter(TodoAdapter());
+
   runApp(const MyApp());
 }
 
@@ -29,6 +37,11 @@ class MyApp extends StatelessWidget {
         Provider(
           create: (context) => DriftTodoDataSource(
             db: context.read(),
+          ),
+        ),
+        Provider(
+          create: (context) => HiveTodoDataSource(
+            boxFuture: Hive.openBox('todos'),
           ),
         ),
       ],
@@ -71,6 +84,13 @@ class HomePage extends StatelessWidget {
                 onTap: () => context.go('/drift'),
               ),
             ),
+            const SizedBox(height: 16),
+            Expanded(
+              child: _PageCard(
+                label: 'Hive',
+                onTap: () => context.go('/hive'),
+              ),
+            ),
           ],
         ),
       ),
@@ -98,6 +118,15 @@ final _router = GoRouter(
           builder: (context, state) => BlocProvider(
             create: (context) => TodoCubit(
               dataSource: context.read<DriftTodoDataSource>(),
+            )..refresh(),
+            child: const TodoPage(),
+          ),
+        ),
+        GoRoute(
+          path: 'hive',
+          builder: (context, state) => BlocProvider(
+            create: (context) => TodoCubit(
+              dataSource: context.read<HiveTodoDataSource>(),
             )..refresh(),
             child: const TodoPage(),
           ),
