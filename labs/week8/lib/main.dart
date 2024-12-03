@@ -82,30 +82,42 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              child: _PageCard(
-                label: 'In-memory',
-                onTap: () => context.go('/in-memory'),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: _PageCard(
+                      label: 'In-memory',
+                      onTap: () => context.go('/in-memory'),
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: _PageCard(
+                      label: 'Drift',
+                      onTap: () => context.go('/drift'),
+                    ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(height: 16),
             Expanded(
-              child: _PageCard(
-                label: 'Drift',
-                onTap: () => context.go('/drift'),
-              ),
-            ),
-            const SizedBox(height: 16),
-            Expanded(
-              child: _PageCard(
-                label: 'Hive',
-                onTap: () => context.go('/hive'),
-              ),
-            ),
-            const SizedBox(height: 16),
-            Expanded(
-              child: _PageCard(
-                label: 'Localstore',
-                onTap: () => context.go('/localstore'),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: _PageCard(
+                      label: 'Hive',
+                      onTap: () => context.go('/hive'),
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: _PageCard(
+                      label: 'Localstore',
+                      onTap: () => context.go('/localstore'),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
