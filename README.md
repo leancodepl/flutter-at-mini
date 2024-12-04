@@ -63,9 +63,9 @@ additional 3 pts each.
 5. **15.11.2024** - [Communication with API](labs/week5)
 6. **22.11.2024** - [State management with external services](labs/week6)
 7. **29.11.2024** - [Firebase Auth in action](labs/week7)
-8. **06.12.2024** - TBA
+8. **06.12.2024** - [Data Persistence](labs/week8)
 
-Week 9-15 lab slots can be used for project consulting.
+Week 9-15 lab slots can be used for project consulting - only by prior arrangement.
 
 ## Project
 
