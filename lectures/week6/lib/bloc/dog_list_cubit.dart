@@ -3,9 +3,11 @@ import 'package:week6/bloc/dog_list_state.dart';
 import 'package:week6/data/dog_api.dart';
 
 class DogListCubit extends Cubit<DogListState> {
-  DogListCubit() : super(const EmptyDogList());
+  DogListCubit({required DogApi api})
+      : _api = api,
+        super(const EmptyDogList());
 
-  final _api = DogApi();
+  final DogApi _api;
 
   Future<void> fetchDogs() async {
     if (state is! FetchedDogList) {

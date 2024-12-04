@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:week6/bloc/dog_list_bloc.dart';
 import 'package:week6/bloc/dog_list_cubit.dart';
+import 'package:week6/data/dog_api.dart';
 import 'package:week6/dog_list_cubit_page.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: BlocProvider(
-        create: (_) => DogListCubit(),
+        create: (_) => DogListCubit(api: DogApi()),
         child: BlocProvider(
           create: (_) => DogListBloc(),
           child: const DogListCubitPage(),

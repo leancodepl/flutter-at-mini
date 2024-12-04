@@ -16,6 +16,7 @@ class EmptyDogListWidget extends StatelessWidget {
             Image.asset('images/undraw_dog.png'),
             const Text('There are no dogs yet :('),
             OutlinedButton(
+              key: const Key('moreDogsButton'),
               onPressed: onFetch,
               child: const Text('More dogs!'),
             ),
