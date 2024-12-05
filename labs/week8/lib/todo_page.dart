@@ -79,26 +79,32 @@ class TodosList extends StatelessWidget {
       child: ListView.separated(
         itemCount: todos.length,
         separatorBuilder: (context, _) => const SizedBox(height: 16),
-        itemBuilder: (context, index) {
-          final todo = todos[index];
+        itemBuilder: (context, index) => TodoTile(todo: todos[index]),
+      ),
+    );
+  }
+}
 
-          return Dismissible(
-            key: ValueKey(todo.id),
-            onDismissed: (_) => context.read<TodoCubit>().delete(todo.id),
-            child: Card.filled(
-              margin: EdgeInsets.zero,
-              child: ListTile(
-                title: Text(todo.title),
-                selected: todo.done,
-                trailing: Checkbox(
-                  value: todo.done,
-                  onChanged: (_) =>
-                      context.read<TodoCubit>().changeDoneStatus(todo),
-                ),
-              ),
-            ),
-          );
-        },
+class TodoTile extends StatelessWidget {
+  const TodoTile({super.key, required this.todo});
+
+  final Todo todo;
+
+  @override
+  Widget build(BuildContext context) {
+    return Dismissible(
+      key: ValueKey(todo.id),
+      onDismissed: (_) => context.read<TodoCubit>().delete(todo.id),
+      child: Card.filled(
+        margin: EdgeInsets.zero,
+        child: ListTile(
+          title: Text(todo.title),
+          selected: todo.done,
+          trailing: Checkbox(
+            value: todo.done,
+            onChanged: (_) => context.read<TodoCubit>().changeDoneStatus(todo),
+          ),
+        ),
       ),
     );
   }

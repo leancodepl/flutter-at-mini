@@ -1,7 +1,7 @@
 import 'package:uuid/uuid.dart';
 
 class Todo {
-  Todo({
+  const Todo({
     required this.id,
     required this.title,
     required this.done,
