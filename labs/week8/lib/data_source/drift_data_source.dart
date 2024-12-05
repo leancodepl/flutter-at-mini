@@ -1,43 +1,31 @@
-import 'package:drift/drift.dart';
 import 'package:week8/data_source/todo_data_source.dart';
-import 'package:week8/db/todo_database.dart';
 import 'package:week8/todo.dart';
 
 class DriftTodoDataSource extends TodoDataSource {
-  DriftTodoDataSource({required this.db});
-
-  final TodoDatabase db;
+  DriftTodoDataSource();
 
   @override
-  Future<void> delete(String id) {
-    return db.managers.todos.filter((f) => f.id.equals(id)).delete();
+  Future<void> delete(String id) async {
+    throw UnimplementedError();
   }
 
   @override
-  Future<Todo?> get(String id) {
-    return db.managers.todos.filter((f) => f.id.equals(id)).getSingleOrNull();
+  Future<Todo?> get(String id) async {
+    throw UnimplementedError();
   }
 
   @override
-  Future<List<Todo>> getAll() {
-    return db.managers.todos.get();
+  Future<List<Todo>> getAll() async {
+    throw UnimplementedError();
   }
 
   @override
-  Future<void> insert(Todo todo) {
-    return db.managers.todos.create(
-      (c) => c(
-        id: todo.id,
-        title: todo.title,
-        done: todo.done,
-      ),
-    );
+  Future<void> insert(Todo todo) async {
+    throw UnimplementedError();
   }
 
   @override
-  Future<void> update(Todo todo) {
-    return db.managers.todos
-        .filter((f) => f.id.equals(todo.id))
-        .update((c) => c(done: Value(todo.done)));
+  Future<void> update(Todo todo) async {
+    throw UnimplementedError();
   }
 }
