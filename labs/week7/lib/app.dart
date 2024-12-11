@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +16,9 @@ class Week7App extends StatelessWidget {
     return MultiProvider(
       providers: [
         Provider(
-          create: (context) => AuthService(),
+          create: (context) => AuthService(
+            firebaseAuth: FirebaseAuth.instance,
+          ),
         ),
         BlocProvider(
           create: (context) => AuthCubit(
@@ -22,7 +26,10 @@ class Week7App extends StatelessWidget {
           ),
         ),
         Provider(
-          create: (context) => UserItemsService(),
+          create: (context) => UserItemsService(
+            db: FirebaseFirestore.instance,
+            auth: context.read(),
+          ),
         ),
       ],
       child: Scaffold(

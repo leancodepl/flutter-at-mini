@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:week7/features/user_items/user_items_service.dart';
@@ -11,15 +12,18 @@ class SliverUserItems extends StatefulWidget {
 
 class _SliverUserItemsState extends State<SliverUserItems> {
   final _nameController = TextEditingController();
-  var _canAddItem = false;
 
-  // TODO...
+  late final Stream<Iterable<UserItem>> _itemsStream;
+
+  var _canAddItem = false;
 
   @override
   void initState() {
     super.initState();
-    // TODO: implement
-    // _itemsStream = ...;
+    _itemsStream = context
+        .read<UserItemsService>()
+        .itemsStream
+        .map((items) => items.sortedBy((item) => item.date).reversed);
     _nameController.addListener(() {
       setState(() => _canAddItem = _nameController.text.isNotEmpty);
     });
@@ -69,8 +73,7 @@ class _SliverUserItemsState extends State<SliverUserItems> {
           ),
         ),
         StreamBuilder(
-          // TODO: replace with the actual stream
-          stream: const Stream<Iterable<UserItem>>.empty(),
+          stream: _itemsStream,
           builder: (context, snapshot) {
             if (!snapshot.hasData) {
               return const SliverToBoxAdapter(
