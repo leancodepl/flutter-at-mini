@@ -1,14 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:localstore/localstore.dart';
+import 'package:provider/provider.dart';
 import 'package:week8/data_source/drift_data_source.dart';
 import 'package:week8/data_source/hive_data_source.dart';
 import 'package:week8/data_source/in_memory.dart';
 import 'package:week8/data_source/localstore_data_source.dart';
+import 'package:week8/db/todo_database.dart';
 import 'package:week8/todo_cubit.dart';
 import 'package:week8/todo_page.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Hive.initFlutter();
+
+  Hive.registerAdapter(TodoAdapter());
+
   runApp(const MyApp());
 }
 
@@ -17,14 +27,43 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      theme: ThemeData.from(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.purple,
-          dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
+    return MultiProvider(
+      providers: [
+        Provider.value(
+          value: Localstore.instance,
         ),
+        Provider(
+          create: (context) => TodoDatabase(),
+          dispose: (context, db) => db.close(),
+        ),
+        Provider(
+          create: (context) => InMemoryTodoDataSource(),
+        ),
+        Provider(
+          create: (context) => DriftTodoDataSource(
+            db: context.read(),
+          ),
+        ),
+        Provider(
+          create: (context) => HiveTodoDataSource(
+            boxFuture: Hive.openBox('todos'),
+          ),
+        ),
+        Provider(
+          create: (context) => LocalstoreTodoDataSource(
+            localstore: context.read(),
+          ),
+        ),
+      ],
+      child: MaterialApp.router(
+        theme: ThemeData.from(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.purple,
+            dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
+          ),
+        ),
+        routerConfig: _router,
       ),
-      routerConfig: _router,
     );
   }
 }
