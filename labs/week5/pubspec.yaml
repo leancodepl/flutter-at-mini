@@ -1,17 +1,17 @@
 name: week5
 
 environment:
-  sdk: 3.5.3
-  flutter: 3.24.3
+  sdk: 3.9.0
+  flutter: 3.35.2
 
 dependencies:
-  dio: ^5.7.0
+  dio: ^5.9.0
   flutter:
     sdk: flutter
-  http: ^1.2.2
+  http: ^1.5.0
 
 dev_dependencies:
-  leancode_lint: ^14.2.0
+  leancode_lint: ^18.0.0
 
 flutter:
   uses-material-design: true

@@ -43,28 +43,28 @@ part 'routes.g.dart';
     ),
   ],
 )
-class HomeRoute extends GoRouteData {
+class HomeRoute extends GoRouteData with _$HomeRoute {
   @override
   Widget build(BuildContext context, GoRouterState state) {
     return const HomePage();
   }
 }
 
-class CubitRoute extends GoRouteData {
+class CubitRoute extends GoRouteData with _$CubitRoute {
   @override
   Widget build(BuildContext context, GoRouterState state) {
     return const CubitPage();
   }
 }
 
-class BlocRoute extends GoRouteData {
+class BlocRoute extends GoRouteData with _$BlocRoute {
   @override
   Widget build(BuildContext context, GoRouterState state) {
     return const BlocPage();
   }
 }
 
-class CubitPokemonDetailsRoute extends GoRouteData {
+class CubitPokemonDetailsRoute extends GoRouteData with _$CubitPokemonDetailsRoute {
   CubitPokemonDetailsRoute({required this.url});
 
   final String url;
@@ -77,7 +77,7 @@ class CubitPokemonDetailsRoute extends GoRouteData {
   }
 }
 
-class BlocPokemonDetailsRoute extends GoRouteData {
+class BlocPokemonDetailsRoute extends GoRouteData with _$BlocPokemonDetailsRoute {
   BlocPokemonDetailsRoute({required this.url});
 
   final String url;

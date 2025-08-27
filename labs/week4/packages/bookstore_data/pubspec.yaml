@@ -1,13 +1,13 @@
 name: bookstore_data
 
 environment:
-  sdk: 3.5.3
+  sdk: 3.9.0
 
 dependencies:
-  collection: ^1.18.0
-  equatable: ^2.0.5
+  collection: ^1.19.1
+  equatable: ^2.0.7
   faker: ^2.2.0
-  meta: ^1.15.0
+  meta: ^1.16.0
 
 dev_dependencies:
-  leancode_lint: ^14.2.0
+  leancode_lint: ^18.0.0

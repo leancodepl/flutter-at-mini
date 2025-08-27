@@ -6,130 +6,139 @@ part of 'routes.dart';
 // GoRouterGenerator
 // **************************************************************************
 
-List<RouteBase> get $appRoutes => [
-      $homeRoute,
-    ];
+List<RouteBase> get $appRoutes => [$homeRoute];
 
 RouteBase get $homeRoute => GoRouteData.$route(
-      path: '/',
-      factory: $HomeRouteExtension._fromState,
+  path: '/',
+  factory: _$HomeRoute._fromState,
+  routes: [
+    GoRouteData.$route(
+      path: 'cubit',
+      factory: _$CubitRoute._fromState,
       routes: [
         GoRouteData.$route(
-          path: 'cubit',
-          factory: $CubitRouteExtension._fromState,
-          routes: [
-            GoRouteData.$route(
-              path: 'pokemon',
-              factory: $CubitPokemonDetailsRouteExtension._fromState,
-            ),
-          ],
-        ),
-        GoRouteData.$route(
-          path: 'bloc',
-          factory: $BlocRouteExtension._fromState,
-          routes: [
-            GoRouteData.$route(
-              path: 'pokemon',
-              factory: $BlocPokemonDetailsRouteExtension._fromState,
-            ),
-          ],
+          path: 'pokemon',
+          factory: _$CubitPokemonDetailsRoute._fromState,
         ),
       ],
-    );
+    ),
+    GoRouteData.$route(
+      path: 'bloc',
+      factory: _$BlocRoute._fromState,
+      routes: [
+        GoRouteData.$route(
+          path: 'pokemon',
+          factory: _$BlocPokemonDetailsRoute._fromState,
+        ),
+      ],
+    ),
+  ],
+);
 
-extension $HomeRouteExtension on HomeRoute {
+mixin _$HomeRoute on GoRouteData {
   static HomeRoute _fromState(GoRouterState state) => HomeRoute();
 
-  String get location => GoRouteData.$location(
-        '/',
-      );
+  @override
+  String get location => GoRouteData.$location('/');
 
+  @override
   void go(BuildContext context) => context.go(location);
 
+  @override
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
+  @override
   void pushReplacement(BuildContext context) =>
       context.pushReplacement(location);
 
+  @override
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $CubitRouteExtension on CubitRoute {
+mixin _$CubitRoute on GoRouteData {
   static CubitRoute _fromState(GoRouterState state) => CubitRoute();
 
-  String get location => GoRouteData.$location(
-        '/cubit',
-      );
+  @override
+  String get location => GoRouteData.$location('/cubit');
 
+  @override
   void go(BuildContext context) => context.go(location);
 
+  @override
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
+  @override
   void pushReplacement(BuildContext context) =>
       context.pushReplacement(location);
 
+  @override
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $CubitPokemonDetailsRouteExtension on CubitPokemonDetailsRoute {
+mixin _$CubitPokemonDetailsRoute on GoRouteData {
   static CubitPokemonDetailsRoute _fromState(GoRouterState state) =>
-      CubitPokemonDetailsRoute(
-        url: state.uri.queryParameters['url']!,
-      );
+      CubitPokemonDetailsRoute(url: state.uri.queryParameters['url']!);
 
-  String get location => GoRouteData.$location(
-        '/cubit/pokemon',
-        queryParams: {
-          'url': url,
-        },
-      );
+  CubitPokemonDetailsRoute get _self => this as CubitPokemonDetailsRoute;
 
+  @override
+  String get location =>
+      GoRouteData.$location('/cubit/pokemon', queryParams: {'url': _self.url});
+
+  @override
   void go(BuildContext context) => context.go(location);
 
+  @override
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
+  @override
   void pushReplacement(BuildContext context) =>
       context.pushReplacement(location);
 
+  @override
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $BlocRouteExtension on BlocRoute {
+mixin _$BlocRoute on GoRouteData {
   static BlocRoute _fromState(GoRouterState state) => BlocRoute();
 
-  String get location => GoRouteData.$location(
-        '/bloc',
-      );
+  @override
+  String get location => GoRouteData.$location('/bloc');
 
+  @override
   void go(BuildContext context) => context.go(location);
 
+  @override
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
+  @override
   void pushReplacement(BuildContext context) =>
       context.pushReplacement(location);
 
+  @override
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $BlocPokemonDetailsRouteExtension on BlocPokemonDetailsRoute {
+mixin _$BlocPokemonDetailsRoute on GoRouteData {
   static BlocPokemonDetailsRoute _fromState(GoRouterState state) =>
-      BlocPokemonDetailsRoute(
-        url: state.uri.queryParameters['url']!,
-      );
+      BlocPokemonDetailsRoute(url: state.uri.queryParameters['url']!);
 
-  String get location => GoRouteData.$location(
-        '/bloc/pokemon',
-        queryParams: {
-          'url': url,
-        },
-      );
+  BlocPokemonDetailsRoute get _self => this as BlocPokemonDetailsRoute;
 
+  @override
+  String get location =>
+      GoRouteData.$location('/bloc/pokemon', queryParams: {'url': _self.url});
+
+  @override
   void go(BuildContext context) => context.go(location);
 
+  @override
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
+  @override
   void pushReplacement(BuildContext context) =>
       context.pushReplacement(location);
 
+  @override
   void replace(BuildContext context) => context.replace(location);
 }

@@ -5,14 +5,15 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.2 <4.0.0'
+  sdk: 3.9.0
+  flutter: 3.35.2
 
 dependencies:
   flutter:
     sdk: flutter
 
 dev_dependencies:
-  leancode_lint: ^14.2.0
+  leancode_lint: ^18.0.0
 
 flutter:
   uses-material-design: true
