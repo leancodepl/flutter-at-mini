@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ErrorMessage extends StatelessWidget {
-  const ErrorMessage({
-    super.key,
-    required this.error,
-  });
+  const ErrorMessage({super.key, required this.error});
 
   final Object error;
 

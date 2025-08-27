@@ -19,14 +19,11 @@ class Pokemons {
 }
 
 class PokemonEntry {
-  PokemonEntry({
-    required this.name,
-    required this.url,
-  });
+  PokemonEntry({required this.name, required this.url});
 
   PokemonEntry.fromJson(Map<String, dynamic> json)
-      : name = json['name'] as String,
-        url = json['url'] as String;
+    : name = json['name'] as String,
+      url = json['url'] as String;
 
   final String name;
   final String url;
@@ -42,11 +39,11 @@ class Pokemon {
   });
 
   Pokemon.fromJson(Map<String, dynamic> json)
-      : id = json['id'] as int,
-        name = json['name'] as String,
-        baseExperience = json['base_experience'] as int,
-        height = json['height'] as int,
-        weight = json['weight'] as int;
+    : id = json['id'] as int,
+      name = json['name'] as String,
+      baseExperience = json['base_experience'] as int,
+      height = json['height'] as int,
+      weight = json['weight'] as int;
 
   final int id;
   final String name;

@@ -7,15 +7,15 @@ part 'todo_database.g.dart';
 @DriftDatabase(tables: [Todos])
 class TodoDatabase extends _$TodoDatabase {
   TodoDatabase()
-      : super(
-          driftDatabase(
-            name: 'todo_database',
-            web: DriftWebOptions(
-              sqlite3Wasm: Uri.parse('sqlite3.wasm'),
-              driftWorker: Uri.parse('drift_worker.dart.js'),
-            ),
+    : super(
+        driftDatabase(
+          name: 'todo_database',
+          web: DriftWebOptions(
+            sqlite3Wasm: Uri.parse('sqlite3.wasm'),
+            driftWorker: Uri.parse('drift_worker.dart.js'),
           ),
-        );
+        ),
+      );
 
   @override
   int get schemaVersion => 1;

@@ -11,8 +11,11 @@ final authors = List.generate(
   (index) => Author(
     id: _faker.guid.guid(),
     name: _faker.person.name(),
-    pictureUrl:
-        _faker.image.loremPicsum(width: 300, height: 300, random: index),
+    pictureUrl: _faker.image.loremPicsum(
+      width: 300,
+      height: 300,
+      random: index,
+    ),
     bio: _faker.lorem.sentences(3).join(' '),
   ),
 );

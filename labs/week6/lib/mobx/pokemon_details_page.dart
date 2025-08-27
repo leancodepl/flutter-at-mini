@@ -7,10 +7,7 @@ import 'package:week6/mobx/pokemon_details_store.dart';
 import 'package:week6/pokemon.dart';
 
 class PokemonDetailsPage extends StatelessWidget {
-  const PokemonDetailsPage({
-    super.key,
-    required this.pokemonUrl,
-  });
+  const PokemonDetailsPage({super.key, required this.pokemonUrl});
 
   final String pokemonUrl;
 
@@ -21,19 +18,19 @@ class PokemonDetailsPage extends StatelessWidget {
           PokemonDetailsStore(pokemonUrl: pokemonUrl)..loadPokemonDetails(),
       builder: (context, _) {
         return Scaffold(
-          appBar: AppBar(
-            title: const Text('MobX Pokémon'),
-          ),
+          appBar: AppBar(title: const Text('MobX Pokémon')),
           body: Observer(
             builder: (context) {
               final store = context.read<PokemonDetailsStore>();
 
               return switch (store) {
                 PokemonDetailsStore(loading: true) => const LoadingIndicator(),
-                PokemonDetailsStore(:final error?) =>
-                  ErrorMessage(error: error),
-                PokemonDetailsStore(:final pokemon?) =>
-                  _PokemonDetails(pokemon),
+                PokemonDetailsStore(:final error?) => ErrorMessage(
+                  error: error,
+                ),
+                PokemonDetailsStore(:final pokemon?) => _PokemonDetails(
+                  pokemon,
+                ),
                 _ => const SizedBox(),
               };
             },
@@ -64,10 +61,7 @@ class _PokemonDetails extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
-            pokemon.name,
-            style: theme.textTheme.displayLarge,
-          ),
+          Text(pokemon.name, style: theme.textTheme.displayLarge),
           const SizedBox(height: 16),
           Image.network(
             'https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/${pokemon.id.toString().padLeft(3, '0')}.png',
@@ -79,17 +73,12 @@ class _PokemonDetails extends StatelessWidget {
                 height: 216,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(
-                    color: theme.colorScheme.outlineVariant,
-                  ),
+                  border: Border.all(color: theme.colorScheme.outlineVariant),
                 ),
                 alignment: Alignment.center,
                 child: frame == null
                     ? const CircularProgressIndicator()
-                    : Padding(
-                        padding: const EdgeInsets.all(8),
-                        child: child,
-                      ),
+                    : Padding(padding: const EdgeInsets.all(8), child: child),
               );
             },
           ),

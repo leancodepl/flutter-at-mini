@@ -15,11 +15,11 @@ class BookScreen extends StatelessWidget {
       appBar: AppBar(),
       body: switch (Bookstore.getBook(id: bookId)) {
         final book? => LayoutBuilder(
-            builder: (context, constraints) => switch (constraints.maxWidth) {
-              < 600 => _BookDetailsNarrow(book),
-              _ => _BookDetailsWide(book),
-            },
-          ),
+          builder: (context, constraints) => switch (constraints.maxWidth) {
+            < 600 => _BookDetailsNarrow(book),
+            _ => _BookDetailsWide(book),
+          },
+        ),
         null => Center(child: Text('Book with id $bookId not found')),
       },
     );
@@ -64,10 +64,7 @@ class _BookDetailsWide extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.all(16),
-          child: SizedBox(
-            width: 200,
-            child: Cover(book.coverUrl),
-          ),
+          child: SizedBox(width: 200, child: Cover(book.coverUrl)),
         ),
         Expanded(
           child: ListView(
@@ -105,10 +102,7 @@ class _Author extends StatelessWidget {
 
     return Row(
       children: [
-        Icon(
-          Icons.person_rounded,
-          color: theme.colorScheme.onSurface,
-        ),
+        Icon(Icons.person_rounded, color: theme.colorScheme.onSurface),
         const SizedBox(width: 8),
         Flexible(
           child: Text(
@@ -138,10 +132,7 @@ class _Genre extends StatelessWidget {
 
     return Row(
       children: [
-        Icon(
-          Icons.category_rounded,
-          color: theme.colorScheme.onSurface,
-        ),
+        Icon(Icons.category_rounded, color: theme.colorScheme.onSurface),
         const SizedBox(width: 8),
         Flexible(
           child: Text(
@@ -171,10 +162,7 @@ class _Published extends StatelessWidget {
 
     return Row(
       children: [
-        Icon(
-          Icons.date_range_rounded,
-          color: theme.colorScheme.onSurface,
-        ),
+        Icon(Icons.date_range_rounded, color: theme.colorScheme.onSurface),
         const SizedBox(width: 8),
         Flexible(
           child: Text(
@@ -203,10 +191,7 @@ class _Description extends StatelessWidget {
       children: [
         Row(
           children: [
-            Icon(
-              Icons.description_rounded,
-              color: theme.colorScheme.onSurface,
-            ),
+            Icon(Icons.description_rounded, color: theme.colorScheme.onSurface),
             const SizedBox(width: 8),
             Expanded(
               child: Text(

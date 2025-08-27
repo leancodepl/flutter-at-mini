@@ -35,9 +35,7 @@ void part2() {
   ];
   print(strings);
 
-  final withLengths = {
-    for (final string in strings) string: string.length,
-  };
+  final withLengths = {for (final string in strings) string: string.length};
   print(withLengths);
 
   final grouped1 = strings.groupListsBy((e) => e[0]);

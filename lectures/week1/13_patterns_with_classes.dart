@@ -13,11 +13,6 @@ void printStatus(PaymentStatus status) {
 
 void main() {
   printStatus(PaymentSuccess(transactionId: '123456'));
-  printStatus(
-    PaymentFailure(
-      errorCode: -1,
-      errorDescription: 'unknown error',
-    ),
-  );
+  printStatus(PaymentFailure(errorCode: -1, errorDescription: 'unknown error'));
   printStatus(PaymentPending());
 }

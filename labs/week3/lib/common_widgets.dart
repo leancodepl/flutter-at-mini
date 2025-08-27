@@ -15,10 +15,7 @@ class Cover extends StatelessWidget {
       width: 200,
       height: 300,
       frameBuilder: (context, child, _, __) {
-        return ClipRRect(
-          borderRadius: BorderRadius.circular(16),
-          child: child,
-        );
+        return ClipRRect(borderRadius: BorderRadius.circular(16), child: child);
       },
     );
   }
@@ -33,10 +30,7 @@ class PageTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    return Text(
-      title,
-      style: theme.textTheme.displayLarge,
-    );
+    return Text(title, style: theme.textTheme.displayLarge);
   }
 }
 
@@ -66,10 +60,7 @@ class _ListEntry extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Row(
             children: [
-              Icon(
-                icon,
-                color: theme.colorScheme.onSurface,
-              ),
+              Icon(icon, color: theme.colorScheme.onSurface),
               const SizedBox(width: 16),
               Expanded(
                 child: Column(

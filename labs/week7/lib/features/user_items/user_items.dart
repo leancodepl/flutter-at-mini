@@ -20,10 +20,9 @@ class _SliverUserItemsState extends State<SliverUserItems> {
   @override
   void initState() {
     super.initState();
-    _itemsStream = context
-        .read<UserItemsService>()
-        .itemsStream
-        .map((items) => items.sortedBy((item) => item.date).reversed);
+    _itemsStream = context.read<UserItemsService>().itemsStream.map(
+      (items) => items.sortedBy((item) => item.date).reversed,
+    );
     _nameController.addListener(() {
       setState(() => _canAddItem = _nameController.text.isNotEmpty);
     });
@@ -47,9 +46,9 @@ class _SliverUserItemsState extends State<SliverUserItems> {
                 FilledButton.tonalIcon(
                   onPressed: _canAddItem
                       ? () {
-                          context
-                              .read<UserItemsService>()
-                              .addItem(_nameController.text);
+                          context.read<UserItemsService>().addItem(
+                            _nameController.text,
+                          );
                           _nameController.clear();
                         }
                       : null,

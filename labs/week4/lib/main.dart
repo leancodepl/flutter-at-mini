@@ -42,21 +42,18 @@ final _router = GoRouter(
       routes: [
         GoRoute(
           path: 'book/:bookId',
-          builder: (context, state) => BookScreen(
-            bookId: state.pathParameters['bookId']!,
-          ),
+          builder: (context, state) =>
+              BookScreen(bookId: state.pathParameters['bookId']!),
         ),
         GoRoute(
           path: 'author/:authorId',
-          builder: (context, state) => AuthorScreen(
-            authorId: state.pathParameters['authorId']!,
-          ),
+          builder: (context, state) =>
+              AuthorScreen(authorId: state.pathParameters['authorId']!),
         ),
         GoRoute(
           path: 'genre/:genreId',
-          builder: (context, state) => GenreScreen(
-            genreId: state.pathParameters['genreId']!,
-          ),
+          builder: (context, state) =>
+              GenreScreen(genreId: state.pathParameters['genreId']!),
         ),
       ],
     ),

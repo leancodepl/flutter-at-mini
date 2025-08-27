@@ -63,11 +63,7 @@ class _Example6State extends State<Example6> {
             color: Colors.blue,
             child: Align(
               alignment: Alignment(_xAlignment, _yAlignment),
-              child: Container(
-                width: 200,
-                height: 100,
-                color: Colors.amber,
-              ),
+              child: Container(width: 200, height: 100, color: Colors.amber),
             ),
           ),
         ),

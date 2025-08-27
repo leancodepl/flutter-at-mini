@@ -48,11 +48,7 @@ void main() {
       },
       act: (cubit) => cubit.fetchDogs(),
       expect: () => contains(
-        isA<FetchedDogList>().having(
-          (s) => s.dogs,
-          'dogs',
-          [(url: 'testDog')],
-        ),
+        isA<FetchedDogList>().having((s) => s.dogs, 'dogs', [(url: 'testDog')]),
       ),
     );
 

@@ -7,11 +7,7 @@ class Example2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstraintsViewer(
-      child: Container(
-        width: 600,
-        height: 300,
-        color: Colors.red,
-      ),
+      child: Container(width: 600, height: 300, color: Colors.red),
     );
   }
 }

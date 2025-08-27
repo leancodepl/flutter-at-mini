@@ -45,21 +45,18 @@ class _PokemonDataState extends State<PokemonData> {
     final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pokemon!'),
-      ),
+      appBar: AppBar(title: const Text('Pokemon!')),
       body: SizedBox.expand(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (selectedPokemon
-                case Pokemon(
-                  :final id,
-                  :final name,
-                  :final baseExperience,
-                  :final height,
-                  :final weight,
-                ))
+            if (selectedPokemon case Pokemon(
+              :final id,
+              :final name,
+              :final baseExperience,
+              :final height,
+              :final weight,
+            ))
               Expanded(
                 child: Center(
                   child: Column(

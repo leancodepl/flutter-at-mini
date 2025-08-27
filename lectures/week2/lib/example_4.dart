@@ -8,11 +8,7 @@ class Example4 extends StatelessWidget {
     return Container(
       constraints: BoxConstraints.tight(const Size(300, 200)),
       color: Colors.red,
-      child: Container(
-        width: 200,
-        height: 100,
-        color: Colors.green,
-      ),
+      child: Container(width: 200, height: 100, color: Colors.green),
     );
   }
 }

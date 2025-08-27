@@ -5,10 +5,6 @@ class Example1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 300,
-      height: 300,
-      color: Colors.red,
-    );
+    return Container(width: 300, height: 300, color: Colors.red);
   }
 }

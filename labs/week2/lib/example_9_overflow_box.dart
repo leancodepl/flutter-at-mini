@@ -22,11 +22,7 @@ class Example9 extends StatelessWidget {
               maxHeight: double.infinity,
               // maxHeight: null,
               child: ConstraintsViewer(
-                child: Container(
-                  width: 400,
-                  height: 800,
-                  color: Colors.red,
-                ),
+                child: Container(width: 400, height: 800, color: Colors.red),
               ),
             ),
           ),

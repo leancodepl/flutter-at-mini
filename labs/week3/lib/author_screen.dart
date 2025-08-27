@@ -13,11 +13,11 @@ class AuthorScreen extends StatelessWidget {
       appBar: AppBar(),
       body: switch (Bookstore.getAuthor(id: authorId)) {
         final author? => LayoutBuilder(
-            builder: (context, constraints) => switch (constraints.maxWidth) {
-              < 600 => _AuthorDetailsNarrow(author),
-              _ => _AuthorDetailsWide(author),
-            },
-          ),
+          builder: (context, constraints) => switch (constraints.maxWidth) {
+            < 600 => _AuthorDetailsNarrow(author),
+            _ => _AuthorDetailsWide(author),
+          },
+        ),
         null => Center(child: Text('Author with id $authorId not found')),
       },
     );
@@ -115,10 +115,7 @@ class _Bio extends StatelessWidget {
       children: [
         Row(
           children: [
-            Icon(
-              Icons.person_rounded,
-              color: theme.colorScheme.onSurface,
-            ),
+            Icon(Icons.person_rounded, color: theme.colorScheme.onSurface),
             const SizedBox(width: 8),
             Expanded(
               child: Text(

@@ -11,18 +11,10 @@ class Example7 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ConstraintsViewer(
-            child: Container(
-              width: 200,
-              height: 200,
-              color: Colors.red,
-            ),
+            child: Container(width: 200, height: 200, color: Colors.red),
           ),
           ConstraintsViewer(
-            child: Container(
-              width: 200,
-              height: 400,
-              color: Colors.blue,
-            ),
+            child: Container(width: 200, height: 400, color: Colors.blue),
           ),
         ],
       ),

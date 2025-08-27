@@ -9,11 +9,7 @@ class Example3 extends StatelessWidget {
     return ConstrainedBox(
       constraints: BoxConstraints.tight(const Size(500, 400)),
       child: ConstraintsViewer(
-        child: Container(
-          width: 50,
-          height: 50,
-          color: Colors.red,
-        ),
+        child: Container(width: 50, height: 50, color: Colors.red),
       ),
     );
   }

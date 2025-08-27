@@ -10,9 +10,7 @@ class BookListScreen extends StatelessWidget {
     final books = Bookstore.books;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Bookstore'),
-      ),
+      appBar: AppBar(title: const Text('Bookstore')),
       body: CustomScrollView(
         slivers: [
           SliverPadding(

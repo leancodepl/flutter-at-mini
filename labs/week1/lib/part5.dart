@@ -14,24 +14,21 @@ void part5() {
 
 final random = Random();
 
-(int, int, int) generate() => (
-      random.nextInt(20),
-      random.nextInt(20),
-      random.nextInt(20),
-    );
+(int, int, int) generate() =>
+    (random.nextInt(20), random.nextInt(20), random.nextInt(20));
 
 Object transform((int, int, int) triple) => switch (triple) {
-      (0, 0, 0) => 'All zeros!',
-      (> 10, 5, final c) => c,
-      (final a, final b, final c) when a.isEven => (b, c),
-// or, to check without the `when` clause:
-      (int(isEven: true), final b, final c) => (b, c),
-      final triple => triple,
-    };
+  (0, 0, 0) => 'All zeros!',
+  (> 10, 5, final c) => c,
+  (final a, final b, final c) when a.isEven => (b, c),
+  // or, to check without the `when` clause:
+  (int(isEven: true), final b, final c) => (b, c),
+  final triple => triple,
+};
 
 ({int x, int y, bool enabled, double temperature}) randomize() => (
-      x: random.nextInt(100),
-      y: random.nextInt(100),
-      enabled: random.nextBool(),
-      temperature: random.nextDouble() * 100,
-    );
+  x: random.nextInt(100),
+  y: random.nextInt(100),
+  enabled: random.nextBool(),
+  temperature: random.nextDouble() * 100,
+);

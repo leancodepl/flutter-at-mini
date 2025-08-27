@@ -11,9 +11,7 @@ class TodoPage extends StatelessWidget {
     final todosCubit = context.watch<TodoCubit>();
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Todos'),
-      ),
+      appBar: AppBar(title: const Text('Todos')),
       body: switch (todosCubit.state) {
         LoadingTodos() => const Center(child: CircularProgressIndicator()),
         LoadedTodos(todos: []) => const EmptyTodosWidget(),
@@ -36,9 +34,7 @@ class TodoPage extends StatelessWidget {
 }
 
 class AddTodoDialog extends StatefulWidget {
-  const AddTodoDialog({
-    super.key,
-  });
+  const AddTodoDialog({super.key});
 
   @override
   State<AddTodoDialog> createState() => _AddTodoDialogState();
@@ -50,10 +46,7 @@ class _AddTodoDialogState extends State<AddTodoDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      content: TextField(
-        controller: _title,
-        autofocus: true,
-      ),
+      content: TextField(controller: _title, autofocus: true),
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context, _title.text),
@@ -65,10 +58,7 @@ class _AddTodoDialogState extends State<AddTodoDialog> {
 }
 
 class TodosList extends StatelessWidget {
-  const TodosList({
-    super.key,
-    required this.todos,
-  });
+  const TodosList({super.key, required this.todos});
 
   final List<Todo> todos;
 

@@ -5,11 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class ConstraintsViewer extends SingleChildRenderObjectWidget {
-  const ConstraintsViewer({
-    super.key,
-    this.tag,
-    super.child,
-  });
+  const ConstraintsViewer({super.key, this.tag, super.child});
 
   final String? tag;
 
@@ -19,10 +15,7 @@ class ConstraintsViewer extends SingleChildRenderObjectWidget {
 }
 
 class RenderPositionedBox extends RenderShiftedBox {
-  RenderPositionedBox({
-    required this.tag,
-    RenderBox? child,
-  }) : super(child);
+  RenderPositionedBox({required this.tag, RenderBox? child}) : super(child);
 
   final String? tag;
 

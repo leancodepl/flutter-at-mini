@@ -30,18 +30,14 @@ void main() {
 }
 
 class App extends StatelessWidget {
-  const App({
-    super.key,
-  });
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: MaterialApp(
         home: Scaffold(
-          appBar: AppBar(
-            title: const Text('Labs – week 2'),
-          ),
+          appBar: AppBar(title: const Text('Labs – week 2')),
           body: ListView.builder(
             itemCount: entries.length,
             itemBuilder: (context, i) {
@@ -63,11 +59,7 @@ class App extends StatelessWidget {
 }
 
 class ExampleWrapper extends StatelessWidget {
-  const ExampleWrapper({
-    super.key,
-    required this.title,
-    required this.child,
-  });
+  const ExampleWrapper({super.key, required this.title, required this.child});
 
   final String title;
   final Widget child;
@@ -75,12 +67,8 @@ class ExampleWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: SafeArea(
-        child: child,
-      ),
+      appBar: AppBar(title: Text(title)),
+      body: SafeArea(child: child),
     );
   }
 }

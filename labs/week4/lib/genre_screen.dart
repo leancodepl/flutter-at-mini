@@ -11,18 +11,16 @@ class GenreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: const [AppThemeSwitcher()],
-      ),
+      appBar: AppBar(actions: const [AppThemeSwitcher()]),
       body: switch (Bookstore.getGenre(id: genreId)) {
         final genre? => CustomScrollView(
-            slivers: [
-              SliverPadding(
-                padding: const EdgeInsets.all(16),
-                sliver: _SliverGenreContent(genre),
-              ),
-            ],
-          ),
+          slivers: [
+            SliverPadding(
+              padding: const EdgeInsets.all(16),
+              sliver: _SliverGenreContent(genre),
+            ),
+          ],
+        ),
         null => Center(child: Text('Genre with id $genreId not found')),
       },
     );
@@ -50,10 +48,7 @@ class _SliverGenreContent extends StatelessWidget {
             const SizedBox(height: 32),
             Padding(
               padding: const EdgeInsetsDirectional.only(start: 16),
-              child: Text(
-                'Authors',
-                style: theme.textTheme.headlineSmall,
-              ),
+              child: Text('Authors', style: theme.textTheme.headlineSmall),
             ),
           ],
         ),
@@ -68,10 +63,7 @@ class _SliverGenreContent extends StatelessWidget {
             const SizedBox(height: 32),
             Padding(
               padding: const EdgeInsetsDirectional.only(start: 16),
-              child: Text(
-                'Books',
-                style: theme.textTheme.headlineSmall,
-              ),
+              child: Text('Books', style: theme.textTheme.headlineSmall),
             ),
           ],
         ),

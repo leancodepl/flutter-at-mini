@@ -19,9 +19,7 @@ class Task1 extends StatelessWidget {
 }
 
 class VerticalLayoutWidget extends StatelessWidget {
-  const VerticalLayoutWidget({
-    super.key,
-  });
+  const VerticalLayoutWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,9 +59,7 @@ class VerticalLayoutWidget extends StatelessWidget {
 }
 
 class WideLayoutWidget extends StatelessWidget {
-  const WideLayoutWidget({
-    super.key,
-  });
+  const WideLayoutWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -82,10 +78,7 @@ class WideLayoutWidget extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Container(
-                  width: math.max(
-                    maxWidth * 3 / 4,
-                    maxWidth - 300,
-                  ),
+                  width: math.max(maxWidth * 3 / 4, maxWidth - 300),
                   color: Colors.green,
                   child: Align(
                     alignment: Alignment.bottomRight,

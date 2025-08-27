@@ -30,9 +30,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Week 6'),
-      ),
+      appBar: AppBar(title: const Text('Week 6')),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -57,15 +55,10 @@ class HomePage extends StatelessWidget {
   }
 }
 
-final _router = GoRouter(
-  routes: $appRoutes,
-);
+final _router = GoRouter(routes: $appRoutes);
 
 class _PageCard extends StatelessWidget {
-  const _PageCard({
-    required this.label,
-    required this.onTap,
-  });
+  const _PageCard({required this.label, required this.onTap});
 
   final String label;
   final VoidCallback onTap;
@@ -78,10 +71,7 @@ class _PageCard extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Center(
-          child: Text(
-            label,
-            style: Theme.of(context).textTheme.headlineSmall,
-          ),
+          child: Text(label, style: Theme.of(context).textTheme.headlineSmall),
         ),
       ),
     );

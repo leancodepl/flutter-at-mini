@@ -13,9 +13,7 @@ class A {
 class B {
   B(this._firstName, this.lastName);
 
-  B.sample()
-      : _firstName = 'John',
-        lastName = 'Smith';
+  B.sample() : _firstName = 'John', lastName = 'Smith';
 
   factory B.create(String fullName) {
     final firstName = fullName.split(' ').first;

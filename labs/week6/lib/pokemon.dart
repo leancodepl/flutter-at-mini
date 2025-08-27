@@ -16,10 +16,7 @@ part 'pokemon.g.dart';
 
 @JsonSerializable()
 class Pokemons {
-  const Pokemons({
-    required this.pokemons,
-    required this.count,
-  });
+  const Pokemons({required this.pokemons, required this.count});
 
   factory Pokemons.fromJson(Map<String, dynamic> json) =>
       _$PokemonsFromJson(json);
@@ -31,10 +28,7 @@ class Pokemons {
 
 @JsonSerializable()
 class PokemonEntry {
-  const PokemonEntry({
-    required this.name,
-    required this.url,
-  });
+  const PokemonEntry({required this.name, required this.url});
 
   factory PokemonEntry.fromJson(Map<String, dynamic> json) =>
       _$PokemonEntryFromJson(json);

@@ -9,10 +9,7 @@ class Example4 extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 16 / 9,
       child: ConstraintsViewer(
-        child: Container(
-          color: Colors.red,
-          height: 100,
-        ),
+        child: Container(color: Colors.red, height: 100),
       ),
     );
   }

@@ -5,9 +5,9 @@ class AppTheme extends ValueNotifier<Brightness> {
   AppTheme() : super(Brightness.light);
 
   void toggle() => value = switch (value) {
-        Brightness.light => Brightness.dark,
-        Brightness.dark => Brightness.light,
-      };
+    Brightness.light => Brightness.dark,
+    Brightness.dark => Brightness.light,
+  };
 }
 
 class AppThemeSwitcher extends StatelessWidget {

@@ -4,10 +4,7 @@ import 'package:week4/app_theme.dart';
 import 'package:week4/favorite_books.dart';
 
 class GlobalProviders extends StatelessWidget {
-  const GlobalProviders({
-    super.key,
-    required this.child,
-  });
+  const GlobalProviders({super.key, required this.child});
 
   final Widget child;
 

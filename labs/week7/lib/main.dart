@@ -10,9 +10,7 @@ void main() {
 }
 
 class _App extends StatefulWidget {
-  const _App({
-    required this.child,
-  });
+  const _App({required this.child});
 
   final Widget child;
 
@@ -21,8 +19,9 @@ class _App extends StatefulWidget {
 }
 
 class _AppState extends State<_App> {
-  final _initialization =
-      Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  final _initialization = Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -40,10 +39,8 @@ class _AppState extends State<_App> {
           return switch (snapshot.connectionState) {
             ConnectionState.done => widget.child,
             _ => const Scaffold(
-                body: Center(
-                  child: CircularProgressIndicator(),
-                ),
-              ),
+              body: Center(child: CircularProgressIndicator()),
+            ),
           };
         },
       ),

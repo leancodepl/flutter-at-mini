@@ -25,11 +25,11 @@ class BookScreen extends StatelessWidget {
       ),
       body: switch (book) {
         final book? => LayoutBuilder(
-            builder: (context, constraints) => switch (constraints.maxWidth) {
-              < 600 => _BookDetailsNarrow(book),
-              _ => _BookDetailsWide(book),
-            },
-          ),
+          builder: (context, constraints) => switch (constraints.maxWidth) {
+            < 600 => _BookDetailsNarrow(book),
+            _ => _BookDetailsWide(book),
+          },
+        ),
         null => Center(child: Text('Book with id $bookId not found')),
       },
     );
@@ -56,10 +56,7 @@ class _BookDetailsNarrow extends StatelessWidget {
         const SizedBox(height: 26),
         _Published(book.publishDate),
         const SizedBox(height: 26),
-        _Description(
-          key: GlobalObjectKey(book.id),
-          book.description,
-        ),
+        _Description(key: GlobalObjectKey(book.id), book.description),
       ],
     );
   }
@@ -77,10 +74,7 @@ class _BookDetailsWide extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.all(16),
-          child: SizedBox(
-            width: 200,
-            child: Cover(book.coverUrl),
-          ),
+          child: SizedBox(width: 200, child: Cover(book.coverUrl)),
         ),
         Expanded(
           child: ListView(
@@ -98,10 +92,7 @@ class _BookDetailsWide extends StatelessWidget {
               const SizedBox(height: 26),
               _Published(book.publishDate),
               const SizedBox(height: 26),
-              _Description(
-                key: GlobalObjectKey(book.id),
-                book.description,
-              ),
+              _Description(key: GlobalObjectKey(book.id), book.description),
             ],
           ),
         ),
@@ -121,10 +112,7 @@ class _Author extends StatelessWidget {
 
     return Row(
       children: [
-        Icon(
-          Icons.person_rounded,
-          color: theme.colorScheme.onSurface,
-        ),
+        Icon(Icons.person_rounded, color: theme.colorScheme.onSurface),
         const SizedBox(width: 8),
         Flexible(
           child: Text(
@@ -154,10 +142,7 @@ class _Genre extends StatelessWidget {
 
     return Row(
       children: [
-        Icon(
-          Icons.category_rounded,
-          color: theme.colorScheme.onSurface,
-        ),
+        Icon(Icons.category_rounded, color: theme.colorScheme.onSurface),
         const SizedBox(width: 8),
         Flexible(
           child: Text(
@@ -187,10 +172,7 @@ class _Published extends StatelessWidget {
 
     return Row(
       children: [
-        Icon(
-          Icons.date_range_rounded,
-          color: theme.colorScheme.onSurface,
-        ),
+        Icon(Icons.date_range_rounded, color: theme.colorScheme.onSurface),
         const SizedBox(width: 8),
         Flexible(
           child: Text(
@@ -226,10 +208,7 @@ class _DescriptionState extends State<_Description> {
       children: [
         Row(
           children: [
-            Icon(
-              Icons.description_rounded,
-              color: theme.colorScheme.onSurface,
-            ),
+            Icon(Icons.description_rounded, color: theme.colorScheme.onSurface),
             const SizedBox(width: 8),
             Flexible(
               child: Text(

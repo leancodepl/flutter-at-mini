@@ -13,11 +13,7 @@ class Example2 extends StatelessWidget {
         color: Colors.red,
         child: Align(
           alignment: Alignment.centerRight, // Alignment(1, 0)
-          child: Container(
-            width: 100,
-            height: 50,
-            color: Colors.green,
-          ),
+          child: Container(width: 100, height: 50, color: Colors.green),
         ),
       ),
     );

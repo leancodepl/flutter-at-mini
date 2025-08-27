@@ -27,10 +27,7 @@ class Task2 extends StatelessWidget {
         for (var i = count - 1; i > 0; i--) {
           child = makeBox(
             i,
-            child: Align(
-              alignment: const FractionalOffset(2, 2),
-              child: child,
-            ),
+            child: Align(alignment: const FractionalOffset(2, 2), child: child),
           );
         }
 

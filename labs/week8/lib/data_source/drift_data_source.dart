@@ -26,11 +26,7 @@ class DriftTodoDataSource extends TodoDataSource {
   @override
   Future<void> insert(Todo todo) {
     return db.managers.todos.create(
-      (c) => c(
-        id: todo.id,
-        title: todo.title,
-        done: todo.done,
-      ),
+      (c) => c(id: todo.id, title: todo.title, done: todo.done),
     );
   }
 

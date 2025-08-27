@@ -10,12 +10,10 @@ void part3() {
   for (final animal in animals) {
     print(animal.description);
     animal.makeSound();
-    print(
-      switch (animal) {
-        Dog(:final color) || Cat(:final color) => 'Color: $color',
-        Cow(:final weight) => 'Weight: $weight',
-      },
-    );
+    print(switch (animal) {
+      Dog(:final color) || Cat(:final color) => 'Color: $color',
+      Cow(:final weight) => 'Weight: $weight',
+    });
   }
 }
 

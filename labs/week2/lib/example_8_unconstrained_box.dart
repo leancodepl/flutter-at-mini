@@ -13,11 +13,7 @@ class Example8 extends StatelessWidget {
         // constrainedAxis: Axis.horizontal,
         // constrainedAxis: Axis.vertical,
         child: ConstraintsViewer(
-          child: Container(
-            width: 400,
-            height: 800,
-            color: Colors.red,
-          ),
+          child: Container(width: 400, height: 800, color: Colors.red),
         ),
       ),
     );

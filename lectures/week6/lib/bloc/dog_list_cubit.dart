@@ -3,9 +3,7 @@ import 'package:week6/bloc/dog_list_state.dart';
 import 'package:week6/data/dog_api.dart';
 
 class DogListCubit extends Cubit<DogListState> {
-  DogListCubit({required DogApi api})
-      : _api = api,
-        super(const EmptyDogList());
+  DogListCubit({required DogApi api}) : _api = api, super(const EmptyDogList());
 
   final DogApi _api;
 

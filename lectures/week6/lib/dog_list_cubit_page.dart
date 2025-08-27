@@ -12,20 +12,18 @@ class DogListCubitPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Dog List with Bloc/Cubit'),
-      ),
+      appBar: AppBar(title: const Text('Dog List with Bloc/Cubit')),
       backgroundColor: Colors.white,
       body: BlocBuilder<DogListCubit, DogListState>(
         builder: (context, state) => switch (state) {
           LoadingDogList() => const LoadingWidget(),
           EmptyDogList() => EmptyDogListWidget(
-              onFetch: () => context.read<DogListCubit>().fetchDogs(),
-            ),
+            onFetch: () => context.read<DogListCubit>().fetchDogs(),
+          ),
           final FetchedDogList dogList => DogListDataWidget(
-              dogList: dogList,
-              onFetch: () => context.read<DogListCubit>().fetchDogs(),
-            ),
+            dogList: dogList,
+            onFetch: () => context.read<DogListCubit>().fetchDogs(),
+          ),
         },
       ),
     );

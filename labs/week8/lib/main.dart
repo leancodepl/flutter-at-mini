@@ -29,30 +29,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        Provider.value(
-          value: Localstore.instance,
-        ),
+        Provider.value(value: Localstore.instance),
         Provider(
           create: (context) => TodoDatabase(),
           dispose: (context, db) => db.close(),
         ),
+        Provider(create: (context) => InMemoryTodoDataSource()),
+        Provider(create: (context) => DriftTodoDataSource(db: context.read())),
         Provider(
-          create: (context) => InMemoryTodoDataSource(),
+          create: (context) =>
+              HiveTodoDataSource(boxFuture: Hive.openBox('todos')),
         ),
         Provider(
-          create: (context) => DriftTodoDataSource(
-            db: context.read(),
-          ),
-        ),
-        Provider(
-          create: (context) => HiveTodoDataSource(
-            boxFuture: Hive.openBox('todos'),
-          ),
-        ),
-        Provider(
-          create: (context) => LocalstoreTodoDataSource(
-            localstore: context.read(),
-          ),
+          create: (context) =>
+              LocalstoreTodoDataSource(localstore: context.read()),
         ),
       ],
       child: MaterialApp.router(
@@ -74,9 +64,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Week 8'),
-      ),
+      appBar: AppBar(title: const Text('Week 8')),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -136,36 +124,36 @@ final _router = GoRouter(
         GoRoute(
           path: 'in-memory',
           builder: (context, state) => BlocProvider(
-            create: (context) => TodoCubit(
-              dataSource: context.read<InMemoryTodoDataSource>(),
-            )..refresh(),
+            create: (context) =>
+                TodoCubit(dataSource: context.read<InMemoryTodoDataSource>())
+                  ..refresh(),
             child: const TodoPage(),
           ),
         ),
         GoRoute(
           path: 'drift',
           builder: (context, state) => BlocProvider(
-            create: (context) => TodoCubit(
-              dataSource: context.read<DriftTodoDataSource>(),
-            )..refresh(),
+            create: (context) =>
+                TodoCubit(dataSource: context.read<DriftTodoDataSource>())
+                  ..refresh(),
             child: const TodoPage(),
           ),
         ),
         GoRoute(
           path: 'hive',
           builder: (context, state) => BlocProvider(
-            create: (context) => TodoCubit(
-              dataSource: context.read<HiveTodoDataSource>(),
-            )..refresh(),
+            create: (context) =>
+                TodoCubit(dataSource: context.read<HiveTodoDataSource>())
+                  ..refresh(),
             child: const TodoPage(),
           ),
         ),
         GoRoute(
           path: 'localstore',
           builder: (context, state) => BlocProvider(
-            create: (context) => TodoCubit(
-              dataSource: context.read<LocalstoreTodoDataSource>(),
-            )..refresh(),
+            create: (context) =>
+                TodoCubit(dataSource: context.read<LocalstoreTodoDataSource>())
+                  ..refresh(),
             child: const TodoPage(),
           ),
         ),
@@ -175,10 +163,7 @@ final _router = GoRouter(
 );
 
 class _PageCard extends StatelessWidget {
-  const _PageCard({
-    required this.label,
-    required this.onTap,
-  });
+  const _PageCard({required this.label, required this.onTap});
 
   final String label;
   final VoidCallback onTap;
@@ -191,10 +176,7 @@ class _PageCard extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Center(
-          child: Text(
-            label,
-            style: Theme.of(context).textTheme.headlineSmall,
-          ),
+          child: Text(label, style: Theme.of(context).textTheme.headlineSmall),
         ),
       ),
     );

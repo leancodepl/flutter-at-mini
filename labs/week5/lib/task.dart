@@ -17,10 +17,12 @@ Future<Pokemon> loadDataIOHttp() async {
     final pokemonsReq = await client.getUrl(url);
     final pokemonsRes = await pokemonsReq.close();
 
-    final pokemonsJson =
-        await pokemonsRes.transform(const Utf8Decoder()).join();
-    final pokemons =
-        Pokemons.fromJson(jsonDecode(pokemonsJson) as Map<String, dynamic>);
+    final pokemonsJson = await pokemonsRes
+        .transform(const Utf8Decoder())
+        .join();
+    final pokemons = Pokemons.fromJson(
+      jsonDecode(pokemonsJson) as Map<String, dynamic>,
+    );
 
     final random =
         pokemons.pokemons[Random().nextInt(pokemons.pokemons.length)];
@@ -36,8 +38,9 @@ Future<Pokemon> loadDataIOHttp() async {
 // Alternatively, with `package:http`
 Future<Pokemon> loadDataHttpPackage() async {
   final pokemonsRes = await http.get(url);
-  final pokemons =
-      Pokemons.fromJson(jsonDecode(pokemonsRes.body) as Map<String, dynamic>);
+  final pokemons = Pokemons.fromJson(
+    jsonDecode(pokemonsRes.body) as Map<String, dynamic>,
+  );
 
   final random = pokemons.pokemons[Random().nextInt(pokemons.pokemons.length)];
   final pokemonRes = await http.get(Uri.parse(random.url));
@@ -66,13 +69,10 @@ Future<Pokemon> loadPokemonFastAndEasy() async {
 Future<Pokemon> loadPokemonFastAndComplex() async {
   // And now, make the same thing as in `loadPokemonFastAndEasy` but with raw Isolates
   final receivePort = ReceivePort();
-  await Isolate.spawn(
-    (sendPort) async {
-      final pokemon = await loadPokemonSlow();
-      sendPort.send(pokemon);
-    },
-    receivePort.sendPort,
-  );
+  await Isolate.spawn((sendPort) async {
+    final pokemon = await loadPokemonSlow();
+    sendPort.send(pokemon);
+  }, receivePort.sendPort);
 
   try {
     return await receivePort.first as Pokemon;

@@ -22,8 +22,15 @@ class Book with EquatableMixin {
   final String description;
 
   @override
-  List<Object?> get props =>
-      [id, title, author, genre, coverUrl, publishDate, description];
+  List<Object?> get props => [
+    id,
+    title,
+    author,
+    genre,
+    coverUrl,
+    publishDate,
+    description,
+  ];
 }
 
 class Author with EquatableMixin {
@@ -51,10 +58,7 @@ class Author with EquatableMixin {
 }
 
 class Genre with EquatableMixin {
-  const Genre({
-    required this.id,
-    required this.name,
-  });
+  const Genre({required this.id, required this.name});
 
   final String id;
   final String name;

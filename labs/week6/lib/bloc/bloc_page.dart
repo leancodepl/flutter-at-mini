@@ -16,9 +16,7 @@ class BlocPage extends StatelessWidget {
       child: Builder(
         builder: (context) {
           return Scaffold(
-            appBar: AppBar(
-              title: const Text('Bloc Pokémon'),
-            ),
+            appBar: AppBar(title: const Text('Bloc Pokémon')),
             body: BlocBuilder<PokemonBloc, PokemonState>(
               builder: (context, state) {
                 return switch (state) {
@@ -26,11 +24,11 @@ class BlocPage extends StatelessWidget {
                   PokemonLoading() => const LoadingIndicator(),
                   PokemonError(:final error) => ErrorMessage(error: error),
                   PokemonLoaded(:final entries) => PokemonList(
-                      entries: entries.pokemons,
-                      onTap: (entry) {
-                        BlocPokemonDetailsRoute(url: entry.url).go(context);
-                      },
-                    ),
+                    entries: entries.pokemons,
+                    onTap: (entry) {
+                      BlocPokemonDetailsRoute(url: entry.url).go(context);
+                    },
+                  ),
                 };
               },
             ),

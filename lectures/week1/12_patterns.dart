@@ -22,11 +22,9 @@ void main() {
   foo(1.3);
   foo(['abc', 'def', 123, 456]);
   foo(['abc', 'def']);
-  foo(
-    [
-      ['abc', 'anything'],
-      'def',
-      42,
-    ],
-  );
+  foo([
+    ['abc', 'anything'],
+    'def',
+    42,
+  ]);
 }

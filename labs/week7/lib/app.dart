@@ -16,14 +16,10 @@ class Week7App extends StatelessWidget {
     return MultiProvider(
       providers: [
         Provider(
-          create: (context) => AuthService(
-            firebaseAuth: FirebaseAuth.instance,
-          ),
+          create: (context) => AuthService(firebaseAuth: FirebaseAuth.instance),
         ),
         BlocProvider(
-          create: (context) => AuthCubit(
-            authService: context.read(),
-          ),
+          create: (context) => AuthCubit(authService: context.read()),
         ),
         Provider(
           create: (context) => UserItemsService(
@@ -33,9 +29,7 @@ class Week7App extends StatelessWidget {
         ),
       ],
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Week 7'),
-        ),
+        appBar: AppBar(title: const Text('Week 7')),
         body: const AuthGate(),
       ),
     );

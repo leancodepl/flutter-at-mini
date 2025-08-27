@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:week6/pokemon.dart';
 
 class PokemonList extends StatelessWidget {
-  const PokemonList({
-    super.key,
-    required this.entries,
-    required this.onTap,
-  });
+  const PokemonList({super.key, required this.entries, required this.onTap});
 
   final List<PokemonEntry> entries;
   final ValueChanged<PokemonEntry> onTap;
@@ -16,10 +12,8 @@ class PokemonList extends StatelessWidget {
     return ListView.separated(
       itemCount: entries.length,
       padding: const EdgeInsets.all(8),
-      itemBuilder: (context, index) => _PokemonEntryTile(
-        entries[index],
-        onTap: onTap,
-      ),
+      itemBuilder: (context, index) =>
+          _PokemonEntryTile(entries[index], onTap: onTap),
       separatorBuilder: (context, index) => const SizedBox(height: 8),
     );
   }

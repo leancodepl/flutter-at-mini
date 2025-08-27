@@ -5,30 +5,20 @@ import 'package:week2/example_2.dart';
 import 'package:week2/example_3.dart';
 import 'package:week2/example_4.dart';
 
-const examples = [
-  Example0(),
-  Example1(),
-  Example2(),
-  Example3(),
-  Example4(),
-];
+const examples = [Example0(), Example1(), Example2(), Example3(), Example4()];
 
 void main() {
   runApp(const App());
 }
 
 class App extends StatelessWidget {
-  const App({
-    super.key,
-  });
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Lecture 2'),
-        ),
+        appBar: AppBar(title: const Text('Lecture 2')),
         body: ListView.builder(
           itemBuilder: (context, i) {
             return ListTile(
@@ -36,9 +26,7 @@ class App extends StatelessWidget {
               onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute<void>(
-                  builder: (_) => ExampleWrapper(
-                    child: examples[i],
-                  ),
+                  builder: (_) => ExampleWrapper(child: examples[i]),
                 ),
               ),
             );
@@ -51,24 +39,15 @@ class App extends StatelessWidget {
 }
 
 class ExampleWrapper extends StatelessWidget {
-  const ExampleWrapper({
-    super.key,
-    required this.child,
-  });
+  const ExampleWrapper({super.key, required this.child});
 
   final Widget child;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          child.runtimeType.toString(),
-        ),
-      ),
-      body: SafeArea(
-        child: child,
-      ),
+      appBar: AppBar(title: Text(child.runtimeType.toString())),
+      body: SafeArea(child: child),
     );
   }
 }

@@ -25,8 +25,9 @@ class _UnauthorizedPageState extends State<UnauthorizedPage> {
         children: [
           TextField(
             decoration: InputDecoration(
-              border:
-                  OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
               hintText: 'Email address',
             ),
             controller: email,
@@ -34,8 +35,9 @@ class _UnauthorizedPageState extends State<UnauthorizedPage> {
           const SizedBox(height: 16),
           TextField(
             decoration: InputDecoration(
-              border:
-                  OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
               hintText: 'Password',
             ),
             controller: password,
@@ -49,10 +51,8 @@ class _UnauthorizedPageState extends State<UnauthorizedPage> {
             const SizedBox(height: 32),
           _SignInButton(
             enabled: state is SignedOutState,
-            onSignIn: () => authCubit.signInWithEmail(
-              email.text,
-              password.text,
-            ),
+            onSignIn: () =>
+                authCubit.signInWithEmail(email.text, password.text),
           ),
         ],
       ),
@@ -61,10 +61,7 @@ class _UnauthorizedPageState extends State<UnauthorizedPage> {
 }
 
 class _SignInButton extends StatelessWidget {
-  const _SignInButton({
-    required this.enabled,
-    required this.onSignIn,
-  });
+  const _SignInButton({required this.enabled, required this.onSignIn});
 
   final bool enabled;
   final VoidCallback onSignIn;

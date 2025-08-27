@@ -10,47 +10,42 @@ import 'package:week6/widgets/empty_dog_list_widget.dart';
 class MockDogListCubit extends Mock implements DogListCubit {}
 
 void main() {
-  testWidgets('DogListCubitPage shows EmptyDogList on empty cubit state',
-      (tester) async {
+  testWidgets('DogListCubitPage shows EmptyDogList on empty cubit state', (
+    tester,
+  ) async {
     // ASSIGN
 
     final DogListCubit cubit = MockDogListCubit();
     when(() => cubit.state).thenReturn(const EmptyDogList());
-    when(() => cubit.stream)
-        .thenAnswer((_) => Stream.fromIterable([const EmptyDogList()]));
+    when(
+      () => cubit.stream,
+    ).thenAnswer((_) => Stream.fromIterable([const EmptyDogList()]));
 
     // ACT
     await tester.pumpWidget(
       MaterialApp(
-        home: BlocProvider.value(
-          value: cubit,
-          child: const DogListCubitPage(),
-        ),
+        home: BlocProvider.value(value: cubit, child: const DogListCubitPage()),
       ),
     );
 
     // ASSERT
-    expect(
-      find.byType(EmptyDogListWidget),
-      findsOneWidget,
-    );
+    expect(find.byType(EmptyDogListWidget), findsOneWidget);
   });
 
-  testWidgets('DogListCubitPage calls cubit.fetchDogs on button tap',
-      (tester) async {
+  testWidgets('DogListCubitPage calls cubit.fetchDogs on button tap', (
+    tester,
+  ) async {
     // ASSIGN
     final DogListCubit cubit = MockDogListCubit();
     when(() => cubit.state).thenReturn(const EmptyDogList());
-    when(() => cubit.stream)
-        .thenAnswer((_) => Stream.fromIterable([const EmptyDogList()]));
+    when(
+      () => cubit.stream,
+    ).thenAnswer((_) => Stream.fromIterable([const EmptyDogList()]));
     when(cubit.fetchDogs).thenAnswer((_) async {});
 
     await tester.pumpWidget(
       MaterialApp(
-        home: BlocProvider.value(
-          value: cubit,
-          child: const DogListCubitPage(),
-        ),
+        home: BlocProvider.value(value: cubit, child: const DogListCubitPage()),
       ),
     );
 

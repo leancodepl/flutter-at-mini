@@ -5,10 +5,7 @@ import 'package:week7/features/auth/auth_service.dart';
 import 'package:week7/features/user_items/user_items.dart';
 
 class AuthorizedPage extends StatelessWidget {
-  const AuthorizedPage({
-    super.key,
-    required this.state,
-  });
+  const AuthorizedPage({super.key, required this.state});
 
   final SignedInState state;
 
@@ -16,9 +13,7 @@ class AuthorizedPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        PinnedHeaderSliver(
-          child: _AccountInfoBox(state: state),
-        ),
+        PinnedHeaderSliver(child: _AccountInfoBox(state: state)),
         const SliverUserItems(),
       ],
     );

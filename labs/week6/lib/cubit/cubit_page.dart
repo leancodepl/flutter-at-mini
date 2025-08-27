@@ -16,9 +16,7 @@ class CubitPage extends StatelessWidget {
       child: Builder(
         builder: (context) {
           return Scaffold(
-            appBar: AppBar(
-              title: const Text('Cubit Pokémon'),
-            ),
+            appBar: AppBar(title: const Text('Cubit Pokémon')),
             body: BlocBuilder<PokemonCubit, PokemonState>(
               builder: (context, state) {
                 return switch (state) {
@@ -26,11 +24,11 @@ class CubitPage extends StatelessWidget {
                   PokemonLoading() => const LoadingIndicator(),
                   PokemonError(:final error) => ErrorMessage(error: error),
                   PokemonLoaded(:final entries) => PokemonList(
-                      entries: entries.pokemons,
-                      onTap: (entry) {
-                        CubitPokemonDetailsRoute(url: entry.url).go(context);
-                      },
-                    ),
+                    entries: entries.pokemons,
+                    onTap: (entry) {
+                      CubitPokemonDetailsRoute(url: entry.url).go(context);
+                    },
+                  ),
                 };
               },
             ),
