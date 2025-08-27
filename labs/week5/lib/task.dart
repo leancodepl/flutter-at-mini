@@ -61,7 +61,7 @@ Future<Pokemon> loadPokemonSlow() async {
   return Pokemon.fromJson(pokemonResponse.data!);
 }
 
-Future<Pokemon> loadPokemonFastAndEasy() async {
+Future<Pokemon> loadPokemonFastAndEasy() {
   // Now, do the same but make it so that the spinner does not hang
   return compute((_) => loadPokemonSlow(), null);
 }

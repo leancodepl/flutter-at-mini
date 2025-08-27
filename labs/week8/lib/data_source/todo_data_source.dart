@@ -3,13 +3,13 @@ import 'dart:async';
 import 'package:week8/todo.dart';
 
 abstract class TodoDataSource {
-  FutureOr<List<Todo>> getAll();
+  Future<List<Todo>> getAll();
 
-  FutureOr<Todo?> get(String id);
+  Future<Todo?> get(String id);
 
-  FutureOr<void> insert(Todo todo);
+  Future<void> insert(Todo todo);
 
-  FutureOr<void> delete(String id);
+  Future<void> delete(String id);
 
-  FutureOr<void> update(Todo todo);
+  Future<void> update(Todo todo);
 }

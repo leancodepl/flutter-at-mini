@@ -15,7 +15,7 @@ class Cover extends StatelessWidget {
       fit: BoxFit.cover,
       width: 200,
       height: 300,
-      frameBuilder: (context, child, _, __) {
+      frameBuilder: (context, child, _, _) {
         return ClipRRect(borderRadius: BorderRadius.circular(16), child: child);
       },
     );

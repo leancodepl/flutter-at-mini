@@ -5,27 +5,27 @@ class InMemoryTodoDataSource extends TodoDataSource {
   final _todos = <String, Todo>{};
 
   @override
-  void delete(String id) {
+  Future<void> delete(String id) async {
     _todos.remove(id);
   }
 
   @override
-  Todo? get(String id) {
+  Future<Todo?> get(String id) async {
     return _todos[id];
   }
 
   @override
-  List<Todo> getAll() {
+  Future<List<Todo>> getAll() async {
     return _todos.values.toList();
   }
 
   @override
-  void insert(Todo todo) {
+  Future<void> insert(Todo todo) async {
     _todos[todo.id] = todo;
   }
 
   @override
-  void update(Todo todo) {
+  Future<void> update(Todo todo) async {
     _todos[todo.id] = todo;
   }
 }
