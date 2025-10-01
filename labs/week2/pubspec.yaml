@@ -1,15 +1,15 @@
 name: week2
 
 environment:
-  sdk: 3.9.0
-  flutter: 3.35.2
+  sdk: 3.9.2
+  flutter: 3.35.5
 
 dependencies:
   flutter:
     sdk: flutter
 
 dev_dependencies:
-  leancode_lint: ^18.0.0
+  leancode_lint: ^19.0.0
 
 flutter:
   uses-material-design: true

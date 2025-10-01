@@ -1,11 +1,11 @@
 name: week6
 
 environment:
-  sdk: 3.9.0
-  flutter: 3.35.2
+  sdk: 3.9.2
+  flutter: 3.35.5
 
 dependencies:
-  bloc: ^9.0.0
+  bloc: ^9.0.1
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1

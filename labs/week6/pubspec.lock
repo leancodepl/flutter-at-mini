@@ -335,18 +335,18 @@ packages:
     dependency: "direct main"
     description:
       name: go_router
-      sha256: ced3fdc143c1437234ac3b8e985f3286cf138968bb83ca9a6f94d22f2951c6b9
+      sha256: c752e2d08d088bf83742cb05bf83003f3e9d276ff1519b5c92f9d5e60e5ddd23
       url: "https://pub.dev"
     source: hosted
-    version: "16.2.0"
+    version: "16.2.4"
   go_router_builder:
     dependency: "direct dev"
     description:
       name: go_router_builder
-      sha256: "75200eb331e3bdfcaaa7df059c7db151c6efa56437f6715698cb3ad3d94c36e4"
+      sha256: "43a109ccf4f804c486f7f7c0e2e11345142ecf456b4cc265f75b33c7e6fe4684"
       url: "https://pub.dev"
     source: hosted
-    version: "3.3.1"
+    version: "4.1.0"
   graphs:
     dependency: transitive
     description:
@@ -407,10 +407,10 @@ packages:
     dependency: "direct dev"
     description:
       name: json_serializable
-      sha256: "3f2913b7c2430afe8ac5afe6fb15c1de4a60af4f630625e6e238f80ba4b80cbd"
+      sha256: "33a040668b31b320aafa4822b7b1e177e163fc3c1e835c6750319d4ab23aa6fe"
       url: "https://pub.dev"
     source: hosted
-    version: "6.11.0"
+    version: "6.11.1"
   leancode_lint:
     dependency: "direct dev"
     description:
@@ -471,10 +471,10 @@ packages:
     dependency: "direct dev"
     description:
       name: mobx_codegen
-      sha256: "7c956996d3105e28995d9f91b24ac037657534398b5e70cdacc3f95d8f68cdae"
+      sha256: "471b02d0cf7f64d1366944e9dc64353674807d31e48faba2201918cc1601876d"
       url: "https://pub.dev"
     source: hosted
-    version: "2.7.2"
+    version: "2.7.4"
   nested:
     dependency: transitive
     description:
@@ -721,5 +721,5 @@ packages:
     source: hosted
     version: "3.1.3"
 sdks:
-  dart: "3.9.0"
-  flutter: "3.35.2"
+  dart: "3.9.2"
+  flutter: "3.35.5"
