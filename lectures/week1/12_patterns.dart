@@ -2,6 +2,7 @@ void foo(dynamic obj) {
   const firstPattern = 'abc';
   const secondPattern = 'def';
 
+  // A switch statement with pattern matching
   switch (obj) {
     case 1:
       print('number one');
@@ -14,6 +15,18 @@ void foo(dynamic obj) {
     case [[firstPattern, ...var _], secondPattern, ...var _]:
       print('this is weird');
   }
+
+  // A switch expression with pattern matching – always has to be exhaustive
+  print(switch (obj) {
+    1 => 'number one',
+    [firstPattern, secondPattern, var thirdParam, ...var rest] =>
+      'this is it with $thirdParam and the $rest',
+    [firstPattern, secondPattern, ...var rest] => 'this is it and the $rest',
+    [[firstPattern, ...var _], secondPattern, ...var _] => 'this is weird',
+    String s => s.length,
+    List(:var length) when length > 4 => 'a long list of length $length',
+    _ => 'default',
+  });
 }
 
 void main() {
@@ -27,4 +40,5 @@ void main() {
     'def',
     42,
   ]);
+  foo([true, null, 1, 'hello', Object()]);
 }
