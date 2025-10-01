@@ -11,6 +11,8 @@ Mateusz Wojtczak – <mateusz.wojtczak@leancode.pl>
 
 Piotr Rogulski – <piotr.rogulski@leancode.pl>
 
+Wiktor Zając - <wiktor.zajac@leancode.pl>
+
 ## Rules
 
 Students need to gather at least 51pt to pass the course:
