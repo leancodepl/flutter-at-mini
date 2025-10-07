@@ -52,7 +52,7 @@ dart pub get
    *******
    ```
 
-[`stdin`]: https://api.dart.dev/stable/3.5.3/dart-io/stdin.html
+[`stdin`]: https://api.dart.dev/dart-io/stdin.html
 
 </details>
 
