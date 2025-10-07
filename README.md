@@ -43,13 +43,13 @@ Points can be gained from:
 5. **04.11.2025** - [Asynchrony and HTTP](lectures/week5)
 6. **18.11.2025** - [State Management with External Libraries](lectures/week6)
 7. **25.11.2025** - [Firebase](lectures/week7)
-8. **02.12.2025** - [Data persistence](lectures/week8)
-9. **09.12.2025** - [Testing](lectures/week9)
-10. **16.12.2025** - [Forms](lectures/week10)
-11. **23.12.2025** - [Architecture](lectures/week11)
-12. **09.01.2026** - [Flutter Web and Flutter Desktop](lectures/week12)
-13. **13.01.2026** - [Communication with Native](lectures/week13)
-14. **20.01.2026** - [Animations](lectures/week14)
+8. **02.12.2025** - [Animations](lectures/week8)
+9. **09.12.2025** - [Architecture](lectures/week9)
+10. **16.12.2025** - [Testing](lectures/week10)
+11. **23.12.2025** - [Forms](lectures/week11)
+12. **09.01.2026** - [Data Persistence](lectures/week12)
+13. **13.01.2026** - [Flutter Web and Flutter Desktop](lectures/week13)
+14. **20.01.2026** - [Communication with Native](lectures/week14)
 15. **27.01.2026** - TBA
 
 ## Labs
@@ -65,7 +65,7 @@ additional 3 pts each.
 5. **07.11.2025** - [Communication with API](labs/week5)
 6. **14.11.2025** - [State management with external services](labs/week6)
 7. **21.11.2025** - [Firebase Auth in action](labs/week7)
-8. **28.11.2025** - [Data Persistence](labs/week8)
+8. **28.11.2025** - [Animations](labs/week8)
 9. **05.12.2025** - ***Mandatory*** project checkpoint
 
 Week 10-15 lab slots can be used for project consulting - only by prior arrangement.
