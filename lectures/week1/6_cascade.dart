@@ -9,6 +9,11 @@ class Person {
     ..firstName = 'John'
     ..lastName = 'Smith'
     ..age = 35;
+
+  List<dynamic> listify() => []
+    ..add(firstName)
+    ..add(lastName)
+    ..add(age);
 }
 
 List withoutLast(Iterable list) => list.toList()..removeLast();

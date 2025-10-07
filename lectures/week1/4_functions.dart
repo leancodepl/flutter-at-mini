@@ -12,6 +12,8 @@ void fun2(int arg1, {int? arg2}) {}
 
 void fun3(int arg1, [int? arg2, int? arg3]) {}
 
+typedef StringifyCoordinates = String Function(double x, double y);
+
 void main() {
   fun(1, 2);
   fun2(1);
@@ -25,12 +27,16 @@ void main() {
   // Use type-safe function types to validate usages at compile time
   void runTypeSafe(String Function(int, int) f) => print(f(2, 3).length);
 
+  // Use typedefs to make function types more readable
+  void runStringifyCoordinates(StringifyCoordinates f) => print(f(1.0, 2.0));
+
   // tear-off
   const op = fun;
   op(1, 2);
   run(fun);
 
   runTypeSafe((x, y) => 'x: $x, y: $y');
+  runStringifyCoordinates((x, y) => '($x, $y)');
   // This won't compile:
   // runTypeSafe((x, y) => x + y);
 }
