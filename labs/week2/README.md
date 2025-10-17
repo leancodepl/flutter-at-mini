@@ -19,10 +19,10 @@ Your task is to recreate the following layouts:
 
 ### Task 1
 
-<video controls width="100%" src="task1.webm"></video>
+[Demo video](task1.webm)
 
 The breakpoint between the two layouts is up to you – for example, at 600 px.
 
 ### Task 2
 
-<video controls width="100%" src="task2.webm"></video>
+[Demo video](task2.webm)
