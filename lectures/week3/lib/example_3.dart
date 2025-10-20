@@ -32,20 +32,24 @@ class _SingleChildScrollViewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          for (var i = 0; i < 1000; i++)
-            BuildAwareWidget(
-              index: i,
-              parent: 'SingleChildScrollView',
-              child: Container(
-                height: 80,
-                color: Colors.primaries[i % Colors.primaries.length],
-              ),
-            ),
-        ],
-      ),
+    return Stack(
+      children: [
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              for (var i = 0; i < 1000; i++)
+                BuildAwareWidget(
+                  index: i,
+                  parent: 'SingleChildScrollView',
+                  child: Container(
+                    height: 80,
+                    color: Colors.primaries[i % Colors.primaries.length],
+                  ),
+                ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
@@ -55,18 +59,17 @@ class _ListViewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        for (var i = 0; i < 1000; i++)
-          BuildAwareWidget(
-            index: i,
-            parent: 'ListView',
-            child: Container(
-              height: 80,
-              color: Colors.primaries[i % Colors.primaries.length],
-            ),
-          ),
-      ],
+    return ListView.builder(
+      itemCount: 1000,
+      itemBuilder: (c, i) => BuildAwareWidget(
+        key: ValueKey('lv-$i'),
+        index: i,
+        parent: 'ListView.builder',
+        child: Container(
+          height: 80,
+          color: Colors.primaries[i % Colors.primaries.length],
+        ),
+      ),
     );
   }
 }
