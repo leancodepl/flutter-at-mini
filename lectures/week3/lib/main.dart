@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:week3/example_1.dart';
 import 'package:week3/example_2.dart';
 import 'package:week3/example_3.dart';
-import 'package:week3/example_4.dart';
-import 'package:week3/example_5.dart';
 
-const examples = [Example1(), Example2(), Example3(), Example4(), Example5()];
+const examples = [Example1(), Example2(), Example3()];
 
 void main() {
   runApp(const App());
