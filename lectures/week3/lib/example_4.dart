@@ -10,6 +10,7 @@ class Example4 extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('ListView vs CustomScrollView'),
+          leading: const SizedBox.shrink(),
           bottom: const TabBar(
             tabs: [
               Tab(text: 'ListView'),
@@ -71,6 +72,7 @@ class SliversScreen extends StatelessWidget {
         const SliverAppBar(
           expandedHeight: 200,
           pinned: true,
+          leading: SizedBox.shrink(),
           flexibleSpace: FlexibleSpaceBar(
             title: Text('Collapsible header'),
             background: _HeaderBg(),
