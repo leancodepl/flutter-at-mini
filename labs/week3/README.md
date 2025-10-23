@@ -25,7 +25,7 @@ about books, authors and genres.
 You can use the [demo app][demo-app] as inspiration. It's ***not*** a strict
 requirement to follow its design or layout; use it as a showcase of the required features.
 
-[demo-app]: https://flutter-at-mini-2024-lab-3.web.app/
+[demo-app]: https://flutter-at-mini-2025-lab-3.web.app/
 
 Your app should have the following:
 
