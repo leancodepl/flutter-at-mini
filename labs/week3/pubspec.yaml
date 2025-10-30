@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   go_router: ^16.3.0
+  intl: ^0.20.2
 
 dev_dependencies:
   leancode_lint: ^19.0.0
