@@ -72,7 +72,7 @@ class _ScrollExampleState extends State<ScrollExample> {
   }
 
   void _printScrollPosition() {
-    print('Scroll position: ${scrollController.position.pixels}');
+    debugPrint('Scroll position: ${scrollController.position.pixels}');
   }
 
   @override
