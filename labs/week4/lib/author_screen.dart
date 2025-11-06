@@ -1,5 +1,6 @@
 import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
+import 'package:week4/app_theme.dart';
 import 'package:week4/common_widgets.dart';
 
 class AuthorScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class AuthorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(actions: const [AppThemeSwitcher()]),
       body: switch (Bookstore.getAuthor(id: authorId)) {
         final author? => LayoutBuilder(
           builder: (context, constraints) => switch (constraints.maxWidth) {
