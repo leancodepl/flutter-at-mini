@@ -63,10 +63,10 @@ additional 3 pts each.
 3. **24.10.2025** - [Layouts 2 & using context](labs/week3)
 4. **31.10.2025** - [Context and StatefulWidget](labs/week4)
 5. **07.11.2025** - [Communication with API](labs/week5)
-6. **14.11.2025** - [State management with external services](labs/week6)
-7. **21.11.2025** - [Firebase Auth in action](labs/week7)
-8. **28.11.2025** - [Animations](labs/week8)
-9. **05.12.2025** - ***Mandatory*** project checkpoint
+6. **21.11.2025** - [State management with external services](labs/week6)
+7. **28.11.2025** - [Firebase Auth in action](labs/week7)
+8. **05.12.2025** - [Animations](labs/week8)
+9. **12.12.2025** - ***Mandatory*** project checkpoint
 
 Week 10-15 lab slots can be used for project consulting - only by prior arrangement.
 
@@ -117,7 +117,7 @@ Week 10-15 lab slots can be used for project consulting - only by prior arrangem
 ### Timeline
 
 - 31.10.2025 - [Initial documentation](#initial-documentation)
-- 05.12.2025 - ***Mandatory*** project checkpoint
+- 12.12.2025 - ***Mandatory*** project checkpoint
 - 27.01.2026 - Project Submission (source code + [final documentation](#final-documentation))
 - 15.02.2026 - [Late Project Submission](#late-project-submission)
 
