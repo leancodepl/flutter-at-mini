@@ -7,6 +7,7 @@ import 'package:week6/bloc/dog_list_cubit.dart';
 import 'package:week6/data/dog_api.dart';
 import 'package:week6/dog_list_bloc_page.dart';
 import 'package:week6/dog_list_cubit_page.dart';
+import 'package:week6/dog_list_request_cubit_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,7 +54,7 @@ class _HomeTabsPageState extends State<_HomeTabsPage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 4, vsync: this);
   }
 
   @override
@@ -88,6 +89,7 @@ class _HomeTabsPageState extends State<_HomeTabsPage>
             Tab(text: 'Cubit scope'),
             Tab(text: 'Bloc scope'),
             Tab(text: 'EventTransformer'),
+            Tab(text: 'RequestCubit'),
           ],
         ),
       ),
@@ -102,6 +104,8 @@ class _HomeTabsPageState extends State<_HomeTabsPage>
               return const _BlocTab();
             case 2:
               return const BalanceEventTransformerPage();
+            case 3:
+              return const DogListRequestCubitPage();
             default:
               return const SizedBox.shrink();
           }
