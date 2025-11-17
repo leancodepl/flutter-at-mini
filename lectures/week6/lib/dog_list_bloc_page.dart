@@ -12,21 +12,17 @@ class DogListBlocPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Dog List with Bloc/Cubit')),
-      backgroundColor: Colors.white,
-      body: BlocBuilder<DogListBloc, DogListState>(
-        builder: (context, state) => switch (state) {
-          LoadingDogList() => const LoadingWidget(),
-          EmptyDogList() => EmptyDogListWidget(
-            onFetch: () => context.read<DogListBloc>().add(FetchDogs()),
-          ),
-          final FetchedDogList dogList => DogListDataWidget(
-            dogList: dogList,
-            onFetch: () async => context.read<DogListBloc>().add(FetchDogs()),
-          ),
-        },
-      ),
+    return BlocBuilder<DogListBloc, DogListState>(
+      builder: (context, state) => switch (state) {
+        LoadingDogList() => const LoadingWidget(),
+        EmptyDogList() => EmptyDogListWidget(
+          onFetch: () => context.read<DogListBloc>().add(FetchDogs()),
+        ),
+        final FetchedDogList dogList => DogListDataWidget(
+          dogList: dogList,
+          onFetch: () async => context.read<DogListBloc>().add(FetchDogs()),
+        ),
+      },
     );
   }
 }
