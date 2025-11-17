@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:week6/balance_event_transformer_page.dart';
 import 'package:week6/bloc/dog_list_bloc.dart';
 import 'package:week6/bloc/dog_list_cubit.dart';
 import 'package:week6/data/dog_api.dart';
@@ -52,7 +53,7 @@ class _HomeTabsPageState extends State<_HomeTabsPage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -86,6 +87,7 @@ class _HomeTabsPageState extends State<_HomeTabsPage>
           tabs: const [
             Tab(text: 'Cubit scope'),
             Tab(text: 'Bloc scope'),
+            Tab(text: 'EventTransformer'),
           ],
         ),
       ),
@@ -98,6 +100,8 @@ class _HomeTabsPageState extends State<_HomeTabsPage>
               return const _CubitTab();
             case 1:
               return const _BlocTab();
+            case 2:
+              return const BalanceEventTransformerPage();
             default:
               return const SizedBox.shrink();
           }
