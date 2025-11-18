@@ -4,7 +4,7 @@ import 'package:week6/bloc/dog_list_state.dart';
 import 'package:week6/data/dog_api.dart';
 
 class DogListBloc extends Bloc<DogListEvent, DogListState> {
-  DogListBloc() : super(const EmptyDogList()) {
+  DogListBloc({required DogApi api}) : _api = api, super(const EmptyDogList()) {
     on<FetchDogs>((_, emit) async {
       emit(const LoadingDogList());
       final dogs = await _api.fetchAll();
@@ -12,5 +12,5 @@ class DogListBloc extends Bloc<DogListEvent, DogListState> {
     });
   }
 
-  final _api = DogApi();
+  final DogApi _api;
 }
