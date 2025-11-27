@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:week6/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,14 +38,14 @@ class HomePage extends StatelessWidget {
             Expanded(
               child: _PageCard(
                 label: 'Cubit',
-                onTap: () => throw UnimplementedError('TODO'),
+                onTap: () => const CubitRoute().go(context),
               ),
             ),
             const SizedBox(height: 16),
             Expanded(
               child: _PageCard(
                 label: 'Bloc',
-                onTap: () => throw UnimplementedError('TODO'),
+                onTap: () => const BlocRoute().go(context),
               ),
             ),
           ],
@@ -54,7 +55,7 @@ class HomePage extends StatelessWidget {
   }
 }
 
-final _router = GoRouter(routes: [/* TODO: use generated routes */]);
+final _router = GoRouter(routes: $appRoutes);
 
 class _PageCard extends StatelessWidget {
   const _PageCard({required this.label, required this.onTap});

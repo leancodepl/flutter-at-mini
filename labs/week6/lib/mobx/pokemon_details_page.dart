@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:provider/provider.dart';
+import 'package:week6/common/error_message.dart';
+import 'package:week6/common/loading_indicator.dart';
+import 'package:week6/mobx/pokemon_details_store.dart';
 import 'package:week6/pokemon.dart';
 
 class PokemonDetailsPage extends StatelessWidget {
@@ -8,17 +13,37 @@ class PokemonDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('MobX Pokémon')),
-      body: const Placeholder(child: Center(child: Text('TODO'))),
-      floatingActionButton: FloatingActionButton.extended(
-        icon: const Icon(Icons.refresh),
-        label: const Text('Reload'),
-        onPressed: () {
-          // TODO: reload Pokémon details
-          throw UnimplementedError('TODO');
-        },
-      ),
+    return Provider(
+      create: (context) =>
+          PokemonDetailsStore(pokemonUrl: pokemonUrl)..loadPokemonDetails(),
+      builder: (context, _) {
+        return Scaffold(
+          appBar: AppBar(title: const Text('MobX Pokémon')),
+          body: Observer(
+            builder: (context) {
+              final store = context.read<PokemonDetailsStore>();
+
+              return switch (store) {
+                PokemonDetailsStore(loading: true) => const LoadingIndicator(),
+                PokemonDetailsStore(:final error?) => ErrorMessage(
+                  error: error,
+                ),
+                PokemonDetailsStore(:final pokemon?) => _PokemonDetails(
+                  pokemon,
+                ),
+                _ => const SizedBox(),
+              };
+            },
+          ),
+          floatingActionButton: FloatingActionButton.extended(
+            icon: const Icon(Icons.refresh),
+            label: const Text('Reload'),
+            onPressed: () {
+              context.read<PokemonDetailsStore>().loadPokemonDetails();
+            },
+          ),
+        );
+      },
     );
   }
 }

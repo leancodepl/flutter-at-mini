@@ -10,22 +10,42 @@
 ///    https://pub.dev/packages/equatable
 library;
 
-class Pokemons {
+import 'package:equatable/equatable.dart';
+import 'package:json_annotation/json_annotation.dart';
+
+part 'pokemon.g.dart';
+
+@JsonSerializable()
+class Pokemons with EquatableMixin {
   const Pokemons({required this.pokemons, required this.count});
 
-  // This field is called `results` in the JSON.
+  factory Pokemons.fromJson(Map<String, dynamic> json) =>
+      _$PokemonsFromJson(json);
+
+  @JsonKey(name: 'results')
   final List<PokemonEntry> pokemons;
   final int count;
+
+  @override
+  List<Object?> get props => [pokemons, count];
 }
 
-class PokemonEntry {
+@JsonSerializable()
+class PokemonEntry with EquatableMixin {
   const PokemonEntry({required this.name, required this.url});
+
+  factory PokemonEntry.fromJson(Map<String, dynamic> json) =>
+      _$PokemonEntryFromJson(json);
 
   final String name;
   final String url;
+
+  @override
+  List<Object?> get props => [name, url];
 }
 
-class Pokemon {
+@JsonSerializable(fieldRename: FieldRename.snake)
+class Pokemon with EquatableMixin {
   const Pokemon({
     required this.id,
     required this.name,
@@ -34,9 +54,15 @@ class Pokemon {
     required this.weight,
   });
 
+  factory Pokemon.fromJson(Map<String, dynamic> json) =>
+      _$PokemonFromJson(json);
+
   final int id;
   final String name;
   final int baseExperience;
   final int height;
   final int weight;
+
+  @override
+  List<Object?> get props => [id, name, baseExperience, height, weight];
 }
