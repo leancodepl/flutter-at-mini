@@ -50,5 +50,3 @@ class _TweenAnimationBuilderDemoState extends State<TweenAnimationBuilderDemo> {
     );
   }
 }
-
-

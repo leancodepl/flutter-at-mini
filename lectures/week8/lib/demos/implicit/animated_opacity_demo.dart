@@ -44,5 +44,3 @@ class _AnimatedOpacityDemoState extends State<AnimatedOpacityDemo> {
     );
   }
 }
-
-

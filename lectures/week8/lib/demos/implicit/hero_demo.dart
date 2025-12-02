@@ -62,8 +62,8 @@ class _HeroCard extends StatelessWidget {
             },
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
-              return FadeTransition(opacity: animation, child: child);
-            },
+                  return FadeTransition(opacity: animation, child: child);
+                },
           ),
         );
       },
@@ -139,11 +139,7 @@ class _HeroDetailPage extends StatelessWidget {
             const SizedBox(height: 32),
             Text(
               'Hero Animation',
-              style: TextStyle(
-                color: color,
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(color: color, fontSize: 28),
             ),
             const SizedBox(height: 12),
             const Text(
@@ -156,5 +152,3 @@ class _HeroDetailPage extends StatelessWidget {
     );
   }
 }
-
-

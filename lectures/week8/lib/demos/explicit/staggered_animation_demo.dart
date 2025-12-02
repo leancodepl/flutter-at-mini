@@ -103,7 +103,6 @@ class _StaggeredAnimationDemoState extends State<StaggeredAnimationDemo>
                         'Item ${index + 1}',
                         style: const TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.w600,
                           fontSize: 16,
                         ),
                       ),

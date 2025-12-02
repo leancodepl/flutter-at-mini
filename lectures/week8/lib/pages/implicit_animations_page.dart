@@ -21,13 +21,7 @@ class ImplicitAnimationsPage extends StatelessWidget {
             children: [
               Icon(Icons.auto_awesome, color: Color(0xFF7EE787)),
               SizedBox(width: 12),
-              Text(
-                'Implicit Animations',
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  letterSpacing: -0.5,
-                ),
-              ),
+              Text('Implicit Animations'),
             ],
           ),
           bottom: const TabBar(

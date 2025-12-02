@@ -31,10 +31,11 @@ class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
           borderRadius: BorderRadius.circular(_expanded ? 32 : 8),
           boxShadow: [
             BoxShadow(
-              color: (_expanded
-                      ? const Color(0xFF7EE787)
-                      : const Color(0xFF58A6FF))
-                  .withAlpha(80),
+              color:
+                  (_expanded
+                          ? const Color(0xFF7EE787)
+                          : const Color(0xFF58A6FF))
+                      .withAlpha(80),
               blurRadius: 24,
               spreadRadius: 2,
             ),
@@ -45,5 +46,3 @@ class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
     );
   }
 }
-
-

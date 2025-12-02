@@ -63,5 +63,3 @@ class _AnimatedAlignDemoState extends State<AnimatedAlignDemo> {
     );
   }
 }
-
-

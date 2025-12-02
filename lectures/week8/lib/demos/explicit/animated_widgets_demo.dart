@@ -74,15 +74,16 @@ class _AnimatedWidgetsDemoState extends State<AnimatedWidgetsDemo>
           _TransitionShowcase(
             label: 'Slide',
             child: SlideTransition(
-              position: Tween<Offset>(
-                begin: const Offset(0, -0.3),
-                end: const Offset(0, 0.3),
-              ).animate(
-                CurvedAnimation(
-                  parent: _controller,
-                  curve: Curves.easeInOut,
-                ),
-              ),
+              position:
+                  Tween<Offset>(
+                    begin: const Offset(0, -0.3),
+                    end: const Offset(0, 0.3),
+                  ).animate(
+                    CurvedAnimation(
+                      parent: _controller,
+                      curve: Curves.easeInOut,
+                    ),
+                  ),
               child: _buildBox(const Color(0xFFA371F7)),
             ),
           ),
@@ -125,5 +126,3 @@ class _TransitionShowcase extends StatelessWidget {
     );
   }
 }
-
-

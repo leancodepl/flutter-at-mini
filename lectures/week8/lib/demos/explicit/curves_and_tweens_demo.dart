@@ -175,5 +175,3 @@ class _CurvesAndTweensDemoState extends State<CurvesAndTweensDemo>
     );
   }
 }
-
-

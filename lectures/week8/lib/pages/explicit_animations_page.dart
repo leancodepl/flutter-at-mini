@@ -19,13 +19,7 @@ class ExplicitAnimationsPage extends StatelessWidget {
             children: [
               Icon(Icons.precision_manufacturing, color: Color(0xFF58A6FF)),
               SizedBox(width: 12),
-              Text(
-                'Explicit Animations',
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  letterSpacing: -0.5,
-                ),
-              ),
+              Text('Explicit Animations'),
             ],
           ),
           bottom: const TabBar(

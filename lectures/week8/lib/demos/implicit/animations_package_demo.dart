@@ -97,13 +97,7 @@ class _OpenContainerCard extends StatelessWidget {
               children: [
                 Icon(icon, color: Colors.white, size: 40),
                 const SizedBox(height: 8),
-                Text(
-                  label,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
+                Text(label, style: const TextStyle(color: Colors.white)),
               ],
             ),
           ),
@@ -147,11 +141,7 @@ class _DetailPage extends StatelessWidget {
             const SizedBox(height: 24),
             Text(
               label,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-              ),
+              style: const TextStyle(color: Colors.white, fontSize: 32),
             ),
             const SizedBox(height: 16),
             const Padding(
@@ -169,5 +159,3 @@ class _DetailPage extends StatelessWidget {
     );
   }
 }
-
-

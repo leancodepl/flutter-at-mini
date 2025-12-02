@@ -85,11 +85,7 @@ class _AnimationControllerDemoState extends State<AnimationControllerDemo>
               const SizedBox(height: 16),
               Text(
                 'Value: ${_controller.value.toStringAsFixed(3)}',
-                style: const TextStyle(
-                  color: Color(0xFF8B949E),
-                  fontFamily: 'SF Mono',
-                  fontSize: 14,
-                ),
+                style: const TextStyle(color: Color(0xFF8B949E), fontSize: 14),
               ),
               const SizedBox(height: 32),
               Transform.rotate(
@@ -140,5 +136,3 @@ class _AnimationControllerDemoState extends State<AnimationControllerDemo>
     );
   }
 }
-
-

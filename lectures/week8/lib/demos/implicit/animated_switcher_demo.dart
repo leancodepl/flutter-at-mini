@@ -45,11 +45,7 @@ class _AnimatedSwitcherDemoState extends State<AnimatedSwitcherDemo> {
           child: Center(
             child: Text(
               '$_count',
-              style: const TextStyle(
-                fontSize: 64,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
+              style: const TextStyle(fontSize: 64, color: Colors.white),
             ),
           ),
         ),
@@ -57,5 +53,3 @@ class _AnimatedSwitcherDemoState extends State<AnimatedSwitcherDemo> {
     );
   }
 }
-
-

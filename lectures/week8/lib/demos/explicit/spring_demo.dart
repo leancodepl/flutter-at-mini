@@ -111,11 +111,7 @@ class _SpringDemoState extends State<SpringDemo> with TickerProviderStateMixin {
             children: [
               Text(
                 spring.name,
-                style: TextStyle(
-                  color: spring.color,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(color: spring.color, fontSize: 16),
               ),
               const SizedBox(height: 4),
               Text(
@@ -169,5 +165,3 @@ class _SpringDemoState extends State<SpringDemo> with TickerProviderStateMixin {
     );
   }
 }
-
-

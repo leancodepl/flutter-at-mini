@@ -51,7 +51,6 @@ class AnimationsShowcaseApp extends StatelessWidget {
             ),
           ),
         ),
-        fontFamily: 'SF Pro Display',
       ),
       home: const HomePage(),
     );
