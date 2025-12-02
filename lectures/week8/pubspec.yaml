@@ -1,0 +1,22 @@
+name: week8
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  animations: ^2.0.11
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  leancode_lint: ^19.0.1
+
+flutter:
+  uses-material-design: true
