@@ -1,5 +1,3 @@
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 
 class Task3Page extends StatefulWidget {
@@ -200,16 +198,12 @@ class _SpringControls extends StatelessWidget {
     );
   }
 
-  String _getSpringDescription() {
-    final criticalDamping = 2 * (stiffness * mass).sqrt();
-    if (damping < criticalDamping * 0.5) {
-      return 'Underdamped (bouncy)';
-    } else if (damping > criticalDamping * 1.5) {
-      return 'Overdamped (slow)';
-    } else {
-      return 'Critically damped (smooth)';
-    }
-  }
+  String _getSpringDescription() =>
+      switch (damping * damping - 4 * mass * stiffness) {
+        > 0 => 'Overdamped (slow)',
+        < 0 => 'Underdamped (bouncy)',
+        _ => 'Critically damped (smooth)',
+      };
 }
 
 class _SliderRow extends StatelessWidget {
@@ -265,8 +259,4 @@ class _SliderRow extends StatelessWidget {
       ],
     );
   }
-}
-
-extension on num {
-  double sqrt() => math.sqrt(toDouble());
 }
