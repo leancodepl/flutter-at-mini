@@ -14,7 +14,9 @@
 ## NOTE
 
 The requirements for each task are not very strict. 
-Those serve more as a guide. Video below represents the desired UX which must be reflected. 
+Those serve more as a guide. Video below represents the desired UX which must be reflected.
+Also check out the [hosted example solution](https://flutter-at-mini-2025-lab-8.web.app/)
+to play around with the implemented features.
 
 https://github.com/user-attachments/assets/740b589f-0176-41c7-8d67-20a3e9c2470c
 
