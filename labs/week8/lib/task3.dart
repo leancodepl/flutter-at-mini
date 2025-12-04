@@ -39,7 +39,16 @@ class _Task3PageState extends State<Task3Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Task 3: Spring Physics')),
-      body: Center(
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Color(0xFF161B22), Color(0xFF0D1117)],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
         child: Column(
           children: [
             Expanded(

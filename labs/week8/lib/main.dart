@@ -73,6 +73,7 @@ class HomePage extends StatelessWidget {
               MaterialPageRoute<void>(builder: (_) => const Task1Page()),
             ),
           ),
+          const SizedBox(height: 12),
           _TaskCard(
             title: 'Task 2: AnimationController',
             subtitle: 'Explicit animations with Tweens and Curves',
@@ -83,6 +84,7 @@ class HomePage extends StatelessWidget {
               MaterialPageRoute<void>(builder: (_) => const Task2Page()),
             ),
           ),
+          const SizedBox(height: 12),
           _TaskCard(
             title: 'Task 3: Spring Physics',
             subtitle: 'SpringSimulation and physics-based animations',

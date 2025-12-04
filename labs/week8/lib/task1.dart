@@ -18,10 +18,21 @@ class _Task1PageState extends State<Task1Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Task 1: Animated Profile Card')),
-      body: Center(
-        child: GestureDetector(
-          onTap: _toggleExpanded,
-          child: _ProfileCard(isExpanded: _isExpanded),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Color(0xFF161B22), Color(0xFF0D1117)],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
+        child: Center(
+          child: GestureDetector(
+            onTap: _toggleExpanded,
+            child: _ProfileCard(isExpanded: _isExpanded),
+          ),
         ),
       ),
     );

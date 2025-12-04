@@ -29,7 +29,16 @@ class _Task2PageState extends State<Task2Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Task 2: Pulsing Indicator')),
-      body: Center(
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Color(0xFF161B22), Color(0xFF0D1117)],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -165,7 +174,11 @@ class _AnimationValueDisplay extends StatelessWidget {
       ),
       child: Text(
         'Value: ${value.toStringAsFixed(3)}',
-        style: const TextStyle(color: Color(0xFF8B949E), fontSize: 14),
+        style: const TextStyle(
+          color: Color(0xFF8B949E),
+          fontSize: 14,
+          fontFamily: 'monospace',
+        ),
       ),
     );
   }
