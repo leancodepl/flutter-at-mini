@@ -1,0 +1,15 @@
+name: week8
+
+environment:
+  sdk: 3.9.2
+  flutter: 3.35.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  leancode_lint: ^19.0.1
+
+flutter:
+  uses-material-design: true
