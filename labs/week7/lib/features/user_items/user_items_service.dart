@@ -1,12 +1,30 @@
-class UserItemsService {
-  UserItemsService(/* TODO: depend on FirebaseFirestore and FirebaseAuth */);
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:week7/features/auth/auth_service.dart';
 
-  // TODO: implement
-  Stream<Iterable<UserItem>> get itemsStream => const Stream.empty();
+class UserItemsService {
+  UserItemsService({required this.db, required this.auth});
+
+  final FirebaseFirestore db;
+  final AuthService auth;
+
+  DocumentReference<Map<String, dynamic>> get _doc =>
+      db.collection('items').doc(auth.currentUser!.uid);
+
+  Stream<List<UserItem>> get itemsStream => _doc.snapshots().map(
+    (snapshot) =>
+        snapshot
+            .data()
+            ?.values
+            .cast<Map<String, dynamic>>()
+            .map(UserItem.fromJson)
+            .toList() ??
+        [],
+  );
 
   Future<void> addItem(String itemName) {
-    // TODO: implement
-    throw UnimplementedError();
+    return _doc.set({
+      itemName: UserItem(name: itemName, date: DateTime.now()).toJson(),
+    }, SetOptions(merge: true));
   }
 }
 

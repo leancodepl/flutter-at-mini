@@ -31,5 +31,17 @@
         ]
       }
     ]
+  },
+  "flutter": {
+    "platforms": {
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "flutter-at-mini-2025",
+          "configurations": {
+            "web": "1:601529993113:web:96ffab5bbba974db54b508"
+          }
+        }
+      }
+    }
   }
 }
