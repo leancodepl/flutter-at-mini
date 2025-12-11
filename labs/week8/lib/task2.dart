@@ -7,22 +7,48 @@ class Task2Page extends StatefulWidget {
   State<Task2Page> createState() => _Task2PageState();
 }
 
-class _Task2PageState extends State<Task2Page> {
-  // TODO: Implement the pulsing animation
+class _Task2PageState extends State<Task2Page>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+  late final Animation<double> _scaleAnimation;
+  late final Animation<double> _opacityAnimation;
 
-  double get _currentScale => 1; // TODO: Replace with animated value
-  double get _currentOpacity => 1; // TODO: Replace with animated value
+  @override
+  void initState() {
+    super.initState();
+
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1500),
+    );
+
+    _scaleAnimation = Tween<double>(
+      begin: 0.8,
+      end: 1.2,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+
+    _opacityAnimation = Tween<double>(
+      begin: 0.4,
+      end: 1,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   void _play() {
-    // TODO
+    _controller.repeat(reverse: true);
   }
 
   void _pause() {
-    // TODO
+    _controller.stop();
   }
 
   void _reset() {
-    // TODO
+    _controller.reset();
   }
 
   @override
@@ -42,12 +68,24 @@ class _Task2PageState extends State<Task2Page> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _StatusIndicator(scale: _currentScale, opacity: _currentOpacity),
+            AnimatedBuilder(
+              animation: _controller,
+              builder: (context, child) {
+                return _StatusIndicator(
+                  scale: _scaleAnimation.value,
+                  opacity: _opacityAnimation.value,
+                );
+              },
+            ),
             const SizedBox(height: 48),
             _ControlButtons(onPlay: _play, onPause: _pause, onReset: _reset),
             const SizedBox(height: 24),
-            // TODO: Display animation progress (0.000 to 1.000)
-            const _AnimationValueDisplay(value: 0),
+            AnimatedBuilder(
+              animation: _controller,
+              builder: (context, child) {
+                return _AnimationValueDisplay(value: _controller.value);
+              },
+            ),
           ],
         ),
       ),

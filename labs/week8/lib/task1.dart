@@ -46,8 +46,9 @@ class _ProfileCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Add smooth animations when transitioning between states
-    return Container(
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.easeInOutCubic,
       clipBehavior: Clip.hardEdge,
       width: isExpanded ? 300 : 200,
       height: isExpanded ? 280 : 100,
@@ -93,46 +94,52 @@ class _AvatarSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Add animations for position and size changes
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Container(
-          width: isExpanded ? 60 : 50,
-          height: isExpanded ? 60 : 50,
-          decoration: BoxDecoration(
-            color: Colors.white.withAlpha(230),
-            shape: BoxShape.circle,
+    return AnimatedAlign(
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.easeInOutCubic,
+      alignment: isExpanded ? Alignment.center : Alignment.centerLeft,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 400),
+            curve: Curves.easeInOutCubic,
+            width: isExpanded ? 60 : 50,
+            height: isExpanded ? 60 : 50,
+            decoration: BoxDecoration(
+              color: Colors.white.withAlpha(230),
+              shape: BoxShape.circle,
+            ),
+            child: const Icon(Icons.person, color: Color(0xFF1F6FEB), size: 32),
           ),
-          child: const Icon(Icons.person, color: Color(0xFF1F6FEB), size: 32),
-        ),
-        const SizedBox(width: 12),
-        Flexible(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text(
-                'Jane Developer',
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+          const SizedBox(width: 12),
+          Flexible(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text(
+                  'Jane Developer',
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              Text(
-                'Flutter Engineer',
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  color: Colors.white.withAlpha(200),
-                  fontSize: 12,
+                Text(
+                  'Flutter Engineer',
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: Colors.white.withAlpha(200),
+                    fontSize: 12,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
@@ -144,32 +151,35 @@ class _ExpandedContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Add fade animation
-    return const Expanded(
+    return Expanded(
       child: ClipRect(
-        child: OverflowBox(
-          minHeight: 0,
-          maxHeight: 200,
-          alignment: Alignment.topCenter,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                'Building beautiful apps with Flutter. '
-                'Passionate about animations and smooth UX.',
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white, fontSize: 13),
-              ),
-              SizedBox(height: 16),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  _StatItem(label: 'Projects', value: '42'),
-                  _StatItem(label: 'Stars', value: '1.2k'),
-                  _StatItem(label: 'Followers', value: '856'),
-                ],
-              ),
-            ],
+        child: AnimatedOpacity(
+          duration: const Duration(milliseconds: 300),
+          opacity: isExpanded ? 1.0 : 0.0,
+          child: const OverflowBox(
+            minHeight: 0,
+            maxHeight: 200,
+            alignment: Alignment.topCenter,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'Building beautiful apps with Flutter. '
+                  'Passionate about animations and smooth UX.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.white, fontSize: 13),
+                ),
+                SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    _StatItem(label: 'Projects', value: '42'),
+                    _StatItem(label: 'Stars', value: '1.2k'),
+                    _StatItem(label: 'Followers', value: '856'),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

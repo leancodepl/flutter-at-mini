@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/physics.dart';
 
 class Task3Page extends StatefulWidget {
   const Task3Page({super.key});
@@ -7,31 +8,64 @@ class Task3Page extends StatefulWidget {
   State<Task3Page> createState() => _Task3PageState();
 }
 
-class _Task3PageState extends State<Task3Page> {
-  // TODO: Implement drag and spring-back behavior
+class _Task3PageState extends State<Task3Page>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
 
   Offset _dragOffset = Offset.zero;
+  Offset _startOffset = Offset.zero;
 
-  // TODO: Use Spring parameters
   double _mass = 1;
   double _stiffness = 200;
   double _damping = 15;
 
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController.unbounded(vsync: this);
+    _controller.addListener(_onAnimationTick);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  void _onAnimationTick() {
+    setState(() {
+      _dragOffset = _startOffset * _controller.value;
+    });
+  }
+
   void _onPanStart(DragStartDetails details) {
-    // TODO
+    _controller.stop();
   }
 
   void _onPanUpdate(DragUpdateDetails details) {
-    // TODO
+    setState(() {
+      _dragOffset += details.delta;
+    });
   }
 
   void _onPanEnd(DragEndDetails details) {
-    // TODO
+    _startOffset = _dragOffset;
+
+    final spring = SpringDescription(
+      mass: _mass,
+      stiffness: _stiffness,
+      damping: _damping,
+    );
+
+    final simulation = SpringSimulation(spring, 1, 0, 0);
+    _controller.animateWith(simulation);
   }
 
   void _resetCard() {
+    _controller.stop();
     setState(() {
       _dragOffset = Offset.zero;
+      _startOffset = Offset.zero;
     });
   }
 
