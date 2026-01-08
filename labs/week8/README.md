@@ -74,5 +74,4 @@ Try to achieve different spring feels: bouncy, smooth, and overdamped.
 
 ## Tips
 
-- Look for `TODO` comments in the starter code for guidance
 - Consider which animation approach is best suited for each task

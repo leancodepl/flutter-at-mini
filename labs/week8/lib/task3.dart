@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/physics.dart';
 
 class Task3Page extends StatefulWidget {
   const Task3Page({super.key});
@@ -8,157 +7,16 @@ class Task3Page extends StatefulWidget {
   State<Task3Page> createState() => _Task3PageState();
 }
 
-class _Task3PageState extends State<Task3Page>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _controller;
-
-  Offset _dragOffset = Offset.zero;
-  Offset _startOffset = Offset.zero;
-
-  double _mass = 1;
-  double _stiffness = 200;
-  double _damping = 15;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController.unbounded(vsync: this);
-    _controller.addListener(_onAnimationTick);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  void _onAnimationTick() {
-    setState(() {
-      _dragOffset = _startOffset * _controller.value;
-    });
-  }
-
-  void _onPanStart(DragStartDetails details) {
-    _controller.stop();
-  }
-
-  void _onPanUpdate(DragUpdateDetails details) {
-    setState(() {
-      _dragOffset += details.delta;
-    });
-  }
-
-  void _onPanEnd(DragEndDetails details) {
-    _startOffset = _dragOffset;
-
-    final spring = SpringDescription(
-      mass: _mass,
-      stiffness: _stiffness,
-      damping: _damping,
-    );
-
-    final simulation = SpringSimulation(spring, 1, 0, 0);
-    _controller.animateWith(simulation);
-  }
-
-  void _resetCard() {
-    _controller.stop();
-    setState(() {
-      _dragOffset = Offset.zero;
-      _startOffset = Offset.zero;
-    });
-  }
-
+class _Task3PageState extends State<Task3Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Task 3: Spring Physics')),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFF161B22), Color(0xFF0D1117)],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-        ),
-        child: Column(
-          children: [
-            Expanded(
-              child: Center(
-                child: GestureDetector(
-                  onPanStart: _onPanStart,
-                  onPanUpdate: _onPanUpdate,
-                  onPanEnd: _onPanEnd,
-                  child: Transform.translate(
-                    offset: _dragOffset,
-                    child: _DraggableCard(),
-                  ),
-                ),
-              ),
-            ),
-            _SpringControls(
-              mass: _mass,
-              stiffness: _stiffness,
-              damping: _damping,
-              onMassChanged: (v) => setState(() => _mass = v),
-              onStiffnessChanged: (v) => setState(() => _stiffness = v),
-              onDampingChanged: (v) => setState(() => _damping = v),
-              onReset: _resetCard,
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
 
-class _DraggableCard extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 150,
-      height: 200,
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFFA371F7), Color(0xFF8957E5)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-            color: const Color(0xFFA371F7).withAlpha(80),
-            blurRadius: 24,
-            spreadRadius: 4,
-          ),
-        ],
-      ),
-      child: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(Icons.touch_app, color: Colors.white, size: 48),
-          SizedBox(height: 12),
-          Text(
-            'Drag me!',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          SizedBox(height: 4),
-          Text(
-            'Release to spring back',
-            style: TextStyle(color: Colors.white70, fontSize: 12),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
+// ignore: unused_element, (README.md - task 3)
 class _SpringControls extends StatelessWidget {
   const _SpringControls({
     required this.mass,

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:week6/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +17,6 @@ class MyApp extends StatelessWidget {
           dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
         ),
       ),
-      routerConfig: _router,
     );
   }
 }
@@ -36,17 +33,11 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              child: _PageCard(
-                label: 'Cubit',
-                onTap: () => const CubitRoute().go(context),
-              ),
+              child: _PageCard(label: 'Cubit', onTap: () {}),
             ),
             const SizedBox(height: 16),
             Expanded(
-              child: _PageCard(
-                label: 'Bloc',
-                onTap: () => const BlocRoute().go(context),
-              ),
+              child: _PageCard(label: 'Bloc', onTap: () {}),
             ),
           ],
         ),
@@ -54,8 +45,6 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-final _router = GoRouter(routes: $appRoutes);
 
 class _PageCard extends StatelessWidget {
   const _PageCard({required this.label, required this.onTap});
