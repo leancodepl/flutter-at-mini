@@ -118,7 +118,7 @@ Week 10-15 lab slots can be used for project consulting - only by prior arrangem
 
 - 31.10.2025 - [Initial documentation](#initial-documentation)
 - 12.12.2025 - ***Mandatory*** project checkpoint
-- 27.01.2026 - Project Submission (source code + [final documentation](#final-documentation))
+- 30.01.2026 - Project Submission (source code + [final documentation](#final-documentation))
 - 15.02.2026 - [Late Project Submission](#late-project-submission)
 
 ### Initial Documentation
