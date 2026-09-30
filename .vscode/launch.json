@@ -53,14 +53,14 @@
             "type": "dart"
         },
         {
-            "name": "Week 2 lecture",
-            "cwd": "lectures/week2",
+            "name": "Week 1 lecture",
+            "cwd": "lectures/week1/flutter",
             "type": "dart",
             "request": "launch"
         },
         {
-            "name": "Week 6 lecture",
-            "cwd": "lectures/week6",
+            "name": "Week 5 lecture",
+            "cwd": "lectures/week5",
             "type": "dart",
             "request": "launch"
         }, 
