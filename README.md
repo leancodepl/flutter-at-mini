@@ -1,17 +1,15 @@
-# Flutter @ MiNI - 2025/2026
+# Flutter @ MiNI - 2026/2027
 
 Repository contains information about **Programming mobile applications in
 Flutter** course.
 
 ## Contact info
 
-Jakub Fijałkowski – <jakub.fijalkowski@leancode.pl>
-
 Mateusz Wojtczak – <mateusz.wojtczak@leancode.pl>
 
 Piotr Rogulski – <piotr.rogulski@leancode.pl>
 
-Wiktor Zając - <wiktor.zajac@leancode.pl>
+Wiktor Zając – <wiktor.zajac@leancode.pl>
 
 ## Rules
 
@@ -34,39 +32,52 @@ Points can be gained from:
 - Flutter 3.35.5
 - Dart 3.9.2
 
+## Setup
+
+- Install Flutter by following the [official guide](https://docs.flutter.dev/get-started/install).
+- On the faculty lab computers, follow [How to install Flutter](misc/flutter_bootstrap.md).
+  You can also bring your own laptop.
+
 ## Lectures
 
-1. **07.10.2025** - [Intro lecture](lectures/week1)
-2. **14.10.2025** - [What is Flutter?](lectures/week2)
-3. **21.10.2025** - [Let's go deeper into Flutter](lectures/week3)
-4. **28.10.2025** - [State Management](lectures/week4)
-5. **04.11.2025** - [Asynchrony and HTTP](lectures/week5)
-6. **18.11.2025** - [State Management with External Libraries](lectures/week6)
-7. **25.11.2025** - [Firebase](lectures/week7)
-8. **02.12.2025** - [Animations](lectures/week8)
-9. **09.12.2025** - [Architecture](lectures/week9)
-10. **16.12.2025** - [Testing](lectures/week10)
-11. **23.12.2025** - [Forms](lectures/week11)
-12. **09.01.2026** - [Data Persistence](lectures/week12)
-13. **13.01.2026** - [Flutter Web and Flutter Desktop](lectures/week13)
-14. **20.01.2026** - [Communication with Native](lectures/week14)
-15. **27.01.2026** - TBA
+Lectures take place on Tuesdays. The schedule may change during the semester;
+changes are announced to students.
+
+| #  | Date           | Lecture                                                                                   | Lecturer         |
+|----|----------------|-------------------------------------------------------------------------------------------|------------------|
+| 1  | **06.10.2026** | [Introduction to Flutter](lectures/week1)                                                 | Wiktor Zając     |
+| 2  | **13.10.2026** | [Let's go deeper into Flutter: widgets, elements and BuildContext](lectures/week2)        | Tomasz Koter     |
+| 3  | **20.10.2026** | [Layouts 2: Flex, lists and slivers](lectures/week3)                                      | Wiktor Zając     |
+| 4  | **27.10.2026** | [Asynchrony and HTTP](lectures/week4)                                                     | Piotr Rogulski   |
+| 5  | **03.11.2026** | [State Management with External Libraries](lectures/week5)                                | Wiktor Zając     |
+| 6  | **10.11.2026** | [Firebase](lectures/week6)                                                                | Wiktor Zając     |
+| 7  | **17.11.2026** | [Animations](lectures/week7)                                                              | Wiktor Zając     |
+| 8  | **24.11.2026** | [Architecture](lectures/week8)                                                            | Mateusz Wojtczak |
+| 9  | **01.12.2026** | [Testing](lectures/week9)                                                                 | Wiktor Zając     |
+| 10 | **08.12.2026** | [Forms](lectures/week10)                                                                  | Kamil Sztandur   |
+| 11 | **15.12.2026** | [Data Persistence](lectures/week11)                                                       | Piotr Rogulski   |
+| 12 | **22.12.2026** | Fullstack Development with .NET and Flutter                                               | Wiktor Zając     |
+| 13 | **12.01.2027** | [Communication with Native](lectures/week13)                                              | Wiktor Zając     |
+| 14 | **19.01.2027** | Flame                                                                                     | Kamil Sztandur   |
+| 15 | **26.01.2027** | Design Systems & Accessibility                                                            | Kamil Sztandur   |
 
 ## Labs
 
-Each lab is an exercise about the preceding lecture consisting of multiple
-parts. Completing all parts is optional (as your homework) and is worth
-additional 3 pts each.
+Labs take place on Tuesdays, right after the lecture, in two groups. Each lab
+consists of multiple parts. Completing all parts is optional (as your homework)
+and is worth additional 3 pts each.
 
-1. **10.10.2025** - [Getting started](labs/week1)
-2. **17.10.2025** - [Layouts 1](labs/week2)
-3. **24.10.2025** - [Layouts 2 & using context](labs/week3)
-4. **31.10.2025** - [Context and StatefulWidget](labs/week4)
-5. **07.11.2025** - [Communication with API](labs/week5)
-6. **21.11.2025** - [State management with external services](labs/week6)
-7. **28.11.2025** - [Firebase Auth in action](labs/week7)
-8. **05.12.2025** - [Animations](labs/week8)
-9. **12.12.2025** - ***Mandatory*** project checkpoint
+| # | Date           | Lab                                                              |
+|---|----------------|------------------------------------------------------------------|
+| 1 | **06.10.2026** | [Getting started: Dart and Flutter setup](labs/week1)            |
+| 2 | **13.10.2026** | [Layouts 1](labs/week2)                                          |
+| 3 | **20.10.2026** | [Layouts 2 & using context](labs/week3)                          |
+| 4 | **27.10.2026** | [Context and StatefulWidget](labs/week4)                         |
+| 5 | **03.11.2026** | [Communication with API](labs/week5)                             |
+| 6 | **10.11.2026** | [State management with external services](labs/week6)            |
+| 7 | **17.11.2026** | [Firebase Auth in action](labs/week7)                            |
+| 8 | **24.11.2026** | [Animations](labs/week8)                                         |
+| 9 | **01.12.2026** | ***Mandatory*** project checkpoint                               |
 
 Week 10-15 lab slots can be used for project consulting - only by prior arrangement.
 
@@ -116,10 +127,10 @@ Week 10-15 lab slots can be used for project consulting - only by prior arrangem
 
 ### Timeline
 
-- 31.10.2025 - [Initial documentation](#initial-documentation)
-- 12.12.2025 - ***Mandatory*** project checkpoint
-- 30.01.2026 - Project Submission (source code + [final documentation](#final-documentation))
-- 15.02.2026 - [Late Project Submission](#late-project-submission)
+- 27.10.2026 - [Initial documentation](#initial-documentation)
+- 01.12.2026 - ***Mandatory*** project checkpoint
+- 29.01.2027 - Project Submission (source code + [final documentation](#final-documentation))
+- 14.02.2027 - [Late Project Submission](#late-project-submission)
 
 ### Initial Documentation
 
@@ -145,14 +156,15 @@ But it shouldn't be longer than 1-2 pages. :)
 
 ### Late Project Submission
 
-Students can submit the project until 15.02.2026. Each day of being late will
+Students can submit the project until 14.02.2027. Each day of being late will
 take a decrease of 5pt from the total number of gained points (not less than
 51pts). Projects submitted after the final deadline won't be accepted.
 
 ## Resources
 
-- [Flutter Official Documentation](https://flutter.dev/docs)
+- [Flutter Official Documentation](https://docs.flutter.dev)
 - [Pub Dev](https://pub.dev)
-- [Effective Dart](https://dart.dev/guides/language/effective-dart)
+- [DartPad](https://dartpad.dev)
+- [Effective Dart](https://dart.dev/effective-dart)
 - [Inside Flutter (for curious ones)](https://docs.flutter.dev/resources/inside-flutter)
 - [Opinionated linter rules used in this codebase](https://github.com/leancodepl/flutter_corelibrary/tree/master/packages/leancode_lint)
