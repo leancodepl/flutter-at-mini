@@ -1,3 +1,3 @@
-# week2_examples
+# week3_examples
 
 A new Flutter project.

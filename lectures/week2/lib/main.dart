@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:week3/example_1.dart';
-import 'package:week3/example_2.dart';
+import 'package:week2/example_1.dart';
+import 'package:week2/example_2.dart';
 
 const examples = [Example1(), Example2()];
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:week3/util/build_aware_widget.dart';
+import 'package:week2/util/build_aware_widget.dart';
 
 class Example2 extends StatelessWidget {
   const Example2({super.key});

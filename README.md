@@ -43,23 +43,23 @@ Points can be gained from:
 Lectures take place on Tuesdays. The schedule may change during the semester;
 changes are announced to students.
 
-| #  | Date           | Lecture                                                                                   | Lecturer         |
-|----|----------------|-------------------------------------------------------------------------------------------|------------------|
-| 1  | **06.10.2026** | [Introduction to Flutter](lectures/week1)                                                 | Wiktor Zając     |
-| 2  | **13.10.2026** | [Let's go deeper into Flutter: widgets, elements and BuildContext](lectures/week2)        | Tomasz Koter     |
-| 3  | **20.10.2026** | [Layouts 2: Flex, lists and slivers](lectures/week3)                                      | Wiktor Zając     |
-| 4  | **27.10.2026** | [Asynchrony and HTTP](lectures/week4)                                                     | Piotr Rogulski   |
-| 5  | **03.11.2026** | [State Management with External Libraries](lectures/week5)                                | Wiktor Zając     |
-| 6  | **10.11.2026** | [Firebase](lectures/week6)                                                                | Wiktor Zając     |
-| 7  | **17.11.2026** | [Animations](lectures/week7)                                                              | Wiktor Zając     |
-| 8  | **24.11.2026** | [Architecture](lectures/week8)                                                            | Mateusz Wojtczak |
-| 9  | **01.12.2026** | [Testing](lectures/week9)                                                                 | Wiktor Zając     |
-| 10 | **08.12.2026** | [Forms](lectures/week10)                                                                  | Kamil Sztandur   |
-| 11 | **15.12.2026** | [Data Persistence](lectures/week11)                                                       | Piotr Rogulski   |
-| 12 | **22.12.2026** | Fullstack Development with .NET and Flutter                                               | Wiktor Zając     |
-| 13 | **12.01.2027** | [Communication with Native](lectures/week13)                                              | Wiktor Zając     |
-| 14 | **19.01.2027** | Flame                                                                                     | Kamil Sztandur   |
-| 15 | **26.01.2027** | Design Systems & Accessibility                                                            | Kamil Sztandur   |
+| #  | Date           | Lecture                                                    | Lecturer         |
+|----|----------------|------------------------------------------------------------|------------------|
+| 1  | **06.10.2026** | [Introduction to Flutter](lectures/week1)                  | Wiktor Zając     |
+| 2  | **13.10.2026** | [Layouts 2: Flex, lists and slivers](lectures/week2)       | Wiktor Zając     |
+| 3  | **20.10.2026** | [Giving context to BuildContext](lectures/week3)           | Tomasz Koter     |
+| 4  | **27.10.2026** | [Asynchrony and HTTP](lectures/week4)                      | Piotr Rogulski   |
+| 5  | **03.11.2026** | [State Management with External Libraries](lectures/week5) | Wiktor Zając     |
+| 6  | **10.11.2026** | [Firebase](lectures/week6)                                 | Wiktor Zając     |
+| 7  | **17.11.2026** | [Animations](lectures/week7)                               | Wiktor Zając     |
+| 8  | **24.11.2026** | [Architecture](lectures/week8)                             | Mateusz Wojtczak |
+| 9  | **01.12.2026** | [Testing](lectures/week9)                                  | Wiktor Zając     |
+| 10 | **08.12.2026** | [Forms](lectures/week10)                                   | Kamil Sztandur   |
+| 11 | **15.12.2026** | [Data Persistence](lectures/week11)                        | Piotr Rogulski   |
+| 12 | **22.12.2026** | Fullstack Development with .NET and Flutter                | Wiktor Zając     |
+| 13 | **12.01.2027** | [Communication with Native](lectures/week13)               | Wiktor Zając     |
+| 14 | **19.01.2027** | Flame                                                      | Kamil Sztandur   |
+| 15 | **26.01.2027** | Design Systems & Accessibility                             | Kamil Sztandur   |
 
 ## Labs
 
