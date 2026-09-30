@@ -4,8 +4,16 @@ import 'package:week1/example_1.dart';
 import 'package:week1/example_2.dart';
 import 'package:week1/example_3.dart';
 import 'package:week1/example_4.dart';
+import 'package:week1/example_5.dart';
 
-const examples = [Example0(), Example1(), Example2(), Example3(), Example4()];
+const examples = [
+  Example0(),
+  Example1(),
+  Example2(),
+  Example3(),
+  Example4(),
+  Example5(),
+];
 
 void main() {
   runApp(const App());
@@ -18,7 +26,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('Lecture 2')),
+        appBar: AppBar(title: const Text('Lecture 1')),
         body: ListView.builder(
           itemBuilder: (context, i) {
             return ListTile(
