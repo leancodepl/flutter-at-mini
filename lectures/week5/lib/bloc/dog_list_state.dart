@@ -1,4 +1,4 @@
-import 'package:week5/data/dog.dart';
+import 'package:lecture_week5/data/dog.dart';
 
 sealed class DogListState {
   const DogListState();

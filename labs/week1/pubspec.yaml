@@ -1,10 +1,10 @@
-name: week1
+name: labs_week1
 
 environment:
-  sdk: 3.9.2
+  sdk: 3.13.4
+  flutter: 3.47.5
+
+resolution: workspace
 
 dependencies:
   collection: ^1.19.1
-
-dev_dependencies:
-  leancode_lint: ^19.0.0

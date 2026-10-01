@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:week1/example_0.dart';
-import 'package:week1/example_1.dart';
-import 'package:week1/example_2.dart';
-import 'package:week1/example_3.dart';
-import 'package:week1/example_4.dart';
-import 'package:week1/example_5.dart';
+import 'package:lecture_week1/example_0.dart';
+import 'package:lecture_week1/example_1.dart';
+import 'package:lecture_week1/example_2.dart';
+import 'package:lecture_week1/example_3.dart';
+import 'package:lecture_week1/example_4.dart';
+import 'package:lecture_week1/example_5.dart';
 
 const examples = [
   Example0(),

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart';
-import 'package:week5/data/dog.dart';
+import 'package:lecture_week5/data/dog.dart';
 
 class DogApi {
   final _uri = Uri.parse('https://dog.ceo/api/breed/corgi/images/random/50');

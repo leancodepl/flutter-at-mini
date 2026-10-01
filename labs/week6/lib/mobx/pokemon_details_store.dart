@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:mobx/mobx.dart';
-import 'package:week6/pokemon.dart';
+import 'package:labs_week6/pokemon.dart';
 
 part 'pokemon_details_store.g.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:week2/utils/constraint_viewer.dart';
+import 'package:labs_week2/utils/constraint_viewer.dart';
 
 class Example4 extends StatelessWidget {
   const Example4({super.key});

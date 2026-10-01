@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
-import 'package:week4/app_theme.dart';
-import 'package:week4/author_screen.dart';
-import 'package:week4/book_list_screen.dart';
-import 'package:week4/book_screen.dart';
-import 'package:week4/genre_screen.dart';
-import 'package:week4/global_providers.dart';
+import 'package:labs_week4/app_theme.dart';
+import 'package:labs_week4/author_screen.dart';
+import 'package:labs_week4/book_list_screen.dart';
+import 'package:labs_week4/book_screen.dart';
+import 'package:labs_week4/genre_screen.dart';
+import 'package:labs_week4/global_providers.dart';
 
 void main() {
   GoRouter.optionURLReflectsImperativeAPIs = true;

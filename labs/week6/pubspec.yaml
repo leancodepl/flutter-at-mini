@@ -1,8 +1,10 @@
-name: week6
+name: labs_week6
 
 environment:
-  sdk: 3.9.2
-  flutter: 3.35.5
+  sdk: 3.13.4
+  flutter: 3.47.5
+
+resolution: workspace
 
 dependencies:
   bloc_concurrency: ^0.3.0
@@ -22,7 +24,6 @@ dev_dependencies:
   build_runner: ^2.10.4
   go_router_builder: ^4.1.1
   json_serializable: ^6.11.1
-  leancode_lint: ^19.0.1
   mobx_codegen: ^2.7.4
 
 flutter:

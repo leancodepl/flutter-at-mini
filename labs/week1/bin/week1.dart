@@ -1,8 +1,8 @@
-import 'package:week1/part1.dart';
-import 'package:week1/part2.dart';
-import 'package:week1/part3.dart';
-import 'package:week1/part4.dart';
-import 'package:week1/part5.dart';
+import 'package:labs_week1/part1.dart';
+import 'package:labs_week1/part2.dart';
+import 'package:labs_week1/part3.dart';
+import 'package:labs_week1/part4.dart';
+import 'package:labs_week1/part5.dart';
 
 void main() {
   part1();

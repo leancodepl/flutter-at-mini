@@ -1,7 +1,7 @@
 import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
-import 'package:week4/app_theme.dart';
-import 'package:week4/common_widgets.dart';
+import 'package:labs_week4/app_theme.dart';
+import 'package:labs_week4/common_widgets.dart';
 
 class GenreScreen extends StatelessWidget {
   const GenreScreen({super.key, required this.genreId});

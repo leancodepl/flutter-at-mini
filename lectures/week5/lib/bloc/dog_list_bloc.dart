@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:week5/bloc/dog_list_event.dart';
-import 'package:week5/bloc/dog_list_state.dart';
-import 'package:week5/data/dog_api.dart';
+import 'package:lecture_week5/bloc/dog_list_event.dart';
+import 'package:lecture_week5/bloc/dog_list_state.dart';
+import 'package:lecture_week5/data/dog_api.dart';
 
 class DogListBloc extends Bloc<DogListEvent, DogListState> {
   DogListBloc({required DogApi api}) : _api = api, super(const EmptyDogList()) {

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:leancode_cubit_utils/leancode_cubit_utils.dart';
-import 'package:week5/data/dog.dart';
+import 'package:lecture_week5/data/dog.dart';
 
 abstract class HttpRequestCubit<TOut>
     extends RequestCubit<http.Response, String, TOut, int> {

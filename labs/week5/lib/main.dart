@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:week5/pokemon_data.dart';
+import 'package:labs_week5/pokemon_data.dart';
 
 void main() {
   runApp(const MyApp());

@@ -3,10 +3,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:week7/features/auth/auth_cubit.dart';
-import 'package:week7/features/auth/auth_gate.dart';
-import 'package:week7/features/auth/auth_service.dart';
-import 'package:week7/features/user_items/user_items_service.dart';
+import 'package:labs_week7/features/auth/auth_cubit.dart';
+import 'package:labs_week7/features/auth/auth_gate.dart';
+import 'package:labs_week7/features/auth/auth_service.dart';
+import 'package:labs_week7/features/user_items/user_items_service.dart';
 
 class Week7App extends StatelessWidget {
   const Week7App({super.key});

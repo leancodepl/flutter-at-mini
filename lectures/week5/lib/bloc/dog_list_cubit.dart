@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week5/bloc/dog_list_state.dart';
-import 'package:week5/data/dog_api.dart';
+import 'package:lecture_week5/bloc/dog_list_state.dart';
+import 'package:lecture_week5/data/dog_api.dart';
 
 class DogListCubit extends Cubit<DogListState> {
   DogListCubit({required DogApi api}) : _api = api, super(const EmptyDogList());

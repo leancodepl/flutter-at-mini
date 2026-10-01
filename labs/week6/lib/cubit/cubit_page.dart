@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week6/common/error_message.dart';
-import 'package:week6/common/loading_indicator.dart';
-import 'package:week6/common/pokemon_list.dart';
-import 'package:week6/cubit/pokemon_cubit.dart';
-import 'package:week6/routes/routes.dart';
+import 'package:labs_week6/common/error_message.dart';
+import 'package:labs_week6/common/loading_indicator.dart';
+import 'package:labs_week6/common/pokemon_list.dart';
+import 'package:labs_week6/cubit/pokemon_cubit.dart';
+import 'package:labs_week6/routes/routes.dart';
 
 class CubitPage extends StatelessWidget {
   const CubitPage({super.key});

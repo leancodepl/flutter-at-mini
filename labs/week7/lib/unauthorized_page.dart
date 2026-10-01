@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week7/features/auth/auth_cubit.dart';
+import 'package:labs_week7/features/auth/auth_cubit.dart';
 
 class UnauthorizedPage extends StatefulWidget {
   const UnauthorizedPage({super.key});

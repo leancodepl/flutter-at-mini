@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:week5/pokemon.dart';
-import 'package:week5/task.dart';
+import 'package:labs_week5/pokemon.dart';
+import 'package:labs_week5/task.dart';
 
 class PokemonData extends StatefulWidget {
   const PokemonData({super.key});

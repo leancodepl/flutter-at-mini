@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:week2/example_1_container.dart';
-import 'package:week2/example_2_constraints.dart';
-import 'package:week2/example_3_constrained_box.dart';
-import 'package:week2/example_4_aspect_ratio.dart';
-import 'package:week2/example_5_layout_builder.dart';
-import 'package:week2/example_6_align.dart';
-import 'package:week2/example_7_intrinsic.dart';
-import 'package:week2/example_8_unconstrained_box.dart';
-import 'package:week2/example_9_overflow_box.dart';
-import 'package:week2/task1.dart';
-import 'package:week2/task2.dart';
+import 'package:labs_week2/example_1_container.dart';
+import 'package:labs_week2/example_2_constraints.dart';
+import 'package:labs_week2/example_3_constrained_box.dart';
+import 'package:labs_week2/example_4_aspect_ratio.dart';
+import 'package:labs_week2/example_5_layout_builder.dart';
+import 'package:labs_week2/example_6_align.dart';
+import 'package:labs_week2/example_7_intrinsic.dart';
+import 'package:labs_week2/example_8_unconstrained_box.dart';
+import 'package:labs_week2/example_9_overflow_box.dart';
+import 'package:labs_week2/task1.dart';
+import 'package:labs_week2/task2.dart';
 
 const entries = [
   (Example1(), '1. Container'),

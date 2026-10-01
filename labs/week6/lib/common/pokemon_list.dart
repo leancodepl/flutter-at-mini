@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:week6/pokemon.dart';
+import 'package:labs_week6/pokemon.dart';
 
 class PokemonList extends StatelessWidget {
   const PokemonList({super.key, required this.entries, required this.onTap});

@@ -1,8 +1,0 @@
-name: flutter_at_mini
-
-packages:
-  - labs/**
-  - lectures/**
-
-scripts:
-  get: melos exec flutter pub get

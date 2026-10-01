@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week6/pokemon.dart';
+import 'package:labs_week6/pokemon.dart';
 
 class PokemonCubit extends Cubit<PokemonState> {
   PokemonCubit() : super(PokemonInitial());

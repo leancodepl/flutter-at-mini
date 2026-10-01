@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:week3/author_screen.dart';
-import 'package:week3/book_list_screen.dart';
-import 'package:week3/book_screen.dart';
-import 'package:week3/genre_screen.dart';
+import 'package:labs_week3/author_screen.dart';
+import 'package:labs_week3/book_list_screen.dart';
+import 'package:labs_week3/book_screen.dart';
+import 'package:labs_week3/genre_screen.dart';
 
 void main() {
   GoRouter.optionURLReflectsImperativeAPIs = true;

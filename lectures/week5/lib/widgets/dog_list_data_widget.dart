@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:week5/bloc/dog_list_state.dart';
+import 'package:lecture_week5/bloc/dog_list_state.dart';
 
 class DogListDataWidget extends StatelessWidget {
   const DogListDataWidget({

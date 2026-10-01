@@ -1,13 +1,13 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week5/balance_event_transformer_page.dart';
-import 'package:week5/bloc/dog_list_bloc.dart';
-import 'package:week5/bloc/dog_list_cubit.dart';
-import 'package:week5/data/dog_api.dart';
-import 'package:week5/dog_list_bloc_page.dart';
-import 'package:week5/dog_list_cubit_page.dart';
-import 'package:week5/dog_list_request_cubit_page.dart';
+import 'package:lecture_week5/balance_event_transformer_page.dart';
+import 'package:lecture_week5/bloc/dog_list_bloc.dart';
+import 'package:lecture_week5/bloc/dog_list_cubit.dart';
+import 'package:lecture_week5/data/dog_api.dart';
+import 'package:lecture_week5/dog_list_bloc_page.dart';
+import 'package:lecture_week5/dog_list_cubit_page.dart';
+import 'package:lecture_week5/dog_list_request_cubit_page.dart';
 
 void main() {
   runApp(const MyApp());

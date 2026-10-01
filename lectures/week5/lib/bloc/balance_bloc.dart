@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:week5/bloc/balance_event.dart';
-import 'package:week5/bloc/balance_state.dart';
+import 'package:lecture_week5/bloc/balance_event.dart';
+import 'package:lecture_week5/bloc/balance_state.dart';
 
 // Similar to https://pub.dev/packages/bloc_concurrency
 EventTransformer<E> sequential<E>() {

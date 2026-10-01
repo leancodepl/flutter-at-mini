@@ -1,7 +1,7 @@
 import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:week4/book_screen.dart';
+import 'package:labs_week4/book_screen.dart';
 
 class Cover extends StatelessWidget {
   const Cover(this.coverUrl, {super.key});

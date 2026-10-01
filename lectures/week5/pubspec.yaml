@@ -1,8 +1,10 @@
-name: week5
+name: lecture_week5
 
 environment:
-  sdk: 3.9.2
-  flutter: 3.35.5
+  sdk: 3.13.4
+  flutter: 3.47.5
+
+resolution: workspace
 
 dependencies:
   bloc: ^9.0.1
@@ -16,7 +18,6 @@ dev_dependencies:
   bloc_test: any
   flutter_test:
     sdk: flutter
-  leancode_lint: ^18.0.0
   mocktail: ^1.0.4
 
 flutter:

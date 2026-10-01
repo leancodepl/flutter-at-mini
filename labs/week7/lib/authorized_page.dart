@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:week7/features/auth/auth_cubit.dart';
-import 'package:week7/features/auth/auth_service.dart';
-import 'package:week7/features/user_items/user_items.dart';
+import 'package:labs_week7/features/auth/auth_cubit.dart';
+import 'package:labs_week7/features/auth/auth_service.dart';
+import 'package:labs_week7/features/user_items/user_items.dart';
 
 class AuthorizedPage extends StatelessWidget {
   const AuthorizedPage({super.key, required this.state});

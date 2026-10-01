@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week7/features/auth/auth_service.dart';
+import 'package:labs_week7/features/auth/auth_service.dart';
 
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit({required this.authService}) : super(authService.stateFromAuth) {

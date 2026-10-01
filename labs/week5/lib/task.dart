@@ -6,7 +6,7 @@ import 'dart:math';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
-import 'package:week5/pokemon.dart';
+import 'package:labs_week5/pokemon.dart';
 
 final url = Uri.parse('https://pokeapi.co/api/v2/pokemon?limit=100');
 

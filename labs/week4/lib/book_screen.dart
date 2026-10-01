@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:week4/app_theme.dart';
-import 'package:week4/common_widgets.dart';
-import 'package:week4/favorite_books.dart';
+import 'package:labs_week4/app_theme.dart';
+import 'package:labs_week4/common_widgets.dart';
+import 'package:labs_week4/favorite_books.dart';
 
 class BookScreen extends StatefulWidget {
   const BookScreen({super.key, required this.bookId});

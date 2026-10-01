@@ -1,19 +1,18 @@
-name: week2
+name: lecture_week2
 description: A new Flutter project.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: 3.9.2
-  flutter: 3.35.5
+  sdk: 3.13.4
+  flutter: 3.47.5
+
+resolution: workspace
 
 dependencies:
   flutter:
     sdk: flutter
-
-dev_dependencies:
-  leancode_lint: ^19.0.0
 
 flutter:
   uses-material-design: true

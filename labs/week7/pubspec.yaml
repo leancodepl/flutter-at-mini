@@ -1,9 +1,11 @@
-name: week7
+name: labs_week7
 version: 1.0.0+1
 
 environment:
-  sdk: 3.9.2
-  flutter: 3.35.5
+  sdk: 3.13.4
+  flutter: 3.47.5
+
+resolution: workspace
 
 dependencies:
   cloud_firestore: ^6.1.0
@@ -15,9 +17,6 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^9.1.1
   provider: ^6.1.5+1
-
-dev_dependencies:
-  leancode_lint: ^19.0.1
 
 flutter:
   uses-material-design: true

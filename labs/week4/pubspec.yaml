@@ -1,20 +1,18 @@
-name: week4
+name: labs_week4
 
 environment:
-  sdk: 3.9.2
-  flutter: 3.35.5
+  sdk: 3.13.4
+  flutter: 3.47.5
+
+resolution: workspace
 
 dependencies:
   bookstore_data:
-    path: packages/bookstore_data
   flutter:
     sdk: flutter
-  go_router: ^16.3.0
+  go_router: ^17.0.0
   intl: ^0.20.2
   provider: ^6.1.5+1
-
-dev_dependencies:
-  leancode_lint: ^19.0.0
 
 flutter:
   uses-material-design: true

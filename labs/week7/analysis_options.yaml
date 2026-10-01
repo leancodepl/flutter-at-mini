@@ -5,3 +5,8 @@ analyzer:
     - custom_lint
   exclude:
     - '**.g.dart'
+    - build/**
+    - android/**
+    - web/**
+    - windows/**
+    - macos/**

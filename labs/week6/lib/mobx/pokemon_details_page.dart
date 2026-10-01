@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
-import 'package:week6/common/error_message.dart';
-import 'package:week6/common/loading_indicator.dart';
-import 'package:week6/mobx/pokemon_details_store.dart';
-import 'package:week6/pokemon.dart';
+import 'package:labs_week6/common/error_message.dart';
+import 'package:labs_week6/common/loading_indicator.dart';
+import 'package:labs_week6/mobx/pokemon_details_store.dart';
+import 'package:labs_week6/pokemon.dart';
 
 class PokemonDetailsPage extends StatelessWidget {
   const PokemonDetailsPage({super.key, required this.pokemonUrl});

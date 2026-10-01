@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
 import 'package:leancode_cubit_utils/leancode_cubit_utils.dart';
-import 'package:week5/bloc/dog_list_request_cubit.dart';
-import 'package:week5/bloc/dog_list_state.dart';
-import 'package:week5/widgets/dog_list_data_widget.dart';
-import 'package:week5/widgets/empty_dog_list_widget.dart';
-import 'package:week5/widgets/loading_widget.dart';
+import 'package:lecture_week5/bloc/dog_list_request_cubit.dart';
+import 'package:lecture_week5/bloc/dog_list_state.dart';
+import 'package:lecture_week5/widgets/dog_list_data_widget.dart';
+import 'package:lecture_week5/widgets/empty_dog_list_widget.dart';
+import 'package:lecture_week5/widgets/loading_widget.dart';
 
 class DogListRequestCubitPage extends StatelessWidget {
   const DogListRequestCubitPage({super.key});

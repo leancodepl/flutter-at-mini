@@ -1,6 +1,6 @@
 import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
-import 'package:week3/common_widgets.dart';
+import 'package:labs_week3/common_widgets.dart';
 
 class BookListScreen extends StatelessWidget {
   const BookListScreen({super.key});

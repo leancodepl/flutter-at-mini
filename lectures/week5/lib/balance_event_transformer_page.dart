@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:week5/bloc/balance_bloc.dart';
-import 'package:week5/bloc/balance_event.dart';
-import 'package:week5/bloc/balance_state.dart';
+import 'package:lecture_week5/bloc/balance_bloc.dart';
+import 'package:lecture_week5/bloc/balance_event.dart';
+import 'package:lecture_week5/bloc/balance_state.dart';
 
 class BalanceEventTransformerPage extends StatelessWidget {
   const BalanceEventTransformerPage({super.key});
@@ -54,9 +54,8 @@ class _ConcurrentColumn extends StatelessWidget {
                     child: BlocBuilder<ConcurrentBalanceBloc, BalanceState>(
                       builder: (context, state) => Text(
                         'Balance: ${state.balance}',
-                        style: Theme.of(
-                          context,
-                        ).textTheme.headlineMedium?.copyWith(color: Colors.red),
+                        style: Theme.of(context).textTheme.headlineMedium
+                            ?.copyWith(color: Colors.red),
                       ),
                     ),
                   ),

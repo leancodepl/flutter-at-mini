@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:week7/features/auth/auth_service.dart';
+import 'package:labs_week7/features/auth/auth_service.dart';
 
 class UserItemsService {
   UserItemsService({required this.db, required this.auth});
