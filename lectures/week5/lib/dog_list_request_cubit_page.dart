@@ -8,9 +8,7 @@ import 'package:lecture_week5/widgets/dog_list_data_widget.dart';
 import 'package:lecture_week5/widgets/empty_dog_list_widget.dart';
 import 'package:lecture_week5/widgets/loading_widget.dart';
 
-class DogListRequestCubitPage extends StatelessWidget {
-  const DogListRequestCubitPage({super.key});
-
+class const DogListRequestCubitPage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RequestLayoutConfigProvider(

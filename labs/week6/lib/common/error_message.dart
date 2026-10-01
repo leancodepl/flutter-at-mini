@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ErrorMessage extends StatelessWidget {
-  const ErrorMessage({super.key, required this.error});
-
-  final Object error;
-
+class const ErrorMessage({super.key, required final Object error})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

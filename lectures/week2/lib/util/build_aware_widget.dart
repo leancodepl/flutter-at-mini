@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
 
 @immutable
-final class Counts {
-  const Counts(this.constructed, this.mounted, this.disposed);
-  final int constructed, mounted, disposed;
+final class const Counts(
+  final int constructed,
+  final int mounted,
+  final int disposed,
+) {
   static const zero = Counts(0, 0, 0);
 }
 
-class BuildAwareWidget extends StatefulWidget {
-  BuildAwareWidget({
-    required this.index,
-    required this.parent,
-    required this.child,
-    super.key,
-  }) {
+class BuildAwareWidget({
+  required final int index,
+  required final String parent,
+  required final Widget child,
+  super.key,
+}) extends StatefulWidget {
+  this {
     _constructed++;
     _scheduleFlush();
     debugPrint('CONSTRUCTED -> $parent #$index');
   }
-
-  final int index;
-  final String parent;
-  final Widget child;
 
   static final counts = ValueNotifier<Counts>(Counts.zero);
 
@@ -50,7 +48,7 @@ class BuildAwareWidget extends StatefulWidget {
   State<BuildAwareWidget> createState() => _BuildAwareWidgetState();
 }
 
-class _BuildAwareWidgetState extends State<BuildAwareWidget> {
+class _BuildAwareWidgetState() extends State<BuildAwareWidget> {
   @override
   void initState() {
     super.initState();

@@ -7,8 +7,8 @@ EventTransformer<E> sequential<E>() {
   return (events, mapper) => events.asyncExpand(mapper);
 }
 
-class ConcurrentBalanceBloc extends Bloc<BalanceEvent, BalanceState> {
-  ConcurrentBalanceBloc() : super(const BalanceState(balance: 0)) {
+class ConcurrentBalanceBloc() extends Bloc<BalanceEvent, BalanceState> {
+  this : super(const BalanceState(balance: 0)) {
     on<IncrementPressed>(_onIncrement);
   }
 
@@ -22,8 +22,8 @@ class ConcurrentBalanceBloc extends Bloc<BalanceEvent, BalanceState> {
   }
 }
 
-class SequentialBalanceBloc extends Bloc<BalanceEvent, BalanceState> {
-  SequentialBalanceBloc() : super(const BalanceState(balance: 0)) {
+class SequentialBalanceBloc() extends Bloc<BalanceEvent, BalanceState> {
+  this : super(const BalanceState(balance: 0)) {
     on<IncrementPressed>(_onIncrement, transformer: sequential());
   }
 

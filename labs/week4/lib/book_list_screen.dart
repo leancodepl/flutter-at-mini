@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:labs_week4/app_theme.dart';
 import 'package:labs_week4/common_widgets.dart';
 
-class BookListScreen extends StatelessWidget {
-  const BookListScreen({super.key});
-
+class const BookListScreen({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final books = Bookstore.books;

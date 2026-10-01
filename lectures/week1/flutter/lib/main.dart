@@ -19,9 +19,7 @@ void main() {
   runApp(const App());
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
-
+class const App({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -46,11 +44,8 @@ class App extends StatelessWidget {
   }
 }
 
-class ExampleWrapper extends StatelessWidget {
-  const ExampleWrapper({super.key, required this.child});
-
-  final Widget child;
-
+class const ExampleWrapper({super.key, required final Widget child})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Task2Page extends StatefulWidget {
-  const Task2Page({super.key});
-
+class const Task2Page({super.key}) extends StatefulWidget {
   @override
   State<Task2Page> createState() => _Task2PageState();
 }
 
-class _Task2PageState extends State<Task2Page>
+class _Task2PageState()
+    extends State<Task2Page>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation<double> _scaleAnimation;
@@ -93,12 +92,10 @@ class _Task2PageState extends State<Task2Page>
   }
 }
 
-class _StatusIndicator extends StatelessWidget {
-  const _StatusIndicator({required this.scale, required this.opacity});
-
-  final double scale;
-  final double opacity;
-
+class const _StatusIndicator({
+  required final double scale,
+  required final double opacity,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Transform.scale(
@@ -132,17 +129,11 @@ class _StatusIndicator extends StatelessWidget {
   }
 }
 
-class _ControlButtons extends StatelessWidget {
-  const _ControlButtons({
-    required this.onPlay,
-    required this.onPause,
-    required this.onReset,
-  });
-
-  final VoidCallback onPlay;
-  final VoidCallback onPause;
-  final VoidCallback onReset;
-
+class const _ControlButtons({
+  required final VoidCallback onPlay,
+  required final VoidCallback onPause,
+  required final VoidCallback onReset,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -168,19 +159,12 @@ class _ControlButtons extends StatelessWidget {
   }
 }
 
-class _ActionButton extends StatelessWidget {
-  const _ActionButton({
-    required this.label,
-    required this.icon,
-    required this.onPressed,
-    this.color = const Color(0xFF238636),
-  });
-
-  final String label;
-  final IconData icon;
-  final VoidCallback onPressed;
-  final Color color;
-
+class const _ActionButton({
+  required final String label,
+  required final IconData icon,
+  required final VoidCallback onPressed,
+  final Color color = const Color(0xFF238636),
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
@@ -196,11 +180,8 @@ class _ActionButton extends StatelessWidget {
   }
 }
 
-class _AnimationValueDisplay extends StatelessWidget {
-  const _AnimationValueDisplay({required this.value});
-
-  final double value;
-
+class const _AnimationValueDisplay({required final double value})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

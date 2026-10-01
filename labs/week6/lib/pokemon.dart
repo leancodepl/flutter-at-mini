@@ -16,52 +16,36 @@ import 'package:json_annotation/json_annotation.dart';
 part 'pokemon.g.dart';
 
 @JsonSerializable()
-class Pokemons with EquatableMixin {
-  const Pokemons({required this.pokemons, required this.count});
-
-  factory Pokemons.fromJson(Map<String, dynamic> json) =>
-      _$PokemonsFromJson(json);
-
-  @JsonKey(name: 'results')
-  final List<PokemonEntry> pokemons;
-  final int count;
+class const Pokemons({
+  @JsonKey(name: 'results') required final List<PokemonEntry> pokemons,
+  required final int count,
+}) with Equatable {
+  factory fromJson(Map<String, dynamic> json) => _$PokemonsFromJson(json);
 
   @override
   List<Object?> get props => [pokemons, count];
 }
 
 @JsonSerializable()
-class PokemonEntry with EquatableMixin {
-  const PokemonEntry({required this.name, required this.url});
-
-  factory PokemonEntry.fromJson(Map<String, dynamic> json) =>
-      _$PokemonEntryFromJson(json);
-
-  final String name;
-  final String url;
+class const PokemonEntry({
+  required final String name,
+  required final String url,
+}) with Equatable {
+  factory fromJson(Map<String, dynamic> json) => _$PokemonEntryFromJson(json);
 
   @override
   List<Object?> get props => [name, url];
 }
 
 @JsonSerializable(fieldRename: FieldRename.snake)
-class Pokemon with EquatableMixin {
-  const Pokemon({
-    required this.id,
-    required this.name,
-    required this.baseExperience,
-    required this.height,
-    required this.weight,
-  });
-
-  factory Pokemon.fromJson(Map<String, dynamic> json) =>
-      _$PokemonFromJson(json);
-
-  final int id;
-  final String name;
-  final int baseExperience;
-  final int height;
-  final int weight;
+class const Pokemon({
+  required final int id,
+  required final String name,
+  required final int baseExperience,
+  required final int height,
+  required final int weight,
+}) with Equatable {
+  factory fromJson(Map<String, dynamic> json) => _$PokemonFromJson(json);
 
   @override
   List<Object?> get props => [id, name, baseExperience, height, weight];

@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'pages/explicit_animations_page.dart';
-import 'pages/implicit_animations_page.dart';
+import 'package:lecture_week7/pages/explicit_animations_page.dart';
+import 'package:lecture_week7/pages/implicit_animations_page.dart';
 
 void main() {
   runApp(const AnimationsShowcaseApp());
 }
 
-class AnimationsShowcaseApp extends StatelessWidget {
-  const AnimationsShowcaseApp({super.key});
-
+class const AnimationsShowcaseApp({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -57,14 +55,12 @@ class AnimationsShowcaseApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
+class const HomePage({super.key}) extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState() extends State<HomePage> {
   int _currentIndex = 0;
 
   final _pages = const [ImplicitAnimationsPage(), ExplicitAnimationsPage()];

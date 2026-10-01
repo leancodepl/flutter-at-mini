@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:labs_week2/utils/constraint_viewer.dart';
 import 'package:labs_week2/utils/tight_constraints.dart';
 
-class Example8 extends StatelessWidget {
-  const Example8({super.key});
-
+class const Example8({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TightConstraints(

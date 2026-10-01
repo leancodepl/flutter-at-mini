@@ -1,16 +1,13 @@
 import 'package:dio/dio.dart';
-import 'package:mobx/mobx.dart';
 import 'package:labs_week6/pokemon.dart';
+import 'package:mobx/mobx.dart';
 
 part 'pokemon_details_store.g.dart';
 
 class PokemonDetailsStore = PokemonDetailsStoreBase with _$PokemonDetailsStore;
 
-abstract class PokemonDetailsStoreBase with Store {
-  PokemonDetailsStoreBase({required this.pokemonUrl});
-
-  final String pokemonUrl;
-
+abstract class PokemonDetailsStoreBase({required final String pokemonUrl})
+    with Store {
   final dio = Dio();
 
   @readonly

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import '../../widgets/demo_scaffold.dart';
+import 'package:lecture_week7/widgets/demo_scaffold.dart';
 
-class StaggeredAnimationDemo extends StatefulWidget {
-  const StaggeredAnimationDemo({super.key});
-
+class const StaggeredAnimationDemo({super.key}) extends StatefulWidget {
   @override
   State<StaggeredAnimationDemo> createState() => _StaggeredAnimationDemoState();
 }
 
-class _StaggeredAnimationDemoState extends State<StaggeredAnimationDemo>
+class _StaggeredAnimationDemoState()
+    extends State<StaggeredAnimationDemo>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final List<Animation<double>> _slideAnimations;

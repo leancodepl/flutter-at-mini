@@ -6,25 +6,25 @@ void foo(dynamic obj) {
   switch (obj) {
     case 1:
       print('number one');
-    case String s:
+    case final String s:
       print(s.length);
-    case [firstPattern, secondPattern, var thirdParam, ...var rest]:
+    case [firstPattern, secondPattern, final thirdParam, ...final rest]:
       print('this is it with $thirdParam and the $rest');
-    case [firstPattern, secondPattern, ...var rest]:
+    case [firstPattern, secondPattern, ...final rest]:
       print('this is it and the $rest');
-    case [[firstPattern, ...var _], secondPattern, ...var _]:
+    case [[firstPattern, ...], secondPattern, ...]:
       print('this is weird');
   }
 
   // A switch expression with pattern matching – always has to be exhaustive
   print(switch (obj) {
     1 => 'number one',
-    [firstPattern, secondPattern, var thirdParam, ...var rest] =>
+    [firstPattern, secondPattern, final thirdParam, ...final rest] =>
       'this is it with $thirdParam and the $rest',
-    [firstPattern, secondPattern, ...var rest] => 'this is it and the $rest',
-    [[firstPattern, ...var _], secondPattern, ...var _] => 'this is weird',
-    String s => s.length,
-    List(:var length) when length > 4 => 'a long list of length $length',
+    [firstPattern, secondPattern, ...final rest] => 'this is it and the $rest',
+    [[firstPattern, ...], secondPattern, ...] => 'this is weird',
+    final String s => s.length,
+    List(:final length) when length > 4 => 'a long list of length $length',
     _ => 'default',
   });
 }

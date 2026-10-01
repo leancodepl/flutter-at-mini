@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../demos/implicit/animated_align_demo.dart';
-import '../demos/implicit/animated_container_demo.dart';
-import '../demos/implicit/animated_opacity_demo.dart';
-import '../demos/implicit/animated_switcher_demo.dart';
-import '../demos/implicit/animations_package_demo.dart';
-import '../demos/implicit/hero_demo.dart';
-import '../demos/implicit/tween_animation_builder_demo.dart';
+import 'package:lecture_week7/demos/implicit/animated_align_demo.dart';
+import 'package:lecture_week7/demos/implicit/animated_container_demo.dart';
+import 'package:lecture_week7/demos/implicit/animated_opacity_demo.dart';
+import 'package:lecture_week7/demos/implicit/animated_switcher_demo.dart';
+import 'package:lecture_week7/demos/implicit/animations_package_demo.dart';
+import 'package:lecture_week7/demos/implicit/hero_demo.dart';
+import 'package:lecture_week7/demos/implicit/tween_animation_builder_demo.dart';
 
-class ImplicitAnimationsPage extends StatelessWidget {
-  const ImplicitAnimationsPage({super.key});
-
+class const ImplicitAnimationsPage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

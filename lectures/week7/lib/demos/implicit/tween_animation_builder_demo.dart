@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import '../../widgets/demo_scaffold.dart';
+import 'package:lecture_week7/widgets/demo_scaffold.dart';
 
-class TweenAnimationBuilderDemo extends StatefulWidget {
-  const TweenAnimationBuilderDemo({super.key});
-
+class const TweenAnimationBuilderDemo({super.key}) extends StatefulWidget {
   @override
   State<TweenAnimationBuilderDemo> createState() =>
       _TweenAnimationBuilderDemoState();
 }
 
-class _TweenAnimationBuilderDemoState extends State<TweenAnimationBuilderDemo> {
+class _TweenAnimationBuilderDemoState()
+    extends State<TweenAnimationBuilderDemo> {
   double _targetValue = 0;
 
   @override

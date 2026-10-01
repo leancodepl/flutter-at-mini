@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Example6 extends StatefulWidget {
-  const Example6({super.key});
-
+class const Example6({super.key}) extends StatefulWidget {
   @override
   State<Example6> createState() => _Example6State();
 }
 
-class _Example6State extends State<Example6> {
+class _Example6State() extends State<Example6> {
   var _xAlignment = 0.0;
   var _yAlignment = 0.0;
 

@@ -3,11 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:labs_week4/app_theme.dart';
 import 'package:labs_week4/common_widgets.dart';
 
-class AuthorScreen extends StatelessWidget {
-  const AuthorScreen({super.key, required this.authorId});
-
-  final String authorId;
-
+class const AuthorScreen({super.key, required final String authorId})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,11 +22,7 @@ class AuthorScreen extends StatelessWidget {
   }
 }
 
-class _AuthorDetailsNarrow extends StatelessWidget {
-  const _AuthorDetailsNarrow(this.author);
-
-  final Author author;
-
+class const _AuthorDetailsNarrow(final Author author) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -57,11 +50,7 @@ class _AuthorDetailsNarrow extends StatelessWidget {
   }
 }
 
-class _AuthorDetailsWide extends StatelessWidget {
-  const _AuthorDetailsWide(this.author);
-
-  final Author author;
-
+class const _AuthorDetailsWide(final Author author) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -102,11 +91,7 @@ class _AuthorDetailsWide extends StatelessWidget {
   }
 }
 
-class _Bio extends StatelessWidget {
-  const _Bio(this.bio);
-
-  final String bio;
-
+class const _Bio(final String bio) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -145,11 +130,7 @@ class _Bio extends StatelessWidget {
   }
 }
 
-class _SliverBooksByAuthor extends StatelessWidget {
-  const _SliverBooksByAuthor(this.author);
-
-  final Author author;
-
+class const _SliverBooksByAuthor(final Author author) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final books = author.books;

@@ -4,21 +4,19 @@ void main() {
   runApp(const GlobalKeyExample());
 }
 
-class GlobalKeyExample extends StatefulWidget {
-  const GlobalKeyExample({super.key});
-
+class const GlobalKeyExample({super.key}) extends StatefulWidget {
   @override
   State<GlobalKeyExample> createState() => _GlobalKeyExampleState();
 }
 
-class _GlobalKeyExampleState extends State<GlobalKeyExample> {
+class _GlobalKeyExampleState() extends State<GlobalKeyExample> {
   final globalKey = GlobalKey();
 
   var _swapped = false;
 
   @override
   Widget build(BuildContext context) {
-    final travelingTextField = TextField(
+    const travelingTextField = TextField(
       // key: globalKey,
       decoration: InputDecoration(labelText: 'Traveling Text Field'),
     );
@@ -31,33 +29,32 @@ class _GlobalKeyExampleState extends State<GlobalKeyExample> {
               color: Colors.blue.shade100,
               height: 300,
               child: Center(
-                child: _swapped ? travelingTextField : Text('Hello, world!'),
+                child: _swapped
+                    ? travelingTextField
+                    : const Text('Hello, world!'),
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             NiceCard(
-              child: _swapped ? Text('Card content') : travelingTextField,
+              child: _swapped ? const Text('Card content') : travelingTextField,
             ),
           ],
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () => setState(() => _swapped = !_swapped),
-          child: Text('Swap'),
+          child: const Text('Swap'),
         ),
       ),
     );
   }
 }
 
-class NiceCard extends StatelessWidget {
-  const NiceCard({super.key, required this.child});
-
-  final Widget child;
-
+class const NiceCard({super.key, required final Widget child})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Padding(padding: const EdgeInsets.all(8.0), child: child),
+      child: Padding(padding: const EdgeInsets.all(8), child: child),
     );
   }
 }

@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:provider/provider.dart';
 import 'package:labs_week6/common/error_message.dart';
 import 'package:labs_week6/common/loading_indicator.dart';
 import 'package:labs_week6/mobx/pokemon_details_store.dart';
 import 'package:labs_week6/pokemon.dart';
+import 'package:provider/provider.dart';
 
-class PokemonDetailsPage extends StatelessWidget {
-  const PokemonDetailsPage({super.key, required this.pokemonUrl});
-
-  final String pokemonUrl;
-
+class const PokemonDetailsPage({super.key, required final String pokemonUrl})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Provider(
@@ -48,11 +45,7 @@ class PokemonDetailsPage extends StatelessWidget {
   }
 }
 
-class _PokemonDetails extends StatelessWidget {
-  const _PokemonDetails(this.pokemon);
-
-  final Pokemon pokemon;
-
+class const _PokemonDetails(final Pokemon pokemon) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

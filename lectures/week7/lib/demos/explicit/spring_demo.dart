@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
-import '../../widgets/demo_scaffold.dart';
+import 'package:lecture_week7/widgets/demo_scaffold.dart';
 
-class SpringDemo extends StatefulWidget {
-  const SpringDemo({super.key});
-
+class const SpringDemo({super.key}) extends StatefulWidget {
   @override
   State<SpringDemo> createState() => _SpringDemoState();
 }
 
-class _SpringDemoState extends State<SpringDemo> with TickerProviderStateMixin {
+class _SpringDemoState()
+    extends State<SpringDemo>
+    with TickerProviderStateMixin {
   late final List<AnimationController> _controllers;
   late final List<Animation<double>> _animations;
   bool _isAnimating = false;

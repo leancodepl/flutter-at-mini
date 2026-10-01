@@ -2,9 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class Task2 extends StatelessWidget {
-  const Task2({super.key});
-
+class const Task2({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Task2v1();
@@ -16,9 +14,7 @@ const _count = 3;
 
 // region Variant 1: imperative loop
 
-class Task2v1 extends StatelessWidget {
-  const Task2v1({super.key});
-
+class const Task2v1({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -46,19 +42,12 @@ class Task2v1 extends StatelessWidget {
   }
 }
 
-class _BoxV1 extends StatelessWidget {
-  const _BoxV1({
-    required this.index,
-    required this.maxWidth,
-    required this.maxHeight,
-    this.child,
-  });
-
-  final int index;
-  final double maxWidth;
-  final double maxHeight;
-  final Widget? child;
-
+class const _BoxV1({
+  required final int index,
+  required final double maxWidth,
+  required final double maxHeight,
+  final Widget? child,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -74,9 +63,7 @@ class _BoxV1 extends StatelessWidget {
 
 // region Variant 2: recursive
 
-class Task2v2 extends StatelessWidget {
-  const Task2v2({super.key});
-
+class const Task2v2({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -89,17 +76,11 @@ class Task2v2 extends StatelessWidget {
   }
 }
 
-class _BoxV2 extends StatelessWidget {
-  const _BoxV2({
-    required this.index,
-    required this.maxWidth,
-    required this.maxHeight,
-  });
-
-  final int index;
-  final double maxWidth;
-  final double maxHeight;
-
+class const _BoxV2({
+  required final int index,
+  required final double maxWidth,
+  required final double maxHeight,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

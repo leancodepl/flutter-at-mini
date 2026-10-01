@@ -2,9 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-class Task1 extends StatelessWidget {
-  const Task1({super.key});
-
+class const Task1({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -18,16 +16,13 @@ class Task1 extends StatelessWidget {
   }
 }
 
-class VerticalLayoutWidget extends StatelessWidget {
-  VerticalLayoutWidget(BoxConstraints constraints, {super.key})
-    : maxWidth = constraints.maxWidth,
-      maxHeight = constraints.maxHeight;
-
-  final double maxWidth;
-  final double maxHeight;
-
+class const VerticalLayoutWidget(final BoxConstraints constraints, {super.key})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final maxWidth = constraints.maxWidth;
+    final maxHeight = constraints.maxHeight;
+
     return Container(
       color: Colors.yellow,
       child: Align(
@@ -53,16 +48,13 @@ class VerticalLayoutWidget extends StatelessWidget {
   }
 }
 
-class WideLayoutWidget extends StatelessWidget {
-  WideLayoutWidget(BoxConstraints constraints, {super.key})
-    : maxWidth = constraints.maxWidth,
-      maxHeight = constraints.maxHeight;
-
-  final double maxWidth;
-  final double maxHeight;
-
+class const WideLayoutWidget(final BoxConstraints constraints, {super.key})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final maxWidth = constraints.maxWidth;
+    final maxHeight = constraints.maxHeight;
+
     return Container(
       color: Colors.yellow,
       child: Align(

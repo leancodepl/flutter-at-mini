@@ -2,11 +2,8 @@ import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
 import 'package:labs_week3/common_widgets.dart';
 
-class GenreScreen extends StatelessWidget {
-  const GenreScreen({super.key, required this.genreId});
-
-  final String genreId;
-
+class const GenreScreen({super.key, required final String genreId})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,11 +23,7 @@ class GenreScreen extends StatelessWidget {
   }
 }
 
-class _SliverGenreContent extends StatelessWidget {
-  const _SliverGenreContent(this.genre);
-
-  final Genre genre;
-
+class const _SliverGenreContent(final Genre genre) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

@@ -1,19 +1,10 @@
 import 'package:lecture_week5/data/dog.dart';
 
-sealed class DogListState {
-  const DogListState();
-}
+sealed class const DogListState();
 
-class LoadingDogList extends DogListState {
-  const LoadingDogList();
-}
+class const LoadingDogList() extends DogListState;
 
-class EmptyDogList extends DogListState {
-  const EmptyDogList();
-}
+class const EmptyDogList() extends DogListState;
 
-class FetchedDogList extends DogListState {
-  const FetchedDogList({required this.dogs});
-
-  final List<Dog> dogs;
-}
+class const FetchedDogList({required final List<Dog> dogs})
+    extends DogListState;

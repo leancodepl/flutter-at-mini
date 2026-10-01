@@ -1,16 +1,11 @@
-sealed class PaymentStatus {}
+sealed class PaymentStatus();
 
-class PaymentSuccess extends PaymentStatus {
-  PaymentSuccess({required this.transactionId});
+class PaymentSuccess({required final String transactionId})
+    extends PaymentStatus;
 
-  final String transactionId;
-}
+class PaymentFailure({
+  required final int errorCode,
+  required final String errorDescription,
+}) extends PaymentStatus;
 
-class PaymentFailure extends PaymentStatus {
-  PaymentFailure({required this.errorCode, required this.errorDescription});
-
-  final int errorCode;
-  final String errorDescription;
-}
-
-class PaymentPending extends PaymentStatus {}
+class PaymentPending() extends PaymentStatus;

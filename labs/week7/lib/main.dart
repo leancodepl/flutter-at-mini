@@ -9,16 +9,12 @@ void main() {
   runApp(const _App(child: Week7App()));
 }
 
-class _App extends StatefulWidget {
-  const _App({required this.child});
-
-  final Widget child;
-
+class const _App({required final Widget child}) extends StatefulWidget {
   @override
   State<_App> createState() => _AppState();
 }
 
-class _AppState extends State<_App> {
+class _AppState() extends State<_App> {
   final _initialization = Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

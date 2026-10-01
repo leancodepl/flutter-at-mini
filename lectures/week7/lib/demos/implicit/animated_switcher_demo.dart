@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../widgets/demo_scaffold.dart';
+import 'package:lecture_week7/widgets/demo_scaffold.dart';
 
-class AnimatedSwitcherDemo extends StatefulWidget {
-  const AnimatedSwitcherDemo({super.key});
-
+class const AnimatedSwitcherDemo({super.key}) extends StatefulWidget {
   @override
   State<AnimatedSwitcherDemo> createState() => _AnimatedSwitcherDemoState();
 }
 
-class _AnimatedSwitcherDemoState extends State<AnimatedSwitcherDemo> {
+class _AnimatedSwitcherDemoState() extends State<AnimatedSwitcherDemo> {
   int _count = 0;
 
   @override

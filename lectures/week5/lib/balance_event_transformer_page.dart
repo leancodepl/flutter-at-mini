@@ -4,9 +4,7 @@ import 'package:lecture_week5/bloc/balance_bloc.dart';
 import 'package:lecture_week5/bloc/balance_event.dart';
 import 'package:lecture_week5/bloc/balance_state.dart';
 
-class BalanceEventTransformerPage extends StatelessWidget {
-  const BalanceEventTransformerPage({super.key});
-
+class const BalanceEventTransformerPage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
@@ -29,9 +27,7 @@ class BalanceEventTransformerPage extends StatelessWidget {
   }
 }
 
-class _ConcurrentColumn extends StatelessWidget {
-  const _ConcurrentColumn();
-
+class const _ConcurrentColumn() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -79,9 +75,7 @@ class _ConcurrentColumn extends StatelessWidget {
   }
 }
 
-class _SequentialColumn extends StatelessWidget {
-  const _SequentialColumn();
-
+class const _SequentialColumn() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

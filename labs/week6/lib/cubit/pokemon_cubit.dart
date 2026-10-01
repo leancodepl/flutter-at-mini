@@ -3,8 +3,8 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:labs_week6/pokemon.dart';
 
-class PokemonCubit extends Cubit<PokemonState> {
-  PokemonCubit() : super(PokemonInitial());
+class PokemonCubit() extends Cubit<PokemonState> {
+  this : super(PokemonInitial());
 
   final dio = Dio();
 
@@ -32,29 +32,21 @@ class PokemonCubit extends Cubit<PokemonState> {
 
 // States
 
-sealed class PokemonState with EquatableMixin {
+sealed class PokemonState() with Equatable {
   @override
   List<Object> get props => [];
 }
 
-class PokemonInitial extends PokemonState {}
+class PokemonInitial() extends PokemonState;
 
-class PokemonLoading extends PokemonState {}
+class PokemonLoading() extends PokemonState;
 
-class PokemonError extends PokemonState {
-  PokemonError(this.error);
-
-  final Object error;
-
+class PokemonError(final Object error) extends PokemonState {
   @override
   List<Object> get props => [error];
 }
 
-class PokemonLoaded extends PokemonState {
-  PokemonLoaded(this.entries);
-
-  final Pokemons entries;
-
+class PokemonLoaded(final Pokemons entries) extends PokemonState {
   @override
   List<Object> get props => [entries];
 }

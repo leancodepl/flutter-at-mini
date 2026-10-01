@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../widgets/demo_scaffold.dart';
+import 'package:lecture_week7/widgets/demo_scaffold.dart';
 
-class AnimatedOpacityDemo extends StatefulWidget {
-  const AnimatedOpacityDemo({super.key});
-
+class const AnimatedOpacityDemo({super.key}) extends StatefulWidget {
   @override
   State<AnimatedOpacityDemo> createState() => _AnimatedOpacityDemoState();
 }
 
-class _AnimatedOpacityDemoState extends State<AnimatedOpacityDemo> {
+class _AnimatedOpacityDemoState() extends State<AnimatedOpacityDemo> {
   bool _visible = true;
 
   @override

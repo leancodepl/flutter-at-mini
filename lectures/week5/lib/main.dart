@@ -13,9 +13,7 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class const MyApp({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RepositoryProvider(
@@ -40,14 +38,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class _HomeTabsPage extends StatefulWidget {
-  const _HomeTabsPage();
-
+class const _HomeTabsPage() extends StatefulWidget {
   @override
   State<_HomeTabsPage> createState() => _HomeTabsPageState();
 }
 
-class _HomeTabsPageState extends State<_HomeTabsPage>
+class _HomeTabsPageState()
+    extends State<_HomeTabsPage>
     with SingleTickerProviderStateMixin {
   late final TabController _tabController;
 
@@ -115,9 +112,7 @@ class _HomeTabsPageState extends State<_HomeTabsPage>
   }
 }
 
-class _CubitTab extends StatelessWidget {
-  const _CubitTab();
-
+class const _CubitTab() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final api = context.read<DogApi>();
@@ -128,9 +123,7 @@ class _CubitTab extends StatelessWidget {
   }
 }
 
-class _BlocTab extends StatelessWidget {
-  const _BlocTab();
-
+class const _BlocTab() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final api = context.read<DogApi>();

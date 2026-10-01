@@ -5,20 +5,16 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class ConstraintsViewer extends SingleChildRenderObjectWidget {
-  const ConstraintsViewer({super.key, this.tag, super.child});
-
-  final String? tag;
-
+class const ConstraintsViewer({super.key, final String? tag, super.child})
+    extends SingleChildRenderObjectWidget {
   @override
   RenderConstraintsViewer createRenderObject(BuildContext context) =>
       RenderConstraintsViewer(tag: tag);
 }
 
-class RenderConstraintsViewer extends RenderProxyBox {
-  RenderConstraintsViewer({required this.tag, RenderBox? child}) : super(child);
-
-  final String? tag;
+class RenderConstraintsViewer({required final String? tag, RenderBox? child})
+    extends RenderProxyBox {
+  this : super(child);
 
   @override
   Size computeDryLayout(BoxConstraints constraints) {

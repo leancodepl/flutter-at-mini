@@ -6,21 +6,17 @@ void main() {
   runApp(const ProviderExample());
 }
 
-class ProviderExample extends StatelessWidget {
-  const ProviderExample({super.key});
-
+class const ProviderExample({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Provider(
       create: (_) => NameManager(),
-      child: MaterialApp(home: HomePage()),
+      child: const MaterialApp(home: HomePage()),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
+class const HomePage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final nameManager = context.watch<NameManager>();
@@ -28,13 +24,13 @@ class HomePage extends StatelessWidget {
       body: Center(child: Text('Hello ${nameManager.name}')),
       floatingActionButton: FloatingActionButton(
         onPressed: nameManager.nextName,
-        child: Text('Next'),
+        child: const Text('Next'),
       ),
     );
   }
 }
 
-class NameManager extends ChangeNotifier {
+class NameManager() extends ChangeNotifier {
   var _nameIndex = 0;
 
   String get name => names[_nameIndex];

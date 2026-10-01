@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:labs_week6/pokemon.dart';
 
-class PokemonList extends StatelessWidget {
-  const PokemonList({super.key, required this.entries, required this.onTap});
-
-  final List<PokemonEntry> entries;
-  final ValueChanged<PokemonEntry> onTap;
-
+class const PokemonList({
+  super.key,
+  required final List<PokemonEntry> entries,
+  required final ValueChanged<PokemonEntry> onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
@@ -19,12 +18,10 @@ class PokemonList extends StatelessWidget {
   }
 }
 
-class _PokemonEntryTile extends StatelessWidget {
-  const _PokemonEntryTile(this.entry, {required this.onTap});
-
-  final PokemonEntry entry;
-  final ValueChanged<PokemonEntry> onTap;
-
+class const _PokemonEntryTile(
+  final PokemonEntry entry, {
+  required final ValueChanged<PokemonEntry> onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card.filled(

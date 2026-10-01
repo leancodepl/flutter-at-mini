@@ -4,18 +4,14 @@ void main() {
   runApp(const MainApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class const MainApp({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(home: FormExample());
   }
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
-
+class const MyWidget({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,18 +21,15 @@ class MyWidget extends StatelessWidget {
       child: Row(
         children: [
           Image.network('https://picsum.photos/200/300'),
-          Text('Hello World!'),
+          const Text('Hello World!'),
         ],
       ),
     );
   }
 }
 
-class MyWidget2 extends StatelessWidget {
-  const MyWidget2({super.key, required this.showImage});
-
-  final bool showImage;
-
+class const MyWidget2({super.key, required final bool showImage})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,45 +39,43 @@ class MyWidget2 extends StatelessWidget {
       child: Row(
         children: [
           if (showImage) Image.network('https://picsum.photos/200/300'),
-          Text('Hello World!'),
+          const Text('Hello World!'),
         ],
       ),
     );
   }
 }
 
-class StatelessCounter extends StatelessWidget {
-  const StatelessCounter({
-    super.key,
-    required this.value,
-    required this.onChanged,
-  });
-
-  final int value;
-  final ValueChanged<int> onChanged;
-
+class const StatelessCounter({
+  super.key,
+  required final int value,
+  required final ValueChanged<int> onChanged,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(value.toString()),
-        ElevatedButton(onPressed: () => onChanged(value + 1), child: Text('+')),
-        ElevatedButton(onPressed: () => onChanged(value - 1), child: Text('-')),
+        ElevatedButton(
+          onPressed: () => onChanged(value + 1),
+          child: const Text('+'),
+        ),
+        ElevatedButton(
+          onPressed: () => onChanged(value - 1),
+          child: const Text('-'),
+        ),
       ],
     );
   }
 }
 
-class StatefulCounter extends StatefulWidget {
-  const StatefulCounter({super.key, required this.initialValue});
-
-  final int initialValue;
-
+class const StatefulCounter({super.key, required final int initialValue})
+    extends StatefulWidget {
   @override
   State<StatefulCounter> createState() => _StatefulCounterState();
 }
 
-class _StatefulCounterState extends State<StatefulCounter> {
+class _StatefulCounterState() extends State<StatefulCounter> {
   late int _value;
 
   @override
@@ -106,27 +97,23 @@ class _StatefulCounterState extends State<StatefulCounter> {
     return Row(
       children: [
         Text(_value.toString()),
-        ElevatedButton(onPressed: _increment, child: Text('+')),
-        ElevatedButton(onPressed: _decrement, child: Text('-')),
+        ElevatedButton(onPressed: _increment, child: const Text('+')),
+        ElevatedButton(onPressed: _decrement, child: const Text('-')),
       ],
     );
   }
 }
 
-class FormExample extends StatefulWidget {
-  const FormExample({super.key});
-
+class const FormExample({super.key}) extends StatefulWidget {
   @override
   State<FormExample> createState() => _FormExampleState();
 }
 
-class _FormExampleState extends State<FormExample> {
+class _FormExampleState() extends State<FormExample> {
   final _fieldsOrder = [0, 1, 2, 3];
 
   void _shuffleFields() {
-    setState(() {
-      _fieldsOrder.shuffle();
-    });
+    setState(_fieldsOrder.shuffle);
   }
 
   @override
@@ -134,26 +121,26 @@ class _FormExampleState extends State<FormExample> {
     final fields = [
       TextFormField(
         // key: Key('Name'),
-        decoration: InputDecoration(labelText: '1) Name'),
+        decoration: const InputDecoration(labelText: '1) Name'),
       ),
       TextFormField(
         // key: Key('Email'),
-        decoration: InputDecoration(labelText: '2) Email'),
+        decoration: const InputDecoration(labelText: '2) Email'),
       ),
       TextFormField(
         // key: Key('Phone'),
-        decoration: InputDecoration(labelText: '3) Phone'),
+        decoration: const InputDecoration(labelText: '3) Phone'),
       ),
       TextFormField(
         // key: Key('Address'),
-        decoration: InputDecoration(labelText: '4) Address'),
+        decoration: const InputDecoration(labelText: '4) Address'),
       ),
     ];
 
     return Scaffold(
       body: Center(
         child: ConstrainedBox(
-          constraints: BoxConstraints(maxWidth: 400),
+          constraints: const BoxConstraints(maxWidth: 400),
           child: Form(
             child: ListView(
               children: [
@@ -168,7 +155,7 @@ class _FormExampleState extends State<FormExample> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _shuffleFields,
-        child: Text('Shuffle Fields'),
+        child: const Text('Shuffle Fields'),
       ),
     );
   }

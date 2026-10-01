@@ -1,16 +1,14 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:labs_week7/features/user_items/user_items_service.dart';
+import 'package:provider/provider.dart';
 
-class SliverUserItems extends StatefulWidget {
-  const SliverUserItems({super.key});
-
+class const SliverUserItems({super.key}) extends StatefulWidget {
   @override
   State<SliverUserItems> createState() => _SliverUserItemsState();
 }
 
-class _SliverUserItemsState extends State<SliverUserItems> {
+class _SliverUserItemsState() extends State<SliverUserItems> {
   final _nameController = TextEditingController();
 
   late final Stream<Iterable<UserItem>> _itemsStream;

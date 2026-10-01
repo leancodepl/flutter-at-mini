@@ -1,14 +1,12 @@
-class Person {
-  Person._();
+class Person._() {
+  factory sample() => Person._()
+    ..firstName = 'John'
+    ..lastName = 'Smith'
+    ..age = 35;
 
   String? firstName;
   String? lastName;
   int? age;
-
-  factory Person.sample() => Person._()
-    ..firstName = 'John'
-    ..lastName = 'Smith'
-    ..age = 35;
 
   List<dynamic> listify() => []
     ..add(firstName)
@@ -16,4 +14,4 @@ class Person {
     ..add(age);
 }
 
-List withoutLast(Iterable list) => list.toList()..removeLast();
+List<int> withoutLast(Iterable<int> list) => list.toList()..removeLast();

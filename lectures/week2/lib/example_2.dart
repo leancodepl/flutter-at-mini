@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lecture_week2/util/build_aware_widget.dart';
 
-class Example2 extends StatelessWidget {
-  const Example2({super.key});
+class const Example2({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -24,13 +23,12 @@ class Example2 extends StatelessWidget {
   }
 }
 
-class ListViewScreen extends StatelessWidget {
-  const ListViewScreen({super.key});
+class const ListViewScreen({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        _FakeParallaxHeader(),
+        const _FakeParallaxHeader(),
         const SizedBox(height: 8),
         ...List.generate(
           30,
@@ -63,8 +61,7 @@ class ListViewScreen extends StatelessWidget {
   }
 }
 
-class SliversScreen extends StatelessWidget {
-  const SliversScreen({super.key});
+class const SliversScreen({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -111,7 +108,7 @@ class SliversScreen extends StatelessWidget {
   }
 }
 
-class _FakeParallaxHeader extends StatelessWidget {
+class const _FakeParallaxHeader() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SizedBox(
@@ -136,9 +133,7 @@ class _FakeParallaxHeader extends StatelessWidget {
   }
 }
 
-class _HeaderBg extends StatelessWidget {
-  const _HeaderBg();
-
+class const _HeaderBg() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -149,11 +144,7 @@ class _HeaderBg extends StatelessWidget {
   }
 }
 
-class _SectionTitle extends StatelessWidget {
-  const _SectionTitle(this.text);
-
-  final String text;
-
+class const _SectionTitle(final String text) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -164,11 +155,8 @@ class _SectionTitle extends StatelessWidget {
   }
 }
 
-class _PinnedHeaderDelegate extends SliverPersistentHeaderDelegate {
-  const _PinnedHeaderDelegate({required this.child});
-
-  final Widget child;
-
+class const _PinnedHeaderDelegate({required final Widget child})
+    extends SliverPersistentHeaderDelegate {
   @override
   double get minExtent => 44;
 

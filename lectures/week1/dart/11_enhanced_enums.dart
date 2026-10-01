@@ -1,6 +1,10 @@
 import 'dart:math';
 
-enum SimpleEnum { one, two, three }
+enum SimpleEnum() {
+  one,
+  two,
+  three,
+}
 
 // Enums can have fields and constructors like regular classes.
 enum EnumWithFields {
@@ -9,11 +13,11 @@ enum EnumWithFields {
   three(3, label: 'three');
 
   // Generative enum constructors have to be const.
-  const EnumWithFields(this.value, {required this.label});
-  const EnumWithFields.emptyLabel(this.value) : label = '';
+  new(this.value, {required this.label});
+  new emptyLabel(this.value) : label = '';
 
   // Factories don't have to be const.
-  factory EnumWithFields.random() {
+  factory random() {
     if (Random().nextBool()) {
       return one;
     } else {
@@ -26,14 +30,10 @@ enum EnumWithFields {
 }
 
 // Enums can be generic – each enum value can have a different type parameter.
-enum GenericEnum<T> {
+enum GenericEnum<T>(final T value) {
   one<int>(1),
   two<String>('two'),
-  three<List<int>>([3, 3, 3]);
-
-  const GenericEnum(this.value);
-
-  final T value;
+  three<List<int>>([3, 3, 3]),
 }
 
 mixin EnumMixin on Enum {
@@ -41,7 +41,7 @@ mixin EnumMixin on Enum {
 }
 
 // Enums can implement interfaces, have mixins and methods.
-enum EnumWithMethods with EnumMixin implements Comparable<EnumWithMethods> {
+enum EnumWithMethods() with EnumMixin implements Comparable<EnumWithMethods> {
   one,
   two,
   three;
@@ -61,7 +61,7 @@ enum EnumWithMethods with EnumMixin implements Comparable<EnumWithMethods> {
   bool operator <(EnumWithMethods other) => compareTo(other) < 0;
 
   @override
-  toString() => 'My enum value: $name';
+  String toString() => 'My enum value: $name';
 }
 
 void main() {

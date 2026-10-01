@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:labs_week2/utils/constraint_viewer.dart';
 
-class Example3 extends StatelessWidget {
-  const Example3({super.key});
-
+class const Example3({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(

@@ -1,7 +1,3 @@
-sealed class BalanceEvent {
-  const BalanceEvent();
-}
+sealed class const BalanceEvent();
 
-class IncrementPressed extends BalanceEvent {
-  const IncrementPressed();
-}
+class const IncrementPressed() extends BalanceEvent;

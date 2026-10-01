@@ -6,9 +6,7 @@ import 'package:labs_week6/common/pokemon_list.dart';
 import 'package:labs_week6/cubit/pokemon_cubit.dart';
 import 'package:labs_week6/routes/routes.dart';
 
-class CubitPage extends StatelessWidget {
-  const CubitPage({super.key});
-
+class const CubitPage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -18,9 +16,7 @@ class CubitPage extends StatelessWidget {
   }
 }
 
-class _CubitScreen extends StatelessWidget {
-  const _CubitScreen();
-
+class const _CubitScreen() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // UI from state using an extension

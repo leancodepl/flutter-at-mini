@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../widgets/demo_scaffold.dart';
+import 'package:lecture_week7/widgets/demo_scaffold.dart';
 
-class AnimatedAlignDemo extends StatefulWidget {
-  const AnimatedAlignDemo({super.key});
-
+class const AnimatedAlignDemo({super.key}) extends StatefulWidget {
   @override
   State<AnimatedAlignDemo> createState() => _AnimatedAlignDemoState();
 }
 
-class _AnimatedAlignDemoState extends State<AnimatedAlignDemo> {
+class _AnimatedAlignDemoState() extends State<AnimatedAlignDemo> {
   int _alignmentIndex = 0;
 
   static const _alignments = [

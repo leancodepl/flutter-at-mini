@@ -2,11 +2,7 @@ import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class Cover extends StatelessWidget {
-  const Cover(this.coverUrl, {super.key});
-
-  final String coverUrl;
-
+class const Cover(final String coverUrl, {super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.network(
@@ -21,11 +17,7 @@ class Cover extends StatelessWidget {
   }
 }
 
-class PageTitle extends StatelessWidget {
-  const PageTitle(this.title, {super.key});
-
-  final String title;
-
+class const PageTitle(final String title, {super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -34,19 +26,12 @@ class PageTitle extends StatelessWidget {
   }
 }
 
-class _ListEntry extends StatelessWidget {
-  const _ListEntry({
-    required this.onTap,
-    required this.icon,
-    required this.label,
-    this.subtitle,
-  });
-
-  final VoidCallback onTap;
-  final IconData icon;
-  final String label;
-  final String? subtitle;
-
+class const _ListEntry({
+  required final VoidCallback onTap,
+  required final IconData icon,
+  required final String label,
+  final String? subtitle,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -96,11 +81,8 @@ class _ListEntry extends StatelessWidget {
   }
 }
 
-class BookEntry extends StatelessWidget {
-  const BookEntry({super.key, required this.book});
-
-  final Book book;
-
+class const BookEntry({super.key, required final Book book})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _ListEntry(
@@ -112,11 +94,8 @@ class BookEntry extends StatelessWidget {
   }
 }
 
-class AuthorEntry extends StatelessWidget {
-  const AuthorEntry({super.key, required this.author});
-
-  final Author author;
-
+class const AuthorEntry({super.key, required final Author author})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _ListEntry(

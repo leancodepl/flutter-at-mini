@@ -4,9 +4,7 @@ import 'package:labs_week7/authorized_page.dart';
 import 'package:labs_week7/features/auth/auth_cubit.dart';
 import 'package:labs_week7/unauthorized_page.dart';
 
-class AuthGate extends StatelessWidget {
-  const AuthGate({super.key});
-
+class const AuthGate({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<AuthCubit, AuthState>(

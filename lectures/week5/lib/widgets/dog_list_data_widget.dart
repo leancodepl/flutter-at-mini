@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:lecture_week5/bloc/dog_list_state.dart';
 
-class DogListDataWidget extends StatelessWidget {
-  const DogListDataWidget({
-    super.key,
-    required FetchedDogList dogList,
-    required Future<void> Function() onFetch,
-  }) : _dogList = dogList,
-       _onFetch = onFetch;
-
-  final FetchedDogList _dogList;
-  final Future<void> Function() _onFetch;
-
+class const DogListDataWidget({
+  super.key,
+  required final FetchedDogList _dogList,
+  required final Future<void> Function() _onFetch,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(

@@ -4,8 +4,8 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:labs_week6/pokemon.dart';
 
-class PokemonBloc extends Bloc<PokemonEvent, PokemonState> {
-  PokemonBloc() : super(PokemonInitial()) {
+class PokemonBloc() extends Bloc<PokemonEvent, PokemonState> {
+  this : super(PokemonInitial()) {
     on<LoadPokemon>(_onLoadPokemon, transformer: droppable());
   }
 
@@ -34,35 +34,27 @@ class PokemonBloc extends Bloc<PokemonEvent, PokemonState> {
 
 // Events
 
-sealed class PokemonEvent {}
+sealed class PokemonEvent();
 
-class LoadPokemon extends PokemonEvent {}
+class LoadPokemon() extends PokemonEvent;
 
 // States
 
-sealed class PokemonState with EquatableMixin {
+sealed class PokemonState() with Equatable {
   @override
   List<Object> get props => [];
 }
 
-class PokemonInitial extends PokemonState {}
+class PokemonInitial() extends PokemonState;
 
-class PokemonLoading extends PokemonState {}
+class PokemonLoading() extends PokemonState;
 
-class PokemonError extends PokemonState {
-  PokemonError(this.error);
-
-  final Object error;
-
+class PokemonError(final Object error) extends PokemonState {
   @override
   List<Object> get props => [error];
 }
 
-class PokemonLoaded extends PokemonState {
-  PokemonLoaded(this.entries);
-
-  final Pokemons entries;
-
+class PokemonLoaded(final Pokemons entries) extends PokemonState {
   @override
   List<Object> get props => [entries];
 }

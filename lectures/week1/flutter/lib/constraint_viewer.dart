@@ -4,20 +4,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class ConstraintsViewer extends SingleChildRenderObjectWidget {
-  const ConstraintsViewer({super.key, this.tag, super.child});
-
-  final String? tag;
-
+class const ConstraintsViewer({super.key, final String? tag, super.child})
+    extends SingleChildRenderObjectWidget {
   @override
   RenderPositionedBox createRenderObject(BuildContext context) =>
       RenderPositionedBox(tag: tag);
 }
 
-class RenderPositionedBox extends RenderShiftedBox {
-  RenderPositionedBox({required this.tag, RenderBox? child}) : super(child);
-
-  final String? tag;
+class RenderPositionedBox({required final String? tag, RenderBox? child})
+    extends RenderShiftedBox {
+  this : super(child);
 
   @override
   Size computeDryLayout(BoxConstraints constraints) {

@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 
-class UserInfoProvider extends InheritedWidget {
-  const UserInfoProvider({
-    super.key,
-    required this.userInfo,
-    required super.child,
-  });
-
-  final UserInfo userInfo;
-
+class const UserInfoProvider({
+  super.key,
+  required final UserInfo userInfo,
+  required super.child,
+}) extends InheritedWidget {
   static UserInfo of(BuildContext context) {
     final provider = context
         .dependOnInheritedWidgetOfExactType<UserInfoProvider>();
@@ -21,43 +17,33 @@ class UserInfoProvider extends InheritedWidget {
   }
 }
 
-class UserInfo {
-  UserInfo({
-    required this.avatarUrl,
-    required this.firstName,
-    required this.lastName,
-    required this.email,
-    required this.phone,
-  });
+class UserInfo({
+  required final String avatarUrl,
+  required final String firstName,
+  required final String lastName,
+  required final String email,
+  required final String phone,
+});
 
-  final String avatarUrl;
-  final String firstName;
-  final String lastName;
-  final String email;
-  final String phone;
-}
-
-class AppRoot extends StatelessWidget {
-  const AppRoot({super.key, required this.userInfo});
-
-  final UserInfo userInfo;
-
+class const AppRoot({super.key, required final UserInfo userInfo})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return UserInfoProvider(userInfo: userInfo, child: UserProfileScreen());
+    return UserInfoProvider(
+      userInfo: userInfo,
+      child: const UserProfileScreen(),
+    );
   }
 }
 
-class UserProfileScreen extends StatelessWidget {
-  const UserProfileScreen({super.key});
-
+class const UserProfileScreen({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final userInfo = UserInfoProvider.of(context);
     return Scaffold(
       body: ListView(
         children: [
-          ProfileCard(),
+          const ProfileCard(),
           Text('Email: ${userInfo.email}'),
           Text('Phone: ${userInfo.phone}'),
         ],
@@ -66,9 +52,7 @@ class UserProfileScreen extends StatelessWidget {
   }
 }
 
-class ProfileCard extends StatelessWidget {
-  const ProfileCard({super.key});
-
+class const ProfileCard({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final userInfo = UserInfoProvider.of(context);

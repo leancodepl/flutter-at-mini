@@ -4,11 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:labs_week3/common_widgets.dart';
 
-class BookScreen extends StatelessWidget {
-  const BookScreen({super.key, required this.bookId});
-
-  final String bookId;
-
+class const BookScreen({super.key, required final String bookId})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,11 +23,7 @@ class BookScreen extends StatelessWidget {
   }
 }
 
-class _BookDetailsNarrow extends StatelessWidget {
-  const _BookDetailsNarrow(this.book);
-
-  final Book book;
-
+class const _BookDetailsNarrow(final Book book) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -52,11 +45,7 @@ class _BookDetailsNarrow extends StatelessWidget {
   }
 }
 
-class _BookDetailsWide extends StatelessWidget {
-  const _BookDetailsWide(this.book);
-
-  final Book book;
-
+class const _BookDetailsWide(final Book book) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -91,11 +80,7 @@ class _BookDetailsWide extends StatelessWidget {
   }
 }
 
-class _Author extends StatelessWidget {
-  const _Author(this.author);
-
-  final Author author;
-
+class const _Author(final Author author) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -121,11 +106,7 @@ class _Author extends StatelessWidget {
   }
 }
 
-class _Genre extends StatelessWidget {
-  const _Genre(this.genre);
-
-  final Genre genre;
-
+class const _Genre(final Genre genre) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -151,11 +132,7 @@ class _Genre extends StatelessWidget {
   }
 }
 
-class _Published extends StatelessWidget {
-  const _Published(this.publishDate);
-
-  final DateTime publishDate;
-
+class const _Published(final DateTime publishDate) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -177,11 +154,7 @@ class _Published extends StatelessWidget {
   }
 }
 
-class _Description extends StatelessWidget {
-  const _Description(this.description);
-
-  final String description;
-
+class const _Description(final String description) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

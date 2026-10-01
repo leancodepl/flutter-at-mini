@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Example0 extends StatelessWidget {
-  const Example0({super.key});
-
+class const Example0({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Text('Hello World!');

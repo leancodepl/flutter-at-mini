@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import '../../widgets/demo_scaffold.dart';
+import 'package:lecture_week7/widgets/demo_scaffold.dart';
 
-class AnimatedWidgetsDemo extends StatefulWidget {
-  const AnimatedWidgetsDemo({super.key});
-
+class const AnimatedWidgetsDemo({super.key}) extends StatefulWidget {
   @override
   State<AnimatedWidgetsDemo> createState() => _AnimatedWidgetsDemoState();
 }
 
-class _AnimatedWidgetsDemoState extends State<AnimatedWidgetsDemo>
+class _AnimatedWidgetsDemoState()
+    extends State<AnimatedWidgetsDemo>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
 
@@ -105,12 +104,10 @@ class _AnimatedWidgetsDemoState extends State<AnimatedWidgetsDemo>
   }
 }
 
-class _TransitionShowcase extends StatelessWidget {
-  const _TransitionShowcase({required this.label, required this.child});
-
-  final String label;
-  final Widget child;
-
+class const _TransitionShowcase({
+  required final String label,
+  required final Widget child,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

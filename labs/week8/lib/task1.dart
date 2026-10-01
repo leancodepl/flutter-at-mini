@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Task1Page extends StatefulWidget {
-  const Task1Page({super.key});
-
+class const Task1Page({super.key}) extends StatefulWidget {
   @override
   State<Task1Page> createState() => _Task1PageState();
 }
 
-class _Task1PageState extends State<Task1Page> {
+class _Task1PageState() extends State<Task1Page> {
   bool _isExpanded = false;
 
   void _toggleExpanded() {
@@ -39,11 +37,8 @@ class _Task1PageState extends State<Task1Page> {
   }
 }
 
-class _ProfileCard extends StatelessWidget {
-  const _ProfileCard({required this.isExpanded});
-
-  final bool isExpanded;
-
+class const _ProfileCard({required final bool isExpanded})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
@@ -87,11 +82,8 @@ class _ProfileCard extends StatelessWidget {
   }
 }
 
-class _AvatarSection extends StatelessWidget {
-  const _AvatarSection({required this.isExpanded});
-
-  final bool isExpanded;
-
+class const _AvatarSection({required final bool isExpanded})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedAlign(
@@ -144,11 +136,8 @@ class _AvatarSection extends StatelessWidget {
   }
 }
 
-class _ExpandedContent extends StatelessWidget {
-  const _ExpandedContent({required this.isExpanded});
-
-  final bool isExpanded;
-
+class const _ExpandedContent({required final bool isExpanded})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -187,12 +176,10 @@ class _ExpandedContent extends StatelessWidget {
   }
 }
 
-class _StatItem extends StatelessWidget {
-  const _StatItem({required this.label, required this.value});
-
-  final String label;
-  final String value;
-
+class const _StatItem({
+  required final String label,
+  required final String value,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

@@ -1,7 +1,6 @@
+import 'package:bookstore_data/src/entities.dart';
 import 'package:faker/faker.dart';
 import 'package:meta/meta.dart';
-
-import 'entities.dart';
 
 final _faker = Faker(seed: 2137);
 

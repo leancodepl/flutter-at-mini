@@ -1,9 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 
-class AnimationsPackageDemo extends StatelessWidget {
-  const AnimationsPackageDemo({super.key});
-
+class const AnimationsPackageDemo({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -49,17 +47,11 @@ class AnimationsPackageDemo extends StatelessWidget {
   }
 }
 
-class _OpenContainerCard extends StatelessWidget {
-  const _OpenContainerCard({
-    required this.color,
-    required this.icon,
-    required this.label,
-  });
-
-  final Color color;
-  final IconData icon;
-  final String label;
-
+class const _OpenContainerCard({
+  required final Color color,
+  required final IconData icon,
+  required final String label,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OpenContainer(
@@ -107,19 +99,12 @@ class _OpenContainerCard extends StatelessWidget {
   }
 }
 
-class _DetailPage extends StatelessWidget {
-  const _DetailPage({
-    required this.color,
-    required this.icon,
-    required this.label,
-    required this.onClose,
-  });
-
-  final Color color;
-  final IconData icon;
-  final String label;
-  final VoidCallback onClose;
-
+class const _DetailPage({
+  required final Color color,
+  required final IconData icon,
+  required final String label,
+  required final VoidCallback onClose,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

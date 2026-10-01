@@ -1,37 +1,23 @@
 import 'package:flutter/material.dart';
 
-class UserInfo {
-  UserInfo({
-    required this.avatarUrl,
-    required this.firstName,
-    required this.lastName,
-    required this.email,
-    required this.phone,
-  });
+class UserInfo({
+  required final String avatarUrl,
+  required final String firstName,
+  required final String lastName,
+  required final String email,
+  required final String phone,
+});
 
-  final String avatarUrl;
-  final String firstName;
-  final String lastName;
-  final String email;
-  final String phone;
-}
-
-class AppRoot extends StatelessWidget {
-  const AppRoot({super.key, required this.userInfo});
-
-  final UserInfo userInfo;
-
+class const AppRoot({super.key, required final UserInfo userInfo})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return UserProfileScreen(userInfo: userInfo);
   }
 }
 
-class UserProfileScreen extends StatelessWidget {
-  const UserProfileScreen({super.key, required this.userInfo});
-
-  final UserInfo userInfo;
-
+class const UserProfileScreen({super.key, required final UserInfo userInfo})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,11 +32,8 @@ class UserProfileScreen extends StatelessWidget {
   }
 }
 
-class ProfileCard extends StatelessWidget {
-  const ProfileCard({super.key, required this.userInfo});
-
-  final UserInfo userInfo;
-
+class const ProfileCard({super.key, required final UserInfo userInfo})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -64,22 +47,17 @@ class ProfileCard extends StatelessWidget {
   }
 }
 
-class NavigatorExample extends StatelessWidget {
-  const NavigatorExample({super.key, required this.userInfo});
-
-  final UserInfo userInfo;
-
+class const NavigatorExample({super.key, required final UserInfo userInfo})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Navigator(
+    return const Navigator(
       /* ??? How do we pass the userInfo to the next screen? */
     );
   }
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class const MyApp({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = ThemeData.light();
@@ -88,7 +66,7 @@ class MyApp extends StatelessWidget {
       theme: theme,
       home: Scaffold(
         backgroundColor: theme.scaffoldBackgroundColor,
-        body: Center(child: Text('Hello World!')),
+        body: const Center(child: Text('Hello World!')),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           foregroundColor: theme.floatingActionButtonTheme.foregroundColor,

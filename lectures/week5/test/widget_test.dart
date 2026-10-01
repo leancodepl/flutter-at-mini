@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
 import 'package:lecture_week5/bloc/dog_list_cubit.dart';
 import 'package:lecture_week5/bloc/dog_list_state.dart';
 import 'package:lecture_week5/dog_list_cubit_page.dart';
 import 'package:lecture_week5/widgets/empty_dog_list_widget.dart';
+import 'package:mocktail/mocktail.dart';
 
-class MockDogListCubit extends Mock implements DogListCubit {}
+class MockDogListCubit() extends Mock implements DogListCubit;
 
 void main() {
   testWidgets('DogListCubitPage shows EmptyDogList on empty cubit state', (

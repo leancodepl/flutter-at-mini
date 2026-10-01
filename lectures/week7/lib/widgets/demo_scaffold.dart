@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
 
-class DemoScaffold extends StatelessWidget {
-  const DemoScaffold({
-    super.key,
-    required this.onToggle,
-    required this.child,
-    this.buttonLabel = 'Toggle',
-  });
-
-  final VoidCallback onToggle;
-  final Widget child;
-  final String buttonLabel;
-
+class const DemoScaffold({
+  super.key,
+  required final VoidCallback onToggle,
+  required final Widget child,
+  final String buttonLabel = 'Toggle',
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,16 +36,11 @@ class DemoScaffold extends StatelessWidget {
   }
 }
 
-class ExplicitDemoScaffold extends StatelessWidget {
-  const ExplicitDemoScaffold({
-    super.key,
-    required this.actions,
-    required this.child,
-  });
-
-  final List<Widget> actions;
-  final Widget child;
-
+class const ExplicitDemoScaffold({
+  super.key,
+  required final List<Widget> actions,
+  required final Widget child,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -83,20 +72,13 @@ class ExplicitDemoScaffold extends StatelessWidget {
   }
 }
 
-class ActionButton extends StatelessWidget {
-  const ActionButton({
-    super.key,
-    required this.label,
-    required this.icon,
-    required this.onPressed,
-    this.isDestructive = false,
-  });
-
-  final String label;
-  final IconData icon;
-  final VoidCallback onPressed;
-  final bool isDestructive;
-
+class const ActionButton({
+  super.key,
+  required final String label,
+  required final IconData icon,
+  required final VoidCallback onPressed,
+  final bool isDestructive = false,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(

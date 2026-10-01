@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:labs_week5/pokemon.dart';
 import 'package:labs_week5/task.dart';
 
-class PokemonData extends StatefulWidget {
-  const PokemonData({super.key});
-
+class const PokemonData({super.key}) extends StatefulWidget {
   @override
   State<PokemonData> createState() => _PokemonDataState();
 }
 
-class _PokemonDataState extends State<PokemonData> {
+class _PokemonDataState() extends State<PokemonData> {
   bool isLoading = false;
   Pokemon? selectedPokemon;
 

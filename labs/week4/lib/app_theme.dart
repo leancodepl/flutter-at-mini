@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class AppTheme extends ValueNotifier<Brightness> {
-  AppTheme() : super(Brightness.light);
+class AppTheme() extends ValueNotifier<Brightness> {
+  this : super(Brightness.light);
 
   void toggle() => value = switch (value) {
     Brightness.light => Brightness.dark,
@@ -10,9 +10,7 @@ class AppTheme extends ValueNotifier<Brightness> {
   };
 }
 
-class AppThemeSwitcher extends StatelessWidget {
-  const AppThemeSwitcher({super.key});
-
+class const AppThemeSwitcher({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appTheme = context.watch<AppTheme>();

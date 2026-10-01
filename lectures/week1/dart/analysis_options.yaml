@@ -1,0 +1,18 @@
+include: '../../../analysis_options.yaml'
+
+analyzer:
+  # Disable various strict lint rules to showcase some language features
+  errors:
+    always_declare_return_types: ignore
+    unnecessary_type_check: ignore
+    avoid_print: ignore
+    file_names: ignore
+    type_annotate_public_apis: ignore
+    strict_top_level_inference: ignore
+    inference_failure_on_function_return_type: ignore
+    inference_failure_on_collection_literal: ignore
+    avoid_dynamic_calls: ignore
+    prefer_int_literals: ignore
+    prefer_inlined_adds: ignore
+    unused_field: ignore
+    unused_local_variable: ignore

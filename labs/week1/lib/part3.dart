@@ -17,22 +17,14 @@ void part3() {
   }
 }
 
-sealed class Animal {
-  const Animal(this.name, {required this.age});
-
-  final int age;
-  final String name;
-
+sealed class const Animal(final String name, {required final int age}) {
   String get description;
 
   void makeSound();
 }
 
-class Dog extends Animal {
-  const Dog(super.name, {required super.age, required this.color});
-
-  final String color;
-
+class const Dog(super.name, {required super.age, required final String color})
+    extends Animal {
   @override
   String get description => 'A $color dog named $name';
 
@@ -42,11 +34,8 @@ class Dog extends Animal {
   }
 }
 
-class Cat extends Animal {
-  const Cat(super.name, {required super.age, required this.color});
-
-  final String color;
-
+class const Cat(super.name, {required super.age, required final String color})
+    extends Animal {
   @override
   String get description => 'A $color cat named $name';
 
@@ -56,11 +45,8 @@ class Cat extends Animal {
   }
 }
 
-class Cow extends Animal {
-  const Cow(super.name, {required super.age, required this.weight});
-
-  final int weight;
-
+class const Cow(super.name, {required super.age, required final int weight})
+    extends Animal {
   @override
   String get description => 'A cow named $name weighing $weight kg';
 

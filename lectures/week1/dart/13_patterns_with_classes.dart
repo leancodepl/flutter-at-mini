@@ -2,9 +2,9 @@ import '7_sealed_classes_1.dart';
 
 void printStatus(PaymentStatus status) {
   switch (status) {
-    case PaymentSuccess(transactionId: var t):
+    case PaymentSuccess(transactionId: final t):
       print('success with id: $t');
-    case PaymentFailure(errorCode: int code):
+    case PaymentFailure(errorCode: final int code):
       print('failure with code: $code');
     case PaymentPending():
       print('still pending');

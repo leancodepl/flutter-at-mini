@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
-enum SignInResult {
+enum SignInResult() {
   invalidEmail,
   userDisabled,
   userNotFound,
@@ -8,11 +8,7 @@ enum SignInResult {
   success,
 }
 
-class AuthService {
-  const AuthService({required this.firebaseAuth});
-
-  final FirebaseAuth firebaseAuth;
-
+class const AuthService({required final FirebaseAuth firebaseAuth}) {
   bool get isSignedIn => currentUser != null;
 
   Stream<bool> get isSignedInStream =>

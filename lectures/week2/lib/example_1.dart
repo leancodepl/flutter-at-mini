@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lecture_week2/util/build_aware_widget.dart';
 
-class Example1 extends StatelessWidget {
-  const Example1({super.key});
-
+class const Example1({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -49,9 +47,7 @@ class Example1 extends StatelessWidget {
   }
 }
 
-class _SingleChildScrollViewScreen extends StatelessWidget {
-  const _SingleChildScrollViewScreen();
-
+class const _SingleChildScrollViewScreen() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -76,9 +72,7 @@ class _SingleChildScrollViewScreen extends StatelessWidget {
   }
 }
 
-class _CountersBar extends StatelessWidget {
-  const _CountersBar();
-
+class const _CountersBar() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<Counts>(
@@ -98,9 +92,7 @@ class _CountersBar extends StatelessWidget {
   }
 }
 
-class _ListViewScreen extends StatelessWidget {
-  const _ListViewScreen();
-
+class const _ListViewScreen() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     BuildAwareWidget.resetCounters(label: 'children');
@@ -124,9 +116,7 @@ class _ListViewScreen extends StatelessWidget {
   }
 }
 
-class _ListViewBuilder extends StatelessWidget {
-  const _ListViewBuilder();
-
+class const _ListViewBuilder() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     BuildAwareWidget.resetCounters(label: 'builder');

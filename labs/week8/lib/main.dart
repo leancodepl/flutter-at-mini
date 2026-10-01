@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'task1.dart';
-import 'task2.dart';
-import 'task3.dart';
+import 'package:labs_week8/task1.dart';
+import 'package:labs_week8/task2.dart';
+import 'package:labs_week8/task3.dart';
 
 void main() {
   runApp(const Week8App());
 }
 
-class Week8App extends StatelessWidget {
-  const Week8App({super.key});
-
+class const Week8App({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -53,9 +51,7 @@ class Week8App extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
+class const HomePage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -101,21 +97,13 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class _TaskCard extends StatelessWidget {
-  const _TaskCard({
-    required this.title,
-    required this.subtitle,
-    required this.icon,
-    required this.color,
-    required this.onTap,
-  });
-
-  final String title;
-  final String subtitle;
-  final IconData icon;
-  final Color color;
-  final VoidCallback onTap;
-
+class const _TaskCard({
+  required final String title,
+  required final String subtitle,
+  required final IconData icon,
+  required final Color color,
+  required final VoidCallback onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(

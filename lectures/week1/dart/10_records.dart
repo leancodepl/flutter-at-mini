@@ -1,4 +1,4 @@
-main() {
+void main() {
   print('=== Records ===');
   print('');
 

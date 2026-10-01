@@ -1,10 +1,8 @@
-// ignore_for_file: unnecessary_type_check
-
-abstract class Animal {
+abstract class Animal() {
   String speak();
 }
 
-class Dog extends Animal implements Huggable {
+class Dog() extends Animal implements Huggable {
   @override
   String speak() => 'Woof woof!';
 
@@ -14,7 +12,7 @@ class Dog extends Animal implements Huggable {
   }
 }
 
-abstract class Huggable {
+abstract class Huggable() {
   void hug() {
     print('Hug');
   }
@@ -28,14 +26,14 @@ mixin Woof {
   String speak() => 'Woof!';
 }
 
-class Cat extends Animal with Meow {}
+class Cat() extends Animal with Meow;
 
-class Cat2 extends Animal with Meow {
+class Cat2() extends Animal with Meow {
   @override
   String speak() => 'Meow meow';
 }
 
-class CatDog extends Animal with Meow, Woof implements Dog, Cat {
+class CatDog() extends Animal with Meow, Woof implements Dog, Cat {
   @override
   void hug() {}
 }

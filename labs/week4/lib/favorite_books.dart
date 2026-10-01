@@ -1,8 +1,8 @@
 import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/foundation.dart';
 
-class FavoriteBooks extends ValueNotifier<Set<String>> {
-  FavoriteBooks() : super({});
+class FavoriteBooks() extends ValueNotifier<Set<String>> {
+  this : super({});
 
   void addBook(Book book) => value = value.union({book.id});
 

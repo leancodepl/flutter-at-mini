@@ -20,8 +20,4 @@ void part4() {
   }
 }
 
-class Container<T extends Object> {
-  const Container(this.value);
-
-  final T value;
-}
+class const Container<T extends Object>(final T value);

@@ -1,13 +1,10 @@
+import 'package:bookstore_data/src/data.dart' as data;
+import 'package:bookstore_data/src/entities.dart';
 import 'package:collection/collection.dart';
-
-import 'src/data.dart' as data;
-import 'src/entities.dart';
 
 export 'src/entities.dart';
 
-abstract final class Bookstore {
-  Bookstore._();
-
+abstract final class Bookstore._() {
   static final books = data.books;
   static final authors = data.authors;
   static final genres = data.genres;

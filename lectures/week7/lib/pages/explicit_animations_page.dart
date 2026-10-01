@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../demos/explicit/animated_widgets_demo.dart';
-import '../demos/explicit/animation_controller_demo.dart';
-import '../demos/explicit/curves_and_tweens_demo.dart';
-import '../demos/explicit/spring_demo.dart';
-import '../demos/explicit/staggered_animation_demo.dart';
+import 'package:lecture_week7/demos/explicit/animated_widgets_demo.dart';
+import 'package:lecture_week7/demos/explicit/animation_controller_demo.dart';
+import 'package:lecture_week7/demos/explicit/curves_and_tweens_demo.dart';
+import 'package:lecture_week7/demos/explicit/spring_demo.dart';
+import 'package:lecture_week7/demos/explicit/staggered_animation_demo.dart';
 
-class ExplicitAnimationsPage extends StatelessWidget {
-  const ExplicitAnimationsPage({super.key});
-
+class const ExplicitAnimationsPage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

@@ -4,12 +4,10 @@ import 'package:http/http.dart' as http;
 import 'package:leancode_cubit_utils/leancode_cubit_utils.dart';
 import 'package:lecture_week5/data/dog.dart';
 
-abstract class HttpRequestCubit<TOut>
-    extends RequestCubit<http.Response, String, TOut, int> {
-  HttpRequestCubit(super.loggerTag, {required this.client});
-
-  final http.Client client;
-
+abstract class HttpRequestCubit<TOut>(
+  super.loggerTag, {
+  required final http.Client client,
+}) extends RequestCubit<http.Response, String, TOut, int> {
   @override
   Future<RequestState<TOut, int>> handleResult(http.Response result) async {
     if (result.statusCode == 200) {
@@ -29,8 +27,9 @@ abstract class HttpRequestCubit<TOut>
   }
 }
 
-class DogListRequestCubit extends HttpRequestCubit<List<Dog>> {
-  DogListRequestCubit({required super.client}) : super('DogListRequestCubit');
+class DogListRequestCubit({required super.client})
+    extends HttpRequestCubit<List<Dog>> {
+  this : super('DogListRequestCubit');
 
   final _uri = Uri.parse('https://dog.ceo/api/breed/corgi/images/random/50');
 

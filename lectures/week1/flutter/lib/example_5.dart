@@ -11,9 +11,7 @@ int fibonacci(int n) {
 
 Future<int> fibonacciInIsolate(int n) => Isolate.run(() => fibonacci(n));
 
-class Example5 extends StatelessWidget {
-  const Example5({super.key});
-
+class const Example5({super.key}) extends StatelessWidget {
   static const n = 43;
 
   @override
@@ -47,8 +45,7 @@ class Example5 extends StatelessWidget {
   }
 
   void _show(BuildContext context, int result) {
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(SnackBar(content: Text('fibonacci($n) = $result')));
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text('fibonacci($n) = $result')));
   }
 }

@@ -2,21 +2,18 @@ import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
-import 'package:provider/provider.dart';
 import 'package:labs_week4/app_theme.dart';
 import 'package:labs_week4/common_widgets.dart';
 import 'package:labs_week4/favorite_books.dart';
+import 'package:provider/provider.dart';
 
-class BookScreen extends StatefulWidget {
-  const BookScreen({super.key, required this.bookId});
-
-  final String bookId;
-
+class const BookScreen({super.key, required final String bookId})
+    extends StatefulWidget {
   @override
   State<BookScreen> createState() => _BookScreenState();
 }
 
-class _BookScreenState extends State<BookScreen> {
+class _BookScreenState() extends State<BookScreen> {
   var _descriptionExpanded = true;
 
   @override
@@ -55,17 +52,11 @@ class _BookScreenState extends State<BookScreen> {
   }
 }
 
-class _BookDetailsNarrow extends StatelessWidget {
-  const _BookDetailsNarrow(
-    this.book, {
-    required this.descriptionExpanded,
-    required this.onToggleDescriptionExpanded,
-  });
-
-  final Book book;
-  final bool descriptionExpanded;
-  final VoidCallback onToggleDescriptionExpanded;
-
+class const _BookDetailsNarrow(
+  final Book book, {
+  required final bool descriptionExpanded,
+  required final VoidCallback onToggleDescriptionExpanded,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -91,17 +82,11 @@ class _BookDetailsNarrow extends StatelessWidget {
   }
 }
 
-class _BookDetailsWide extends StatelessWidget {
-  const _BookDetailsWide(
-    this.book, {
-    required this.descriptionExpanded,
-    required this.onToggleDescriptionExpanded,
-  });
-
-  final Book book;
-  final bool descriptionExpanded;
-  final VoidCallback onToggleDescriptionExpanded;
-
+class const _BookDetailsWide(
+  final Book book, {
+  required final bool descriptionExpanded,
+  required final VoidCallback onToggleDescriptionExpanded,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -140,11 +125,7 @@ class _BookDetailsWide extends StatelessWidget {
   }
 }
 
-class _Author extends StatelessWidget {
-  const _Author(this.author);
-
-  final Author author;
-
+class const _Author(final Author author) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -170,11 +151,7 @@ class _Author extends StatelessWidget {
   }
 }
 
-class _Genre extends StatelessWidget {
-  const _Genre(this.genre);
-
-  final Genre genre;
-
+class const _Genre(final Genre genre) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -200,11 +177,7 @@ class _Genre extends StatelessWidget {
   }
 }
 
-class _Published extends StatelessWidget {
-  const _Published(this.publishDate);
-
-  final DateTime publishDate;
-
+class const _Published(final DateTime publishDate) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -226,16 +199,14 @@ class _Published extends StatelessWidget {
   }
 }
 
-class _Description extends StatelessWidget {
-  _Description(
-    this.book, {
-    required this.expanded,
-    required this.onToggleExpanded,
-  }) : super(key: PageStorageKey(book.id));
-
-  final Book book;
-  final bool expanded;
-  final VoidCallback onToggleExpanded;
+// Bug in the lint: https://github.com/dart-lang/sdk/issues/64037
+// ignore: prefer_const_constructors_in_immutables
+class _Description(
+  final Book book, {
+  required final bool expanded,
+  required final VoidCallback onToggleExpanded,
+}) extends StatelessWidget {
+  this : super(key: PageStorageKey(book.id));
 
   @override
   Widget build(BuildContext context) {
@@ -286,11 +257,8 @@ class _Description extends StatelessWidget {
   }
 }
 
-class BookFavoriteButton extends StatelessWidget {
-  const BookFavoriteButton({super.key, required this.book});
-
-  final Book book;
-
+class const BookFavoriteButton({super.key, required final Book book})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

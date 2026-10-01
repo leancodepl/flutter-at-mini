@@ -6,14 +6,13 @@ void main() {
   runApp(const ScrollExample());
 }
 
-class AnimationExample extends StatefulWidget {
-  const AnimationExample({super.key});
-
+class const AnimationExample({super.key}) extends StatefulWidget {
   @override
   State<AnimationExample> createState() => _AnimationExampleState();
 }
 
-class _AnimationExampleState extends State<AnimationExample>
+class _AnimationExampleState()
+    extends State<AnimationExample>
     with TickerProviderStateMixin {
   late final animationController = AnimationController(
     duration: const Duration(seconds: 3),
@@ -47,7 +46,7 @@ class _AnimationExampleState extends State<AnimationExample>
             animation: rotation,
             builder: (context, child) =>
                 Transform.rotate(angle: rotation.value, child: child),
-            child: Text('Hello, world!'),
+            child: const Text('Hello, world!'),
           ),
         ),
       ),
@@ -55,14 +54,12 @@ class _AnimationExampleState extends State<AnimationExample>
   }
 }
 
-class ScrollExample extends StatefulWidget {
-  const ScrollExample({super.key});
-
+class const ScrollExample({super.key}) extends StatefulWidget {
   @override
   State<ScrollExample> createState() => _ScrollExampleState();
 }
 
-class _ScrollExampleState extends State<ScrollExample> {
+class _ScrollExampleState() extends State<ScrollExample> {
   final scrollController = ScrollController();
 
   @override

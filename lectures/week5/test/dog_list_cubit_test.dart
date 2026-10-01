@@ -1,11 +1,11 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
 import 'package:lecture_week5/bloc/dog_list_cubit.dart';
 import 'package:lecture_week5/bloc/dog_list_state.dart';
 import 'package:lecture_week5/data/dog_api.dart';
+import 'package:mocktail/mocktail.dart';
 
-class MockDogApi extends Mock implements DogApi {}
+class MockDogApi() extends Mock implements DogApi;
 
 void main() {
   group('DogListCubit', () {

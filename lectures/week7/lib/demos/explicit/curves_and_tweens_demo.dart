@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import '../../widgets/demo_scaffold.dart';
+import 'package:lecture_week7/widgets/demo_scaffold.dart';
 
-class CurvesAndTweensDemo extends StatefulWidget {
-  const CurvesAndTweensDemo({super.key});
-
+class const CurvesAndTweensDemo({super.key}) extends StatefulWidget {
   @override
   State<CurvesAndTweensDemo> createState() => _CurvesAndTweensDemoState();
 }
 
-class _CurvesAndTweensDemoState extends State<CurvesAndTweensDemo>
+class _CurvesAndTweensDemoState()
+    extends State<CurvesAndTweensDemo>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late Animation<double> _animation;

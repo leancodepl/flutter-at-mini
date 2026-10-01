@@ -1,3 +1,3 @@
-sealed class DogListEvent {}
+sealed class DogListEvent();
 
-class FetchDogs extends DogListEvent {}
+class FetchDogs() extends DogListEvent;

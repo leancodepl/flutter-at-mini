@@ -6,9 +6,7 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class const MyApp({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
@@ -24,9 +22,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
+class const HomePage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,12 +53,10 @@ class HomePage extends StatelessWidget {
 
 final _router = GoRouter(routes: $appRoutes);
 
-class _PageCard extends StatelessWidget {
-  const _PageCard({required this.label, required this.onTap});
-
-  final String label;
-  final VoidCallback onTap;
-
+class const _PageCard({
+  required final String label,
+  required final VoidCallback onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card.filled(

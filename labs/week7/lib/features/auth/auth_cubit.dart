@@ -4,14 +4,14 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:labs_week7/features/auth/auth_service.dart';
 
-class AuthCubit extends Cubit<AuthState> {
-  AuthCubit({required this.authService}) : super(authService.stateFromAuth) {
+class AuthCubit({required final AuthService authService})
+    extends Cubit<AuthState> {
+  this : super(authService.stateFromAuth) {
     _sub = authService.isSignedInStream.listen((isSignedIn) {
       emit(authService.stateFromAuth);
     });
   }
 
-  final AuthService authService;
   StreamSubscription<bool>? _sub;
 
   Future<void> signInWithEmail(String email, String password) async {
@@ -50,7 +50,7 @@ class AuthCubit extends Cubit<AuthState> {
   @override
   Future<void> close() async {
     await _sub?.cancel();
-    return super.close();
+    await super.close();
   }
 }
 
@@ -59,27 +59,19 @@ extension on AuthService {
       isSignedIn ? SignedInState(email: userEmail) : SignedOutState();
 }
 
-sealed class AuthState with EquatableMixin {}
+sealed class AuthState() with Equatable;
 
-class SignedInState extends AuthState {
-  SignedInState({required this.email});
-
-  final String email;
-
+class SignedInState({required final String email}) extends AuthState {
   @override
   List<Object?> get props => [email];
 }
 
-class SigningInState extends AuthState {
+class SigningInState() extends AuthState {
   @override
   List<Object?> get props => [];
 }
 
-class SignedOutState extends AuthState {
-  SignedOutState({this.error});
-
-  final String? error;
-
+class SignedOutState({final String? error}) extends AuthState {
   @override
   List<Object?> get props => [error];
 }

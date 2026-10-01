@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:labs_week7/features/auth/auth_cubit.dart';
 
-class UnauthorizedPage extends StatefulWidget {
-  const UnauthorizedPage({super.key});
-
+class const UnauthorizedPage({super.key}) extends StatefulWidget {
   @override
   State<UnauthorizedPage> createState() => _UnauthorizedPageState();
 }
 
-class _UnauthorizedPageState extends State<UnauthorizedPage> {
+class _UnauthorizedPageState() extends State<UnauthorizedPage> {
   final email = TextEditingController();
   final password = TextEditingController();
 
@@ -60,12 +58,10 @@ class _UnauthorizedPageState extends State<UnauthorizedPage> {
   }
 }
 
-class _SignInButton extends StatelessWidget {
-  const _SignInButton({required this.enabled, required this.onSignIn});
-
-  final bool enabled;
-  final VoidCallback onSignIn;
-
+class const _SignInButton({
+  required final bool enabled,
+  required final VoidCallback onSignIn,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FilledButton.tonal(

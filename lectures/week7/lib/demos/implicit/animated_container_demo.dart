@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../widgets/demo_scaffold.dart';
+import 'package:lecture_week7/widgets/demo_scaffold.dart';
 
-class AnimatedContainerDemo extends StatefulWidget {
-  const AnimatedContainerDemo({super.key});
-
+class const AnimatedContainerDemo({super.key}) extends StatefulWidget {
   @override
   State<AnimatedContainerDemo> createState() => _AnimatedContainerDemoState();
 }
 
-class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
+class _AnimatedContainerDemoState() extends State<AnimatedContainerDemo> {
   bool _expanded = false;
 
   @override

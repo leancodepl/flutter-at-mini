@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 
-class Task3Page extends StatefulWidget {
-  const Task3Page({super.key});
-
+class const Task3Page({super.key}) extends StatefulWidget {
   @override
   State<Task3Page> createState() => _Task3PageState();
 }
 
-class _Task3PageState extends State<Task3Page>
+class _Task3PageState()
+    extends State<Task3Page>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
 
@@ -93,7 +92,7 @@ class _Task3PageState extends State<Task3Page>
                   onPanEnd: _onPanEnd,
                   child: Transform.translate(
                     offset: _dragOffset,
-                    child: _DraggableCard(),
+                    child: const _DraggableCard(),
                   ),
                 ),
               ),
@@ -114,7 +113,7 @@ class _Task3PageState extends State<Task3Page>
   }
 }
 
-class _DraggableCard extends StatelessWidget {
+class const _DraggableCard() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -159,25 +158,15 @@ class _DraggableCard extends StatelessWidget {
   }
 }
 
-class _SpringControls extends StatelessWidget {
-  const _SpringControls({
-    required this.mass,
-    required this.stiffness,
-    required this.damping,
-    required this.onMassChanged,
-    required this.onStiffnessChanged,
-    required this.onDampingChanged,
-    required this.onReset,
-  });
-
-  final double mass;
-  final double stiffness;
-  final double damping;
-  final ValueChanged<double> onMassChanged;
-  final ValueChanged<double> onStiffnessChanged;
-  final ValueChanged<double> onDampingChanged;
-  final VoidCallback onReset;
-
+class const _SpringControls({
+  required final double mass,
+  required final double stiffness,
+  required final double damping,
+  required final ValueChanged<double> onMassChanged,
+  required final ValueChanged<double> onStiffnessChanged,
+  required final ValueChanged<double> onDampingChanged,
+  required final VoidCallback onReset,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -249,21 +238,13 @@ class _SpringControls extends StatelessWidget {
       };
 }
 
-class _SliderRow extends StatelessWidget {
-  const _SliderRow({
-    required this.label,
-    required this.value,
-    required this.min,
-    required this.max,
-    required this.onChanged,
-  });
-
-  final String label;
-  final double value;
-  final double min;
-  final double max;
-  final ValueChanged<double> onChanged;
-
+class const _SliderRow({
+  required final String label,
+  required final double value,
+  required final double min,
+  required final double max,
+  required final ValueChanged<double> onChanged,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(

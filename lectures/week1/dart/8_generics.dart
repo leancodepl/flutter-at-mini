@@ -1,6 +1,4 @@
-// ignore_for_file: unnecessary_type_check
-
-abstract class Cache<K extends String, T> {
+abstract class Cache<K extends String, T>() {
   T get(K key);
   void set(K key, T value);
 }
@@ -8,6 +6,7 @@ abstract class Cache<K extends String, T> {
 void main() {
   // generics are reified!
   final list = <String>['foo', 'bar'];
+  print(list.runtimeType);
   list.add('abc');
 
   print(list is List<String>);

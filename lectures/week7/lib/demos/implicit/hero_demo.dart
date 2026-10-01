@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HeroDemo extends StatelessWidget {
-  const HeroDemo({super.key});
-
+class const HeroDemo({super.key}) extends StatelessWidget {
   static const _items = [
     (color: Color(0xFFF85149), icon: Icons.rocket_launch, tag: 'rocket'),
     (color: Color(0xFF7EE787), icon: Icons.eco, tag: 'eco'),
@@ -44,13 +42,11 @@ class HeroDemo extends StatelessWidget {
   }
 }
 
-class _HeroCard extends StatelessWidget {
-  const _HeroCard({required this.color, required this.icon, required this.tag});
-
-  final Color color;
-  final IconData icon;
-  final String tag;
-
+class const _HeroCard({
+  required final Color color,
+  required final IconData icon,
+  required final String tag,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -90,17 +86,11 @@ class _HeroCard extends StatelessWidget {
   }
 }
 
-class _HeroDetailPage extends StatelessWidget {
-  const _HeroDetailPage({
-    required this.color,
-    required this.icon,
-    required this.tag,
-  });
-
-  final Color color;
-  final IconData icon;
-  final String tag;
-
+class const _HeroDetailPage({
+  required final Color color,
+  required final IconData icon,
+  required final String tag,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

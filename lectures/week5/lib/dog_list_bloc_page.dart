@@ -7,9 +7,7 @@ import 'package:lecture_week5/widgets/dog_list_data_widget.dart';
 import 'package:lecture_week5/widgets/empty_dog_list_widget.dart';
 import 'package:lecture_week5/widgets/loading_widget.dart';
 
-class DogListBlocPage extends StatelessWidget {
-  const DogListBlocPage({super.key});
-
+class const DogListBlocPage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<DogListBloc, DogListState>(

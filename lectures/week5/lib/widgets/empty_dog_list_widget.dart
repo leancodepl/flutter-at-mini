@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
-class EmptyDogListWidget extends StatelessWidget {
-  const EmptyDogListWidget({super.key, required this.onFetch});
-
-  final VoidCallback onFetch;
-
+class const EmptyDogListWidget({super.key, required final VoidCallback onFetch})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(

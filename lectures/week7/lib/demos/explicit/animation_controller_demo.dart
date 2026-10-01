@@ -1,17 +1,16 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import '../../widgets/demo_scaffold.dart';
+import 'package:lecture_week7/widgets/demo_scaffold.dart';
 
-class AnimationControllerDemo extends StatefulWidget {
-  const AnimationControllerDemo({super.key});
-
+class const AnimationControllerDemo({super.key}) extends StatefulWidget {
   @override
   State<AnimationControllerDemo> createState() =>
       _AnimationControllerDemoState();
 }
 
-class _AnimationControllerDemoState extends State<AnimationControllerDemo>
+class _AnimationControllerDemoState()
+    extends State<AnimationControllerDemo>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
 

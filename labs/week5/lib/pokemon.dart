@@ -1,7 +1,7 @@
 class Pokemons {
-  Pokemons({required this.pokemons});
+  new({required this.pokemons});
 
-  Pokemons.fromJson(Map<String, dynamic> json) : pokemons = [] {
+  new fromJson(Map<String, dynamic> json) : pokemons = [] {
     for (final (i, json as Map) in (json['results'] as List).indexed) {
       pokemons.add(PokemonEntry.fromJson(json.cast()));
 
@@ -17,9 +17,9 @@ class Pokemons {
 }
 
 class PokemonEntry {
-  PokemonEntry({required this.name, required this.url});
+  new({required this.name, required this.url});
 
-  PokemonEntry.fromJson(Map<String, dynamic> json)
+  new fromJson(Map<String, dynamic> json)
     : name = json['name'] as String,
       url = json['url'] as String;
 
@@ -28,7 +28,7 @@ class PokemonEntry {
 }
 
 class Pokemon {
-  Pokemon({
+  new({
     required this.id,
     required this.name,
     required this.baseExperience,
@@ -36,7 +36,7 @@ class Pokemon {
     required this.weight,
   });
 
-  Pokemon.fromJson(Map<String, dynamic> json)
+  new fromJson(Map<String, dynamic> json)
     : id = json['id'] as int,
       name = json['name'] as String,
       baseExperience = json['base_experience'] as int,
