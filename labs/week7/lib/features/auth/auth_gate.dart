@@ -10,8 +10,9 @@ class const AuthGate({super.key}) extends StatelessWidget {
     return BlocBuilder<AuthCubit, AuthState>(
       builder: (context, state) {
         return switch (state) {
-          SignedInState() => AuthorizedPage(state: state),
-          SigningInState() || SignedOutState() => const UnauthorizedPage(),
+          AuthStateSignedIn() => AuthorizedPage(state: state),
+          AuthStateSigningIn() ||
+          AuthStateSignedOut() => const UnauthorizedPage(),
         };
       },
     );

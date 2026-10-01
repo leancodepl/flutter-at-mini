@@ -5,17 +5,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:labs_week6/pokemon.dart';
 
 class PokemonBloc() extends Bloc<PokemonEvent, PokemonState> {
-  this : super(PokemonInitial()) {
-    on<LoadPokemon>(_onLoadPokemon, transformer: droppable());
+  this : super(PokemonStateInitial()) {
+    on<PokemonEventLoad>(_onLoadPokemon, transformer: droppable());
   }
 
   final dio = Dio();
 
   Future<void> _onLoadPokemon(
-    LoadPokemon event,
+    PokemonEventLoad event,
     Emitter<PokemonState> emit,
   ) async {
-    emit(PokemonLoading());
+    emit(PokemonStateLoading());
 
     await Future<void>.delayed(const Duration(seconds: 2));
 
@@ -25,9 +25,9 @@ class PokemonBloc() extends Bloc<PokemonEvent, PokemonState> {
       );
 
       final entries = Pokemons.fromJson(response.data!);
-      emit(PokemonLoaded(entries));
+      emit(PokemonStateLoaded(entries));
     } catch (err) {
-      emit(PokemonError(err));
+      emit(PokemonStateError(err));
     }
   }
 }
@@ -36,7 +36,7 @@ class PokemonBloc() extends Bloc<PokemonEvent, PokemonState> {
 
 sealed class PokemonEvent();
 
-class LoadPokemon() extends PokemonEvent;
+class PokemonEventLoad() extends PokemonEvent;
 
 // States
 
@@ -45,16 +45,16 @@ sealed class PokemonState() with Equatable {
   List<Object> get props => [];
 }
 
-class PokemonInitial() extends PokemonState;
+class PokemonStateInitial() extends PokemonState;
 
-class PokemonLoading() extends PokemonState;
+class PokemonStateLoading() extends PokemonState;
 
-class PokemonError(final Object error) extends PokemonState {
+class PokemonStateError(final Object error) extends PokemonState {
   @override
   List<Object> get props => [error];
 }
 
-class PokemonLoaded(final Pokemons entries) extends PokemonState {
+class PokemonStateLoaded(final Pokemons entries) extends PokemonState {
   @override
   List<Object> get props => [entries];
 }

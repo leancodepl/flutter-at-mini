@@ -10,7 +10,7 @@ class const ProviderExample({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Provider(
-      create: (_) => NameManager(),
+      create: (context) => NameManager(),
       child: const MaterialApp(home: HomePage()),
     );
   }

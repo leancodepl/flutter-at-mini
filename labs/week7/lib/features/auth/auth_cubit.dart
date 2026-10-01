@@ -15,7 +15,7 @@ class AuthCubit({required final AuthService authService})
   StreamSubscription<bool>? _sub;
 
   Future<void> signInWithEmail(String email, String password) async {
-    emit(SigningInState());
+    emit(AuthStateSigningIn());
     await Future<void>.delayed(const Duration(seconds: 1));
 
     try {
@@ -23,25 +23,25 @@ class AuthCubit({required final AuthService authService})
 
       switch (result) {
         case SignInResult.invalidEmail:
-          emit(SignedOutState(error: 'This email address is invalid.'));
+          emit(AuthStateSignedOut(error: 'This email address is invalid.'));
         case SignInResult.userDisabled:
-          emit(SignedOutState(error: 'This user has been banned.'));
+          emit(AuthStateSignedOut(error: 'This user has been banned.'));
         case SignInResult.userNotFound:
           await _trySignUp(email, password);
         case SignInResult.wrongPassword:
-          emit(SignedOutState(error: 'Invalid credentials.'));
+          emit(AuthStateSignedOut(error: 'Invalid credentials.'));
         case SignInResult.success:
-          emit(SignedInState(email: email));
+          emit(AuthStateSignedIn(email: email));
       }
     } catch (err) {
-      emit(SignedOutState(error: 'Unexpected error: $err'));
+      emit(AuthStateSignedOut(error: 'Unexpected error: $err'));
     }
   }
 
   Future<void> signOut() async {
     await authService.signOut();
 
-    emit(SignedOutState());
+    emit(AuthStateSignedOut());
   }
 
   Future<void> _trySignUp(String email, String password) =>
@@ -56,22 +56,22 @@ class AuthCubit({required final AuthService authService})
 
 extension on AuthService {
   AuthState get stateFromAuth =>
-      isSignedIn ? SignedInState(email: userEmail) : SignedOutState();
+      isSignedIn ? AuthStateSignedIn(email: userEmail) : AuthStateSignedOut();
 }
 
 sealed class AuthState() with Equatable;
 
-class SignedInState({required final String email}) extends AuthState {
+class AuthStateSignedIn({required final String email}) extends AuthState {
   @override
   List<Object?> get props => [email];
 }
 
-class SigningInState() extends AuthState {
+class AuthStateSigningIn() extends AuthState {
   @override
   List<Object?> get props => [];
 }
 
-class SignedOutState({final String? error}) extends AuthState {
+class AuthStateSignedOut({final String? error}) extends AuthState {
   @override
   List<Object?> get props => [error];
 }

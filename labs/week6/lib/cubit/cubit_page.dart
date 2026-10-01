@@ -25,10 +25,10 @@ class const _CubitScreen() extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Cubit Pokémon')),
       body: switch (cubit.state) {
-        PokemonInitial() => const SizedBox(),
-        PokemonLoading() => const LoadingIndicator(),
-        PokemonError(:final error) => ErrorMessage(error: error),
-        PokemonLoaded(:final entries) => PokemonList(
+        PokemonStateInitial() => const SizedBox(),
+        PokemonStateLoading() => const LoadingIndicator(),
+        PokemonStateError(:final error) => ErrorMessage(error: error),
+        PokemonStateLoaded(:final entries) => PokemonList(
           entries: entries.pokemons,
           onTap: (e) => CubitPokemonDetailsRoute(url: e.url).go(context),
         ),

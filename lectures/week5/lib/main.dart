@@ -17,7 +17,7 @@ class const MyApp({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RepositoryProvider(
-      create: (_) => DogApi(),
+      create: (context) => DogApi(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
@@ -115,9 +115,8 @@ class _HomeTabsPageState()
 class const _CubitTab() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final api = context.read<DogApi>();
     return BlocProvider(
-      create: (_) => DogListCubit(api: api),
+      create: (context) => DogListCubit(api: context.read<DogApi>()),
       child: const DogListCubitPage(),
     );
   }
@@ -126,9 +125,8 @@ class const _CubitTab() extends StatelessWidget {
 class const _BlocTab() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final api = context.read<DogApi>();
     return BlocProvider(
-      create: (_) => DogListBloc(api: api),
+      create: (context) => DogListBloc(api: context.read<DogApi>()),
       child: const DogListBlocPage(),
     );
   }

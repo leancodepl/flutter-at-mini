@@ -24,12 +24,12 @@ class const DogListRequestCubitPage({super.key}) extends StatelessWidget {
         ),
       ),
       child: BlocProvider(
-        create: (_) => DogListRequestCubit(client: http.Client()),
+        create: (context) => DogListRequestCubit(client: http.Client()),
         child: Builder(
           builder: (context) => Scaffold(
             backgroundColor: Colors.white,
             body: RequestCubitBuilder<List<({String url})>, int>(
-              cubit: context.read<DogListRequestCubit>(),
+              cubit: context.watch<DogListRequestCubit>(),
               onInitial: (context) => EmptyDogListWidget(
                 onFetch: () => context.read<DogListRequestCubit>().run(),
               ),

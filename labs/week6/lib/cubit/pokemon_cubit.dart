@@ -4,16 +4,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:labs_week6/pokemon.dart';
 
 class PokemonCubit() extends Cubit<PokemonState> {
-  this : super(PokemonInitial());
+  this : super(PokemonStateInitial());
 
   final dio = Dio();
 
   Future<void> loadPokemon() async {
-    if (state is PokemonLoading) {
+    if (state is PokemonStateLoading) {
       return;
     }
 
-    emit(PokemonLoading());
+    emit(PokemonStateLoading());
 
     await Future<void>.delayed(const Duration(seconds: 2));
 
@@ -23,9 +23,9 @@ class PokemonCubit() extends Cubit<PokemonState> {
       );
 
       final entries = Pokemons.fromJson(response.data!);
-      emit(PokemonLoaded(entries));
+      emit(PokemonStateLoaded(entries));
     } catch (err) {
-      emit(PokemonError(err));
+      emit(PokemonStateError(err));
     }
   }
 }
@@ -37,16 +37,16 @@ sealed class PokemonState() with Equatable {
   List<Object> get props => [];
 }
 
-class PokemonInitial() extends PokemonState;
+class PokemonStateInitial() extends PokemonState;
 
-class PokemonLoading() extends PokemonState;
+class PokemonStateLoading() extends PokemonState;
 
-class PokemonError(final Object error) extends PokemonState {
+class PokemonStateError(final Object error) extends PokemonState {
   @override
   List<Object> get props => [error];
 }
 
-class PokemonLoaded(final Pokemons entries) extends PokemonState {
+class PokemonStateLoaded(final Pokemons entries) extends PokemonState {
   @override
   List<Object> get props => [entries];
 }

@@ -10,7 +10,7 @@ class const BlocPage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => PokemonBloc()..add(LoadPokemon()),
+      create: (context) => PokemonBloc()..add(PokemonEventLoad()),
       child: Builder(
         builder: (context) {
           return Scaffold(
@@ -19,10 +19,10 @@ class const BlocPage({super.key}) extends StatelessWidget {
             body: BlocBuilder<PokemonBloc, PokemonState>(
               builder: (context, state) {
                 return switch (state) {
-                  PokemonInitial() => const SizedBox(),
-                  PokemonLoading() => const LoadingIndicator(),
-                  PokemonError(:final error) => ErrorMessage(error: error),
-                  PokemonLoaded(:final entries) => PokemonList(
+                  PokemonStateInitial() => const SizedBox(),
+                  PokemonStateLoading() => const LoadingIndicator(),
+                  PokemonStateError(:final error) => ErrorMessage(error: error),
+                  PokemonStateLoaded(:final entries) => PokemonList(
                     entries: entries.pokemons,
                     onTap: (e) =>
                         BlocPokemonDetailsRoute(url: e.url).go(context),
@@ -33,7 +33,8 @@ class const BlocPage({super.key}) extends StatelessWidget {
             floatingActionButton: FloatingActionButton.extended(
               icon: const Icon(Icons.refresh),
               label: const Text('Reload'),
-              onPressed: () => context.read<PokemonBloc>().add(LoadPokemon()),
+              onPressed: () =>
+                  context.read<PokemonBloc>().add(PokemonEventLoad()),
             ),
           );
         },

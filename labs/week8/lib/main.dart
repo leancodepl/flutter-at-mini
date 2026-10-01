@@ -66,7 +66,7 @@ class const HomePage({super.key}) extends StatelessWidget {
             color: const Color(0xFF58A6FF),
             onTap: () => Navigator.push(
               context,
-              MaterialPageRoute<void>(builder: (_) => const Task1Page()),
+              MaterialPageRoute<void>(builder: (context) => const Task1Page()),
             ),
           ),
           const SizedBox(height: 12),
@@ -77,7 +77,7 @@ class const HomePage({super.key}) extends StatelessWidget {
             color: const Color(0xFF7EE787),
             onTap: () => Navigator.push(
               context,
-              MaterialPageRoute<void>(builder: (_) => const Task2Page()),
+              MaterialPageRoute<void>(builder: (context) => const Task2Page()),
             ),
           ),
           const SizedBox(height: 12),
@@ -88,7 +88,7 @@ class const HomePage({super.key}) extends StatelessWidget {
             color: const Color(0xFFA371F7),
             onTap: () => Navigator.push(
               context,
-              MaterialPageRoute<void>(builder: (_) => const Task3Page()),
+              MaterialPageRoute<void>(builder: (context) => const Task3Page()),
             ),
           ),
         ],

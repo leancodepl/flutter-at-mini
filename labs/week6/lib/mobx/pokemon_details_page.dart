@@ -18,7 +18,7 @@ class const PokemonDetailsPage({super.key, required final String pokemonUrl})
           appBar: AppBar(title: const Text('MobX Pokémon')),
           body: Observer(
             builder: (context) {
-              final store = context.read<PokemonDetailsStore>();
+              final store = context.watch<PokemonDetailsStore>();
 
               return switch (store) {
                 PokemonDetailsStore(loading: true) => const LoadingIndicator(),

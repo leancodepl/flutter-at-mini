@@ -21,7 +21,7 @@ class const App({super.key}) extends StatelessWidget {
               onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute<void>(
-                  builder: (_) => ExampleWrapper(child: examples[i]),
+                  builder: (context) => ExampleWrapper(child: examples[i]),
                 ),
               ),
             );

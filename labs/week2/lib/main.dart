@@ -44,7 +44,8 @@ class const App({super.key}) extends StatelessWidget {
                 title: Text(title),
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (_) => ExampleWrapper(title: title, child: child),
+                    builder: (context) =>
+                        ExampleWrapper(title: title, child: child),
                   ),
                 ),
               );

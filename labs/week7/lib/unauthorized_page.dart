@@ -42,13 +42,13 @@ class _UnauthorizedPageState() extends State<UnauthorizedPage> {
             obscureText: true,
           ),
           const SizedBox(height: 16),
-          if (state case SignedOutState(:final error?)) ...[
+          if (state case AuthStateSignedOut(:final error?)) ...[
             Text(error),
             const SizedBox(height: 16),
           ] else
             const SizedBox(height: 32),
           _SignInButton(
-            enabled: state is SignedOutState,
+            enabled: state is AuthStateSignedOut,
             onSignIn: () =>
                 authCubit.signInWithEmail(email.text, password.text),
           ),

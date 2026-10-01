@@ -9,18 +9,11 @@ class const BalanceEventTransformerPage({super.key}) extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Row(
         children: [
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(child: _ConcurrentColumn()),
-                SizedBox(width: 16),
-                Expanded(child: _SequentialColumn()),
-              ],
-            ),
-          ),
+          Expanded(child: _ConcurrentColumn()),
+          SizedBox(width: 16),
+          Expanded(child: _SequentialColumn()),
         ],
       ),
     );
@@ -31,7 +24,7 @@ class const _ConcurrentColumn() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => ConcurrentBalanceBloc(),
+      create: (context) => ConcurrentBalanceBloc(),
       child: Builder(
         builder: (context) => Card(
           color: Colors.red.shade50,
@@ -79,7 +72,7 @@ class const _SequentialColumn() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => SequentialBalanceBloc(),
+      create: (context) => SequentialBalanceBloc(),
       child: Builder(
         builder: (context) => Card(
           color: Colors.green.shade50,

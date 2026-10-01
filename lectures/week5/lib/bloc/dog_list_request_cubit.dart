@@ -17,11 +17,9 @@ abstract class HttpRequestCubit<TOut>(
       logger.severe('Request error. Status code: ${result.statusCode}');
       try {
         return await handleError(RequestErrorState(error: result.statusCode));
-      } catch (e, s) {
-        logger.severe(
-          'Processing error failed. Exception: $e. Stack trace: $s',
-        );
-        return RequestErrorState(exception: e, stackTrace: s);
+      } catch (err, st) {
+        logger.severe('Processing error failed', err, st);
+        return RequestErrorState(exception: err, stackTrace: st);
       }
     }
   }
