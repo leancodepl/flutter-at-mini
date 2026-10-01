@@ -7,7 +7,7 @@ import 'package:lecture_week5/data/dog.dart';
 abstract class HttpRequestCubit<TOut>(
   super.loggerTag, {
   required final http.Client client,
-}) extends RequestCubit<http.Response, String, TOut, int> {
+}) extends RequestCubit<http.Response, TOut, int> {
   @override
   Future<RequestState<TOut, int>> handleResult(http.Response result) async {
     if (result.statusCode == 200) {
@@ -23,6 +23,8 @@ abstract class HttpRequestCubit<TOut>(
       }
     }
   }
+
+  TOut map(String data);
 }
 
 class DogListRequestCubit({required super.client})

@@ -10,24 +10,29 @@ List<RouteBase> get $appRoutes => [$homeRoute];
 
 RouteBase get $homeRoute => GoRouteData.$route(
   path: '/',
+  hasOverriddenOnExit: false,
   factory: $HomeRoute._fromState,
   routes: [
     GoRouteData.$route(
       path: 'cubit',
+      hasOverriddenOnExit: false,
       factory: $CubitRoute._fromState,
       routes: [
         GoRouteData.$route(
           path: 'pokemon',
+          hasOverriddenOnExit: false,
           factory: $CubitPokemonDetailsRoute._fromState,
         ),
       ],
     ),
     GoRouteData.$route(
       path: 'bloc',
+      hasOverriddenOnExit: false,
       factory: $BlocRoute._fromState,
       routes: [
         GoRouteData.$route(
           path: 'pokemon',
+          hasOverriddenOnExit: false,
           factory: $BlocPokemonDetailsRoute._fromState,
         ),
       ],
