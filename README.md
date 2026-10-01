@@ -29,8 +29,8 @@ Points can be gained from:
 
 ### Minimum SDK versions
 
-- Flutter 3.35.5
-- Dart 3.9.2
+- Flutter 3.47.5
+- Dart 3.13.4
 
 ## Setup
 
