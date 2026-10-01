@@ -15,17 +15,17 @@ Wiktor Zając – <wiktor.zajac@leancode.pl>
 
 Students need to gather at least 51pt to pass the course:
 
-- 51-60pt - 3
-- 61-70pt - 3.5
-- 71-80pt - 4
-- 81-90pt - 4.5
-- 91-100pt - 5
+- 51–60pt - 3
+- 61–70pt - 3.5
+- 71–80pt - 4
+- 81–90pt - 4.5
+- 91–100pt - 5
 
 Points can be gained from:
 
-- Project - 100pt
-- Activity during lectures - 10pt
-- Labs (non-obligatory) - 8 * 3 = 24 pt
+- Project — 100pt
+- Activity during lectures — 10pt
+- Labs (non-obligatory) — 8 × 3pt = 24pt
 
 ### Minimum SDK versions
 
@@ -46,7 +46,7 @@ changes are announced to students.
 | #  | Date           | Lecture                                                    | Lecturer         |
 |----|----------------|------------------------------------------------------------|------------------|
 | 1  | **06.10.2026** | [Introduction to Flutter](lectures/week1)                  | Wiktor Zając     |
-| 2  | **13.10.2026** | [Layouts 2: Flex, lists and slivers](lectures/week2)       | Wiktor Zając     |
+| 2  | **13.10.2026** | [Layouts 2: Flex, lists, and slivers](lectures/week2)      | Wiktor Zając     |
 | 3  | **20.10.2026** | [Giving context to BuildContext](lectures/week3)           | Tomasz Koter     |
 | 4  | **27.10.2026** | [Asynchrony and HTTP](lectures/week4)                      | Piotr Rogulski   |
 | 5  | **03.11.2026** | [State Management with External Libraries](lectures/week5) | Wiktor Zając     |
@@ -79,58 +79,58 @@ and is worth additional 3 pts each.
 | 8 | **24.11.2026** | [Animations](labs/week8)                                         |
 | 9 | **01.12.2026** | ***Mandatory*** project checkpoint                               |
 
-Week 10-15 lab slots can be used for project consulting - only by prior arrangement.
+Week 10–15 lab slots can be used for project consulting — only by prior arrangement.
 
 ## Project
 
 ### Requirements
 
-- Individual multi-layer Flutter application that works at least on one mobile
+- Individual multilayer Flutter application that works at least on one mobile
   platform (Android/iOS)
-- Application's topic and scope is defined by the student, should be described
-  in the initial documentation and approved by the lecturer
-- Project's source code and final documentation is submitted according to
-  the [Timeline](#timeline)
+- Application’s topic and scope is defined by the student, should be described
+  in the initial documentation and approved by the lecturer.
+- Project’s source code and final documentation is submitted according to
+  the [Timeline](#timeline).
 
 ### Assessment Rules
 
 - Implementation of the required project assumptions (50pt)
-    - Initial documentation - 5pt
-    - Architecture - 15pt
-    - Code quality (e.g. static code analysis, formatting) - 15pt
+    - Initial documentation — 5pt
+    - Architecture — 15pt
+    - Code quality (e.g., static code analysis, formatting) — 15pt
     - UI/UX
-        - Material Design - 5pt
-        - Custom design widgets - 5pt
-    - Final documentation - 5pt
+        - Material Design — 5pt
+        - Custom design widgets — 5pt
+    - The final documentation — 5pt
 - Optional requirements (max 50pt)
-    - Support for each additional platform (Mobile/Web/Desktop) - 5pt each
+    - Support for each additional platform (Mobile/Web/Desktop) — 5pt each
     - Animations
-        - Implicit / ready-to-use packages - max 5pt
-        - Custom - max 10pt
+        - Implicit / ready-to-use packages — max 5pt
+        - Custom — max 10pt
     - Tests
-        - Unit tests - max 5pt
-        - Widget tests - max 5pt
-        - Patrol tests - max 10pt
+        - Unit tests — max 5pt
+        - Widget tests — max 5pt
+        - Patrol tests — max 10pt
     - Signing in process
-        - Firebase Auth - max 5pt
-        - Custom backend auth - max 10pt
-    - Multi-step form with validation - max 10pt
-    - CI/CD - max 15pt
-        - code analysis & run flutter test - max 10pt
-        - deploy app - max 10pt
+        - Firebase Auth — max 5pt
+        - Custom backend auth — max 10pt
+    - Multistep form with validation — max 10pt
+    - CI/CD — max 15pt
+        - Code analysis & run flutter test — max 10pt
+        - App deployment — max 10pt
     - Platform Channels
-        - Using pub package for platform features (e.g. camera) - 5pt
-        - Creating custom platform channels - 15pt
-    - Internationalization - max 10pt
-    - Custom painting - max 5pt
-    - Local data persistence (offline) - max 15pt
+        - Using pub package for platform features (e.g., camera) — 5pt
+        - Creating custom platform channels — 15pt
+    - Internationalization — max 10pt
+    - Custom painting — max 5pt
+    - Local data persistence (offline) — max 15pt
 
 ### Timeline
 
-- 27.10.2026 - [Initial documentation](#initial-documentation)
-- 01.12.2026 - ***Mandatory*** project checkpoint
-- 29.01.2027 - Project Submission (source code + [final documentation](#final-documentation))
-- 14.02.2027 - [Late Project Submission](#late-project-submission)
+- 27.10.2026 — [Initial documentation](#initial-documentation)
+- 01.12.2026 — ***Mandatory*** project checkpoint
+- 29.01.2027 — Project Submission (source code + [final documentation](#final-documentation))
+- 14.02.2027 — [Late Project Submission](#late-project-submission)
 
 ### Initial Documentation
 
@@ -138,11 +138,11 @@ Initial documentation should contain:
 
 - Project description
 - Desired optional requirements should be listed in the initial documentation
-- User stories (e.g. As a user, I can sign in; As a user, I can view the list of items)
+- User stories (e.g., As a user, I can sign in; As a user, I can view the list of items)
 
 ### Final Documentation
 
-Final documentation should contain:
+The final documentation should contain:
 
 - Project description
 - Integrations
@@ -152,13 +152,13 @@ Final documentation should contain:
 - Database/Firestore schema (if applicable)
 - CI/CD description/screenshot (if applicable)
 
-But it shouldn't be longer than 1-2 pages. :)
+But it shouldn't be longer than 1–2 pages. :)
 
 ### Late Project Submission
 
 Students can submit the project until 14.02.2027. Each day of being late will
 take a decrease of 5pt from the total number of gained points (not less than
-51pts). Projects submitted after the final deadline won't be accepted.
+51pt). Projects submitted after the final deadline won't be accepted.
 
 ## Resources
 
