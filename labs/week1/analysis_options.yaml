@@ -1,7 +1,0 @@
-include: package:leancode_lint/analysis_options.yaml
-
-analyzer:
-  errors:
-    avoid_print: ignore
-  plugins:
-    - custom_lint

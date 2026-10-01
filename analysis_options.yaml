@@ -1,13 +1,14 @@
 include: package:leancode_lint/analysis_options.yaml
 
+plugins:
+  leancode_lint: ^27.0.0
+
 analyzer:
   exclude:
+    - '**.g.dart'
+    - '**/build/**'
     - build/**
     - android/**
-    - ios/**
     - web/**
     - windows/**
     - macos/**
-    - linux/**
-  plugins:
-    - custom_lint
