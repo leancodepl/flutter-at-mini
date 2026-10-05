@@ -12,48 +12,6 @@
             "type": "dart"
         },
         {
-            "name": "Week 2",
-            "cwd": "labs/week2",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "Week 3",
-            "cwd": "labs/week3",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "Week 4",
-            "cwd": "labs/week4",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "Week 5",
-            "cwd": "labs/week5",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "Week 6",
-            "cwd": "labs/week6",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "Week 7",
-            "cwd": "labs/week7",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "Week 8",
-            "cwd": "labs/week8",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
             "name": "Week 1 lecture",
             "cwd": "lectures/week1/flutter",
             "type": "dart",
