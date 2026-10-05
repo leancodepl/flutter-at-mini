@@ -181,3 +181,15 @@ dart pub get
    creating any additional variables or using property access (i.e. `obj.prop`).
 
 </details>
+
+<details>
+<summary><h3>6. Flutter setup</h3></summary>
+
+1. Install Flutter (see [Setup](../../README.md#setup); on the faculty lab
+   computers follow [How to install Flutter](../../misc/flutter_bootstrap.md)).
+2. Run `flutter doctor`.
+3. Create a new app with `flutter create` and run it with `flutter run -d chrome`.
+4. Change a text in the counter app, press `r` in the terminal and see the
+   change (hot reload).
+
+</details>
