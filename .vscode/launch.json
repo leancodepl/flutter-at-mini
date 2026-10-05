@@ -9,6 +9,7 @@
             "cwd": "labs/week1",
             "program": "bin/labs_week1.dart",
             "request": "launch",
+            "console": "terminal",
             "type": "dart"
         },
         {

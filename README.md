@@ -105,7 +105,7 @@ so don't send single files or a different project structure.
 - Individual multilayer Flutter application that works at least on one mobile
   platform (Android/iOS)
 - Application’s topic and scope is defined by the student, should be described
-  in the initial documentation and approved by the lecturer.
+  in the initial documentation and approved by the teacher of your group.
 - Project’s source code and final documentation is submitted according to
   the [Timeline](#timeline).
 
@@ -120,7 +120,6 @@ so don't send single files or a different project structure.
         - Custom design widgets — 5pt
     - The final documentation — 5pt
 - Optional requirements (max 50pt)
-    - Support for each additional platform (Mobile/Web/Desktop) — 5pt each
     - Animations
         - Implicit / ready-to-use packages — max 5pt
         - Custom — max 10pt
