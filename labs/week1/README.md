@@ -194,7 +194,9 @@ dart pub get
 1. Install Flutter (see [Setup](../../README.md#setup); on the faculty lab
    computers follow [How to install Flutter](../../misc/flutter_bootstrap.md)).
 2. Run `flutter doctor`.
-3. Create a new app with `flutter create` and run it with `flutter run -d chrome`.
+3. Outside this repository, create a new app with `flutter create` and run it
+   with `flutter run -d chrome`. An app created inside the repository breaks
+   `pub get` for the whole workspace.
 4. Change a text in the counter app, press `r` in the terminal and see the
    change (hot reload).
 
