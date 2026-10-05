@@ -1,5 +1,11 @@
 # Labs – week 1
 
+> ⚠️ ***Sending solutions***
+>
+> Run `flutter clean` in `labs/week1`, zip the whole directory as
+> `lab1_surname_name.zip` (e.g. `lab1_kowalski_jan.zip`) and send it by email
+> to the teacher of your group. See [Sending solutions](../../README.md#sending-solutions).
+
 If your IDE doesn't detect the project files,
 run the following in the terminal:
 

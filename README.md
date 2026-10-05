@@ -81,6 +81,23 @@ and is worth additional 3 pts each.
 
 Week 10–15 lab slots can be used for project consulting — only by prior arrangement.
 
+### Sending solutions
+
+Send each lab by email to the teacher of your group:
+
+- Group 1 — Wiktor Zając <wiktor.zajac@leancode.pl>
+- Group 2 — Piotr Rogulski <piotr.rogulski@leancode.pl>
+
+1. Solve the lab in your clone of this repository, in `labs/weekN`. Don't
+   create a separate project.
+2. Run `flutter clean` in `labs/weekN`.
+3. Zip the whole `labs/weekN` directory and name the archive
+   `labN_surname_name.zip`, lowercase and without Polish characters, e.g.
+   `lab2_kowalski_jan.zip`. The archive should contain one directory: `weekN`.
+
+Your teacher unpacks the archive in place of `labs/weekN` and runs it as it is,
+so don't send single files or a different project structure.
+
 ## Project
 
 ### Requirements
@@ -131,6 +148,13 @@ Week 10–15 lab slots can be used for project consulting — only by prior arra
 - 01.12.2026 — ***Mandatory*** project checkpoint
 - 29.01.2027 — Project Submission (source code + [final documentation](#final-documentation))
 - 14.02.2027 — [Late Project Submission](#late-project-submission)
+
+### Sending the project
+
+Send the project by email to the teacher of your group, as with
+[labs](#sending-solutions). Run `flutter clean`, then zip the project directory
+together with the final documentation (PDF) and name the archive
+`project_surname_name.zip`, e.g. `project_kowalski_jan.zip`.
 
 ### Initial Documentation
 
