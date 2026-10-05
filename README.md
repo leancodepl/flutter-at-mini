@@ -120,7 +120,6 @@ so don't send single files or a different project structure.
         - Custom design widgets — 5pt
     - The final documentation — 5pt
 - Optional requirements (max 50pt)
-    - Support for each additional platform (Mobile/Web/Desktop) — 5pt each
     - Animations
         - Implicit / ready-to-use packages — max 5pt
         - Custom — max 10pt
