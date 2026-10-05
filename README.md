@@ -105,7 +105,7 @@ so don't send single files or a different project structure.
 - Individual multilayer Flutter application that works at least on one mobile
   platform (Android/iOS)
 - Application’s topic and scope is defined by the student, should be described
-  in the initial documentation and approved by the lecturer.
+  in the initial documentation and approved by the teacher of your group.
 - Project’s source code and final documentation is submitted according to
   the [Timeline](#timeline).
 
