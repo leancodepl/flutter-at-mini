@@ -40,8 +40,7 @@ Points can be gained from:
 
 ## Lectures
 
-Lectures take place on Tuesdays. The schedule may change during the semester;
-changes are announced to students.
+Lectures take place on Tuesdays. If anything changes - it will be announced.
 
 | #  | Date           | Lecture                                                    | Lecturer         |
 |----|----------------|------------------------------------------------------------|------------------|
@@ -63,7 +62,8 @@ changes are announced to students.
 
 ## Labs
 
-Labs take place on Tuesdays, right after the lecture, in two groups. Each lab
+Labs take place on Tuesdays, right after the lecture, in two groups. From lab 2
+on, each lab is an exercise about the lecture from the previous week. Each lab
 consists of multiple parts. Completing all parts is optional (as your homework)
 and is worth additional 3 pts each.
 
