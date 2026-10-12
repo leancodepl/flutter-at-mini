@@ -13,6 +13,12 @@
             "type": "dart"
         },
         {
+            "name": "Week 2",
+            "cwd": "labs/week2",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
             "name": "Week 1 lecture",
             "cwd": "lectures/week1/flutter",
             "type": "dart",
