@@ -10,6 +10,8 @@
 > dart format --set-exit-if-changed .
 > flutter analyze
 > ```
+> 
+> No issues should be visible in the IDE either.
 
 > ⚠️ ***Sending solutions***
 >
