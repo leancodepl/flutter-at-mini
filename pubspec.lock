@@ -232,6 +232,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   frontend_server_client:
     dependency: transitive
     description:
@@ -248,6 +253,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
+  go_router:
+    dependency: transitive
+    description:
+      name: go_router
+      sha256: d8f590a69729f719177ea68eb1e598295e8dbc41bbc247fed78b2c8a25660d7c
+      url: "https://pub.dev"
+    source: hosted
+    version: "16.3.0"
   http:
     dependency: transitive
     description:
