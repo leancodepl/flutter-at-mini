@@ -29,6 +29,110 @@
             "cwd": "lectures/week5",
             "type": "dart",
             "request": "launch"
-        }, 
+        },
+        {
+            "name": "Week 3 lecture: all demos (browser)",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_00_all.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
+        {
+            "name": "Week 3 lecture: element tree",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_01_element_tree.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
+        {
+            "name": "Week 3 lecture: identity",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_02_identity.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
+        {
+            "name": "Week 3 lecture: lifecycle",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_03_lifecycle.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
+        {
+            "name": "Week 3 lecture: gestures",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_04_gestures.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
+        {
+            "name": "Week 3 lecture: rebuilds",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_05_rebuilds.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
+        {
+            "name": "Week 3 lecture: GlobalKey",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_06_global_key.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
+        {
+            "name": "Week 3 lecture: keys (FormExample)",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_07_keys.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
+        {
+            "name": "Week 3 lecture: InheritedWidget",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_08_inherited.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
+        {
+            "name": "Week 3 lecture: Provider",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_09_provider.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
+        {
+            "name": "Week 3 lecture: BuildContext pitfalls",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_10_context_pitfalls.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
+        {
+            "name": "Week 3 lecture: Listenables",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_11_listenables.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
+        {
+            "name": "Week 3 lecture: good practices",
+            "cwd": "lectures/week3/examples",
+            "program": "lib/demo_12_good_practices.dart",
+            "deviceId": "macos",
+            "type": "dart",
+            "request": "launch"
+        },
     ]
 }
