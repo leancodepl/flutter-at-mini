@@ -1,5 +1,6 @@
 import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
+import 'package:labs_week4/app_theme.dart';
 import 'package:labs_week4/common_widgets.dart';
 
 class const GenreScreen({super.key, required final String genreId})
@@ -7,7 +8,7 @@ class const GenreScreen({super.key, required final String genreId})
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(actions: const [AppThemeSwitcher()]),
       body: switch (Bookstore.getGenre(id: genreId)) {
         final genre? => CustomScrollView(
           slivers: [

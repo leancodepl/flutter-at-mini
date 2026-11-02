@@ -1,5 +1,6 @@
 import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
+import 'package:labs_week4/app_theme.dart';
 import 'package:labs_week4/common_widgets.dart';
 
 class const BookListScreen({super.key}) extends StatelessWidget {
@@ -8,7 +9,10 @@ class const BookListScreen({super.key}) extends StatelessWidget {
     final books = Bookstore.books;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Bookstore')),
+      appBar: AppBar(
+        title: const Text('Bookstore'),
+        actions: const [AppThemeSwitcher()],
+      ),
       body: CustomScrollView(
         slivers: [
           SliverPadding(

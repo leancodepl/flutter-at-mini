@@ -1,6 +1,7 @@
 import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:labs_week4/book_screen.dart';
 
 class const Cover(final String coverUrl, {super.key}) extends StatelessWidget {
   @override
@@ -31,6 +32,7 @@ class const _ListEntry({
   required final IconData icon,
   required final String label,
   final String? subtitle,
+  final Widget? trailing,
 }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -69,6 +71,10 @@ class const _ListEntry({
                   ],
                 ),
               ),
+              if (trailing case final trailing?) ...[
+                trailing,
+                const SizedBox(width: 8),
+              ],
               Icon(
                 Icons.chevron_right_rounded,
                 color: theme.colorScheme.onSurface,
@@ -90,6 +96,7 @@ class const BookEntry({super.key, required final Book book})
       icon: Icons.book_rounded,
       label: book.title,
       subtitle: 'by ${book.author.name}',
+      trailing: BookFavoriteButton(book: book),
     );
   }
 }

@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:labs_week4/app_theme.dart';
 import 'package:labs_week4/author_screen.dart';
 import 'package:labs_week4/book_list_screen.dart';
 import 'package:labs_week4/book_screen.dart';
 import 'package:labs_week4/genre_screen.dart';
+import 'package:labs_week4/global_providers.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   GoRouter.optionURLReflectsImperativeAPIs = true;
-  runApp(const MyApp());
+  runApp(const GlobalProviders(child: MyApp()));
 }
 
 class const MyApp({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final brightness = context.watch<AppTheme>().value;
+
     return MaterialApp.router(
       routerConfig: _router,
       title: 'Week 4',
@@ -20,6 +25,7 @@ class const MyApp({super.key}) extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepOrange,
           dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
+          brightness: brightness,
         ),
       ),
     );
