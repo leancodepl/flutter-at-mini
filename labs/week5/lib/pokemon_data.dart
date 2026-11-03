@@ -50,7 +50,7 @@ class _PokemonDataState() extends State<PokemonData> {
                         Text(name, style: theme.textTheme.displayLarge),
                         const SizedBox(height: 16),
                         Image.network(
-                          'https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/${id.toString().padLeft(3, '0')}.png',
+                          'https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/${id.toString().padLeft(4, '0')}.png',
                           width: 200,
                           height: 200,
                           frameBuilder: (context, child, frame, _) {
