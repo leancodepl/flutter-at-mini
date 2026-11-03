@@ -1,5 +1,6 @@
 import 'package:bookstore_data/bookstore_data.dart';
 import 'package:flutter/material.dart';
+import 'package:labs_week4/app_theme.dart';
 import 'package:labs_week4/common_widgets.dart';
 
 class const AuthorScreen({super.key, required final String authorId})
@@ -7,7 +8,7 @@ class const AuthorScreen({super.key, required final String authorId})
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(actions: const [AppThemeSwitcher()]),
       body: switch (Bookstore.getAuthor(id: authorId)) {
         final author? => LayoutBuilder(
           builder: (context, constraints) => switch (constraints.maxWidth) {
