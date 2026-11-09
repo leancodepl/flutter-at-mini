@@ -12,3 +12,65 @@
 ///     └── pokemon (MobxPokemonDetailsPage)
 /// ```
 library;
+
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:labs_week6/bloc/bloc_page.dart';
+import 'package:labs_week6/cubit/cubit_page.dart';
+import 'package:labs_week6/main.dart';
+import 'package:labs_week6/mobx/pokemon_details_page.dart';
+import 'package:labs_week6/riverpod/pokemon_details_page.dart';
+
+part 'routes.g.dart';
+
+@TypedGoRoute<HomeRoute>(
+  path: '/',
+  routes: [
+    TypedGoRoute<CubitRoute>(
+      path: 'cubit',
+      routes: [TypedGoRoute<CubitPokemonDetailsRoute>(path: 'pokemon')],
+    ),
+    TypedGoRoute<BlocRoute>(
+      path: 'bloc',
+      routes: [TypedGoRoute<BlocPokemonDetailsRoute>(path: 'pokemon')],
+    ),
+  ],
+)
+class const HomeRoute() extends GoRouteData with $HomeRoute {
+  @override
+  Widget build(BuildContext context, GoRouterState state) {
+    return const HomePage();
+  }
+}
+
+class const CubitRoute() extends GoRouteData with $CubitRoute {
+  @override
+  Widget build(BuildContext context, GoRouterState state) {
+    return const CubitPage();
+  }
+}
+
+class const BlocRoute() extends GoRouteData with $BlocRoute {
+  @override
+  Widget build(BuildContext context, GoRouterState state) {
+    return const BlocPage();
+  }
+}
+
+class const CubitPokemonDetailsRoute({required final String url})
+    extends GoRouteData
+    with $CubitPokemonDetailsRoute {
+  @override
+  Widget build(BuildContext context, GoRouterState state) {
+    return RiverpodPokemonDetailsPage(pokemonUrl: url);
+  }
+}
+
+class const BlocPokemonDetailsRoute({required final String url})
+    extends GoRouteData
+    with $BlocPokemonDetailsRoute {
+  @override
+  Widget build(BuildContext context, GoRouterState state) {
+    return MobxPokemonDetailsPage(pokemonUrl: url);
+  }
+}

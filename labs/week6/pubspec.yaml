@@ -7,6 +7,7 @@ environment:
 resolution: workspace
 
 dependencies:
+  bloc_concurrency: ^0.3.0
   dio: ^5.11.1
   equatable: ^2.1.0
   flutter:
