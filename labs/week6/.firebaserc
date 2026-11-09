@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "flutter-at-mini-2025"
+  },
+  "targets": {
+    "flutter-at-mini-2025": {
+      "hosting": {
+        "lab-6": [
+          "flutter-at-mini-2025-lab-6"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
