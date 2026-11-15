@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+import 'dart:math' as math;
+
 import 'package:lecture_week7/widgets/demo_scaffold.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const TweenAnimationBuilderDemo({super.key}) extends StatefulWidget {
   @override
@@ -13,37 +15,30 @@ class _TweenAnimationBuilderDemoState()
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = ColorScheme.of(context);
+
     return DemoScaffold(
       onToggle: () => setState(() => _targetValue += 1),
       buttonLabel: 'Rotate',
       child: TweenAnimationBuilder<double>(
         tween: Tween(begin: 0, end: _targetValue),
-        duration: const Duration(milliseconds: 600),
+        duration: const Duration(milliseconds: 1000),
         curve: Curves.easeOutBack,
         builder: (context, value, child) {
-          return Transform.rotate(
-            angle: value * 2 * 3.14159,
-            child: Transform.scale(scale: 1 + (value % 1) * 0.1, child: child),
-          );
+          return Transform.rotate(angle: value * 2 * math.pi, child: child);
         },
         child: Container(
-          width: 120,
-          height: 120,
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Color(0xFF79C0FF), Color(0xFF58A6FF)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-            borderRadius: BorderRadius.circular(24),
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0xFF58A6FF).withAlpha(60),
-                blurRadius: 24,
-              ),
-            ],
+          width: 140,
+          height: 140,
+          decoration: ShapeDecoration(
+            color: colorScheme.primaryContainer,
+            shape: MaterialShapeBorder(shape: MaterialShapes.sunny),
           ),
-          child: const Icon(Icons.refresh, color: Colors.white, size: 48),
+          child: Icon(
+            Icons.refresh,
+            color: colorScheme.onPrimaryContainer,
+            size: 48,
+          ),
         ),
       ),
     );

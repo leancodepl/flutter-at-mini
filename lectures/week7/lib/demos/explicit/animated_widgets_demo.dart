@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:lecture_week7/widgets/demo_scaffold.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const AnimatedWidgetsDemo({super.key}) extends StatefulWidget {
   @override
@@ -33,6 +33,7 @@ class _AnimatedWidgetsDemoState()
         ActionButton(
           label: _controller.isAnimating ? 'Pause' : 'Play',
           icon: _controller.isAnimating ? Icons.pause : Icons.play_arrow,
+          isPrimary: true,
           onPressed: () {
             setState(() {
               if (_controller.isAnimating) {
@@ -53,21 +54,21 @@ class _AnimatedWidgetsDemoState()
               scale: Tween<double>(begin: 0.5, end: 1).animate(
                 CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
               ),
-              child: _buildBox(const Color(0xFFF85149)),
+              child: _buildBox(context, MaterialShapes.cookie4Sided),
             ),
           ),
           _TransitionShowcase(
             label: 'Rotation',
             child: RotationTransition(
               turns: _controller,
-              child: _buildBox(const Color(0xFF7EE787)),
+              child: _buildBox(context, MaterialShapes.clover4Leaf),
             ),
           ),
           _TransitionShowcase(
             label: 'Fade',
             child: FadeTransition(
               opacity: _controller,
-              child: _buildBox(const Color(0xFF58A6FF)),
+              child: _buildBox(context, MaterialShapes.gem),
             ),
           ),
           _TransitionShowcase(
@@ -83,7 +84,7 @@ class _AnimatedWidgetsDemoState()
                       curve: Curves.easeInOut,
                     ),
                   ),
-              child: _buildBox(const Color(0xFFA371F7)),
+              child: _buildBox(context, MaterialShapes.pill),
             ),
           ),
         ],
@@ -91,14 +92,13 @@ class _AnimatedWidgetsDemoState()
     );
   }
 
-  Widget _buildBox(Color color) {
+  Widget _buildBox(BuildContext context, RoundedPolygon shape) {
     return Container(
-      width: 60,
-      height: 60,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [BoxShadow(color: color.withAlpha(80), blurRadius: 16)],
+      width: 120,
+      height: 120,
+      decoration: ShapeDecoration(
+        color: ColorScheme.of(context).primary,
+        shape: MaterialShapeBorder(shape: shape),
       ),
     );
   }
@@ -113,11 +113,12 @@ class const _TransitionShowcase({
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        SizedBox(width: 70, height: 70, child: Center(child: child)),
-        const SizedBox(height: 12),
+        Center(child: child),
+        const SizedBox(height: 36),
         Text(
           label,
-          style: const TextStyle(color: Color(0xFF8B949E), fontSize: 13),
+          style: TextTheme.of(context).labelLarge
+              ?.copyWith(color: ColorScheme.of(context).onSurfaceVariant),
         ),
       ],
     );

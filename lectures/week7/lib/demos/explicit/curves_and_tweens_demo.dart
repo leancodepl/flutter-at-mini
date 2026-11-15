@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:lecture_week7/widgets/demo_scaffold.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const CurvesAndTweensDemo({super.key}) extends StatefulWidget {
   @override
@@ -34,10 +34,16 @@ class _CurvesAndTweensDemoState()
       vsync: this,
       duration: const Duration(milliseconds: 1500),
     );
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
     _setupAnimations();
   }
 
   void _setupAnimations() {
+    final colorScheme = ColorScheme.of(context);
     final curvedAnimation = CurvedAnimation(
       parent: _controller,
       curve: _selectedCurve,
@@ -46,8 +52,8 @@ class _CurvesAndTweensDemoState()
     _animation = Tween<double>(begin: -100, end: 100).animate(curvedAnimation);
 
     _colorAnimation = ColorTween(
-      begin: const Color(0xFFF85149),
-      end: const Color(0xFF7EE787),
+      begin: colorScheme.tertiary,
+      end: colorScheme.primary,
     ).animate(curvedAnimation);
 
     _scaleAnimation = Tween<double>(
@@ -64,61 +70,40 @@ class _CurvesAndTweensDemoState()
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = ColorScheme.of(context);
+
     return ExplicitDemoScaffold(
       actions: [
         ActionButton(
           label: 'Animate',
           icon: Icons.play_arrow,
           onPressed: () => _controller.forward(from: 0),
+          isPrimary: true,
         ),
       ],
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            alignment: WrapAlignment.center,
-            children: _curves.entries.map((entry) {
-              final isSelected = _selectedCurve == entry.value;
-              return GestureDetector(
-                onTap: () {
-                  setState(() {
-                    _selectedCurve = entry.value;
-                    _setupAnimations();
-                  });
-                },
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 6,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              alignment: WrapAlignment.center,
+              children: [
+                for (final MapEntry(key: name, value: curve) in _curves.entries)
+                  ChoiceChip(
+                    label: Text(name),
+                    selected: _selectedCurve == curve,
+                    onSelected: (_) {
+                      setState(() {
+                        _selectedCurve = curve;
+                        _setupAnimations();
+                      });
+                    },
                   ),
-                  decoration: BoxDecoration(
-                    color: isSelected
-                        ? const Color(0xFF238636)
-                        : const Color(0xFF21262D),
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(
-                      color: isSelected
-                          ? const Color(0xFF3FB950)
-                          : const Color(0xFF30363D),
-                    ),
-                  ),
-                  child: Text(
-                    entry.key,
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: isSelected
-                          ? Colors.white
-                          : const Color(0xFF8B949E),
-                      fontWeight: isSelected
-                          ? FontWeight.w600
-                          : FontWeight.normal,
-                    ),
-                  ),
-                ),
-              );
-            }).toList(),
+              ],
+            ),
           ),
           const SizedBox(height: 48),
           AnimatedBuilder(
@@ -128,9 +113,8 @@ class _CurvesAndTweensDemoState()
                 width: 320,
                 height: 120,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF21262D),
-                  borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: const Color(0xFF30363D)),
+                  color: colorScheme.surfaceContainerHighest,
+                  borderRadius: BorderRadius.circular(32),
                 ),
                 child: Stack(
                   alignment: Alignment.center,
@@ -139,7 +123,7 @@ class _CurvesAndTweensDemoState()
                       width: 260,
                       height: 4,
                       decoration: BoxDecoration(
-                        color: const Color(0xFF30363D),
+                        color: colorScheme.outlineVariant,
                         borderRadius: BorderRadius.circular(2),
                       ),
                     ),
@@ -148,18 +132,11 @@ class _CurvesAndTweensDemoState()
                       child: Transform.scale(
                         scale: _scaleAnimation.value,
                         child: Container(
-                          width: 50,
-                          height: 50,
+                          width: 48,
+                          height: 48,
                           decoration: BoxDecoration(
                             color: _colorAnimation.value,
                             shape: BoxShape.circle,
-                            boxShadow: [
-                              BoxShadow(
-                                color: (_colorAnimation.value ?? Colors.white)
-                                    .withAlpha(100),
-                                blurRadius: 16,
-                              ),
-                            ],
                           ),
                         ),
                       ),

@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 
-import 'package:flutter/material.dart';
 import 'package:lecture_week7/widgets/demo_scaffold.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const AnimationControllerDemo({super.key}) extends StatefulWidget {
   @override
@@ -31,12 +31,15 @@ class _AnimationControllerDemoState()
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = ColorScheme.of(context);
+
     return ExplicitDemoScaffold(
       actions: [
         ActionButton(
           label: 'Forward',
           icon: Icons.play_arrow,
           onPressed: () => _controller.forward(from: 0),
+          isPrimary: true,
         ),
         ActionButton(
           label: 'Reverse',
@@ -52,7 +55,6 @@ class _AnimationControllerDemoState()
           label: 'Stop',
           icon: Icons.stop,
           onPressed: () => _controller.stop(),
-          isDestructive: true,
         ),
       ],
       child: AnimatedBuilder(
@@ -61,69 +63,41 @@ class _AnimationControllerDemoState()
           return Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Container(
+              SizedBox(
                 width: 200,
-                height: 8,
-                decoration: BoxDecoration(
-                  color: const Color(0xFF21262D),
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                child: FractionallySizedBox(
-                  alignment: Alignment.centerLeft,
-                  widthFactor: _controller.value,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                        colors: [Color(0xFF58A6FF), Color(0xFF7EE787)],
-                      ),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                  ),
-                ),
+                child: LinearProgressIndicator(value: _controller.value),
               ),
               const SizedBox(height: 16),
               Text(
                 'Value: ${_controller.value.toStringAsFixed(3)}',
-                style: const TextStyle(color: Color(0xFF8B949E), fontSize: 14),
+                style: TextTheme.of(context).labelLarge?.copyWith(
+                  color: colorScheme.onSurfaceVariant,
+                  fontFeatures: const [FontFeature.tabularFigures()],
+                ),
               ),
               const SizedBox(height: 32),
               Transform.rotate(
                 angle: _controller.value * 2 * math.pi,
                 child: Container(
-                  width: 100,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.lerp(
-                          const Color(0xFF58A6FF),
-                          const Color(0xFF7EE787),
-                          _controller.value,
-                        )!,
-                        Color.lerp(
-                          const Color(0xFF1F6FEB),
-                          const Color(0xFF3FB950),
-                          _controller.value,
-                        )!,
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
+                  width: 120,
+                  height: 120,
+                  decoration: ShapeDecoration(
+                    color: Color.lerp(
+                      colorScheme.primaryContainer,
+                      colorScheme.inverseSurface,
+                      _controller.value,
                     ),
-                    borderRadius: BorderRadius.circular(16),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color.lerp(
-                          const Color(0xFF58A6FF),
-                          const Color(0xFF7EE787),
-                          _controller.value,
-                        )!.withAlpha(80),
-                        blurRadius: 24,
-                      ),
-                    ],
+                    shape: MaterialShapeBorder(
+                      shape: MaterialShapes.cookie9Sided,
+                    ),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.settings,
-                    color: Colors.white,
+                    color: Color.lerp(
+                      colorScheme.onPrimaryContainer,
+                      colorScheme.onInverseSurface,
+                      _controller.value,
+                    ),
                     size: 44,
                   ),
                 ),

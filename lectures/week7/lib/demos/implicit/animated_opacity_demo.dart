@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:lecture_week7/widgets/demo_scaffold.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const AnimatedOpacityDemo({super.key}) extends StatefulWidget {
   @override
@@ -11,6 +11,8 @@ class _AnimatedOpacityDemoState() extends State<AnimatedOpacityDemo> {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = ColorScheme.of(context);
+
     return DemoScaffold(
       onToggle: () => setState(() => _visible = !_visible),
       child: AnimatedOpacity(
@@ -20,22 +22,14 @@ class _AnimatedOpacityDemoState() extends State<AnimatedOpacityDemo> {
         child: Container(
           width: 150,
           height: 150,
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Color(0xFFF778BA), Color(0xFFFF7B72)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0xFFF778BA).withAlpha(60),
-                blurRadius: 24,
-              ),
-            ],
+          decoration: ShapeDecoration(
+            color: colorScheme.secondaryContainer,
+            shape: MaterialShapeBorder(shape: MaterialShapes.ghostish),
           ),
-          child: const Center(
-            child: Text('👻', style: TextStyle(fontSize: 48)),
+          child: Icon(
+            Icons.visibility_outlined,
+            color: colorScheme.onSecondaryContainer,
+            size: 56,
           ),
         ),
       ),

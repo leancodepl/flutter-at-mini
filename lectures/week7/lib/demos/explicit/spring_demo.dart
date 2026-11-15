@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 import 'package:lecture_week7/widgets/demo_scaffold.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const SpringDemo({super.key}) extends StatefulWidget {
   @override
@@ -14,31 +14,39 @@ class _SpringDemoState()
   late final List<Animation<double>> _animations;
   bool _isAnimating = false;
 
-  static const _springs = [
+  static final _springs = [
     (
       name: 'Bouncy',
       desc: 'Low damping',
-      color: Color(0xFFF85149),
-      spring: SpringDescription(mass: 1, stiffness: 200, damping: 5),
+      spring: SpringDescription.withDampingRatio(
+        mass: 1,
+        stiffness: 200,
+        ratio: 0.2,
+      ),
     ),
     (
       name: 'Smooth',
       desc: 'Critical damping',
-      color: Color(0xFF7EE787),
-      spring: SpringDescription(mass: 1, stiffness: 200, damping: 20),
+      spring: SpringDescription.withDampingRatio(mass: 1, stiffness: 200),
     ),
     (
       name: 'Heavy',
       desc: 'High mass',
-      color: Color(0xFF58A6FF),
-      spring: SpringDescription(mass: 100, stiffness: 200, damping: 15),
+      spring: SpringDescription.withDampingRatio(mass: 100, stiffness: 200),
     ),
   ];
+
+  static const _ballSize = 50.0;
+  static const _travel = 100.0;
+  static const _trackHeight = _ballSize + _travel * 1.6;
 
   @override
   void initState() {
     super.initState();
-    _controllers = List.generate(3, (_) => AnimationController(vsync: this));
+    _controllers = List.generate(
+      3,
+      (_) => AnimationController.unbounded(vsync: this),
+    );
     _animations = _controllers
         .map((c) => Tween<double>(begin: 0, end: 1).animate(c))
         .toList();
@@ -76,7 +84,7 @@ class _SpringDemoState()
 
   void _reset() {
     for (final controller in _controllers) {
-      controller.reset();
+      controller.value = 0;
     }
     setState(() => _isAnimating = false);
   }
@@ -91,12 +99,16 @@ class _SpringDemoState()
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = ColorScheme.of(context);
+    final textTheme = TextTheme.of(context);
+
     return ExplicitDemoScaffold(
       actions: [
         ActionButton(
           label: 'Animate',
           icon: Icons.play_arrow,
           onPressed: _animate,
+          isPrimary: true,
         ),
         ActionButton(label: 'Reset', icon: Icons.refresh, onPressed: _reset),
       ],
@@ -109,21 +121,21 @@ class _SpringDemoState()
           return Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
-                spring.name,
-                style: TextStyle(color: spring.color, fontSize: 16),
-              ),
+              Text(spring.name, style: textTheme.titleMedium),
               const SizedBox(height: 4),
               Text(
                 spring.desc,
-                style: const TextStyle(color: Color(0xFF8B949E), fontSize: 12),
+                style: textTheme.bodySmall?.copyWith(
+                  color: colorScheme.onSurfaceVariant,
+                ),
               ),
               const SizedBox(height: 20),
               SizedBox(
-                height: 200,
+                height: _trackHeight,
                 width: 60,
                 child: Stack(
                   alignment: Alignment.topCenter,
+                  clipBehavior: Clip.none,
                   children: [
                     Positioned(
                       left: 27,
@@ -132,26 +144,27 @@ class _SpringDemoState()
                       child: Container(
                         width: 6,
                         decoration: BoxDecoration(
-                          color: const Color(0xFF30363D),
+                          color: colorScheme.outlineVariant,
                           borderRadius: BorderRadius.circular(3),
                         ),
                       ),
                     ),
                     Positioned(
-                      top: value * 150,
+                      top: _travel + _ballSize / 2 - 1,
                       child: Container(
-                        width: 50,
-                        height: 50,
+                        width: 40,
+                        height: 2,
+                        color: colorScheme.outline,
+                      ),
+                    ),
+                    Positioned(
+                      top: value * _travel,
+                      child: Container(
+                        width: _ballSize,
+                        height: _ballSize,
                         decoration: BoxDecoration(
-                          color: spring.color,
+                          color: colorScheme.primary,
                           shape: BoxShape.circle,
-                          boxShadow: [
-                            BoxShadow(
-                              color: spring.color.withAlpha(100),
-                              blurRadius: 16,
-                              spreadRadius: 2,
-                            ),
-                          ],
                         ),
                       ),
                     ),

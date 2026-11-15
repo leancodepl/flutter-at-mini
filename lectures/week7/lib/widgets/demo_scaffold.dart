@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const DemoScaffold({
   super.key,
@@ -8,30 +8,16 @@ class const DemoScaffold({
 }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Color(0xFF161B22), Color(0xFF0D1117)],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
+    return ExplicitDemoScaffold(
+      actions: [
+        ActionButton(
+          label: buttonLabel,
+          icon: Icons.play_arrow,
+          onPressed: onToggle,
+          isPrimary: true,
         ),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded(child: Center(child: child)),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 32),
-            child: ElevatedButton.icon(
-              onPressed: onToggle,
-              icon: const Icon(Icons.play_arrow, size: 20),
-              label: Text(buttonLabel),
-            ),
-          ),
-        ],
-      ),
+      ],
+      child: child,
     );
   }
 }
@@ -43,25 +29,15 @@ class const ExplicitDemoScaffold({
 }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Color(0xFF161B22), Color(0xFF0D1117)],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        ),
-      ),
+    return SizedBox.expand(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(child: Center(child: child)),
           Padding(
-            padding: const EdgeInsets.only(bottom: 32),
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
             child: Wrap(
-              spacing: 12,
-              runSpacing: 12,
+              spacing: 8,
+              runSpacing: 8,
               alignment: WrapAlignment.center,
               children: actions,
             ),
@@ -77,21 +53,25 @@ class const ActionButton({
   required final String label,
   required final IconData icon,
   required final VoidCallback onPressed,
-  final bool isDestructive = false,
+  final bool isPrimary = false,
 }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final colorScheme = ColorScheme.of(context);
+
     return ElevatedButton.icon(
       onPressed: onPressed,
-      icon: Icon(icon, size: 18),
+      icon: Icon(icon),
       label: Text(label),
       style: ElevatedButton.styleFrom(
-        backgroundColor: isDestructive
-            ? const Color(0xFFF85149)
-            : const Color(0xFF238636),
-        foregroundColor: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-      ),
+        sizeVariant: .medium,
+        backgroundColor: isPrimary
+            ? colorScheme.primary
+            : colorScheme.secondaryContainer,
+        foregroundColor: isPrimary
+            ? colorScheme.onPrimary
+            : colorScheme.onSecondaryContainer,
+      ).copyWith(elevation: const WidgetStatePropertyAll(0)),
     );
   }
 }

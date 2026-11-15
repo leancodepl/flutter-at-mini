@@ -1,45 +1,33 @@
 import 'package:animations/animations.dart';
-import 'package:flutter/material.dart';
+import 'package:lecture_week7/widgets/container_colors.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const AnimationsPackageDemo({super.key}) extends StatelessWidget {
+  static const _items = [
+    (icon: Icons.photo_library, label: 'Gallery'),
+    (icon: Icons.music_note, label: 'Music'),
+    (icon: Icons.video_library, label: 'Videos'),
+    (icon: Icons.article, label: 'Articles'),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Color(0xFF161B22), Color(0xFF0D1117)],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        ),
-      ),
-      child: const Center(
+    final colorScheme = ColorScheme.of(context);
+
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
         child: Wrap(
-          spacing: 20,
-          runSpacing: 20,
+          spacing: 16,
+          runSpacing: 16,
           alignment: WrapAlignment.center,
           children: [
-            _OpenContainerCard(
-              color: Color(0xFFF85149),
-              icon: Icons.photo_library,
-              label: 'Gallery',
-            ),
-            _OpenContainerCard(
-              color: Color(0xFF7EE787),
-              icon: Icons.music_note,
-              label: 'Music',
-            ),
-            _OpenContainerCard(
-              color: Color(0xFF58A6FF),
-              icon: Icons.video_library,
-              label: 'Videos',
-            ),
-            _OpenContainerCard(
-              color: Color(0xFFA371F7),
-              icon: Icons.article,
-              label: 'Articles',
-            ),
+            for (final (index, item) in _items.indexed)
+              _OpenContainerCard(
+                colors: colorScheme.containerColorsAt(index),
+                icon: item.icon,
+                label: item.label,
+              ),
           ],
         ),
       ),
@@ -48,7 +36,7 @@ class const AnimationsPackageDemo({super.key}) extends StatelessWidget {
 }
 
 class const _OpenContainerCard({
-  required final Color color,
+  required final ContainerColors colors,
   required final IconData icon,
   required final String label,
 }) extends StatelessWidget {
@@ -58,40 +46,33 @@ class const _OpenContainerCard({
       transitionDuration: const Duration(milliseconds: 500),
       openBuilder: (context, closeContainer) {
         return _DetailPage(
-          color: color,
+          colors: colors,
           icon: icon,
           label: label,
           onClose: closeContainer,
         );
       },
+      openColor: ColorScheme.of(context).surface,
       closedElevation: 0,
       closedShape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(32),
       ),
-      closedColor: color,
+      closedColor: colors.container,
       closedBuilder: (context, openContainer) {
-        return GestureDetector(
-          onTap: openContainer,
-          child: Container(
-            width: 120,
-            height: 120,
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: color.withAlpha(80),
-                  blurRadius: 20,
-                  offset: const Offset(0, 8),
-                ),
-              ],
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(icon, color: Colors.white, size: 40),
-                const SizedBox(height: 8),
-                Text(label, style: const TextStyle(color: Colors.white)),
-              ],
-            ),
+        return SizedBox(
+          width: 136,
+          height: 136,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, color: colors.onContainer, size: 40),
+              const SizedBox(height: 8),
+              Text(
+                label,
+                style: TextTheme.of(context).labelLarge
+                    ?.copyWith(color: colors.onContainer),
+              ),
+            ],
           ),
         );
       },
@@ -100,42 +81,45 @@ class const _OpenContainerCard({
 }
 
 class const _DetailPage({
-  required final Color color,
+  required final ContainerColors colors,
   required final IconData icon,
   required final String label,
   required final VoidCallback onClose,
 }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final textTheme = TextTheme.of(context);
+
     return Scaffold(
-      backgroundColor: color,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.close, color: Colors.white),
-          onPressed: onClose,
-        ),
-        title: Text(label, style: const TextStyle(color: Colors.white)),
+        leading: CloseButton(onPressed: onClose),
+        title: Text(label),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, color: Colors.white, size: 120),
-            const SizedBox(height: 24),
-            Text(
-              label,
-              style: const TextStyle(color: Colors.white, fontSize: 32),
+            Container(
+              width: 160,
+              height: 160,
+              decoration: ShapeDecoration(
+                color: colors.container,
+                shape: MaterialShapeBorder(shape: MaterialShapes.cookie9Sided),
+              ),
+              child: Icon(icon, color: colors.onContainer, size: 80),
             ),
-            const SizedBox(height: 16),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 48),
+            const SizedBox(height: 24),
+            Text(label, style: textTheme.headlineMedium),
+            const SizedBox(height: 8),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 48),
               child: Text(
                 'OpenContainer from animations package\n'
                 'provides Material container transform',
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white70, fontSize: 16),
+                style: textTheme.bodyLarge?.copyWith(
+                  color: ColorScheme.of(context).onSurfaceVariant,
+                ),
               ),
             ),
           ],

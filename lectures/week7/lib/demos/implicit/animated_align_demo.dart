@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:lecture_week7/widgets/demo_scaffold.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const AnimatedAlignDemo({super.key}) extends StatefulWidget {
   @override
@@ -19,6 +19,8 @@ class _AnimatedAlignDemoState() extends State<AnimatedAlignDemo> {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = ColorScheme.of(context);
+
     return DemoScaffold(
       onToggle: () => setState(
         () => _alignmentIndex = (_alignmentIndex + 1) % _alignments.length,
@@ -27,34 +29,23 @@ class _AnimatedAlignDemoState() extends State<AnimatedAlignDemo> {
       child: Container(
         width: 280,
         height: 280,
+        padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: const Color(0xFF21262D),
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: const Color(0xFF30363D)),
+          color: colorScheme.surfaceContainerHighest,
+          borderRadius: BorderRadius.circular(32),
         ),
         child: AnimatedAlign(
           duration: const Duration(milliseconds: 400),
           curve: Curves.easeInOutBack,
           alignment: _alignments[_alignmentIndex],
           child: Container(
-            width: 60,
-            height: 60,
-            margin: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Color(0xFFFFA657), Color(0xFFD29922)],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              borderRadius: BorderRadius.circular(12),
-              boxShadow: [
-                BoxShadow(
-                  color: const Color(0xFFFFA657).withAlpha(60),
-                  blurRadius: 16,
-                ),
-              ],
+            width: 64,
+            height: 64,
+            decoration: ShapeDecoration(
+              color: colorScheme.primary,
+              shape: MaterialShapeBorder(shape: MaterialShapes.cookie4Sided),
             ),
-            child: const Icon(Icons.navigation, color: Colors.white),
+            child: Icon(Icons.navigation, color: colorScheme.onPrimary),
           ),
         ),
       ),

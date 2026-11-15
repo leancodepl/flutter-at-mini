@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:lecture_week7/widgets/demo_scaffold.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const AnimatedSwitcherDemo({super.key}) extends StatefulWidget {
   @override
@@ -9,8 +9,18 @@ class const AnimatedSwitcherDemo({super.key}) extends StatefulWidget {
 class _AnimatedSwitcherDemoState() extends State<AnimatedSwitcherDemo> {
   int _count = 0;
 
+  static final _shapes = [
+    MaterialShapes.cookie9Sided,
+    MaterialShapes.pentagon,
+    MaterialShapes.cookie6Sided,
+    MaterialShapes.puffy,
+    MaterialShapes.sunny,
+  ];
+
   @override
   Widget build(BuildContext context) {
+    final colorScheme = ColorScheme.of(context);
+
     return DemoScaffold(
       onToggle: () => setState(() => _count++),
       buttonLabel: 'Increment',
@@ -26,24 +36,17 @@ class _AnimatedSwitcherDemoState() extends State<AnimatedSwitcherDemo> {
           key: ValueKey<int>(_count),
           width: 150,
           height: 150,
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Color(0xFFA371F7), Color(0xFF8957E5)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0xFFA371F7).withAlpha(60),
-                blurRadius: 24,
-              ),
-            ],
+          decoration: ShapeDecoration(
+            color: colorScheme.tertiaryContainer,
+            shape: MaterialShapeBorder(shape: _shapes[_count % _shapes.length]),
           ),
           child: Center(
             child: Text(
               '$_count',
-              style: const TextStyle(fontSize: 64, color: Colors.white),
+              style: TextTheme.of(context).displayLarge?.copyWith(
+                color: colorScheme.onTertiaryContainer,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
         ),

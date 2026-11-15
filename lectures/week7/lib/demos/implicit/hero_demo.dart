@@ -1,41 +1,36 @@
-import 'package:flutter/material.dart';
+import 'package:lecture_week7/widgets/container_colors.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const HeroDemo({super.key}) extends StatelessWidget {
-  static const _items = [
-    (color: Color(0xFFF85149), icon: Icons.rocket_launch, tag: 'rocket'),
-    (color: Color(0xFF7EE787), icon: Icons.eco, tag: 'eco'),
-    (color: Color(0xFF58A6FF), icon: Icons.water_drop, tag: 'water'),
-    (color: Color(0xFFA371F7), icon: Icons.star, tag: 'star'),
-    (color: Color(0xFFFFA657), icon: Icons.sunny, tag: 'sun'),
-    (color: Color(0xFFF778BA), icon: Icons.favorite, tag: 'heart'),
+  static final _items = [
+    (icon: Icons.rocket_launch, shape: MaterialShapes.arch, tag: 'rocket'),
+    (icon: Icons.eco, shape: MaterialShapes.clover4Leaf, tag: 'eco'),
+    (icon: Icons.water_drop, shape: MaterialShapes.cookie6Sided, tag: 'water'),
+    (icon: Icons.star, shape: MaterialShapes.softBurst, tag: 'star'),
+    (icon: Icons.sunny, shape: MaterialShapes.sunny, tag: 'sun'),
+    (icon: Icons.favorite, shape: MaterialShapes.pixelCircle, tag: 'heart'),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Color(0xFF161B22), Color(0xFF0D1117)],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        ),
-      ),
-      child: Center(
+    final colorScheme = ColorScheme.of(context);
+
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
         child: Wrap(
           spacing: 16,
           runSpacing: 16,
           alignment: WrapAlignment.center,
-          children: _items
-              .map(
-                (item) => _HeroCard(
-                  color: item.color,
-                  icon: item.icon,
-                  tag: item.tag,
-                ),
-              )
-              .toList(),
+          children: [
+            for (final (index, item) in _items.indexed)
+              _HeroCard(
+                colors: colorScheme.containerColorsAt(index),
+                icon: item.icon,
+                shape: item.shape,
+                tag: item.tag,
+              ),
+          ],
         ),
       ),
     );
@@ -43,43 +38,43 @@ class const HeroDemo({super.key}) extends StatelessWidget {
 }
 
 class const _HeroCard({
-  required final Color color,
+  required final ContainerColors colors,
   required final IconData icon,
+  required final RoundedPolygon shape,
   required final String tag,
 }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.of(context).push(
-          PageRouteBuilder<void>(
-            pageBuilder: (context, animation, secondaryAnimation) {
-              return _HeroDetailPage(color: color, icon: icon, tag: tag);
-            },
-            transitionsBuilder:
-                (context, animation, secondaryAnimation, child) {
-                  return FadeTransition(opacity: animation, child: child);
+    return Hero(
+      tag: tag,
+      child: Material(
+        color: colors.container,
+        shape: MaterialShapeBorder(shape: shape),
+        clipBehavior: Clip.antiAlias,
+        child: InkWell(
+          onTap: () {
+            Navigator.of(context).push(
+              PageRouteBuilder<void>(
+                pageBuilder: (context, animation, secondaryAnimation) {
+                  return _HeroDetailPage(
+                    colors: colors,
+                    icon: icon,
+                    shape: shape,
+                    tag: tag,
+                  );
                 },
-          ),
-        );
-      },
-      child: Hero(
-        tag: tag,
-        child: Container(
-          width: 100,
-          height: 100,
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: color.withAlpha(80),
-                blurRadius: 16,
-                offset: const Offset(0, 6),
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) {
+                      return FadeTransition(opacity: animation, child: child);
+                    },
               ),
-            ],
+            );
+          },
+          child: SizedBox(
+            width: 140,
+            height: 140,
+            child: Icon(icon, color: colors.onContainer, size: 64),
           ),
-          child: Icon(icon, color: Colors.white, size: 40),
         ),
       ),
     );
@@ -87,54 +82,41 @@ class const _HeroCard({
 }
 
 class const _HeroDetailPage({
-  required final Color color,
+  required final ContainerColors colors,
   required final IconData icon,
+  required final RoundedPolygon shape,
   required final String tag,
 }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final textTheme = TextTheme.of(context);
+
     return Scaffold(
-      backgroundColor: const Color(0xFF0D1117),
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-      ),
+      appBar: AppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Hero(
               tag: tag,
-              child: Container(
-                width: 200,
-                height: 200,
-                decoration: BoxDecoration(
-                  color: color,
-                  borderRadius: BorderRadius.circular(40),
-                  boxShadow: [
-                    BoxShadow(
-                      color: color.withAlpha(100),
-                      blurRadius: 40,
-                      spreadRadius: 8,
-                    ),
-                  ],
+              child: Material(
+                color: colors.container,
+                shape: MaterialShapeBorder(shape: shape),
+                child: SizedBox(
+                  width: 250,
+                  height: 250,
+                  child: Icon(icon, color: colors.onContainer, size: 64),
                 ),
-                child: Icon(icon, color: Colors.white, size: 80),
               ),
             ),
             const SizedBox(height: 32),
+            Text('Hero Animation', style: textTheme.headlineMedium),
+            const SizedBox(height: 8),
             Text(
-              'Hero Animation',
-              style: TextStyle(color: color, fontSize: 28),
-            ),
-            const SizedBox(height: 12),
-            const Text(
               'Same tag = shared element transition',
-              style: TextStyle(color: Color(0xFF8B949E), fontSize: 16),
+              style: textTheme.bodyLarge?.copyWith(
+                color: ColorScheme.of(context).onSurfaceVariant,
+              ),
             ),
           ],
         ),

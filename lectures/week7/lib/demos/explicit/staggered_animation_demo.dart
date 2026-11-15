@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:lecture_week7/widgets/demo_scaffold.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const StaggeredAnimationDemo({super.key}) extends StatefulWidget {
   @override
@@ -12,6 +12,14 @@ class _StaggeredAnimationDemoState()
   late final AnimationController _controller;
   late final List<Animation<double>> _slideAnimations;
   late final List<Animation<double>> _fadeAnimations;
+
+  static final _shapes = [
+    MaterialShapes.cookie4Sided,
+    MaterialShapes.clover4Leaf,
+    MaterialShapes.sunny,
+    MaterialShapes.cookie6Sided,
+    MaterialShapes.puffy,
+  ];
 
   @override
   void initState() {
@@ -58,6 +66,7 @@ class _StaggeredAnimationDemoState()
           label: 'Play',
           icon: Icons.play_arrow,
           onPressed: () => _controller.forward(from: 0),
+          isPrimary: true,
         ),
         ActionButton(
           label: 'Reset',
@@ -68,42 +77,41 @@ class _StaggeredAnimationDemoState()
       child: AnimatedBuilder(
         animation: _controller,
         builder: (context, child) {
+          final colorScheme = ColorScheme.of(context);
+
           return Column(
             mainAxisSize: MainAxisSize.min,
             children: List.generate(5, (index) {
-              const colors = [
-                Color(0xFFF85149),
-                Color(0xFFFFA657),
-                Color(0xFF7EE787),
-                Color(0xFF58A6FF),
-                Color(0xFFA371F7),
-              ];
               return Transform.translate(
                 offset: Offset(_slideAnimations[index].value, 0),
                 child: Opacity(
                   opacity: _fadeAnimations[index].value,
-                  child: Container(
-                    width: 240,
-                    height: 48,
-                    margin: const EdgeInsets.symmetric(vertical: 6),
-                    decoration: BoxDecoration(
-                      color: colors[index],
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: colors[index].withAlpha(60),
-                          blurRadius: 12,
-                          offset: const Offset(0, 4),
+                  child: SizedBox(
+                    width: 280,
+                    child: Card.filled(
+                      margin: const EdgeInsets.symmetric(vertical: 1),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.vertical(
+                          top: Radius.circular(index == 0 ? 20 : 4),
+                          bottom: Radius.circular(index == 4 ? 20 : 4),
                         ),
-                      ],
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Item ${index + 1}',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
+                      ),
+                      child: ListTile(
+                        leading: Container(
+                          width: 40,
+                          height: 40,
+                          alignment: Alignment.center,
+                          decoration: ShapeDecoration(
+                            color: colorScheme.primary,
+                            shape: MaterialShapeBorder(shape: _shapes[index]),
+                          ),
+                          child: Text(
+                            '${index + 1}',
+                            style: TextTheme.of(context).titleMedium
+                                ?.copyWith(color: colorScheme.onPrimary),
+                          ),
                         ),
+                        title: Text('Item ${index + 1}'),
                       ),
                     ),
                   ),

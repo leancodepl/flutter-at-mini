@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:lecture_week7/widgets/demo_scaffold.dart';
+import 'package:material_ui/material_ui.dart';
 
 class const AnimatedContainerDemo({super.key}) extends StatefulWidget {
   @override
@@ -11,6 +11,8 @@ class _AnimatedContainerDemoState() extends State<AnimatedContainerDemo> {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = ColorScheme.of(context);
+
     return DemoScaffold(
       onToggle: () => setState(() => _expanded = !_expanded),
       child: AnimatedContainer(
@@ -18,28 +20,29 @@ class _AnimatedContainerDemoState() extends State<AnimatedContainerDemo> {
         curve: Curves.easeInOutCubic,
         width: _expanded ? 200 : 100,
         height: _expanded ? 200 : 100,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: _expanded
-                ? [const Color(0xFF7EE787), const Color(0xFF3FB950)]
-                : [const Color(0xFF58A6FF), const Color(0xFF1F6FEB)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          borderRadius: BorderRadius.circular(_expanded ? 32 : 8),
-          boxShadow: [
-            BoxShadow(
-              color:
-                  (_expanded
-                          ? const Color(0xFF7EE787)
-                          : const Color(0xFF58A6FF))
-                      .withAlpha(80),
-              blurRadius: 24,
-              spreadRadius: 2,
+        decoration: ShapeDecoration(
+          color: _expanded
+              ? colorScheme.tertiaryContainer
+              : colorScheme.primaryContainer,
+          shape: MaterialShapeBorder(
+            shape: _expanded
+                ? MaterialShapes.cookie9Sided
+                : MaterialShapes.square,
+            side: .new(
+              width: _expanded ? 16 : 2,
+              color: _expanded
+                  ? colorScheme.onTertiaryContainer
+                  : colorScheme.onPrimaryContainer,
             ),
-          ],
+          ),
         ),
-        child: const Icon(Icons.flutter_dash, color: Colors.white, size: 40),
+        child: Icon(
+          Icons.flutter_dash,
+          color: _expanded
+              ? colorScheme.onTertiaryContainer
+              : colorScheme.onPrimaryContainer,
+          size: 40,
+        ),
       ),
     );
   }
