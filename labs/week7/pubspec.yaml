@@ -1,0 +1,21 @@
+name: labs_week7
+
+environment:
+  sdk: 3.13.5
+  flutter: 3.47.6
+
+resolution: workspace
+
+dependencies:
+  cloud_firestore: ^7.2.0
+  collection: ^1.19.1
+  equatable: ^2.1.0
+  firebase_auth: ^7.1.0
+  firebase_core: ^5.2.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  provider: ^6.1.5+1
+
+flutter:
+  uses-material-design: true
