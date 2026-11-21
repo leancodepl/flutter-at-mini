@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:labs_week6/routes/routes.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class const MyApp({super.key}) extends StatelessWidget {
@@ -33,14 +35,14 @@ class const HomePage({super.key}) extends StatelessWidget {
             Expanded(
               child: _PageCard(
                 label: 'Cubit',
-                onTap: () => throw UnimplementedError('TODO'),
+                onTap: () => const CubitRoute().go(context),
               ),
             ),
             const SizedBox(height: 16),
             Expanded(
               child: _PageCard(
                 label: 'Bloc',
-                onTap: () => throw UnimplementedError('TODO'),
+                onTap: () => const BlocRoute().go(context),
               ),
             ),
           ],
@@ -50,7 +52,7 @@ class const HomePage({super.key}) extends StatelessWidget {
   }
 }
 
-final _router = GoRouter(routes: [/* TODO: use generated routes */]);
+final _router = GoRouter(routes: $appRoutes);
 
 class const _PageCard({
   required final String label,
