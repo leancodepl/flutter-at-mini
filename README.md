@@ -50,8 +50,8 @@ Lectures take place on Tuesdays. If anything changes - it will be announced.
 | 4  | **27.10.2026** | [Asynchrony and HTTP](lectures/week4)                      | Piotr Rogulski   |
 | 5  | **03.11.2026** | [State Management with External Libraries](lectures/week5) | Wiktor Zając     |
 | 6  | **10.11.2026** | [Firebase](lectures/week6)                                 | Wiktor Zając     |
-| 7  | **17.11.2026** | [Animations](lectures/week7)                               | Wiktor Zając     |
-| 8  | **24.11.2026** | [Architecture](lectures/week8)                             | Mateusz Wojtczak |
+| 7  | **17.11.2026** | [Animations](lectures/week7)                               | Piotr Rogulski   |
+| 8  | **24.11.2026** | [Architecture](lectures/week8)                             | Wiktor Zając     |
 | 9  | **01.12.2026** | [Testing](lectures/week9)                                  | Wiktor Zając     |
 | 10 | **08.12.2026** | [Forms](lectures/week10)                                   | Kamil Sztandur   |
 | 11 | **15.12.2026** | [Data Persistence](lectures/week11)                        | Piotr Rogulski   |
