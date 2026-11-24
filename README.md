@@ -67,17 +67,17 @@ on, each lab is an exercise about the lecture from the previous week. Each lab
 consists of multiple parts. Completing all parts is optional (as your homework)
 and is worth additional 3 pts each.
 
-| # | Date           | Lab                                                              |
-|---|----------------|------------------------------------------------------------------|
-| 1 | **06.10.2026** | [Getting started: Dart and Flutter setup](labs/week1)            |
-| 2 | **13.10.2026** | [Layouts 1](labs/week2)                                          |
-| 3 | **20.10.2026** | [Layouts 2 & using context](labs/week3)                          |
-| 4 | **27.10.2026** | [Context and StatefulWidget](labs/week4)                         |
-| 5 | **03.11.2026** | [Communication with API](labs/week5)                             |
-| 6 | **10.11.2026** | [State management with external services](labs/week6)            |
-| 7 | **17.11.2026** | [Firebase Auth in action](labs/week7)                            |
-| 8 | **24.11.2026** | [Animations](labs/week8)                                         |
-| 9 | **01.12.2026** | ***Mandatory*** project checkpoint                               |
+| # | Date           | Lab                                                                 |
+|---|----------------|---------------------------------------------------------------------|
+| 1 | **06.10.2026** | [Getting started: Dart and Flutter setup](labs/week1)               |
+| 2 | **13.10.2026** | [Layouts 1](labs/week2)                                             |
+| 3 | **20.10.2026** | [Layouts 2 & using context](labs/week3)                             |
+| 4 | **27.10.2026** | [Context and StatefulWidget](labs/week4)                            |
+| 5 | **03.11.2026** | [Communication with API](labs/week5)                                |
+| 6 | **10.11.2026** | [State management with external services](labs/week6)               |
+| 7 | **17.11.2026** | [Firebase Auth in action](labs/week7)                               |
+| 8 | **24.11.2026** | [Animations](labs/week8)                                            |
+| 9 | **01.12.2026** | [***Mandatory*** project checkpoint](#mandatory-project-checkpoint) |
 
 Week 10–15 lab slots can be used for project consulting — only by prior arrangement.
 
@@ -144,7 +144,7 @@ so don't send single files or a different project structure.
 ### Timeline
 
 - 27.10.2026 — [Initial documentation](#initial-documentation)
-- 01.12.2026 — ***Mandatory*** project checkpoint
+- 01.12.2026 — [***Mandatory*** project checkpoint](#mandatory-project-checkpoint)
 - 29.01.2027 — Project Submission (source code + [final documentation](#final-documentation))
 - 14.02.2027 — [Late Project Submission](#late-project-submission)
 
@@ -162,6 +162,14 @@ Initial documentation should contain:
 - Project description
 - Desired optional requirements should be listed in the initial documentation
 - User stories (e.g., As a user, I can sign in; As a user, I can view the list of items)
+
+### Mandatory Project Checkpoint
+
+The checkpoint takes place on 01.12.2026, during lab 9. It is not graded, but
+attendance is mandatory. Show the teacher of your group that the project has
+started and is further along than the initial documentation. The easiest way is
+to show the code and the running app, but a presentation, more detailed
+documentation or Figma mockups are fine too.
 
 ### Final Documentation
 
